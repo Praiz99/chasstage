@@ -1,0 +1,91 @@
+#winpop { width:380px; height:0px; position:absolute; right:0; bottom:0; border:1px solid #bbb; margin:0; 
+		padding:1px; overflow:hidden; display:none; background:#FFFFFF;
+		border-radius:4px;
+}
+#winpop .title { width:100%; height:30px; line-height:30px; color:#333333;
+				font-size:16px;
+				font-family:Î¢ÈíÑÅºÚ;
+				font-weight:bold;}
+#winpop .con { width:100%; height:80px; line-height:80px; font-weight:bold; font-size:12px; color:#FF0000; text-
+decoration:underline; text-align:center}
+#silu { font-size:13px; color:#999999; position:absolute; right:0; text-align:right; text-decoration:underline; 
+line-height:22px;}
+.com_close { 
+	position: absolute;
+    left: 360px;
+    width: 12px;
+    height: 12px;
+    margin-top:6px;
+    background: url(../../imgs/index/gb.png);}
+
+.com_proxy{
+	position: absolute;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    margin-top:4px;
+    background: url(../../imgs/index/error.png);
+}
+.div_content{
+	width: 100%;
+    height: 80px;
+    padding-top: 10px;
+}
+.notice_content{
+	width:256px;
+	height:80px;
+	float: left;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 23px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis; 
+	overflow: hidden
+}
+.bztx_button{
+	display:inline-block;
+	width:60px; 
+	height:25px; 
+	background:url(../../imgs/index/bztx.png);
+	border:none; 
+	border-radius:3px;
+	color:#333333; 
+	font-size:12px;
+	cursor:pointer; 
+	font-family:'Microsoft Yahei','Î¢ÈíÑÅºÚ';
+}
+.ckgd_button{
+	display:inline-block;
+	width:60px; 
+	height:25px; 
+	background:url(../../imgs/index/ckgd.png);
+	border:none; 
+	border-radius:3px;
+	color:#FFFFFF; 
+	font-size:12px;
+	cursor:pointer; 
+	font-family:'Microsoft Yahei','Î¢ÈíÑÅºÚ';
+}
+
+.container_horn{
+	position: absolute;
+    left: 320px;
+    top: 0px;
+    width: 300px;
+    height: 70px;
+}
+
+.horn_info{
+	position: absolute;
+    left: 30px;
+    top: 10px;
+    width:600px;
+	height:13px;
+	font-size:14px;
+	font-family:Î¢ÈíÑÅºÚ;
+	font-weight:400;
+	color: #fdf75e;
+    line-height: 24px;
+    z-index: 66;
+}

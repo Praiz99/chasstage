@@ -1,0 +1,1 @@
+function APP_MBLX(){  var SourceArray = [{"name":"通用模版","jpcode":"tymb","code":"1002","scode":"tongyongmoban"},{"name":"电动自行车被盗","jpcode":"ddzxcbd","code":"1001","scode":"diandongzixingchebeidao"}]; return SourceArray;}

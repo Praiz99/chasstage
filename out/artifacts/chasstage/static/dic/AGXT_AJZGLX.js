@@ -1,0 +1,1 @@
+function AGXT_AJZGLX(){  var SourceArray = [{"name":"材料缺失","jpcode":"clqs","code":"001","scode":"cailiaoqueshi"},{"name":"材料内容问题","jpcode":"clnrwt","code":"002","scode":"cailiaoneirongwenti"},{"name":"其他","jpcode":"qt","code":"003","scode":"qita"}]; return SourceArray;}

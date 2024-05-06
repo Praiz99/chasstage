@@ -1,0 +1,43 @@
+
+w
+java:S2293°"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢8ñ¥¾à¡1
+w
+java:S2293Ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢8ñ¥¾à¡1
+w
+java:S2293‰"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢8ñ¥¾à¡1
+w
+java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢8ñ¥¾à¡1
+p
+java:S1192P"NDefine a constant instead of duplicating this literal "æ“ä½œå¤±è´¥!" 7 times.(ˆ’ôûÿÿÿÿ8ò¥¾à¡1
+l
+java:S1192N"ODefine a constant instead of duplicating this literal "æ“ä½œæˆåŠŸ!" 10 times.(Éì¸ò8ò¥¾à¡1
+p
+java:S1192U"NDefine a constant instead of duplicating this literal "æ“ä½œå¤±è´¥:" 5 times.(é¦úÒúÿÿÿÿ8ò¥¾à¡1
+h
+java:S1192{"FDefine a constant instead of duplicating this literal "baqid" 7 times.(ÙÆ†ûÿÿÿÿ8ò¥¾à¡1
+c
+java:S2259°"EA "NullPointerException" could be thrown; "baqznpz" is nullable here.(œÚÓà8ƒª¾à¡1
+a
+java:S1155Ë">Use isEmpty() to check whether the collection is empty or not.(ýÇÛ þÿÿÿÿ8£ª¾à¡1
+\
+java:S1155î">Use isEmpty() to check whether the collection is empty or not.(Êìâ’8³ª¾à¡1
+Y	java:S125ò"<This block of commented-out lines of code should be removed.(òå¿—8Ãª¾à¡1
+\
+java:S1155õ">Use isEmpty() to check whether the collection is empty or not.(ï„Ì™8Óª¾à¡1
+^	java:S125ø"<This block of commented-out lines of code should be removed.(Û¬Ñüÿÿÿÿÿ8âª¾à¡1
+Y	java:S125ƒ"<This block of commented-out lines of code should be removed.(‘Ê¤Ë8‚«¾à¡1
+p
+java:S3776¥"RRefactor this method to reduce its Cognitive Complexity from 49 to the 15 allowed.(·úŽ“8…«¾à¡1
+F	java:S108µ")Either remove or fill this block of code.(”ý¾8«¾à¡1
+b
+java:S1854®"?Remove this useless assignment to local variable "sysCodeLike".(ÔÛÓ³þÿÿÿÿ8®«¾à¡1
+[
+java:S1854Ö"=Remove this useless assignment to local variable "startWith".(Æñˆ8»«¾à¡1
+v
+java:S1128"TRemove this unused import 'com.wckj.chasstage.modules.qygl.service.ChasXtQyService'.(ú—Œ¡ùÿÿÿÿ8¾«¾à¡1
+p
+java:S1128"SRemove this unused import 'com.wckj.framework.api.annotation.ApiAccessNotValidate'.(Ã‹ˆî8¾«¾à¡1
+b
+java:S1128"@Remove this unused import 'org.apache.commons.lang.SystemUtils'.(ìÀ¸äûÿÿÿÿ8¾«¾à¡1
+U
+java:S1128 "8Remove this unused import 'scala.annotation.meta.param'.(ú‚œ8¾«¾à¡1

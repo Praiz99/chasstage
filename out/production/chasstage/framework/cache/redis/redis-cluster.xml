@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">                        
+
+    <!--redis哨兵 -->
+    <bean id="redisSentinelConfiguration" class="com.wckj.framework.spring.cache.redis.cluster.CustomRedisSentinelConfiguration">
+        <property name="master">
+            <bean class="org.springframework.data.redis.connection.RedisNode">
+                <property name="name" value="mymaster"/>
+            </bean>
+        </property>
+        <property name="sentinelsArray">
+        	<array value-type="java.lang.String">
+        		<value>${redis.sentinel1}</value>
+        		<value>${redis.sentinel2}</value>
+        		<value>${redis.sentinel3}</value>
+        	</array>        
+        </property>
+    </bean>
+    
+    <!-- 配置 JedisPoolConfig 实例 -->
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="20"/>
+        <property name="maxTotal" value="${redis.maxActive:300}"/>
+        <property name="maxWaitMillis" value="${redis.timeout:10000}"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="blockWhenExhausted" value="false"/>
+    </bean>
+   
+   <!-- 配置JedisConnectionFactory -->
+   <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+         <constructor-arg name="sentinelConfig" ref="redisSentinelConfiguration"/>
+         <constructor-arg name="poolConfig" ref="poolConfig" />  
+         <property name="password" value="${redis.password:}" /> 
+         <property name="timeout" value="${redis.timeout:10000}" ></property> 
+         <property name="convertPipelineAndTxResults" value="false"/>
+   </bean>  
+    
+    <bean id="jacksonSerializer" class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
+	
+    <!-- 配置RedisTemplate -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+        <property name="defaultSerializer" ref="jacksonSerializer"/>
+    </bean>
+
+	<!--  分布式事件 -->
+    <bean id="messageListener" class="com.wckj.framework.event.devt.redis.CustomRedisMessageListenerAdapter">
+        <property name="serializer" ref="jacksonSerializer"/>
+    </bean>
+	<bean id="redisContainer" class="com.wckj.framework.event.devt.redis.CustomRedisMessageListenerContainer">
+	    <property name="connectionFactory" ref="jedisConnectionFactory"/>
+	    <property name="listener" ref="messageListener"/>
+	    <property name="groupId" value="${conf.appname}"/>
+	</bean>
+	<bean class="com.wckj.framework.event.devt.redis.LocalTriggerRedisEventHandle"/>
+	  
+</beans>

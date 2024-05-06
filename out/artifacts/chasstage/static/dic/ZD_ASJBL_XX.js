@@ -1,0 +1,1 @@
+function ZD_ASJBL_XX(){  var SourceArray = [{"name":"O型","jpcode":"Ox","code":"1","scode":"Oxing"},{"name":"A型","jpcode":"Ax","code":"2","scode":"Axing"},{"name":"B型","jpcode":"Bx","code":"3","scode":"Bxing"},{"name":"AB型","jpcode":"ABx","code":"4","scode":"ABxing"}]; return SourceArray;}

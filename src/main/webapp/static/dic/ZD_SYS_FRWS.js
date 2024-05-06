@@ -1,0 +1,1 @@
+function ZD_SYS_FRWS(){  var SourceArray = [{"name":"系统默认","jpcode":"xtmr","code":"frws-app-default","scode":"xitongmoren"},{"name":"杭州地区","jpcode":"hzdq","code":"hangzhou","scode":"hangzhoudiqu"}]; return SourceArray;}

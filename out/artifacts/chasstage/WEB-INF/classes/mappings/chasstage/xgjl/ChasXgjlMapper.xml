@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.xgjl.dao.ChasXgjlMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.xgjl.entity.ChasXgjl">
+
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="DKSJ" jdbcType="TIMESTAMP" property="dksj" />
+    <result column="KH" jdbcType="VARCHAR" property="kh" />
+    <result column="SBBH" jdbcType="VARCHAR" property="sbbh" />
+    <result column="QYID" jdbcType="VARCHAR" property="qyid" />
+    <result column="QYMC" jdbcType="VARCHAR" property="qymc" />
+    <result column="SBMC" jdbcType="VARCHAR" property="sbmc" />
+    <result column="ycqk" jdbcType="VARCHAR" property="ycqk" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_xgjl
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.xgjl.entity.ChasXgjl">
+    insert into chas_yw_xgjl (ID, ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, DKSJ, 
+      KH, SBBH, QYID, QYMC, SBMC,ycqk
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{dksj,jdbcType=TIMESTAMP}, 
+      #{kh,jdbcType=VARCHAR}, #{sbbh,jdbcType=VARCHAR}, #{qyid,jdbcType=VARCHAR}, #{qymc,jdbcType=VARCHAR}, #{sbmc,jdbcType=VARCHAR},
+       #{ycqk,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.xgjl.entity.ChasXgjl">
+    update chas_yw_xgjl
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      DKSJ = #{dksj,jdbcType=TIMESTAMP},
+      KH = #{kh,jdbcType=VARCHAR},
+      SBBH = #{sbbh,jdbcType=VARCHAR},
+      QYID = #{qyid,jdbcType=VARCHAR},
+      QYMC = #{qymc,jdbcType=VARCHAR},
+      SBMC= #{sbmc,jdbcType=VARCHAR},
+      ycqk=#{ycqk,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, DKSJ, 
+    KH, SBBH, QYID, QYMC, SBMC,ycqk
+    from chas_yw_xgjl
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, DKSJ, 
+    KH, SBBH, QYID, QYMC, SBMC,ycqk
+    from chas_yw_xgjl
+    <where>
+     1=1 and isdel = 0
+       <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}' 
+     </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+     <if test="kh != null and kh !=''">
+            and KH = '${kh}' 
+     </if>
+       <if test="kstime != null and kstime !=''">
+            and dksj &gt;= '${kstime}' 
+     </if>
+       <if test="jstime != null and jstime !=''">
+            and dksj &lt;= '${jstime}' 
+     </if>
+      <if test="sbmc != null and sbmc !=''">
+        and SBMC like '%${sbmc}%'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+		and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+	  </if>
+    </where>
+  </select>
+</mapper>

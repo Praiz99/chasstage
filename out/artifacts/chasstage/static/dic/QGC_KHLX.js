@@ -1,0 +1,1 @@
+function QGC_KHLX(){  var SourceArray = [{"name":"警员考核","jpcode":"jykh","code":"001","scode":"jingyuankaohe"},{"name":"单位考核","jpcode":"dwkh","code":"002","scode":"danweikaohe"},{"name":"案件完整度","jpcode":"ajwzd","code":"003","scode":"anjianwanzhengdu"},{"name":"案件考核","jpcode":"ajkh","code":"004","scode":"anjiankaohe"}]; return SourceArray;}

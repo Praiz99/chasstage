@@ -1,0 +1,1 @@
+function DHSLX(){  var SourceArray = [{"name":"候问室","jpcode":"hws","code":"1","scode":"houwenshi"},{"name":"等候室","jpcode":"dhs","code":"2","scode":"denghoushi"}]; return SourceArray;}

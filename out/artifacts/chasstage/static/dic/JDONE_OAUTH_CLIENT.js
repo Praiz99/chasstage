@@ -1,0 +1,1 @@
+function JDONE_OAUTH_CLIENT(){  var SourceArray = [{"name":"第三方平台","jpcode":"","code":"dsfClient","scode":""},{"name":"九江平台","jpcode":"","code":"jiujiangClient","scode":""},{"name":"测试方","jpcode":"","code":"testClient","scode":""}]; return SourceArray;}

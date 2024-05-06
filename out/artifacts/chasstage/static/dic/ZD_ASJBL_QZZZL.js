@@ -1,0 +1,1 @@
+function ZD_ASJBL_QZZZL(){  var SourceArray = [{"name":"限期出境","jpcode":"xqcj","code":"5","scode":"xianqichujing"}]; return SourceArray;}

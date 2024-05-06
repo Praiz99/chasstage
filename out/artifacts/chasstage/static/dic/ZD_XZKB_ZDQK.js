@@ -1,0 +1,1 @@
+function ZD_XZKB_ZDQK(){  var SourceArray = [{"name":"阴","jpcode":"y","code":"01","scode":"yin"},{"name":"雨","jpcode":"y","code":"02","scode":"yu"},{"name":"雪","jpcode":"x","code":"03","scode":"xue"},{"name":"雾","jpcode":"w","code":"04","scode":"wu"},{"name":"晴","jpcode":"q","code":"05","scode":"qing"}]; return SourceArray;}

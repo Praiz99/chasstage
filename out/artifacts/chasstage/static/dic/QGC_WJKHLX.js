@@ -1,0 +1,1 @@
+function QGC_WJKHLX(){  var SourceArray = [{"name":"未出示证件","jpcode":"wcszj","code":"01","scode":"weichushizhengjian"},{"name":"暴力执法","jpcode":"blzf","code":"02","scode":"baolizhifa"},{"name":"执法不严","jpcode":"zfby","code":"03","scode":"zhifabuyan"}]; return SourceArray;}

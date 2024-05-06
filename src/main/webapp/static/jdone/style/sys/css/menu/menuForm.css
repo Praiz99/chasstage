@@ -1,0 +1,79 @@
+.table-detail{
+	margin: 2px;
+}
+.table-detail textarea{
+	margin: 2px;
+}
+.table-detail th{
+	/*padding-right: 6px;*/
+    height: 29px;
+    text-align: right;
+    font-size: 12px;
+    background-color: #ebf5ff;
+    border: 1px solid #7babcf;
+}
+
+.table-detail td{
+	border: solid 1px #7babcf;
+    text-align: left;
+    font-size: 12px;
+    height: 100%;
+    /*font-family: cursive;*/
+}
+
+.l-text-field{
+    top: 0px;
+    left: 0px;
+    width: 110px;
+    border: 1px solid #aecaf0;
+    margin: 0;
+    outline: none;
+    width: 97%;
+    height: 81%;
+}
+
+#user a{
+	float: left;
+	display: inline-block;
+    vertical-align: top;
+    width: auto;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 4px;
+}
+#role a{
+	float: left;
+	display: inline-block;
+    vertical-align: top;
+    width: auto;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 4px;
+}
+#org a{
+	float: left;
+	display: inline-block;
+    vertical-align: top;
+    width: auto;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 4px;
+}
+#reg a{
+	float: left;
+	display: inline-block;
+    vertical-align: top;
+    width: auto;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 4px;
+}
+.panel-body .panel{
+	display: block;
+    margin: 4px;
+    width: 99%;
+}

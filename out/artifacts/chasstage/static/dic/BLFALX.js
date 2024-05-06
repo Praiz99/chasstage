@@ -1,0 +1,1 @@
+function BLFALX(){  var SourceArray = [{"name":"标准方案","jpcode":"bzfa","code":"01","scode":"biaozhunfangan"},{"name":"个人方案","jpcode":"grfa","code":"02","scode":"gerenfangan"}]; return SourceArray;}

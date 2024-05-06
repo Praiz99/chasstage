@@ -1,0 +1,1 @@
+function ZFKP_KPBZQK(){  var SourceArray = [{"name":"未整改","jpcode":"wzg","code":"01","scode":"weizhenggai"},{"name":"已整改","jpcode":"yzg","code":"02","scode":"yizhenggai"},{"name":"无法整改","jpcode":"wfzg","code":"03","scode":"wufazhenggai"}]; return SourceArray;}

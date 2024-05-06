@@ -1,0 +1,1 @@
+function ZNZD_KHDLX(){  var SourceArray = [{"name":"自助报案","jpcode":"zzba","code":"0100","scode":"zizhubaoan"},{"name":"自助查询","jpcode":"zzcx","code":"0102","scode":"zizhuchaxun"},{"name":"其他","jpcode":"qt","code":"0099","scode":"qita"}]; return SourceArray;}

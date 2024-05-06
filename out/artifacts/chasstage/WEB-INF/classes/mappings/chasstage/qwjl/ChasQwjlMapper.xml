@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.qwjl.dao.ChasQwjlMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.qwjl.entity.ChasQwjl">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="bz" jdbcType="VARCHAR" property="bz" />
+    <result column="czmj_sfzh" jdbcType="VARCHAR" property="czmjSfzh" />
+    <result column="czmj_xm" jdbcType="VARCHAR" property="czmjXm" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="czsj" jdbcType="TIMESTAMP" property="czsj" />
+    <result column="wpbh" jdbcType="VARCHAR" property="wpbh" />
+    <result column="cyr" jdbcType="VARCHAR" property="cyr" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="czlx" jdbcType="VARCHAR" property="czlx" />
+    <result column="sswpxxid" jdbcType="VARCHAR" property="sswpxxid" />
+    <result column="lhwp" jdbcType="VARCHAR" property="lhwp" />
+    <result column="zbdw_bh" jdbcType="VARCHAR" property="zbdwBh" />
+     <result column="wlhwp" jdbcType="VARCHAR" property="wlhwp" />
+    <result column="cab_id" jdbcType="VARCHAR" property="cabId" />
+    <result column="cab_bh" jdbcType="VARCHAR" property="cabBh" />
+  </resultMap>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.qwjl.entity.ChasQwjl">
+    insert into chas_yw_qwjl (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      bz, czmj_sfzh, czmj_xm, 
+      dwxtbh, czsj, wpbh, 
+      cyr, rybh, czlx, sswpxxid, 
+      lhwp, zbdw_bh ,wlhwp,cab_id,cab_bh)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{bz,jdbcType=VARCHAR}, #{czmjSfzh,jdbcType=VARCHAR}, #{czmjXm,jdbcType=VARCHAR}, 
+      #{dwxtbh,jdbcType=VARCHAR}, #{czsj,jdbcType=TIMESTAMP}, #{wpbh,jdbcType=VARCHAR}, 
+      #{cyr,jdbcType=VARCHAR}, #{rybh,jdbcType=VARCHAR}, #{czlx,jdbcType=VARCHAR}, #{sswpxxid,jdbcType=VARCHAR}, 
+      #{lhwp,jdbcType=VARCHAR}, #{zbdwBh,jdbcType=VARCHAR}, 
+      #{wlhwp,jdbcType=VARCHAR},#{cabId,jdbcType=VARCHAR},#{cabBh,jdbcType=VARCHAR})
+  </insert>
+  
+<!--  <delete id="deleteByPrimaryRbyh" parameterType="java.lang.String">-->
+<!--    delete from chas_yw_qwjl where RYBH = #{rybh,jdbcType=VARCHAR}-->
+<!--  </delete>-->
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, bz, czmj_sfzh, 
+    czmj_xm, dwxtbh, czsj, wpbh, cyr, rybh, czlx, sswpxxid, lhwp, zbdw_bh, wlhwp,cab_id,cab_bh
+    from chas_yw_qwjl
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+          and baqid = '${baqid}' 
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and rybh = '${rybh}' 
+      </if>
+      <if test="sswpxxid != null and sswpxxid !=''">
+          and sswpxxid = '${sswpxxid}' 
+      </if>
+      <if test="cabId != null and cabId !=''">
+        and cab_id = '${cabId}'
+      </if>
+      <if test="czlx != null and czlx != ''">
+        and czlx = '${czlx}'
+      </if>
+    </where>
+  </select>
+
+  <select id="getQwjlApiPageData" resultType="java.util.HashMap">
+    select jl.*,sb.sbmc
+    from chas_yw_qwjl jl left join chas_xt_sb sb on jl.cab_id = sb.sbbh
+    <where>
+      1=1
+      <if test="baqid != null and baqid !=''">
+        and jl.baqid = '${baqid}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and jl.rybh = '${rybh}'
+      </if>
+      <if test="sswpxxid != null and sswpxxid !=''">
+        and jl.sswpxxid = '${sswpxxid}'
+      </if>
+      <if test="cabId != null and cabId !=''">
+        and jl.cab_id = '${cabId}'
+      </if>
+      <if test="czlx != null and czlx != ''">
+        and jl.czlx = '${czlx}'
+      </if>
+    </where>
+  </select>
+</mapper>

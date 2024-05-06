@@ -1,0 +1,1 @@
+function ZD_SYS_UPLOAD_FILE_TYPE(){  var SourceArray = [{"name":"嫌疑人照片","jpcode":"xyrzp","code":"XYRZP","scode":"xianyirenzhaopian"}]; return SourceArray;}

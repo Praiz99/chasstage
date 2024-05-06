@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.cldj.dao.ChasXtCldjMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.cldj.entity.ChasXtCldj">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="INTEGER" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="dwmc" jdbcType="VARCHAR" property="dwmc" />
+    <result column="cl_brand" jdbcType="VARCHAR" property="clBrand" />
+    <result column="cl_model" jdbcType="VARCHAR" property="clModel" />
+    <result column="cl_number" jdbcType="VARCHAR" property="clNumber" />
+    <result column="zrr_sfzh" jdbcType="VARCHAR" property="zrrSfzh" />
+    <result column="zrr_xm" jdbcType="VARCHAR" property="zrrXm" />
+    <result column="cl_photo" jdbcType="VARCHAR" property="clPhoto" />
+    <result column="qssj" jdbcType="DATE" property="qssj" />
+    <result column="jssj" jdbcType="DATE" property="jssj" />
+    <result column="clsyzt" jdbcType="VARCHAR" property="clsyzt" />
+    <result column="cllx" jdbcType="VARCHAR" property="cllx" />
+    <result column="czjzbh" jdbcType="VARCHAR" property="czjzbh" />
+    <result column="czsxtbh" jdbcType="VARCHAR" property="czsxtbh" />
+    <result column="zdrysl" jdbcType="INTEGER" property="zdrysl" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_cldj set isdel=1,xgsj = date_trunc('second', now())
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.cldj.entity.ChasXtCldj">
+    insert into chas_xt_cldj (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      dwxtbh, dwmc, cl_brand, 
+      cl_model, cl_number, zrr_sfzh, 
+      zrr_xm, cl_photo,
+      qssj, jssj, clsyzt, cllx,czjzbh,czsxtbh,zdrysl
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{dwxtbh,jdbcType=VARCHAR}, #{dwmc,jdbcType=VARCHAR}, #{clBrand,jdbcType=VARCHAR}, 
+      #{clModel,jdbcType=VARCHAR}, #{clNumber,jdbcType=VARCHAR}, #{zrrSfzh,jdbcType=VARCHAR}, 
+      #{zrrXm,jdbcType=VARCHAR}, #{clPhoto,jdbcType=VARCHAR},
+      #{qssj,jdbcType=DATE}, #{jssj,jdbcType=DATE}, #{clsyzt,jdbcType=VARCHAR}, #{cllx,jdbcType=VARCHAR}
+      , #{czjzbh,jdbcType=VARCHAR}, #{czsxtbh,jdbcType=VARCHAR}, #{zdrysl,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.cldj.entity.ChasXtCldj">
+    update chas_xt_cldj
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+      dwmc = #{dwmc,jdbcType=VARCHAR},
+      cl_brand = #{clBrand,jdbcType=VARCHAR},
+      cl_model = #{clModel,jdbcType=VARCHAR},
+      cl_number = #{clNumber,jdbcType=VARCHAR},
+      zrr_sfzh = #{zrrSfzh,jdbcType=VARCHAR},
+      zrr_xm = #{zrrXm,jdbcType=VARCHAR},
+      cl_photo = #{clPhoto,jdbcType=VARCHAR},
+      qssj = #{qssj,jdbcType=DATE},
+      jssj = #{jssj,jdbcType=DATE},
+      clsyzt = #{clsyzt,jdbcType=VARCHAR},
+      cllx = #{cllx,jdbcType=VARCHAR},
+      czjzbh = #{czjzbh,jdbcType=VARCHAR},
+      czsxtbh = #{czsxtbh,jdbcType=VARCHAR},
+      zdrysl=#{zdrysl,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwxtbh, 
+    dwmc, cl_brand, cl_model, cl_number, zrr_sfzh, zrr_xm, cl_photo, qssj, jssj,
+    clsyzt, cllx,czjzbh,czsxtbh,zdrysl
+    from chas_xt_cldj
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwxtbh, 
+    dwmc, cl_brand, cl_model, cl_number, zrr_sfzh, zrr_xm, cl_photo,  qssj, jssj,
+    clsyzt, cllx,czjzbh,czsxtbh,zdrysl
+    from chas_xt_cldj
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="dwxtbh != null and dwxtbh !=''">
+        and DWXTBH = '${dwxtbh}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="clsyzt != null and clsyzt !=''">
+        and clsyzt = '${clsyzt}'
+      </if>
+      <if test="cllx != null and cllx !=''">
+        and cllx = '${cllx}'
+      </if>
+      <if test="baqmc !=null and baqmc !=''">
+        and BAQMC LIKE '%${baqmc}%'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and baqid in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+      </if>
+      <if test="qxbs == 'province'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

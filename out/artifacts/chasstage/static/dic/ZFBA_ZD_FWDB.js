@@ -1,0 +1,1 @@
+function ZFBA_ZD_FWDB(){  var SourceArray = [{"name":"待接收","jpcode":"djs","code":"01","scode":"daijieshou"},{"name":"撤回","jpcode":"ch","code":"02","scode":"chehui"},{"name":"拒绝","jpcode":"jj","code":"03","scode":"jujue"},{"name":"同意","jpcode":"ty","code":"04","scode":"tongyi"},{"name":"完成","jpcode":"wc","code":"05","scode":"wancheng"}]; return SourceArray;}

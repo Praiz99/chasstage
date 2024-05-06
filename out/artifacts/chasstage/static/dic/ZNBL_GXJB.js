@@ -1,0 +1,1 @@
+function ZNBL_GXJB(){  var SourceArray = [{"name":"单位","jpcode":"dw","code":"01","scode":"danwei"},{"name":"区县","jpcode":"qx","code":"02","scode":"quxian"},{"name":"市级","jpcode":"sj","code":"03","scode":"shiji"},{"name":"省级","jpcode":"sj","code":"04","scode":"shengji"}]; return SourceArray;}

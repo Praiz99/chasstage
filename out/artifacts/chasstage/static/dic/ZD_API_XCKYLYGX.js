@@ -1,0 +1,1 @@
+function ZD_API_XCKYLYGX(){  var SourceArray = [{"name":"自然光","jpcode":"zrg","code":"01","scode":"ziranguang"},{"name":"勘验灯光","jpcode":"kydg","code":"02","scode":"kanyandengguang"}]; return SourceArray;}

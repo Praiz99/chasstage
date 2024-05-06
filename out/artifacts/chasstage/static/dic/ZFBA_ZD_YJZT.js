@@ -1,0 +1,1 @@
+function ZFBA_ZD_YJZT(){  var SourceArray = [{"name":"待审批","jpcode":"dsp","code":"01","scode":"daishenpi"},{"name":"接收中","jpcode":"jsz","code":"02","scode":"jieshouzhong"},{"name":"已移交","jpcode":"yyj","code":"03","scode":"yiyijiao"},{"name":"已退回","jpcode":"yth","code":"04","scode":"yituihui"},{"name":"已撤回","jpcode":"ych","code":"05","scode":"yichehui"}]; return SourceArray;}

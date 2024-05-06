@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.baq.dao.ChasBaqMapper">
+	<resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.baq.entity.ChasBaq">
+		<id column="ID" jdbcType="VARCHAR" property="id" />
+		<result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+		<result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+		<result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+		<result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+		<result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+		<result column="IS_DEFAULT" jdbcType="INTEGER" property="isDefault" />
+		<result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+		<result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+		<result column="DWDM" jdbcType="VARCHAR" property="dwdm" />
+		<result column="DWMC" jdbcType="VARCHAR" property="dwmc" />
+		<result column="BZ" jdbcType="VARCHAR" property="bz" />
+		<result column="IP" jdbcType="VARCHAR" property="ip" />
+		<result column="PORT" jdbcType="VARCHAR" property="port" />
+		<result column="XTMC" jdbcType="VARCHAR" property="xtmc" />
+		<result column="SFDW" jdbcType="INTEGER" property="sfdw" />
+		<result column="SFZNBAQ" jdbcType="INTEGER" property="sfznbaq" />
+		<result column="DWXTBH" jdbcType="VARCHAR" property="dwxtbh" />
+		<result column="lxdh" jdbcType="VARCHAR" property="lxdh" />
+		<result column="virtual" jdbcType="VARCHAR" property="virtual" />
+		<result column="sfdzx" jdbcType="INTEGER" property="sfdzx" />
+	</resultMap>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		update chas_xt_baq
+    	set isdel = 1,xgsj = date_trunc('second', now())
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="com.wckj.chasstage.modules.baq.entity.ChasBaq">
+		insert into chas_xt_baq (ID, ISDEL, DATA_FLAG,
+		LRR_SFZH, LRSJ, XGR_SFZH,
+		IS_DEFAULT, XGSJ, BAQMC,
+		DWDM, DWMC, BZ, 		IP, PORT, XTMC, SFDW,
+		SFZNBAQ,DWXTBH,lxdh,virtual,sfdzx)
+		values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER},
+		#{dataflag,jdbcType=CHAR},
+		#{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+		#{isDefault,jdbcType=INTEGER}, #{xgsj,jdbcType=TIMESTAMP},
+		#{baqmc,jdbcType=VARCHAR},
+		#{dwdm,jdbcType=VARCHAR}, #{dwmc,jdbcType=VARCHAR}, #{bz,jdbcType=VARCHAR},
+		#{ip,jdbcType=VARCHAR}, #{port,jdbcType=VARCHAR}, #{xtmc,jdbcType=VARCHAR},
+		#{sfdw,jdbcType=INTEGER},
+		#{sfznbaq,jdbcType=INTEGER},
+		#{dwxtbh,jdbcType=VARCHAR},
+		#{lxdh,jdbcType=VARCHAR},#{virtual,jdbcType=VARCHAR},#{sfdzx,jdbcType=INTEGER})
+	</insert>
+	<update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.baq.entity.ChasBaq">
+		update chas_xt_baq
+		set ISDEL = #{isdel,jdbcType=INTEGER},
+		DATA_FLAG = #{dataflag,jdbcType=CHAR},
+		LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+		LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+		XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+		IS_DEFAULT = #{isDefault,jdbcType=INTEGER},
+		XGSJ = date_trunc('second', now()),
+		BAQMC = #{baqmc,jdbcType=VARCHAR},
+		DWDM = #{dwdm,jdbcType=VARCHAR},
+		DWMC = #{dwmc,jdbcType=VARCHAR},
+		BZ = #{bz,jdbcType=VARCHAR},
+		IP = #{ip,jdbcType=VARCHAR},
+		PORT = #{port,jdbcType=VARCHAR},
+		XTMC = #{xtmc,jdbcType=VARCHAR},
+		SFDW = #{sfdw,jdbcType=INTEGER},
+		SFZNBAQ = #{sfznbaq,jdbcType=INTEGER},
+		DWXTBH = #{dwxtbh,jdbcType=VARCHAR},
+		lxdh = #{lxdh,jdbcType=VARCHAR},
+		virtual = #{virtual,jdbcType=VARCHAR},
+		sfdzx = #{sfdzx,jdbcType=INTEGER}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<select id="selectByPrimaryKey" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, IS_DEFAULT,
+		XGSJ, BAQMC,
+		DWDM, DWMC, BZ, IP, PORT, XTMC, SFDW, SFZNBAQ, DWXTBH,lxdh,virtual,sfdzx
+		from chas_xt_baq
+		where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, IS_DEFAULT,
+		XGSJ, BAQMC,
+		DWDM, DWMC, BZ,  IP, PORT, XTMC, SFDW, SFZNBAQ, DWXTBH,lxdh,virtual,sfdzx
+		from chas_xt_baq
+		<where>
+			1=1 and isdel = 0
+			<if test="baqid != null and baqid !=''">
+				and ID in
+				<foreach close=")" collection="baqids" index="index" item="item" open="(" separator=",">
+					'${item}'
+				</foreach>
+			</if>
+			<if test="dwdm != null and dwdm !=''">
+				and DWDM = '${dwdm}'
+			</if>
+			<if test="dwxtbh != null and dwxtbh !=''">
+				and DWXTBH = '${dwxtbh}'
+			</if>
+			<if test="ip != null and ip !=''">
+				and IP = '${ip}'
+			</if>
+			<if test="sfdw != null and sfdw !=''">
+				and SFDW = '${sfdw}'
+			</if>
+			<if test="sfznbaq != null and sfznbaq !=''">
+				and SFZNBAQ = '${sfznbaq}'
+			</if>
+			<if test="baqmc !=null and baqmc !=''">
+				and BAQMC LIKE '%${baqmc}%'
+			</if>
+			<if test="sydwdm != null and sydwdm !=''">
+				and id in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+			</if>
+			<if test="qxbs == 'province'">
+				and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+			</if>
+		    <if test="qxbs == 'city'">
+				and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+			</if>
+			<if test="qxbs == 'reg'">
+				and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+			</if>
+			<if test="qxbs == 'org'">
+				and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+			</if>
+			<if test="qxbs == 'user'">
+				and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+	<select id="findByParams" resultMap="BaseResultMap">
+		select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, IS_DEFAULT,
+		XGSJ, BAQMC,
+		DWDM, DWMC, BZ, IP, PORT, XTMC, SFDW, SFZNBAQ, DWXTBH,lxdh,virtual,sfdzx
+		from chas_xt_baq
+		<where>
+			1=1 and isdel = 0
+			<if test="dwdm != null and dwdm !=''">
+				and DWDM = '${dwdm}'
+			</if>
+            <if test="dwxtbh != null and dwxtbh !=''">
+                and DWXTBH = '${dwxtbh}'
+            </if>
+			<if test="sydwdm != null and sydwdm !=''">
+				and id in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+			</if>
+		</where>
+	</select>
+
+
+	<select id="findListByParams" resultMap="BaseResultMap">
+		select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, IS_DEFAULT,
+		XGSJ, BAQMC,
+		DWDM, DWMC, BZ, IP, PORT, XTMC, SFDW, SFZNBAQ, DWXTBH,lxdh,virtual,sfdzx
+		from chas_xt_baq
+		<where>
+			1=1 and isdel = 0
+			<if test="dwdm != null and dwdm !=''">
+				and DWDM = '${dwdm}'
+			</if>
+			<if test="dwxtbh != null and dwxtbh !=''">
+				and DWXTBH = '${dwxtbh}'
+			</if>
+			<if test="sydwdm != null and sydwdm !=''">
+				and id in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+			</if>
+			<if test="sysCode != null and sysCode !=''">
+				and DWXTBH like '${sysCode}%'
+			</if>
+			<if test="sfdzx != null and sfdzx != ''">
+				and sfdzx = #{sfdzx}
+			</if>
+		</where>
+		order by lrsj desc
+	</select>
+
+	<select id="getStatisticsBy" resultType="java.util.HashMap">
+		select
+			--本日入办案区
+			(select count(*) as sl from gg_baqryxx ry where ry.isdel = 0 and ry.baqid = '${baqid}'
+			and ry.r_rssj
+			BETWEEN date_trunc('day',current_date) and date_trunc('day',current_date) + interval'1 day - 1 second'
+			) rs,
+			--本日出办案区
+			(select count(*) as sl from gg_baqryxx ry where ry.isdel = 0 and ry.baqid = '${baqid}'
+			and ry.c_cssj
+			BETWEEN date_trunc('day',current_date) and date_trunc('day',current_date) + interval'1 day - 1 second'
+			and ryzt = '04') cs,
+			--临时出所
+			(select count(*) as sl from gg_baqryxx ry where ry.isdel = 0 and ry.baqid = '${baqid}'
+			and ry.c_cssj
+			BETWEEN date_trunc('day',current_date) and date_trunc('day',current_date) + interval'1 day - 1 second'
+			and ryzt = '06') lscs,
+			--审批
+			(select count(*) as sl from gg_baqryxx ry where ry.isdel = 0 and ry.baqid = '${baqid}'
+			and ry.c_cssj
+			BETWEEN date_trunc('day',current_date) and date_trunc('day',current_date) + interval'1 day - 1 second'
+			and ryzt in ('02','05')) dsp,
+			--预警
+			(select count(*) as sl from chas_yw_yjxx where isdel = 0 and yjzt = '0' and baqid = '${baqid}') yj,
+			--亲情驿站 (审批通过)
+			(select count(*) as sl from chas_yw_qqyz where isdel = 0 and baqid = '${baqid}') qqyz,
+			(select count(*) as sl from chas_yw_jhrw where isdel = 0 and baqid = '${baqid}') jhrw
+	</select>
+</mapper>

@@ -1,0 +1,1 @@
+function ZFBA_SZHQZ_BLZT(){  var SourceArray = [{"name":"申请勘验","jpcode":"sqky","code":"01","scode":"shenqingkanyan"},{"name":"完成勘验","jpcode":"wcky","code":"02","scode":"wanchengkanyan"},{"name":"任务结束","jpcode":"rwjs","code":"03","scode":"renwujieshu"}]; return SourceArray;}

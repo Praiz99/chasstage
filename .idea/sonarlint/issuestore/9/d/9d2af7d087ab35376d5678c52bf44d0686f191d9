@@ -1,0 +1,131 @@
+
+E
+java:S3740¾"/Provide the parametrized type for this generic.(‡Üà%
+j
+java:S1192ç"NDefine a constant instead of duplicating this literal "ä¿å­˜æˆåŠŸ!" 3 times.(õà¾úÿÿÿÿ
+p
+java:S1192ø"TDefine a constant instead of duplicating this literal "äººå‘˜ç¼–å·ä¸ºNULL" 5 times.(À¶×³şÿÿÿÿ
+^
+java:S1192À"GDefine a constant instead of duplicating this literal "status" 3 times.(úĞÇ“
+b
+java:S1192"FDefine a constant instead of duplicating this literal "baqid" 8 times.(î¥£Åûÿÿÿÿ
+a
+java:S1192­"JDefine a constant instead of duplicating this literal " 00:00:00" 3 times.(Œ§ò÷
+}
+java:S1192—"fDefine a constant instead of duplicating this literal "SaveWithUpdate:æ–°å¢ç™»è®°åŒºè½¨è¿¹:" 3 times.(¥ó»
+\
+java:S1192§"FDefine a constant instead of duplicating this literal "isdel" 3 times.(úÕõT
+]
+java:S1192‘"FDefine a constant instead of duplicating this literal "wdbhL" 6 times.(„‹«û
+]
+java:S1192Á"GDefine a constant instead of duplicating this literal "userId" 3 times.(Ü•³
+]
+java:S1192Š"FDefine a constant instead of duplicating this literal "boxNo" 4 times.(Ñòæ
+f
+java:S1192³"JDefine a constant instead of duplicating this literal " 23:59:59" 3 times.(„ªÕØşÿÿÿÿ
+d
+java:S1192•"HDefine a constant instead of duplicating this literal "baqryxx" 3 times.(¢Ñ˜Íúÿÿÿÿ
+c
+java:S1192Ø"GDefine a constant instead of duplicating this literal "zbdwBh" 4 times.(öıË©şÿÿÿÿ
+p
+java:S1192ª"TDefine a constant instead of duplicating this literal "yyyy-MM-dd HH:mm:ss" 4 times.(î‰Ëùÿÿÿÿ
+q
+java:S1192"ZDefine a constant instead of duplicating this literal "å½“å‰æœ¬äººæ­£åœ¨ä½¿ç”¨!" 3 times.(¾ğš
+^
+java:S1192«"GDefine a constant instead of duplicating this literal "rqType" 6 times.(€éü
+j
+java:S1192å"NDefine a constant instead of duplicating this literal "ä¿å­˜å¤±è´¥:" 3 times.(‡¼ã¸ÿÿÿÿÿ
+K
+java:S1066"/Merge this if statement with the enclosing one.(—”Á¶ûÿÿÿÿ
+K
+java:S1066ğ"/Merge this if statement with the enclosing one.(ÖÈÙüÿÿÿÿ
+K
+java:S1066ñ"/Merge this if statement with the enclosing one.(Òšùöıÿÿÿÿ
+8
+java:S1643Ñ"Use a StringBuilder instead.(Æğ©şÿÿÿÿ
+D
+java:S5411º"(Use a primitive boolean expression here.(ŒÊ¥ÿÿÿÿÿ
+a
+java:S2259›"EA "NullPointerException" could be thrown; "baqryxx" is nullable here.(Â·ôÊúÿÿÿÿ
+_
+java:S2259Ô"HA "NullPointerException" could be thrown; "ryjlByRybh" is nullable here.(Ñ¦õÂ
+d
+java:S2259ñ"HA "NullPointerException" could be thrown; "ryjlByRybh" is nullable here.(¸øªºúÿÿÿÿ
+W
+java:S2259¤"@A "NullPointerException" could be thrown; "wr" is nullable here.(×ÕÌ
+a
+java:S2259«"EA "NullPointerException" could be thrown; "baqryxx" is nullable here.(Â·ôÊúÿÿÿÿ
+
+java:S4165¯"eRemove this useless assignment; "boxtype" already holds the assigned value along all execution paths.(ŠÆ®Ñúÿÿÿÿ
+i
+java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(§¸ôÊ
+R	java:S125Â"<This block of commented-out lines of code should be removed.(Ûê™¾
+n
+java:S3776¹"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(«Ş×ôûÿÿÿÿ
+Q
+java:S1854À":Remove this useless assignment to local variable "status".(úĞÇ“
+B
+java:S1481À"+Remove this unused "status" local variable.(úĞÇ“
+R	java:S125Ö"<This block of commented-out lines of code should be removed.(ÿ¡ºÃ
+i
+java:S3776ƒ"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(¨¨Š›
+=	java:S131§""Add a default case to this switch.(•µÏıûÿÿÿÿ
+i
+java:S3776Î"RRefactor this method to reduce its Cognitive Complexity from 51 to the 15 allowed.(êØ±¨
+S
+java:S1854¸"<Remove this useless assignment to local variable "response".(€ËÊÇ
+Z
+java:S1155ë">Use isEmpty() to check whether the collection is empty or not.(êèƒ¤ÿÿÿÿÿ
+W	java:S125°"<This block of commented-out lines of code should be removed.(Êç×úÿÿÿÿ
+W	java:S125Å"<This block of commented-out lines of code should be removed.(ì¾‰Æıÿÿÿÿ
+U
+java:S1854Î"9Remove this useless assignment to local variable "baqid".(…‚¸Œûÿÿÿÿ
+F
+java:S1481Î"*Remove this unused "baqid" local variable.(…‚¸Œûÿÿÿÿ
+R	java:S125Ò"<This block of commented-out lines of code should be removed.(Ç‚Ôä
+o
+java:S3776ƒ"SRefactor this method to reduce its Cognitive Complexity from 109 to the 15 allowed.(±Åå³ÿÿÿÿÿ
+U
+java:S1155Š">Use isEmpty() to check whether the collection is empty or not.(Ô›êÎ
+Z
+java:S1155—">Use isEmpty() to check whether the collection is empty or not.(èşÑšûÿÿÿÿ
+Z
+java:S1155¡">Use isEmpty() to check whether the collection is empty or not.(µšŞ·úÿÿÿÿ
+R	java:S125®"<This block of commented-out lines of code should be removed.(¼Ï”©
+Z
+java:S1155Á">Use isEmpty() to check whether the collection is empty or not.(Ï¢â°ùÿÿÿÿ
+Z
+java:S1155Ê">Use isEmpty() to check whether the collection is empty or not.(Ï¢â°ùÿÿÿÿ
+Z
+java:S1155Ü">Use isEmpty() to check whether the collection is empty or not.(èşÑšûÿÿÿÿ
+Z
+java:S1155æ">Use isEmpty() to check whether the collection is empty or not.(µšŞ·úÿÿÿÿ
+Z
+java:S1155û">Use isEmpty() to check whether the collection is empty or not.(É€°Îøÿÿÿÿ
+Z
+java:S1155ş">Use isEmpty() to check whether the collection is empty or not.(Ï¢â°ùÿÿÿÿ
+Z
+java:S1155…">Use isEmpty() to check whether the collection is empty or not.(Ëïèñûÿÿÿÿ
+Z
+java:S1155ˆ">Use isEmpty() to check whether the collection is empty or not.(öï‰“øÿÿÿÿ
+?	java:S108İ")Either remove or fill this block of code.(”ı¾
+Z
+java:S1155Œ">Use isEmpty() to check whether the collection is empty or not.(µšŞ·úÿÿÿÿ
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ã†ìñøÿÿÿÿ
+W
+java:S1854Í"@Remove this useless assignment to local variable "returnResult".(Å¿œú
+H
+java:S1481Í"1Remove this unused "returnResult" local variable.(Å¿œú
+n
+java:S3776ø"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(İØì¼şÿÿÿÿ
+Z
+java:S1155‰	">Use isEmpty() to check whether the collection is empty or not.( Œ–úşÿÿÿÿ
+\
+java:S1854²	"9Remove this useless assignment to local variable "array".(è¯É¥ûÿÿÿÿ8Ò¥ä¡1
+\
+java:S1854±	">Remove this useless assignment to local variable "jsonObject".(íÇ”î8Ó°ä¡1
+M
+java:S1481±	"/Remove this unused "jsonObject" local variable.(íÇ”î8Ô°ä¡1
+M
+java:S1481²	"*Remove this unused "array" local variable.(è¯É¥ûÿÿÿÿ8Ô¥ä¡1

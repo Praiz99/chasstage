@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.yjxx.dao.ChasYjxxMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.yjxx.entity.ChasYjxx">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="YJLB" jdbcType="VARCHAR" property="yjlb" />
+    <result column="JQMS" jdbcType="VARCHAR" property="jqms" />
+    <result column="YJZT" jdbcType="VARCHAR" property="yjzt" />
+    <result column="YJJB" jdbcType="VARCHAR" property="yjjb" />
+    <result column="CFSJ" jdbcType="TIMESTAMP" property="cfsj" />
+    <result column="CLRXM" jdbcType="VARCHAR" property="clrxm" />
+    <result column="CLSJ" jdbcType="TIMESTAMP" property="clsj" />
+    <result column="CFRXM" jdbcType="VARCHAR" property="cfrxm" />
+    <result column="CFRID" jdbcType="VARCHAR" property="cfrid" />
+    <result column="CFQYMC" jdbcType="VARCHAR" property="cfqymc" />
+    <result column="CFSBID" jdbcType="VARCHAR" property="cfsbid" />
+    <result column="CFQYID" jdbcType="VARCHAR" property="cfqyid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_yjxx
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.yjxx.entity.ChasYjxx">
+    insert into chas_yw_yjxx (ID, ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, YJLB, 
+      JQMS, YJZT, YJJB, CFSJ, 
+      CLRXM, CLSJ, CFRXM, CFRID, 
+      CFQYMC, CFSBID, CFQYID
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      date_trunc('second', now()), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{yjlb,jdbcType=VARCHAR},
+      #{jqms,jdbcType=VARCHAR}, #{yjzt,jdbcType=VARCHAR}, #{yjjb,jdbcType=VARCHAR}, #{cfsj,jdbcType=TIMESTAMP}, 
+      #{clrxm,jdbcType=VARCHAR}, #{clsj,jdbcType=TIMESTAMP}, #{cfrxm,jdbcType=VARCHAR}, #{cfrid,jdbcType=VARCHAR}, 
+      #{cfqymc,jdbcType=VARCHAR}, #{cfsbid,jdbcType=VARCHAR}, #{cfqyid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.yjxx.entity.ChasYjxx">
+    update chas_yw_yjxx
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      YJLB = #{yjlb,jdbcType=VARCHAR},
+      JQMS = #{jqms,jdbcType=VARCHAR},
+      YJZT = #{yjzt,jdbcType=VARCHAR},
+      YJJB = #{yjjb,jdbcType=VARCHAR},
+      CFSJ = #{cfsj,jdbcType=TIMESTAMP},
+      CLRXM = #{clrxm,jdbcType=VARCHAR},
+      CLSJ = #{clsj,jdbcType=TIMESTAMP},
+      CFRXM = #{cfrxm,jdbcType=VARCHAR},
+      CFRID = #{cfrid,jdbcType=VARCHAR},
+      CFQYMC = #{cfqymc,jdbcType=VARCHAR},
+      CFSBID = #{cfsbid,jdbcType=VARCHAR},
+      CFQYID = #{cfqyid,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, YJLB, 
+    JQMS, YJZT, YJJB, CFSJ, CLRXM, CLSJ, CFRXM, CFRID, CFQYMC, CFSBID, CFQYID
+    from chas_yw_yjxx
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, YJLB, 
+    JQMS, YJZT, YJJB, CFSJ, CLRXM, CLSJ, CFRXM, CFRID, CFQYMC, CFSBID, CFQYID
+    from chas_yw_yjxx
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid !=null and baqid !=''">
+        and BAQID='${baqid}'
+      </if>
+      <if test="yjlb !=null and yjlb !=''">
+        and YJLB='${yjlb}'
+      </if>
+      <if test="yjzt !=null and yjzt !=''">
+        and YJZT='${yjzt}'
+      </if>
+      <if test="clrxm !=null and clrxm !=''">
+        and CLRXM like '${clrxm}%'
+      </if>
+      <if test="cfqymc !=null and cfqymc !=''">
+        and CFQYMC='${cfqymc}'
+      </if>
+       <if test="cfsj !=null and cfsj !=''">
+        and CFSJ &gt;'${cfsj}'
+      </if>
+      <if test="yjsj1 !=null and yjsj1 !=''">
+        and CFSJ &gt;='${yjsj1}'
+      </if>
+      <if test="yjsj2 !=null and yjsj2 !=''">
+        and CFSJ &lt;='${yjsj2}'
+      </if>
+      <if test="cfrxm !=null and cfrxm !=''">
+        and CFRXM like '${cfrxm}%'
+      </if>
+      <if test="cfrid !=null and cfrid !=''">
+        and CFRID ='${cfrid}'
+      </if>
+      <if test="cfqyid !=null and cfqyid !=''">
+        and CFQYID='${cfqyid}'
+      </if>
+       <if test="kstime !=null and kstime !=''">
+        and CFSJ &gt;'${kstime}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+		and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+	  </if>
+    </where>
+  </select>
+
+  <select id="findXzYjxx" resultMap="BaseResultMap">
+    select * from chas_yw_yjxx where yjlb = '12'
+    and cfrid in (select rybh from gg_baqryxx where (dafs != '01' and dafs != '06' and dafs != '09' and dafs != '10')
+    and baqid = '${baqid}') and isdel = 0 order by xgsj desc
+  </select>
+
+  <select id="findXsYjxx" resultMap="BaseResultMap">
+    select * from chas_yw_yjxx where yjlb = '12'
+    and cfrid in (select rybh from gg_baqryxx where (dafs = '01' or dafs = '06' or dafs = '09' or dafs = '10')
+    and baqid = '${baqid}') and isdel = 0 order by xgsj desc
+  </select>
+</mapper>

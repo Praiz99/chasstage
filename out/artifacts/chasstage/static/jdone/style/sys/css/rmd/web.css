@@ -1,0 +1,10 @@
+@charset "utf-8";
+body,html{height:100%}
+body{font-size:12px;margin:-2px 0 0 0;padding:0}
+.hidden{display:none}
+.table-grid{margin-top:10px;border:1px solid #7babcf;width:100%}
+.table-grid th{color:#102a49;height:28px;text-align:center;border:solid 1px #7babcf;white-space:nowrap;border-right:dotted 1px #cacaca;font-size:12px;border-top:solid 1px #cacaca}
+.table-grid td img{margin-right:2px;margin-bottom:-4px;}
+.table-grid td{height:22px;padding:4px 4px 4px 4px;border-right:dotted 1px #cacaca;border-bottom:solid 1px #a8cfeb;text-align:center;padding-left:5px}
+
+

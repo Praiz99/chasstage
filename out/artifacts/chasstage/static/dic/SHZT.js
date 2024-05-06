@@ -1,0 +1,1 @@
+function SHZT(){  var SourceArray = [{"name":"审核中","jpcode":"shz","code":"0","scode":"shenhezhong"},{"name":"审核通过","jpcode":"shtg","code":"1","scode":"shenhetongguo"},{"name":"审核不通过","jpcode":"shbtg","code":"-1","scode":"shenhebutongguo"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_JJZC_FZZTLX(){  var SourceArray = [{"name":"自然人","jpcode":"zrr","code":"1","scode":"ziranren"},{"name":"法人（单位）","jpcode":"fr-dw-","code":"2","scode":"faren-danwei-"},{"name":"未知","jpcode":"wz","code":"3","scode":"weizhi"}]; return SourceArray;}

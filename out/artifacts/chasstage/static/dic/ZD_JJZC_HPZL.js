@@ -1,0 +1,1 @@
+function ZD_JJZC_HPZL(){  var SourceArray = [{"name":"蓝牌","jpcode":"lp","code":"1","scode":"lanpai"},{"name":"黄牌","jpcode":"hp","code":"2","scode":"huangpai"},{"name":"特殊","jpcode":"ts","code":"3","scode":"teshu"}]; return SourceArray;}

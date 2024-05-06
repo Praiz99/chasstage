@@ -1,0 +1,1 @@
+function CHAS_QTDJ_JCQK_BS(){  var SourceArray = [{"name":"确认有过往病史","jpcode":"y","code":"1","scode":"you"},{"name":"确认无过往病史","jpcode":"w","code":"2","scode":"wu"}]; return SourceArray;}

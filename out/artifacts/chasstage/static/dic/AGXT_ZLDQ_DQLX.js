@@ -1,0 +1,1 @@
+function AGXT_ZLDQ_DQLX(){  var SourceArray = [{"name":"前科调取","jpcode":"qkdq","code":"01","scode":"qiankediaoqu"},{"name":"户籍信息调取","jpcode":"hjxxdq","code":"02","scode":"hujixinxidiaoqu"},{"name":"案件调取","jpcode":"ajdq","code":"03","scode":"anjiandiaoqu"},{"name":"人员调取","jpcode":"rydq","code":"04","scode":"renyuandiaoqu"}]; return SourceArray;}

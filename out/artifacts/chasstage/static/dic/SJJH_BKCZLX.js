@@ -1,0 +1,1 @@
+function SJJH_BKCZLX(){  var SourceArray = [{"name":"测试","jpcode":"cs","code":"0","scode":"ceshi"},{"name":"发起","jpcode":"fq","code":"1","scode":"faqi"},{"name":"续控","jpcode":"xk","code":"2","scode":"xukong"},{"name":"撤控","jpcode":"ck","code":"3","scode":"chekong"}]; return SourceArray;}

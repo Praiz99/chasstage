@@ -1,0 +1,1 @@
+function RQLB(){  var SourceArray = [{"name":"涉案人入区","jpcode":"sarrq","code":"01","scode":"sheanrenruqu"},{"name":"民警入区","jpcode":"mjrq","code":"02","scode":"minjingruqu"},{"name":"访客入区","jpcode":"fkrq","code":"03","scode":"fangkeruqu"}]; return SourceArray;}

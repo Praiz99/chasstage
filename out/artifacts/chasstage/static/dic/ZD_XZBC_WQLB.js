@@ -1,0 +1,1 @@
+function ZD_XZBC_WQLB(){  var SourceArray = [{"name":"所有","jpcode":"sy","code":"1","scode":"suoyou"},{"name":"持有","jpcode":"cy","code":"2","scode":"chiyou"},{"name":"使用","jpcode":"sy","code":"3","scode":"shiyong"},{"name":"担保","jpcode":"db","code":"4","scode":"danbao"}]; return SourceArray;}

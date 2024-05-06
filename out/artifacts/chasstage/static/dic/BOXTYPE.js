@@ -1,0 +1,1 @@
+function BOXTYPE(){  var SourceArray = [{"name":"无","jpcode":"w","code":"0","scode":"wu"},{"name":"大","jpcode":"d","code":"1","scode":"da"},{"name":"中","jpcode":"z","code":"2","scode":"zhong"},{"name":"小","jpcode":"x","code":"3","scode":"xiao"},{"name":"超大","jpcode":"cd","code":"4","scode":"chaoda"}]; return SourceArray;}

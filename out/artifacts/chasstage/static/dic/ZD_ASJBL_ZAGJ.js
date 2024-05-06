@@ -1,0 +1,1 @@
+function ZD_ASJBL_ZAGJ(){  var SourceArray = [{"name":"刀","jpcode":"d","code":"A0100","scode":"dao"}]; return SourceArray;}

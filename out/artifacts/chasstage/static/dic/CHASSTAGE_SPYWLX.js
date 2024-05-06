@@ -1,0 +1,1 @@
+function CHASSTAGE_SPYWLX(){  var SourceArray = [{"name":"亲情驿站","jpcode":"qq-z","code":"baqqqyzAct","scode":"qinqing-zhan"},{"name":"办案区人员","jpcode":"baqry","code":"dzxbaqryAct","scode":"bananqurenyuan"}]; return SourceArray;}

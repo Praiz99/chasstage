@@ -1,0 +1,1 @@
+function SACW_JESFSQ(){  var SourceArray = [{"name":"未收取","jpcode":"wsq","code":"0","scode":"weishouqu"},{"name":"已收取","jpcode":"ysq","code":"1","scode":"yishouqu"}]; return SourceArray;}

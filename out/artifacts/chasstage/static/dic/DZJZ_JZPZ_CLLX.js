@@ -1,0 +1,1 @@
+function DZJZ_JZPZ_CLLX(){  var SourceArray = [{"name":"行政","jpcode":"xz","code":"01","scode":"xingzheng"},{"name":"刑事","jpcode":"xs","code":"02","scode":"xingshi"},{"name":"通用","jpcode":"ty","code":"03","scode":"tongyong"},{"name":"警情","jpcode":"jq","code":"04","scode":"jingqing"}]; return SourceArray;}

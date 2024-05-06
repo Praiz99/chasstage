@@ -1,0 +1,1 @@
+function ZFKP_KPBZ_BZFL(){  var SourceArray = [{"name":"目录","jpcode":"ml","code":"01","scode":"mulu"},{"name":"标准项","jpcode":"bzx","code":"02","scode":"biaozhunxiang"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_DB_CON_TYPE(){  var SourceArray = [{"name":"JDBC","jpcode":"JDBC","code":"1","scode":"JDBC"},{"name":"JNDI","jpcode":"JNDI","code":"2","scode":"JNDI"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFKP_KSLB(){  var SourceArray = [{"name":"行政案件","jpcode":"xzaj","code":"01","scode":"xingzhenganjian"},{"name":"刑事案件","jpcode":"xsaj","code":"02","scode":"xingshianjian"},{"name":"法律法规","jpcode":"flfg","code":"03","scode":"falvfagui"}]; return SourceArray;}

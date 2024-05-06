@@ -1,0 +1,36 @@
+html{}
+body{padding-bottom:20px;}
+#main{margin:15px 10px 0 15px;}
+
+.nav-list{margin-bottom:20px;}
+.nav-list .nav-item{float:left;margin-right:30px; cursor:pointer;}
+.nav-list .nav-item a{color:#000;}
+.nav-list .nav-item a:hover{text-decoration:none;}
+.nav-list .nav-item .icon{width:70px;height:70px;}
+.nav-list .nav-item .title{ text-align:center; font-size:14px;}
+.nav-list .nav-item.desk .icon{ background:url("../../../sys/imgs/index/t01.png");}
+.nav-list .nav-item.news .icon{ background:url("../../../sys/imgs/index/t02.png");}
+.nav-list .nav-item.notice .icon{ background:url("../../../sys/imgs/index/t03.png");}
+.nav-list .nav-item.plan .icon{ background:url("../../../sys/imgs/index/t04.png");}
+.nav-list .nav-item.contacts .icon{ background:url("../../../sys/imgs/index/t05.png");}
+.nav-list .nav-item.mail .icon{ background:url("../../../sys/imgs/index/t06.png");}  
+.nav-list .nav-item.logs .icon { background:url("../../../sys/imgs/index/t07.png");} 
+.nav-list .nav-item.dosthings .icon{ background:url("../../../sys/imgs/index/t08.png");}   
+.nav-list .nav-item.fav .icon{ background:url("../../../sys/imgs/index/t09.png");}
+.nav-list .nav-item.browser  .icon{ background:url("../../../sys/imgs/index/t10.png");}
+
+.content-list{}
+.content-list .content-item{float:left;border:1px solid #cfcfcf;margin:0 10px 10px 0;width:382px;}
+.content-list .content-item .content-hd{height:36px; font-size:14px; line-height:36px;padding-left:15px;background:url("../../../sys/imgs/index/toolbarbg.png");border-bottom:1px solid #cfcfcf; cursor:move;}
+.content-list .content-item .content-hd .opt{float:right;margin-right:10px;}
+.content-list .content-item .content-hd .opt span{display:inline-block;width:12px;height:12px; cursor:pointer;}
+.content-list .content-item .content-hd .opt span.refresh{ background:url("../../../sys/imgs/index/p01.png");}
+.content-list .content-item .content-hd .opt span.setting{ background:url("../../../sys/imgs/index/p02.png");}
+.content-list .content-item .content-hd .opt span.report{ background:url("../../../sys/imgs/index/p03.png");}
+.content-list .content-item .content-hd .opt span.close{ background:url("../../../sys/imgs/index/p04.png");}
+
+.content-list .content-item .content-bd{height:170px;color:#000; overflow:auto; background:#fff;width:100%;}
+.content-list .content-item .content-bd .content-list{padding:10px;}
+.content-list .content-item .content-bd .content-list-item {margin-bottom:10px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.content-list .content-item .content-bd .content-list-item .icon{display:inline-block;margin-right:5px;width:8px;height:9px; background:url("../../../sys/imgs/index/plist.png");}
+.content-list .content-item .content-bd .content-list-item a{color:#000;}

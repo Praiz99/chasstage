@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.mjzpk.dao.ChasXtMjzpkMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.mjzpk.entity.ChasXtMjzpk">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="dwdm" jdbcType="VARCHAR" property="dwdm" />
+    <result column="dwmc" jdbcType="VARCHAR" property="dwmc" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="mjxm" jdbcType="VARCHAR" property="mjxm" />
+    <result column="mjsfzh" jdbcType="VARCHAR" property="mjsfzh" />
+    <result column="mjjh" jdbcType="VARCHAR" property="mjjh" />
+    <result column="zpid" jdbcType="VARCHAR" property="zpid" />
+    <result column="sprjh" jdbcType="VARCHAR" property="sprjh" />
+    <result column="sprxm" jdbcType="VARCHAR" property="sprxm" />
+    <result column="sprdwdm" jdbcType="VARCHAR" property="sprdwdm" />
+    <result column="spyj" jdbcType="VARCHAR" property="spyj" />
+    <result column="spzt" jdbcType="VARCHAR" property="spzt" />
+    <result column="lxr" jdbcType="VARCHAR" property="lxr" />
+    <result column="gzdw" jdbcType="VARCHAR" property="gzdw" />
+    <result column="bz" jdbcType="VARCHAR" property="bz" />
+    <result column="lxdh" jdbcType="VARCHAR" property="lxdh" />
+    <result column="rylx" jdbcType="VARCHAR" property="rylx" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_mjzpk set isdel=1
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.mjzpk.entity.ChasXtMjzpk">
+    insert into chas_xt_mjzpk (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      dwdm, dwmc, dwxtbh, 
+      mjxm, mjsfzh, mjjh, 
+      zpid,sprjh,
+      sprxm, sprdwdm, spyj,
+      spzt,lxr,gzdw,bz,lxdh,rylx)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{dwdm,jdbcType=VARCHAR}, #{dwmc,jdbcType=VARCHAR}, #{dwxtbh,jdbcType=VARCHAR}, 
+      #{mjxm,jdbcType=VARCHAR}, #{mjsfzh,jdbcType=VARCHAR}, #{mjjh,jdbcType=VARCHAR}, 
+      #{zpid,jdbcType=VARCHAR},#{sprjh,jdbcType=VARCHAR},
+      #{sprxm,jdbcType=VARCHAR}, #{sprdwdm,jdbcType=VARCHAR}, #{spyj,jdbcType=VARCHAR},
+      #{spzt,jdbcType=VARCHAR},#{lxr,jdbcType=VARCHAR},#{gzdw,jdbcType=VARCHAR},#{bz,jdbcType=VARCHAR}
+      ,#{lxdh,jdbcType=VARCHAR},#{rylx,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.mjzpk.entity.ChasXtMjzpk">
+    update chas_xt_mjzpk
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      dwdm = #{dwdm,jdbcType=VARCHAR},
+      dwmc = #{dwmc,jdbcType=VARCHAR},
+      dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+      mjxm = #{mjxm,jdbcType=VARCHAR},
+      mjsfzh = #{mjsfzh,jdbcType=VARCHAR},
+      mjjh = #{mjjh,jdbcType=VARCHAR},
+      zpid = #{zpid,jdbcType=VARCHAR},
+      sprjh = #{sprjh,jdbcType=VARCHAR},
+      sprxm = #{sprxm,jdbcType=VARCHAR},
+      sprdwdm = #{sprdwdm,jdbcType=VARCHAR},
+      spyj = #{spyj,jdbcType=VARCHAR},
+      spzt = #{spzt,jdbcType=VARCHAR},
+      lxr = #{lxr,jdbcType=VARCHAR},
+      gzdw = #{gzdw,jdbcType=VARCHAR},
+      bz = #{bz,jdbcType=VARCHAR},
+      lxdh=#{lxdh,jdbcType=VARCHAR},
+      rylx=#{rylx,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwdm, 
+    dwmc, dwxtbh, mjxm, mjsfzh, mjjh, zpid,sprjh, sprxm, sprdwdm, spyj, spzt,lxr,gzdw,bz,lxdh,rylx
+    from chas_xt_mjzpk
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwdm, 
+    dwmc, dwxtbh, mjxm, mjsfzh, mjjh, zpid,sprjh, sprxm, sprdwdm, spyj, spzt,lxr,gzdw,bz,lxdh,rylx
+    from chas_xt_mjzpk
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="dwdm != null and dwdm !=''">
+        and DWDM = '${dwdm}'
+      </if>
+      <if test="dwxtbh != null and dwxtbh !=''">
+        and DWXTBH = '${dwxtbh}'
+      </if>
+      <if test="mjxm != null and mjxm !=''">
+        and mjxm = '${mjxm}'
+      </if>
+      <if test="mjsfzh != null and mjsfzh !=''">
+        and mjsfzh = '${mjsfzh}'
+      </if>
+      <if test="mjjh != null and mjjh !=''">
+        and mjjh = '${mjjh}'
+      </if>
+      <if test="spzt != null and spzt !=''">
+        and spzt = '${spzt}'
+      </if>
+      <if test="baqmc !=null and baqmc !=''">
+        and BAQMC LIKE '%${baqmc}%'
+      </if>
+      <if test="lrsj1 !=null and lrsj1 !=''">
+        and lrsj &gt;='${lrsj1}'
+      </if>
+      <if test="lrsj2 !=null and lrsj2 !=''">
+        and lrsj &lt;='${lrsj2}'
+      </if>
+      <if test="qxbs == 'province'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+    </where>
+  </select>
+
+  <select id="findByParams" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwdm,
+    dwmc, dwxtbh, mjxm, mjsfzh, mjjh, zpid,sprjh, sprxm, sprdwdm, spyj, spzt, lxr,gzdw,bz,lxdh,rylx
+    from chas_xt_mjzpk
+    <where>
+      1=1 and isdel=0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="dwdm != null and dwdm !=''">
+        and dwdm = '${dwdm}'
+      </if>
+      <if test="dwxtbh != null and dwxtbh !=''">
+        and dwxtbh = '${dwxtbh}'
+      </if>
+      <if test="mjxm != null and mjxm !=''">
+        and mjxm = '${mjxm}'
+      </if>
+      <if test="mjsfzh != null and mjsfzh !=''">
+        and mjsfzh = '${mjsfzh}'
+      </if>
+      <if test="mjjh != null and mjjh !=''">
+        and mjjh = '${mjjh}'
+      </if>
+      <if test="spzt != null and spzt !=''">
+        and spzt = '${spzt}'
+      </if>
+    </where>
+  </select>
+  <select id="findDelMjxx" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, dwdm,
+    dwmc, dwxtbh, mjxm, mjsfzh, mjjh, zpid,sprjh, sprxm, sprdwdm, spyj, spzt,lxr,gzdw,bz,lxdh,rylx
+    from chas_xt_mjzpk where isdel=1
+
+  </select>
+</mapper>

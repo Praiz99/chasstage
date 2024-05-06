@@ -1,0 +1,51 @@
+html,body{
+	width: 99%;
+	height: 98%;
+	padding: 0px;
+}
+
+/**
+   浏览等级
+*/
+.rdolist{
+	display: none;	
+}
+.rdobox, .chkbox {
+    display: inline-block;
+    padding: 10px;
+    height: 16px;
+    line-height: 16px;
+    background: #eee;
+    border-radius: 3px;
+    color: #666;
+    font-family: 'Microsoft YaHei';
+}
+.checked {
+    background: #3498DB;
+    color: #fff;
+    margin: 5px;
+}
+.unchecked{
+	margin: 5px;
+}
+.check-image {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: -4px;
+    background: url(../../static/jdone/style/sys/imgs/index/input-unchecked.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#rank label{
+	margin: 20 auto;
+	width: 50%;
+	height: 15%;
+	display: block;
+	text-align: center;
+}
+.radiobox-content{
+	font-size: x-large;
+    line-height: 3.3;
+    text-align: center;
+}

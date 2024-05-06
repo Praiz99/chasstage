@@ -1,0 +1,1 @@
+function SXDD_DDZT(){  var SourceArray = [{"name":"待调度","jpcode":"ddd","code":"0","scode":"daidiaodu"},{"name":"已调度（未到岗）","jpcode":"ydd-wdg-","code":"1","scode":"yidiaodu-weidaogang-"},{"name":"已到岗","jpcode":"ydg","code":"2","scode":"yidaogang"},{"name":"任务结束","jpcode":"rwjs","code":"3","scode":"renwujieshu"}]; return SourceArray;}

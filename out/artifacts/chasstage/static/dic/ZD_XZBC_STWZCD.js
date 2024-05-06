@@ -1,0 +1,1 @@
+function ZD_XZBC_STWZCD(){  var SourceArray = [{"name":"完整","jpcode":"wz","code":"1","scode":"wanzheng"},{"name":"尸块","jpcode":"sk","code":"2","scode":"shikuai"}]; return SourceArray;}

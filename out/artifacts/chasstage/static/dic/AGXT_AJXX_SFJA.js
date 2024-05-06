@@ -1,0 +1,1 @@
+function AGXT_AJXX_SFJA(){  var SourceArray = [{"name":"未结案","jpcode":"yja","code":"0","scode":"yijiean"},{"name":"已结案","jpcode":"yja","code":"1","scode":"yijiean"}]; return SourceArray;}

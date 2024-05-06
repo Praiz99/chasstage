@@ -1,0 +1,116 @@
+/* 
+fork this demo on github: 
+https://github.com/jkneb/street-fighter-css
+*/
+/* 
+A little more explanations on how it works 
+http://front-back.com/animate-png-sprites-with-css3-animations
+*/
+/* 
+ * mixins 
+*/
+/* element who's going to receive this class will be mirrored */
+.flip {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.avatar
+{
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  background-image: url("1.gif");
+  background-repeat:no-repeat; 
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;;
+}
+
+
+
+
+.ken {
+  position: absolute;
+  #top: 512px;
+  #left: 850px;
+  width: 16px;
+  height: 20px;
+  background-position:center;
+  background-size:cover;
+}
+
+.ken_up {
+  background-image: url("../ryicon/fkup.png");
+}
+.ken_down {
+  background-image: url("../ryicon/fkdown.png");
+}
+
+.ken_left {
+  background-image: url("../ryicon/fkleft.png");
+}
+.ken_right {
+  background-image: url("../ryicon/fkright.png");
+}
+
+.nfk_up {
+  background-image: url("../ryicon/nfkup.png");
+}
+.nfk_down {
+  background-image: url("../ryicon/nfkdown.png");
+}
+
+.nfk_left {
+  background-image: url("../ryicon/nfkleft.png");
+}
+.nfk_right {
+  background-image: url("../ryicon/nfkright.png");
+}
+
+
+.fk_up {
+  background-image: url("../ryicon/fkup.png");
+}
+.fk_down {
+  background-image: url("../ryicon/fkdown.png");
+}
+
+.fk_left {
+  background-image: url("../ryicon/fkleft.png");
+}
+.fk_right {
+  background-image: url("../ryicon/fkright.png");
+}
+
+.mj_up {
+  background-image: url("../ryicon/mjup.png");
+}
+.mj_down {
+  background-image: url("../ryicon/mjdown.png");
+}
+
+.mj_left {
+  background-image: url("../ryicon/mjleft.png");
+}
+.mj_right {
+  background-image: url("../ryicon/mjright.png");
+}
+
+
+
+.stage {
+  #position: absolute;
+  top: 0;
+  width: 900px;
+  height: 330px;
+  #background: url("sf2-bg.jpg") no-repeat 0px -100px;
+  background-size: contain;
+  float: left;
+  margin-right: 20px;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+}

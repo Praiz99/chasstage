@@ -1,0 +1,1 @@
+function DZJZ_AJGL_GDZT(){  var SourceArray = [{"name":"待推送","jpcode":"dts","code":"01","scode":"daituisong"},{"name":"已推送","jpcode":"yts","code":"02","scode":"yituisong"},{"name":"被退回","jpcode":"bth","code":"03","scode":"beituihui"},{"name":"已归档","jpcode":"ygd","code":"04","scode":"yiguidang"}]; return SourceArray;}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.jhrw.dao.ChasYwJhrwMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.jhrw.entity.ChasYwJhrw">
+    <result column="id" jdbcType="OTHER" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="ryxm" jdbcType="VARCHAR" property="ryxm" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="rqyy" jdbcType="VARCHAR" property="rqyy" />
+    <result column="rqsj" jdbcType="TIMESTAMP" property="rqsj" />
+    <result column="rwlx" jdbcType="VARCHAR" property="rwlx" />
+    <result column="rwzt" jdbcType="VARCHAR" property="rwzt" />
+    <result column="jhry" jdbcType="VARCHAR" property="jhry" />
+    <result column="rwkssj" jdbcType="TIMESTAMP" property="rwkssj" />
+    <result column="rwjssj" jdbcType="TIMESTAMP" property="rwjssj" />
+    <result column="sjbq" jdbcType="TIMESTAMP" property="sjbq" />
+    <result column="jhrwqd" jdbcType="VARCHAR" property="jhrwqd" />
+    <result column="jhrwzd" jdbcType="VARCHAR" property="jhrwzd" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_jhrw
+    set isdel = 1,xgsj = date_trunc('second', now())
+	where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.jhrw.entity.ChasYwJhrw">
+    insert into chas_yw_jhrw (id, isdel, data_flag,
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      ryxm, rybh,  rqyy,
+      rqsj, rwlx, rwzt,
+      jhry, rwkssj, rwjssj, sjbq,
+      jhrwqd, jhrwzd, dwxtbh)
+    values (#{id,jdbcType=OTHER}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{ryxm,jdbcType=VARCHAR},  #{rybh,jdbcType=VARCHAR}, #{rqyy,jdbcType=VARCHAR},
+      #{rqsj,jdbcType=TIMESTAMP}, #{rwlx,jdbcType=VARCHAR}, #{rwzt,jdbcType=VARCHAR},
+      #{jhry,jdbcType=VARCHAR}, #{rwkssj,jdbcType=TIMESTAMP}, #{rwjssj,jdbcType=TIMESTAMP},
+      #{sjbq,jdbcType=TIMESTAMP}, #{jhrwqd,jdbcType=VARCHAR}, #{jhrwzd,jdbcType=VARCHAR},
+      #{dwxtbh,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.jhrw.entity.ChasYwJhrw">
+    update chas_yw_jhrw
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+    DATA_FLAG = #{dataFlag,jdbcType=CHAR},
+    LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+    LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+    XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+    baqid = #{baqid,jdbcType=VARCHAR},
+    baqmc = #{baqmc,jdbcType=VARCHAR},
+    ryxm = #{ryxm,jdbcType=VARCHAR} ,
+    rybh = #{rybh,jdbcType=VARCHAR} ,
+    rqyy = #{rqyy,jdbcType=VARCHAR},
+    rqsj =#{rqsj,jdbcType=TIMESTAMP},
+    rwlx = #{rwlx,jdbcType=VARCHAR} ,
+    rwzt = #{rwzt,jdbcType=VARCHAR} ,
+    jhry =#{jhry,jdbcType=VARCHAR},
+    rwkssj = #{rwkssj,jdbcType=TIMESTAMP},
+    rwjssj = #{rwjssj,jdbcType=TIMESTAMP},
+    jhrwqd = #{jhrwqd,jdbcType=VARCHAR},
+    jhrwzd = #{jhrwzd,jdbcType=VARCHAR},
+    dwxtbh = #{dwxtbh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String"
+          resultMap="BaseResultMap">
+   select * from chas_yw_jhrw
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from chas_yw_jhrw
+    <where>
+      1=1 and isdel = 0
+      <if test="ryxm != null and ryxm !=''">
+        and ryxm like '%${ryxm}%'
+      </if>
+      <if test="jhry != null and jhry !=''">
+        and jhry like '%${jhry}%'
+      </if>
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="rwlx != null and rwlx !=''">
+        and rwlx = '${rwlx}'
+      </if>
+      <if test="rwzt != null and rwzt !=''">
+        and rwzt = '${rwzt}'
+      </if>
+      <if test="rwzt23 != null and rwzt23 !=''">
+        and (rwzt = '02' or rwzt = '03')
+      </if>
+      <if test="rwzts != null and rwzts !=''">
+        and (rwzt = '01' or rwzt = '02' or rwzt = '03')
+      </if>
+      <if test="rqsj1 !=null and rqsj1 !=''">
+        and rqsj &gt;='${rqsj1}'
+      </if>
+      <if test="rqsj2 !=null and rqsj2 !=''">
+        and rqsj &lt;='${rqsj2}'
+      </if>
+      <if test="rwkssj1 !=null and rwkssj1 !=''">
+        and rwkssj &gt;='${rwkssj1}'
+      </if>
+      <if test="rwkssj2 !=null and rwkssj2 !=''">
+        and rwkssj &lt;='${rwkssj2}'
+      </if>
+      <if test="rwjssj1 !=null and rwjssj1 !=''">
+        and rwjssj &gt;='${rwjssj1}'
+      </if>
+      <if test="rwjssj2 !=null and rwjssj2 !=''">
+        and rwjssj &lt;='${rwjssj2}'
+      </if>
+
+      <if test="xyrbh != null and xyrbh !=''">
+        and rybh like '%${rybh}%'
+      </if>
+      <if test="xyrmc != null and xyrmc !=''">
+        and ryxm like '%${ryxm}%'
+      </if>
+      <if test="rwmc != null and rwmc !=''">
+        and rwlx = '${rwlx}'
+      </if>
+      <if test="yjry != null and yjry !=''">
+        and yjry = '${yjry}'
+      </if>
+      <if test="jsry != null and jsry !=''">
+        and jsry like '%${jsry}%'
+      </if>
+      <if test="sbsj1 !=null and sbsj1 !=''">
+        and rwkssj &gt;='${sbsj1}'
+      </if>
+      <if test="sbsj2 !=null and sbsj2 !=''">
+        and rwkssj &lt;='${sbsj2}'
+      </if>
+      <if test="qxbs == 'province'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <select id="getJhrwByRybhAndRwlx" parameterType="java.lang.String"
+          resultMap="BaseResultMap">
+   select * from chas_yw_jhrw
+    where isdel = 0 and rybh = #{rybh,jdbcType=VARCHAR} and (rwzt = '01' or rwzt = '02' or rwzt = '03')
+    and rwlx = #{rwlx,jdbcType=VARCHAR}
+  </select>
+
+  <select id="getDpData" resultType="java.lang.String" >
+   select * from chas_yw_jhrw
+    <where> isdel = 0 and (rwzt = '02' or rwzt = '03')
+    </where>
+  </select>
+
+  <select id="getJhrwByrwzt" parameterType="java.lang.String" resultMap="BaseResultMap" >
+    select * from chas_yw_jhrw
+    <where> isdel = 0 and rwzt = #{rwzt,jdbcType=VARCHAR}
+    </where>
+  </select>
+
+</mapper>

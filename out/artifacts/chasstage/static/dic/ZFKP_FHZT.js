@@ -1,0 +1,1 @@
+function ZFKP_FHZT(){  var SourceArray = [{"name":"待复核","jpcode":"dfh","code":"01","scode":"daifuhe"},{"name":"复核中","jpcode":"fhz","code":"02","scode":"fuhezhong"},{"name":"复核完成","jpcode":"fhwc","code":"03","scode":"fuhewancheng"},{"name":"已确认","jpcode":"yqr","code":"04","scode":"yiqueren"}]; return SourceArray;}

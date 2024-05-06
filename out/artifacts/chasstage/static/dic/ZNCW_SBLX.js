@@ -1,0 +1,1 @@
+function ZNCW_SBLX(){  var SourceArray = [{"name":"自助柜","jpcode":"zzg","code":"buffetCabinet","scode":"zizhugui"},{"name":"通用设备","jpcode":"tysb","code":"storageBox","scode":"tongyongshebei"},{"name":"储物柜","jpcode":"cwg","code":"storageCabinet","scode":"chuwugui"},{"name":"储物架","jpcode":"cwj","code":"storageRack","scode":"chuwujia"}]; return SourceArray;}

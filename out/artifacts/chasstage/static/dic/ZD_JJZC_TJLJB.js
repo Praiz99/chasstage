@@ -1,0 +1,1 @@
+function ZD_JJZC_TJLJB(){  var SourceArray = [{"name":"部A","jpcode":"bA","code":"1","scode":"buA"},{"name":"部B","jpcode":"bB","code":"2","scode":"buB"},{"name":"省A","jpcode":"sA","code":"3","scode":"shengA"},{"name":"省B","jpcode":"sB","code":"4","scode":"shengB"},{"name":"地市","jpcode":"ds","code":"5","scode":"dishi"}]; return SourceArray;}

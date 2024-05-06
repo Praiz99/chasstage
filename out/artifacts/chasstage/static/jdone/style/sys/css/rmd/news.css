@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+.b-news-view { width:798px; margin:0px auto; border: 1px dashed black;}
+
+.b-news-view-right { background:#BBFFFF; width:199px; vertical-align:top;}
+.b-news-view-title-div { border-bottom:1px dashed #999; margin:5px 10px 0 8px; background:#F4FAFE}
+.b-news-view-title {width:72%; text-align:center;font-size:16px; font-weight:bold; margin-left:58px; font-family:黑体,Verdana; color:#444; line-height:30px;_margin-left:20px; }
+.b-news-view-info {font-size:12px; color:#888; line-height:22px; margin:4px 10px 0 8px; background:#BAE1EF; border:1px solid black; padding-left:4px;}
+.b-news-view-info-single {float:left; width:32%;}
+.b-news-view-content { clear:both; margin:9px 10px 10px 12px; color:#444; line-height:20px; }
+.b-news-rel-div { width:188px; margin:4px 0 5px 6px; }
+.b-news-notice { float:right; margin:5px 5px 0 0 ;_width:88px;}
+.b-news-favor {display:inline; float:left; }
+.b-news-situation {display:inline; float:left ; border:2px solid #FFF; line-height:16px;margin-right:4px; color:#666; }
+
+/* 第一种框样式（蓝色） */
+.porlet-1-bframe { margin-bottom:10px;text-align:left}/* 公告栏的最外框。设定与下方的距离为10px，可修改or删除 */
+.porlet-1-bframe table { width:100%}
+.porlet-1-bframe-mm {background-color:#FFF; font-size:12px; height:23px; line-height:20px;overflow:auto;  color:#222;}/* 中间部分 */
+
+/* 菜单列表样式B */
+.list-ul-b { width:100%; margin:0px;text-align:left}
+.list-ul-b-title { background:#C4E2FD ;height:24px; margin-bottom:5px;}
+.list-ul-b-title-txt {height:16px; line-height:16px; font-size:12px;padding:5px 0px 0px 13px; color:#227DA8; margin-left:11px; font-weight:bold}/* 标题样式 */
+.list-ul-b-div { background:#DDF0F7; border:1px solid #BAE1EF;font-size:12px; }/* 边框样式 */
+.list-ul-b-div ul { margin:5px 8px 7px 8px; padding:0px; list-style:none}
+.list-ul-b-div li{height:22px;_height:18px;line-height:22px;padding-top:0;_padding-top:6px;font-size:12px;}
+.list-ul-b-div li a { color:#222;}
+.list-ul-b-div li a:hover { color:#2B68B3}
+.list-ul-b-div li span{margin-left:4px;display:inline-block;width:13px;height:18px;}
+
+.cb { clear:both; line-height:0; font-size:0; height:0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

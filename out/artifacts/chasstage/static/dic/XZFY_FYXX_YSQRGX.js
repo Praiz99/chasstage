@@ -1,0 +1,1 @@
+function XZFY_FYXX_YSQRGX(){  var SourceArray = [{"name":"亲属","jpcode":"qs","code":"01","scode":"qinshu"},{"name":"好友","jpcode":"hy","code":"02","scode":"haoyou"},{"name":"律师","jpcode":"ls","code":"03","scode":"lvshi"},{"name":"其他","jpcode":"qt","code":"04","scode":"qita"}]; return SourceArray;}

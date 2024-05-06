@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.ryjl.dao.ChasRyjlMapper">
+    <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.ryjl.entity.ChasRyjl">
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="ISDEL" jdbcType="INTEGER" property="isdel"/>
+        <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag"/>
+        <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh"/>
+        <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj"/>
+        <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh"/>
+        <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj"/>
+        <result column="BAQID" jdbcType="VARCHAR" property="baqid"/>
+        <result column="BAQMC" jdbcType="VARCHAR" property="baqmc"/>
+        <result column="RYBH" jdbcType="VARCHAR" property="rybh"/>
+        <result column="WDBH_H" jdbcType="VARCHAR" property="wdbhH"/>
+        <result column="WDBH_L" jdbcType="VARCHAR" property="wdbhL"/>
+        <result column="RYZT" jdbcType="VARCHAR" property="ryzt"/>
+        <result column="ajbh" jdbcType="VARCHAR" property="ajbh"/>
+        <result column="CWG_ID" jdbcType="VARCHAR" property="cwgId"/>
+        <result column="CWG_LX" jdbcType="VARCHAR" property="cwgLx"/>
+        <result column="CWG_BH" jdbcType="VARCHAR" property="cwgBh"/>
+        <result column="CFSJ" jdbcType="TIMESTAMP" property="cfsj"/>
+        <result column="QZSJ" jdbcType="TIMESTAMP" property="qzsj"/>
+        <result column="XB" jdbcType="VARCHAR" property="xb"/>
+        <result column="XM" jdbcType="VARCHAR" property="xm"/>
+        <result column="RYLB" jdbcType="VARCHAR" property="rylb"/>
+        <result column="SFTAYJ" jdbcType="INTEGER" property="sftayj"/>
+        <result column="DHS_BH" jdbcType="VARCHAR" property="dhsBh"/>
+        <result column="SXS_BH" jdbcType="VARCHAR" property="sxsBh"/>
+        <result column="SJG_ID" jdbcType="VARCHAR" property="sjgId"/>
+        <result column="SJG_BH" jdbcType="VARCHAR" property="sjgBh"/>
+        <result column="lczt" jdbcType="VARCHAR" property="lczt"/>
+        <result column="ywbh" jdbcType="VARCHAR" property="ywbh"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_ryjl
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+    <delete id="deleteByPrimaryRbyh" parameterType="java.lang.String">
+    delete from chas_yw_ryjl where RYBH = #{rybh,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.wckj.chasstage.modules.ryjl.entity.ChasRyjl">
+    insert into chas_yw_ryjl (ID, ISDEL, DATA_FLAG,
+      LRR_SFZH, LRSJ, XGR_SFZH,
+      XGSJ, BAQID, BAQMC, RYBH,
+      WDBH_H, WDBH_L, RYZT,
+      ajbh, CWG_ID,CWG_LX,CWG_BH, CFSJ,
+      QZSJ, XB, XM, RYLB,
+      SFTAYJ, DHS_BH, SXS_BH,SJG_ID,SJG_BH,LCZT,YWBH
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR},
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{rybh,jdbcType=VARCHAR},
+      #{wdbhH,jdbcType=VARCHAR}, #{wdbhL,jdbcType=VARCHAR}, #{ryzt,jdbcType=VARCHAR},
+      #{ajbh,jdbcType=VARCHAR},  #{cwgId,jdbcType=VARCHAR},  #{cwgLx,jdbcType=VARCHAR},#{cwgBh,jdbcType=VARCHAR}, #{cfsj,jdbcType=TIMESTAMP},
+      #{qzsj,jdbcType=TIMESTAMP}, #{xb,jdbcType=VARCHAR}, #{xm,jdbcType=VARCHAR}, #{rylb,jdbcType=VARCHAR},
+      #{sftayj,jdbcType=INTEGER}, #{dhsBh,jdbcType=VARCHAR}, #{sxsBh,jdbcType=VARCHAR},
+      #{sjgId,jdbcType=VARCHAR},#{sjgBh,jdbcType=VARCHAR},#{lczt,jdbcType=VARCHAR},#{ywbh,jdbcType=VARCHAR}
+      )
+  </insert>
+    <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.ryjl.entity.ChasRyjl">
+    update chas_yw_ryjl
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+      XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      RYBH = #{rybh,jdbcType=VARCHAR},
+      WDBH_H = #{wdbhH,jdbcType=VARCHAR},
+      WDBH_L = #{wdbhL,jdbcType=VARCHAR},
+      RYZT = #{ryzt,jdbcType=VARCHAR},
+      ajbh = #{ajbh,jdbcType=VARCHAR},
+      CWG_ID= #{cwgId,jdbcType=VARCHAR},
+      CWG_LX= #{cwgLx,jdbcType=VARCHAR},
+      CWG_BH = #{cwgBh,jdbcType=VARCHAR},
+      CFSJ = #{cfsj,jdbcType=TIMESTAMP},
+      QZSJ = #{qzsj,jdbcType=TIMESTAMP},
+      XB = #{xb,jdbcType=VARCHAR},
+      XM = #{xm,jdbcType=VARCHAR},
+      RYLB = #{rylb,jdbcType=VARCHAR},
+      SFTAYJ = #{sftayj,jdbcType=INTEGER},
+      DHS_BH = #{dhsBh,jdbcType=VARCHAR},
+      SXS_BH = #{sxsBh,jdbcType=VARCHAR},
+      SJG_ID = #{sjgId,jdbcType=VARCHAR},
+      SJG_BH = #{sjgBh,jdbcType=VARCHAR},
+      LCZT = #{lczt,jdbcType=VARCHAR},
+      YWBH = #{ywbh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select *
+    from chas_yw_ryjl
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select *
+        from chas_yw_ryjl
+        <where>
+            1=1
+            <if test="isdel != null and isdel !=''">
+
+            </if>
+            <if test="isdel == null or isdel ==''">
+                and ISDEL=0
+            </if>
+            <if test="baqid != null and baqid !=''">
+                and BAQID = '${baqid}'
+            </if>
+            <if test="wdbhL != null and wdbhL !=''">
+                and WDBH_L = '${wdbhL}'
+            </if>
+            <if test="wdbhH != null and wdbhH !=''">
+                and WDBH_H = '${wdbhH}'
+            </if>
+            <if test="ryzt != null and ryzt !=''">
+                and RYZT = '${ryzt}'
+            </if>
+            <if test="rybh != null and rybh !=''">
+                and RYBH = '${rybh}'
+            </if>
+            <if test="sjgId != null and sjgId != ''">
+                and sjg_id = '${sjgId}'
+            </if>
+            <if test="ajbh != null">
+               and position('${ywbh}' in ywbh) &gt; 0
+            </if>
+            <if test="xm != null and xm != ''">
+                and xm like '${xm}%'
+            </if>
+            <if test="baqList !=null">
+                and BAQID in
+                <foreach item="item" index="index" collection="baqList" open="(" separator="," close=")">
+                    '${item}'
+                </foreach>
+            </if>
+            <if test="rybhs !=null and rybhs != ''">
+                and RYBH in
+                <foreach item="item" index="index" collection="rybhs" open="(" separator="," close=")">
+                    '${item}'
+                </foreach>
+            </if>
+        </where>
+    </select>
+    <select id="findByParams" resultMap="BaseResultMap">
+        select *
+        from chas_yw_ryjl
+        <where>
+            1=1
+            <if test="isdel != null and isdel !=''">
+
+            </if>
+            <if test="isdel == null or isdel ==''">
+                and ISDEL=0
+            </if>
+            <if test="baqid != null and baqid !=''">
+                and BAQID = '${baqid}'
+            </if>
+            <if test="rybh != null and rybh !=''">
+                and RYBH = '${rybh}'
+            </if>
+            <if test="ryzt != null and ryzt !=''">
+                and RYZT = '${ryzt}'
+            </if>
+            <if test="wdbh_h != null and wdbh_h !=''">
+                and WDBH_H = '${wdbh_h}'
+            </if>
+            <if test="wdbh_l != null and wdbh_l !=''">
+                and WDBH_L = '${wdbh_l}'
+            </if>
+            <if test="ywbh != null">
+                and ajbh = '${ajbh}'
+            </if>
+        </where>
+    </select>
+    <select id="findByWdbhL" resultMap="BaseResultMap">
+        select *
+        from chas_yw_ryjl where 1 = 1 and isdel = 0 and baqid='${baqid}' and WDBH_L = '${wdbhL}'
+         order by lrsj desc limit 1 offset 0
+    </select>
+    <select id="findUsedLockerById" resultMap="BaseResultMap">
+        select * from chas_yw_ryjl where ryzt = '1' and isdel = '0' and (cwg_id = '${wpgId}' or sjg_id = '${wpgId}') ORDER BY lrsj asc limit 1
+    </select>
+
+    <update id="updateYwbhByRyywbh">
+        update chas_yw_ryjl
+        set ywbh = '${ywbh}'
+        where ywbh = '${oldywbh}'
+    </update>
+    <delete id="clearByRybh" parameterType="java.lang.String">
+    delete from chas_yw_ryjl where rybh='${rybh}'
+  </delete>
+
+    <select id="findRyjlByRybhUndel" resultMap="BaseResultMap">
+        select * from chas_yw_ryjl where baqid = '${baqid}' and rybh = '${rybh}' and isdel = 0
+    </select>
+    <select id="findByWdbhLUndel" resultMap="BaseResultMap">
+         select *
+        from chas_yw_ryjl where  WDBH_L = '${wdbhl}' and isdel = 0
+         order by lrsj desc limit 1 offset 0
+    </select>
+</mapper>

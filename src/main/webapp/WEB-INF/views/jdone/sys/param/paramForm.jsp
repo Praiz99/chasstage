@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/views/framework/include/taglib.jsp"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%@ include file="/WEB-INF/views/framework/include/default.jsp"%>  
+<link rel="stylesheet" type="text/css" href="${ctx}/static/framework/plugins/jquery-plugins/validate/jquery.validate.min.css">
+<script type="text/javascript" src="${ctx}/static/framework/plugins/jquery-plugins/validate/jquery.validate.min.js"></script>
+<link rel="stylesheet" type="text/css" href="${ctx}/static/framework/style/css/default/sysForm.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/static/framework/plugins/jquery-ztree/3.5.12/css/zTreeStyle/zTreeStyle.css">
+<script type="text/javascript" src="${ctx}/static/framework/plugins/jquery-ztree/3.5.12/js/jquery.ztree.all-3.5.js"></script>
+<script type="text/javascript">
+ $(function (){
+		$("#src").html(parent.src);
+		if($("#id").val() == ""){  //新增时才给定最大排序值
+			$("#orderId").val(parent.desort);
+		}
+		
+	});
+ </script>
+</head>
+<body>
+	<!-- 菜单操作 开始 -->
+		<form id="mainForm" class="form-horizontal"  method="post">
+			<!-- 隐藏域   开始-->
+			<input type="hidden" name="id" id="id" value="${menu.id}"/>
+			<input id="isGroup" name="isGroup" type="hidden" value="0"/>
+			<input type="hidden" name="groupId" id="groupId" value="${pid}" /> <!-- 父菜单ID判断是否添加子菜单或父菜单 -->
+			<div id="main">
+			<h2 class="subfild">
+	        	<span>${not empty menu.id?'修改参数':'添加参数'}</span>
+	        </h2>
+            </div>
+			<!-- 隐藏域  结束 -->
+			<table class="table" cellpadding="0" cellspacing="0" width="99%">
+				<tr>
+					<th width="10%"><label class="control-label">参数名称:</label></th>
+					<td>
+					<input type="text" name="name" class="required" value="${menu.name}"/>
+					<span class="help-inline">
+							<font color="red">*</font>
+					</span>
+					</td>
+					<th width="10%"><label class="control-label">参数标识:</label></th>
+					<td>
+						<input id="mark" name="mark"  class="required"  type="text" value="${menu.mark}"/>
+						<span class="help-inline">
+							<font color="red">*</font>
+					</span>
+					</td>
+				</tr>
+				<tr>
+					<th width="10%"><label class="control-label">排序ID:</label></th>
+					<td  colspan="3">
+						<input id="orderId" name="orderId" ltype="number" class="required"  type="text" value="${menu.orderId}"/>
+					<span class="help-inline">
+							<font color="red">*</font>
+					</span>
+					</td>
+				</tr>
+				<tr>
+	                <th width="10%"><label class="control-label">参数值:</label></th>
+	                <td  colspan="3" style="height:80px;">
+	                	<textarea  style="width:95%;height: 60px;" class="required"  id="value"  name="value" >${menu.value}</textarea>
+						<span class="help-inline">
+							<font color="red">*</font>
+					</span>
+				    </td>
+				</tr>
+				<tr>
+					<th style="width:10%;"><label class="control-label">备注:</label></th>
+					<td colspan="3" style="height:80px;">
+					   <textarea  style="width:95%;height: 60px;"  id="remark"  name="remark" >${menu.remark}</textarea>
+					</td>
+				</tr>
+			</table>
+			</form>
+</body>
+</html>

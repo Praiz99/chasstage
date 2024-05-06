@@ -1,0 +1,1 @@
+function ZD_CASE_SHLB(){  var SourceArray = [{"name":"人身伤害","jpcode":"rssh","code":"01","scode":"renshenshanghai"},{"name":"财产损失","jpcode":"ccss","code":"99","scode":"caichansunshi"}]; return SourceArray;}

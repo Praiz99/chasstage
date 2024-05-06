@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="chasstage" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0b101f7-00a9-47af-bbc9-b1aa07e8663f" name="Default Changelist" comment="【任务】25103【宁海】案件搜索界面新增时间筛选，25049【宁海】办案区功能优化1205">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/def/khd/service/ApiXxdjzdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/def/khd/service/ApiXxdjzdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/server/imp/khd/ApiXxdjzdServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/server/imp/khd/ApiXxdjzdServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/server/release/rest/khd/ApiXxdjzdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/server/release/rest/khd/ApiXxdjzdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/dao/ChasBaqryxxMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/dao/ChasBaqryxxMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/service/ChasBaqryxxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/service/ChasBaqryxxService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/service/impl/ChasBaqryxxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/baqry/service/impl/ChasBaqryxxServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/dao/ChasSswpxgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/dao/ChasSswpxgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/entity/ChasSswpxg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/entity/ChasSswpxg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/service/ChasSswpxgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/service/ChasSswpxgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/service/impl/ChasSswpxgServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/wpxg/service/impl/ChasSswpxgServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappings/chasstage/baqry/ChasBaqryxxMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappings/chasstage/baqry/ChasBaqryxxMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappings/chasstage/wpxg/ChasSswpxgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappings/chasstage/wpxg/ChasSswpxgMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2GwCSMYLC2Yx0mlDPNOYOYQlPEf" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.baidu.comate.intellij.config.id",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\大中心后端\chasstage\src\main\webapp\static\chas\bigscreen\qzjs\images" />
+      <recent name="D:\大中心后端\chasstage\src\main\webapp\WEB-INF\lib" />
+      <recent name="D:\大中心后端\chasstage\src\main\resources\mappings\chasstage\dhssyjl" />
+      <recent name="D:\大中心\chasstage\src\main\resources\mappings\chasstage\shsng" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wckj.chasstage.common.util" />
+      <recent name="com.wckj.chasstage.modules.dhssyjl.dao" />
+      <recent name="com.wckj.chasstage.modules.dhssyjl.entity" />
+      <recent name="com.wckj.chasstage.modules.shsng.dao" />
+      <recent name="com.wckj.chasstage.modules.shsng.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.78">
+    <configuration name="ApiRlbdServiceImp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wckj.chasstage.api.server.imp.rlbd.ApiRlbdServiceImp" />
+      <module name="chasstage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wckj.chasstage.api.server.imp.rlbd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChasBaqryxxServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wckj.chasstage.modules.baqry.service.impl.ChasBaqryxxServiceImpl" />
+      <module name="chasstage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wckj.chasstage.modules.baqry.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IHikBrakeServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wckj.chasstage.api.server.release.dc.service.impl.IHikBrakeServiceImpl" />
+      <module name="chasstage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wckj.chasstage.api.server.release.dc.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IWdServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wckj.chasstage.api.server.imp.device.IWdServiceImpl" />
+      <module name="chasstage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wckj.chasstage.api.server.imp.device.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="chasstage" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.78" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.78" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8083/chasstage/index" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="chasstage">
+          <settings>
+            <option name="CONTEXT_PATH" value="/chasstage" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2af25d9a-8559-48a6-955b-0d291084d7d6" />
+        <option name="HTTP_PORT" value="8083" />
+        <option name="JNDI_PORT" value="10990" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52524" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="chasstage" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.IHikBrakeServiceImpl" />
+      <item itemvalue="Application.ApiRlbdServiceImp" />
+      <item itemvalue="Application.ChasBaqryxxServiceImpl" />
+      <item itemvalue="Application.IWdServiceImpl" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.78" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChasBaqryxxServiceImpl" />
+        <item itemvalue="Application.IWdServiceImpl" />
+        <item itemvalue="Application.ApiRlbdServiceImp" />
+        <item itemvalue="Application.IHikBrakeServiceImpl" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0b101f7-00a9-47af-bbc9-b1aa07e8663f" name="Default Changelist" comment="" />
+      <created>1667290282811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667290282811</updated>
+      <workItem from="1667290285953" duration="8747000" />
+      <workItem from="1667352554966" duration="27780000" />
+      <workItem from="1667437444437" duration="10801000" />
+      <workItem from="1667523808815" duration="16291000" />
+      <workItem from="1667784976073" duration="31191000" />
+      <workItem from="1667956160518" duration="8436000" />
+      <workItem from="1668006789158" duration="13885000" />
+      <workItem from="1668129149187" duration="2269000" />
+      <workItem from="1668147141597" duration="2866000" />
+      <workItem from="1668390655165" duration="11227000" />
+      <workItem from="1668476683148" duration="15635000" />
+      <workItem from="1668560455815" duration="3942000" />
+      <workItem from="1668566182585" duration="903000" />
+      <workItem from="1668586542395" duration="20000" />
+      <workItem from="1669252652883" duration="16248000" />
+      <workItem from="1669290126974" duration="7763000" />
+      <workItem from="1669338466313" duration="1518000" />
+      <workItem from="1669343930864" duration="125000" />
+      <workItem from="1669346288290" duration="8838000" />
+      <workItem from="1669359936052" duration="58000" />
+      <workItem from="1669366830635" duration="2359000" />
+      <workItem from="1669597637203" duration="77000" />
+      <workItem from="1669597739252" duration="1491000" />
+      <workItem from="1670375868089" duration="676000" />
+      <workItem from="1670466654251" duration="16220000" />
+      <workItem from="1670548124144" duration="9085000" />
+      <workItem from="1670576049324" duration="681000" />
+      <workItem from="1670634642696" duration="2972000" />
+      <workItem from="1670807223034" duration="1232000" />
+      <workItem from="1670810301554" duration="45000" />
+      <workItem from="1670815601748" duration="7734000" />
+      <workItem from="1670837209658" duration="2547000" />
+      <workItem from="1670893694881" duration="3280000" />
+      <workItem from="1670919986553" duration="2417000" />
+      <workItem from="1670980504474" duration="7636000" />
+      <workItem from="1671066620333" duration="595000" />
+      <workItem from="1671181395235" duration="691000" />
+      <workItem from="1671370503804" duration="2983000" />
+      <workItem from="1671412336914" duration="13556000" />
+      <workItem from="1671434012179" duration="15150000" />
+      <workItem from="1671498474925" duration="9849000" />
+      <workItem from="1671517933671" duration="2789000" />
+      <workItem from="1671584996600" duration="14533000" />
+      <workItem from="1671671414986" duration="1187000" />
+      <workItem from="1672190043944" duration="14519000" />
+      <workItem from="1672708861431" duration="88000" />
+      <workItem from="1672735937637" duration="1845000" />
+      <workItem from="1672794263754" duration="3300000" />
+      <workItem from="1672880849766" duration="9211000" />
+      <workItem from="1672967786971" duration="5929000" />
+      <workItem from="1673226398356" duration="12966000" />
+      <workItem from="1673313082495" duration="19774000" />
+      <workItem from="1673399103969" duration="7159000" />
+      <workItem from="1673413887885" duration="12066000" />
+      <workItem from="1673485639290" duration="20805000" />
+      <workItem from="1673572300102" duration="5071000" />
+      <workItem from="1673831402679" duration="8115000" />
+      <workItem from="1673922530030" duration="8027000" />
+      <workItem from="1674954329536" duration="2562000" />
+      <workItem from="1674957409666" duration="5676000" />
+      <workItem from="1675127344239" duration="14409000" />
+      <workItem from="1675147133714" duration="11113000" />
+      <workItem from="1675213798666" duration="9629000" />
+      <workItem from="1675300071855" duration="1203000" />
+      <workItem from="1675386846283" duration="4410000" />
+      <workItem from="1675645658861" duration="1186000" />
+      <workItem from="1675921424597" duration="6692000" />
+      <workItem from="1675991405635" duration="15419000" />
+      <workItem from="1676250566767" duration="11226000" />
+      <workItem from="1677555294980" duration="15370000" />
+      <workItem from="1677633938856" duration="4427000" />
+      <workItem from="1677720516257" duration="16213000" />
+      <workItem from="1677806791041" duration="1236000" />
+      <workItem from="1677833514636" duration="582000" />
+      <workItem from="1678066080848" duration="18954000" />
+      <workItem from="1678152322677" duration="13383000" />
+      <workItem from="1678191152562" duration="114000" />
+      <workItem from="1678254659061" duration="4367000" />
+      <workItem from="1678324705982" duration="18399000" />
+      <workItem from="1678411849105" duration="15534000" />
+      <workItem from="1678670842255" duration="15825000" />
+      <workItem from="1678758006533" duration="15954000" />
+      <workItem from="1678843537229" duration="16281000" />
+      <workItem from="1678929990351" duration="5220000" />
+      <workItem from="1678954383094" duration="107000" />
+      <workItem from="1679016229712" duration="594000" />
+      <workItem from="1679275600674" duration="592000" />
+      <workItem from="1679277352931" duration="630000" />
+      <workItem from="1679362030078" duration="5079000" />
+      <workItem from="1679548904806" duration="40000" />
+      <workItem from="1679551900076" duration="9377000" />
+      <workItem from="1679621479624" duration="18278000" />
+      <workItem from="1680490180585" duration="6825000" />
+      <workItem from="1680589079799" duration="947000" />
+      <workItem from="1680597354658" duration="238000" />
+      <workItem from="1680600620619" duration="967000" />
+      <workItem from="1680671837327" duration="927000" />
+      <workItem from="1681281384241" duration="8444000" />
+      <workItem from="1681349187581" duration="7699000" />
+      <workItem from="1681366086642" duration="9510000" />
+      <workItem from="1681435151791" duration="13839000" />
+      <workItem from="1681708004021" duration="4702000" />
+      <workItem from="1681781860108" duration="2156000" />
+      <workItem from="1681794691592" duration="1553000" />
+      <workItem from="1681873344196" duration="6749000" />
+      <workItem from="1681954450914" duration="19813000" />
+      <workItem from="1682001760455" duration="172000" />
+      <workItem from="1682041416925" duration="2334000" />
+      <workItem from="1682061707889" duration="865000" />
+      <workItem from="1682064224547" duration="4076000" />
+      <workItem from="1682139440228" duration="3000" />
+      <workItem from="1682493716933" duration="2679000" />
+      <workItem from="1682574537353" duration="894000" />
+      <workItem from="1683278176394" duration="620000" />
+      <workItem from="1683336483983" duration="1562000" />
+      <workItem from="1683338236785" duration="15934000" />
+      <workItem from="1683513040953" duration="6215000" />
+      <workItem from="1683534988868" duration="4816000" />
+      <workItem from="1683596218640" duration="17634000" />
+      <workItem from="1683681804096" duration="28195000" />
+      <workItem from="1683719521271" duration="10203000" />
+      <workItem from="1683767967441" duration="12851000" />
+      <workItem from="1683786506322" duration="9776000" />
+      <workItem from="1683812021420" duration="6589000" />
+      <workItem from="1683854982221" duration="22841000" />
+      <workItem from="1683905638753" duration="4198000" />
+      <workItem from="1684114094961" duration="14493000" />
+      <workItem from="1684163667397" duration="672000" />
+      <workItem from="1684200169620" duration="15964000" />
+      <workItem from="1684286535701" duration="792000" />
+      <workItem from="1684478856497" duration="64000" />
+      <workItem from="1684479633077" duration="5130000" />
+      <workItem from="1684485593676" duration="95000" />
+      <workItem from="1684748612788" duration="29000" />
+      <workItem from="1684980057616" duration="401000" />
+      <workItem from="1685350414369" duration="1058000" />
+      <workItem from="1685410025208" duration="3125000" />
+      <workItem from="1685426646385" duration="39000" />
+      <workItem from="1685434812697" duration="2971000" />
+      <workItem from="1685498599544" duration="1435000" />
+      <workItem from="1685511383889" duration="7557000" />
+      <workItem from="1685583461151" duration="13786000" />
+      <workItem from="1685670494831" duration="2878000" />
+      <workItem from="1685675487261" duration="5520000" />
+      <workItem from="1685691884621" duration="25000" />
+      <workItem from="1685693249952" duration="646000" />
+      <workItem from="1685694040326" duration="3851000" />
+      <workItem from="1685698820337" duration="2829000" />
+      <workItem from="1685928468207" duration="20311000" />
+      <workItem from="1686014504061" duration="8038000" />
+      <workItem from="1686030571779" duration="2684000" />
+      <workItem from="1686042888150" duration="1049000" />
+      <workItem from="1686212508832" duration="1616000" />
+      <workItem from="1686320983382" duration="3000" />
+      <workItem from="1686540516047" duration="10669000" />
+      <workItem from="1686556880311" duration="3651000" />
+      <workItem from="1686707922987" duration="660000" />
+      <workItem from="1686723089336" duration="5324000" />
+      <workItem from="1686743797187" duration="3843000" />
+      <workItem from="1686792439569" duration="11897000" />
+      <workItem from="1686814435318" duration="3780000" />
+      <workItem from="1686829104130" duration="11719000" />
+      <workItem from="1686879413171" duration="14501000" />
+      <workItem from="1686904284681" duration="3346000" />
+      <workItem from="1687062442526" duration="3208000" />
+      <workItem from="1687138571866" duration="20084000" />
+      <workItem from="1687224479869" duration="12912000" />
+      <workItem from="1687310838821" duration="21167000" />
+      <workItem from="1687656564249" duration="8927000" />
+      <workItem from="1687677116092" duration="6160000" />
+      <workItem from="1687742970919" duration="12538000" />
+      <workItem from="1687830124587" duration="1628000" />
+      <workItem from="1687940878431" duration="3695000" />
+      <workItem from="1688002019128" duration="6302000" />
+      <workItem from="1688010892168" duration="3363000" />
+      <workItem from="1688023738114" duration="7376000" />
+      <workItem from="1688031558926" duration="645000" />
+      <workItem from="1688052888145" duration="8000" />
+      <workItem from="1688091157968" duration="736000" />
+      <workItem from="1688091910618" duration="635000" />
+      <workItem from="1688094752985" duration="2102000" />
+      <workItem from="1688113371729" duration="1477000" />
+      <workItem from="1688348733739" duration="4789000" />
+      <workItem from="1688363225247" duration="832000" />
+      <workItem from="1688364167974" duration="47000" />
+      <workItem from="1688364233242" duration="100000" />
+      <workItem from="1688364341886" duration="4544000" />
+      <workItem from="1688434504612" duration="7113000" />
+      <workItem from="1688479336628" duration="6398000" />
+      <workItem from="1688520855857" duration="4630000" />
+      <workItem from="1688607138444" duration="1524000" />
+      <workItem from="1688630216999" duration="26000" />
+      <workItem from="1688952412529" duration="9357000" />
+      <workItem from="1688969364136" duration="12174000" />
+      <workItem from="1689038833218" duration="14395000" />
+      <workItem from="1689060922723" duration="4145000" />
+      <workItem from="1689125496620" duration="4867000" />
+      <workItem from="1689214204225" duration="9045000" />
+      <workItem from="1689298390705" duration="15967000" />
+      <workItem from="1689557242217" duration="6006000" />
+      <workItem from="1689567893735" duration="4543000" />
+      <workItem from="1689643658312" duration="29124000" />
+      <workItem from="1689729950540" duration="15266000" />
+      <workItem from="1689816305889" duration="12456000" />
+      <workItem from="1689845093920" duration="592000" />
+      <workItem from="1689903307889" duration="6771000" />
+      <workItem from="1689917675819" duration="8404000" />
+      <workItem from="1690162503262" duration="1817000" />
+      <workItem from="1690248812943" duration="12338000" />
+      <workItem from="1690334973558" duration="2767000" />
+      <workItem from="1690354610723" duration="6073000" />
+      <workItem from="1690421574724" duration="5659000" />
+      <workItem from="1690510874403" duration="5265000" />
+      <workItem from="1690793623371" duration="2961000" />
+      <workItem from="1690853601714" duration="5357000" />
+      <workItem from="1690940095905" duration="16902000" />
+      <workItem from="1691026400239" duration="12742000" />
+      <workItem from="1691112805997" duration="31247000" />
+      <workItem from="1691215878401" duration="15782000" />
+      <workItem from="1691372497979" duration="15751000" />
+      <workItem from="1691458594110" duration="16076000" />
+      <workItem from="1691482343339" duration="3133000" />
+      <workItem from="1691545277910" duration="17647000" />
+      <workItem from="1691649872824" duration="2480000" />
+      <workItem from="1691718348740" duration="13767000" />
+      <workItem from="1691976910378" duration="12401000" />
+      <workItem from="1692063204107" duration="1934000" />
+      <workItem from="1692151224701" duration="11627000" />
+      <workItem from="1692174717347" duration="86000" />
+      <workItem from="1692174908544" duration="1271000" />
+      <workItem from="1692236092292" duration="594000" />
+      <workItem from="1692250966839" duration="12091000" />
+      <workItem from="1692322423631" duration="14716000" />
+      <workItem from="1692594322152" duration="11301000" />
+      <workItem from="1692668532062" duration="11444000" />
+      <workItem from="1692695902129" duration="2839000" />
+      <workItem from="1692754789341" duration="23550000" />
+      <workItem from="1692842964366" duration="20859000" />
+      <workItem from="1692929048640" duration="11714000" />
+      <workItem from="1693186937974" duration="3241000" />
+      <workItem from="1693274067910" duration="9196000" />
+      <workItem from="1693359619483" duration="20350000" />
+      <workItem from="1693446010236" duration="13938000" />
+      <workItem from="1693532082805" duration="7554000" />
+      <workItem from="1693791657636" duration="32950000" />
+      <workItem from="1693877243128" duration="3688000" />
+      <workItem from="1693964465969" duration="13735000" />
+      <workItem from="1693984490597" duration="3865000" />
+      <workItem from="1694049964057" duration="18062000" />
+      <workItem from="1694136390692" duration="16391000" />
+      <workItem from="1694158340797" duration="6841000" />
+      <workItem from="1694395640659" duration="21894000" />
+      <workItem from="1694482042439" duration="13882000" />
+      <workItem from="1694568445449" duration="11304000" />
+      <workItem from="1694654808260" duration="9107000" />
+      <workItem from="1694696201346" duration="3917000" />
+      <workItem from="1694741386422" duration="7440000" />
+      <workItem from="1695000749132" duration="3130000" />
+      <workItem from="1695141534977" duration="2679000" />
+      <workItem from="1695173611965" duration="4925000" />
+      <workItem from="1695191439059" duration="6704000" />
+      <workItem from="1695260205125" duration="2037000" />
+      <workItem from="1695346246038" duration="3155000" />
+      <workItem from="1695605216775" duration="5027000" />
+      <workItem from="1695692345429" duration="583000" />
+      <workItem from="1696729624906" duration="1562000" />
+      <workItem from="1696735610691" duration="87000" />
+      <workItem from="1696835598448" duration="21000" />
+      <workItem from="1696901596024" duration="4425000" />
+      <workItem from="1696918710340" duration="4541000" />
+      <workItem from="1696987801444" duration="672000" />
+      <workItem from="1697126496247" duration="4282000" />
+      <workItem from="1697160454769" duration="2183000" />
+      <workItem from="1697184705713" duration="5577000" />
+      <workItem from="1697281742567" duration="44000" />
+      <workItem from="1697420283765" duration="2049000" />
+      <workItem from="1697523124512" duration="674000" />
+      <workItem from="1697527423881" duration="7618000" />
+      <workItem from="1697537276134" duration="2322000" />
+      <workItem from="1697592494126" duration="120000" />
+      <workItem from="1698632218926" duration="2388000" />
+      <workItem from="1698634855613" duration="1961000" />
+      <workItem from="1698637268970" duration="1358000" />
+      <workItem from="1698642549144" duration="5082000" />
+      <workItem from="1698653056352" duration="8536000" />
+      <workItem from="1698676882386" duration="599000" />
+      <workItem from="1698815695618" duration="32747000" />
+      <workItem from="1698889126510" duration="16301000" />
+      <workItem from="1698915055108" duration="2288000" />
+      <workItem from="1698918292354" duration="1445000" />
+      <workItem from="1698940102229" duration="305000" />
+      <workItem from="1698979998126" duration="21000" />
+      <workItem from="1698991645371" duration="125000" />
+      <workItem from="1698991849411" duration="3553000" />
+      <workItem from="1698997455918" duration="6048000" />
+      <workItem from="1699234439343" duration="1206000" />
+      <workItem from="1699253820998" duration="28000" />
+      <workItem from="1699257091121" duration="4255000" />
+      <workItem from="1699333495425" duration="592000" />
+      <workItem from="1699420440421" duration="1916000" />
+      <workItem from="1699426168603" duration="1217000" />
+      <workItem from="1699432879066" duration="956000" />
+      <workItem from="1699584148006" duration="1314000" />
+      <workItem from="1699585625801" duration="400000" />
+      <workItem from="1699586310201" duration="59000" />
+      <workItem from="1699607783113" duration="114000" />
+      <workItem from="1699861748283" duration="4919000" />
+      <workItem from="1699925663168" duration="14388000" />
+      <workItem from="1700113260051" duration="424000" />
+      <workItem from="1700463219372" duration="8609000" />
+      <workItem from="1700530570259" duration="289000" />
+      <workItem from="1700703456377" duration="586000" />
+      <workItem from="1700789672415" duration="15202000" />
+      <workItem from="1701048850544" duration="26562000" />
+      <workItem from="1701090959944" duration="11090000" />
+      <workItem from="1701135742898" duration="27643000" />
+      <workItem from="1701221728844" duration="387000" />
+      <workItem from="1701843649256" duration="17837000" />
+      <workItem from="1701912836693" duration="13963000" />
+      <workItem from="1701999275016" duration="3351000" />
+      <workItem from="1702259399178" duration="509000" />
+      <workItem from="1702259954628" duration="857000" />
+      <workItem from="1702263947386" duration="1326000" />
+      <workItem from="1702283727908" duration="3234000" />
+      <workItem from="1702309210935" duration="777000" />
+      <workItem from="1702344766453" duration="94000" />
+      <workItem from="1702359876526" duration="11805000" />
+      <workItem from="1702431172893" duration="12350000" />
+      <workItem from="1702454626617" duration="7055000" />
+      <workItem from="1702475027304" duration="5420000" />
+      <workItem from="1702517616479" duration="16633000" />
+      <workItem from="1702603986331" duration="8823000" />
+      <workItem from="1702868442550" duration="11301000" />
+      <workItem from="1702975355908" duration="1677000" />
+      <workItem from="1703036123713" duration="622000" />
+      <workItem from="1703055649823" duration="7046000" />
+      <workItem from="1703122429893" duration="2227000" />
+      <workItem from="1703215411393" duration="7508000" />
+      <workItem from="1703317448970" duration="14926000" />
+      <workItem from="1703753325019" duration="3293000" />
+      <workItem from="1705227625424" duration="595000" />
+      <workItem from="1705246391838" duration="591000" />
+      <workItem from="1708514132975" duration="1617000" />
+      <workItem from="1708525203892" duration="882000" />
+      <workItem from="1708689655666" duration="1793000" />
+      <workItem from="1709047644845" duration="597000" />
+      <workItem from="1709370564195" duration="2948000" />
+      <workItem from="1709470550422" duration="3349000" />
+      <workItem from="1709991939623" duration="592000" />
+      <workItem from="1711251946712" duration="2799000" />
+      <workItem from="1711799577781" duration="2092000" />
+      <workItem from="1712322410593" duration="1424000" />
+      <workItem from="1713073065869" duration="55000" />
+      <workItem from="1713073140323" duration="9403000" />
+      <workItem from="1715004940855" duration="26000" />
+      <workItem from="1715005016245" duration="480000" />
+      <workItem from="1715005548072" duration="289000" />
+      <workItem from="1715005987219" duration="131000" />
+      <workItem from="1715006556849" duration="1299000" />
+    </task>
+    <task id="LOCAL-00017" summary="22966【省内办案区】入区未审讯预警提示信息显示不完整">
+      <created>1685953081091</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685953081091</updated>
+    </task>
+    <task id="LOCAL-00018" summary="22966【省内办案区】入区未审讯预警提示信息显示不完整">
+      <created>1686022131074</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686022131075</updated>
+    </task>
+    <task id="LOCAL-00019" summary="22966【省内办案区】入区未审讯预警提示信息显示不完整">
+      <created>1686022527298</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686022527298</updated>
+    </task>
+    <task id="LOCAL-00020" summary="22985【省内大中心（派出所版）】审讯室等候室查询的 机构编号不正确及 当前登录人单位，未配置办案区！">
+      <created>1686557015781</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686557015781</updated>
+    </task>
+    <task id="LOCAL-00021" summary="23041【余姚】余姚大中心办案区功能室使用记录不显示【测试环境未复现】">
+      <created>1686726194882</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1686726194883</updated>
+    </task>
+    <task id="LOCAL-00022" summary="22706 【二期办案区】大中心人员在二期办案区审核审批，使用刷卡取物客户端出所，登记表显示物品未领取">
+      <created>1686797968995</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686797968995</updated>
+    </task>
+    <task id="LOCAL-00023" summary="获取办案区人员列表接口改为查询在区办案区人员列表">
+      <created>1687671083857</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1687671083857</updated>
+    </task>
+    <task id="LOCAL-00024" summary="获取办案区人员列表接口改为查询在区办案区人员列表">
+      <created>1687677973753</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1687677973753</updated>
+    </task>
+    <task id="LOCAL-00025" summary="根据人员编号获取人员信息接口修改">
+      <created>1688031200542</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688031200542</updated>
+    </task>
+    <task id="LOCAL-00026" summary="等候室分配免登录接口修改">
+      <created>1688092512377</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688092512377</updated>
+    </task>
+    <task id="LOCAL-00027" summary="等候室使用记录方法修改">
+      <created>1688350902638</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688350902638</updated>
+    </task>
+    <task id="LOCAL-00028" summary="21949 新增更正出区时间后，进出情况出区时间及二期中的对应改变功能">
+      <created>1688969128382</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688969128382</updated>
+    </task>
+    <task id="LOCAL-00029" summary="23266省内大中心】人员出所后，随身物品页面出所物品的物品状态显示为在所物品">
+      <created>1689219419450</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1689219419450</updated>
+    </task>
+    <task id="LOCAL-00030" summary="22084【余姚大中心】办案区人员出区后再进去根据证件号引用本办案区人员信息">
+      <created>1689312134146</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1689312134147</updated>
+    </task>
+    <task id="LOCAL-00031" summary="21874新增审批记录">
+      <created>1689571936732</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1689571936732</updated>
+    </task>
+    <task id="LOCAL-00032" summary="22154【省内大中心】入区登记海康人脸门禁权限下发">
+      <created>1689746813841</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689746813842</updated>
+    </task>
+    <task id="LOCAL-00033" summary="21874新增审批记录">
+      <created>1689918432911</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1689918432911</updated>
+    </task>
+    <task id="LOCAL-00034" summary="21874新增审批记录">
+      <created>1689918528200</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1689918528200</updated>
+    </task>
+    <task id="LOCAL-00035" summary="22154【省内大中心】入区登记海康人脸门禁权限下发">
+      <created>1691573191707</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1691573191707</updated>
+    </task>
+    <task id="LOCAL-00036" summary="入区登记海康人脸门禁权限下发配置">
+      <created>1691982909758</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1691982909758</updated>
+    </task>
+    <task id="LOCAL-00037" summary="22838 依图人脸比对接口改造">
+      <created>1692173429283</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1692173429283</updated>
+    </task>
+    <task id="LOCAL-00038" summary="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警">
+      <created>1692257297073</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1692257297073</updated>
+    </task>
+    <task id="LOCAL-00039" summary="人员入区生成轨迹方法加日志">
+      <created>1692691760771</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1692691760771</updated>
+    </task>
+    <task id="LOCAL-00040" summary="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警">
+      <created>1692845399010</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1692845399010</updated>
+    </task>
+    <task id="LOCAL-00041" summary="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警">
+      <created>1692869836970</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1692869836970</updated>
+    </task>
+    <task id="LOCAL-00042" summary="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警">
+      <created>1692869923747</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1692869923747</updated>
+    </task>
+    <task id="LOCAL-00043" summary="【任务】22923宁波余姚】嫌疑人入区登记新增人脸识别辅助登记">
+      <created>1692946786825</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1692946786825</updated>
+    </task>
+    <task id="LOCAL-00044" summary="人脸比对接口修改（警务百度）">
+      <created>1693981020199</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1693981020199</updated>
+    </task>
+    <task id="LOCAL-00045" summary="6699 【宁海】办案区新增可化分配审讯室功能">
+      <created>1694071718859</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1694071718859</updated>
+    </task>
+    <task id="LOCAL-00046" summary="6699 【宁海】办案区新增可化分配审讯室功能">
+      <created>1694162062902</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1694162062902</updated>
+    </task>
+    <task id="LOCAL-00047" summary="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警">
+      <created>1694163242736</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1694163242736</updated>
+    </task>
+    <task id="LOCAL-00048" summary="增加同步闸机">
+      <created>1695261357070</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1695261357070</updated>
+    </task>
+    <task id="LOCAL-00049" summary="23779 大中心手环验证优化">
+      <created>1696924778760</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1696924778760</updated>
+    </task>
+    <task id="LOCAL-00050" summary="23814 审批记录权限功能优化">
+      <created>1697162659618</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1697162659618</updated>
+    </task>
+    <task id="LOCAL-00051" summary="23814 审批记录权限功能优化">
+      <created>1697523799651</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1697523799651</updated>
+    </task>
+    <task id="LOCAL-00052" summary="23814 审批记录权限功能优化">
+      <created>1697536812380</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1697536812381</updated>
+    </task>
+    <task id="LOCAL-00053" summary="[bug]24065【省内大中心】民警刷脸分配审讯室时，提示未识别到人脸">
+      <created>1698663960745</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1698663960755</updated>
+    </task>
+    <task id="LOCAL-00054" summary="修改查询警情查询接口">
+      <created>1698856155031</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1698856155032</updated>
+    </task>
+    <task id="LOCAL-00055" summary="修改查询警情查询接口">
+      <created>1698903557859</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1698903557860</updated>
+    </task>
+    <task id="LOCAL-00056" summary="警务百度人脸比对接口修改">
+      <created>1698915106014</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1698915106015</updated>
+    </task>
+    <task id="LOCAL-00057" summary="警务百度人脸比对接口修改">
+      <created>1699586010323</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1699586010324</updated>
+    </task>
+    <task id="LOCAL-00058" summary="[任务]24758【江山】2.5D地图点击人员图标显示人员信息 11.28前发现场">
+      <created>1701137337585</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1701137337585</updated>
+    </task>
+    <task id="LOCAL-00059" summary="[任务]24758【江山】2.5D地图点击人员图标显示人员信息 11.28前发现场">
+      <created>1701158369339</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1701158369339</updated>
+    </task>
+    <task id="LOCAL-00060" summary="[任务]24758【江山】2.5D地图点击人员图标显示人员信息 11.28前发现场">
+      <created>1701159930262</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1701159930262</updated>
+    </task>
+    <task id="LOCAL-00061" summary="[任务]24758【江山】2.5D地图点击人员图标显示人员信息 11.28前发现场">
+      <created>1701222011027</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1701222011027</updated>
+    </task>
+    <task id="LOCAL-00062" summary="【任务】25034省内大中心】办案区---人员页面出所拍照：新增调用网络摄像头拍照">
+      <created>1702377179575</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1702377179575</updated>
+    </task>
+    <task id="LOCAL-00063" summary="【bug】24427【省内大中心】办案区-人员页面出所拍照，不配置网络摄像头就报错">
+      <created>1702538108331</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1702538108331</updated>
+    </task>
+    <task id="LOCAL-00064" summary="【任务】25103【宁海】案件搜索界面新增时间筛选，25049【宁海】办案区功能优化1205">
+      <created>1703215682272</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1703215682273</updated>
+    </task>
+    <task id="LOCAL-00065" summary="【任务】25103【宁海】案件搜索界面新增时间筛选，25049【宁海】办案区功能优化1205">
+      <created>1703216516564</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1703216516564</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="等候室分配免登录接口修改" />
+    <MESSAGE value="等候室使用记录方法修改" />
+    <MESSAGE value="21949 新增更正出区时间后，进出情况出区时间及二期中的对应改变功能" />
+    <MESSAGE value="23266省内大中心】人员出所后，随身物品页面出所物品的物品状态显示为在所物品" />
+    <MESSAGE value="22084【余姚大中心】办案区人员出区后再进去根据证件号引用本办案区人员信息" />
+    <MESSAGE value="21874新增审批记录" />
+    <MESSAGE value="22154【省内大中心】入区登记海康人脸门禁权限下发" />
+    <MESSAGE value="入区登记海康人脸门禁权限下发配置" />
+    <MESSAGE value="22838 依图人脸比对接口改造" />
+    <MESSAGE value="人员入区生成轨迹方法加日志" />
+    <MESSAGE value="【任务】22923宁波余姚】嫌疑人入区登记新增人脸识别辅助登记" />
+    <MESSAGE value="人脸比对接口修改（警务百度）" />
+    <MESSAGE value="6699 【宁海】办案区新增可化分配审讯室功能" />
+    <MESSAGE value="[任务]22873【省内大中心】人员轨迹表、审讯室控制表，录入人和修改人为办案区人员主办民警" />
+    <MESSAGE value="增加同步闸机" />
+    <MESSAGE value="23779 大中心手环验证优化" />
+    <MESSAGE value="23814 审批记录权限功能优化" />
+    <MESSAGE value="[bug]24065【省内大中心】民警刷脸分配审讯室时，提示未识别到人脸" />
+    <MESSAGE value="修改查询警情查询接口" />
+    <MESSAGE value="人脸是被警务百度接口修改" />
+    <MESSAGE value="警务百度人脸比对接口修改" />
+    <MESSAGE value="[任务]24758【江山】2.5D地图点击人员图标显示人员信息 11.28前发现场" />
+    <MESSAGE value="【任务】25034省内大中心】办案区---人员页面出所拍照：新增调用网络摄像头拍照" />
+    <MESSAGE value="【bug】24427【省内大中心】办案区-人员页面出所拍照，不配置网络摄像头就报错" />
+    <MESSAGE value="【任务】25103【宁海】案件搜索界面新增时间筛选，25049【宁海】办案区功能优化1205" />
+    <option name="LAST_COMMIT_MESSAGE" value="【任务】25103【宁海】案件搜索界面新增时间筛选，25049【宁海】办案区功能优化1205" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/mjgl/dao/ChasYwMjrqMapper.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/frws-sdk-v1.0.4.jar!/com/wckj/frws/sdk/FrwsApiForThirdPart.class</url>
+          <line>56</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wckj/chasstage/api/server/imp/cldj/ApiCldjServiceImpl.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/rygj/service/impl/ChasYwRygjServiceImpl.java</url>
+          <line>290</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/sswp/service/impl/ChasSswpxxServiceImpl.java</url>
+          <line>429</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wckj/chasstage/modules/fkgl/service/impl/ChasYwFkdjServiceImpl.java</url>
+          <line>45</line>
+          <properties field="iWdService" class="com.wckj.chasstage.modules.fkgl.service.impl.ChasYwFkdjServiceImpl" />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="operationList" />
+        <watch expression="ReturnError" />
+        <watch expression="jqxxselectparam" />
+        <watch expression="jqxxselectparam" language="JAVA" />
+        <watch expression="((java.util.ArrayList)((HashMap.Node)((HashMap)rydwxx).entrySet().toArray()[0]).getValue()).get(0)" custom="java.util.HashMap.Node,java.util.HashMap,java.util.ArrayList" />
+        <watch expression="((java.util.ArrayList)((HashMap.Node)entry).getValue()).get(0)" custom="java.util.HashMap.Node,java.util.ArrayList" />
+        <watch expression="jdoneComYwbhService" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/chasstage$Tomcat_8_5_78.ic" NAME="Tomcat 8.5.78 Coverage Results" MODIFIED="1691138196418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

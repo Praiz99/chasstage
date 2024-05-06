@@ -1,0 +1,1 @@
+function TXTJ_SYLX(){  var SourceArray = [{"name":"刑事羁押","jpcode":"xs-y","code":"1","scode":"xingshi-ya"},{"name":"行政拘留","jpcode":"xzjl","code":"2","scode":"xingzhengjuliu"},{"name":"强制戒毒","jpcode":"qzjd","code":"3","scode":"qiangzhijiedu"}]; return SourceArray;}

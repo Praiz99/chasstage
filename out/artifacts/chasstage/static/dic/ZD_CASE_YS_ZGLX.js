@@ -1,0 +1,1 @@
+function ZD_CASE_YS_ZGLX(){  var SourceArray = [{"name":"电子笔录制作","jpcode":"dzblzz","code":"01","scode":"dianzibiluzhizuo"},{"name":"文书填写规范","jpcode":"wstxgf","code":"02","scode":"wenshutianxieguifan"},{"name":"缺失证据材料","jpcode":"qszjcl","code":"03","scode":"queshizhengjucailiao"},{"name":"退查提纲","jpcode":"tctg","code":"04","scode":"tuichatigang"}]; return SourceArray;}

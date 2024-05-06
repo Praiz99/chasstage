@@ -1,0 +1,1 @@
+function TXTJ_RYGLLB(){  var SourceArray = [{"name":"普管","jpcode":"pg","code":"0","scode":"puguan"},{"name":"宽管","jpcode":"kg","code":"1","scode":"kuanguan"},{"name":"严管","jpcode":"yg","code":"2","scode":"yanguan"},{"name":"其它","jpcode":"qt","code":"9","scode":"qita"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function CHAS_ZD_ZB_XB(){  var SourceArray = [{"name":"未知的性别","jpcode":"WZDXB","code":"0","scode":"WEIZHIDIXINGBIE"},{"name":"男","jpcode":"N","code":"1","scode":"NAN"},{"name":"女","jpcode":"N","code":"2","scode":"NV"},{"name":"未说明的性别","jpcode":"WSMDXB","code":"9","scode":"WEISHUIMINGDIXINGBIE"}]; return SourceArray;}

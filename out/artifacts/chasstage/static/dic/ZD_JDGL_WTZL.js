@@ -1,0 +1,1 @@
+function ZD_JDGL_WTZL(){  var SourceArray = [{"name":"纳入考评类","jpcode":"nrkpl","code":"nrkpl","scode":"narukaopinglei"},{"name":"人工巡查类","jpcode":"rgxcl","code":"rgxcl","scode":"rengongxunchalei"},{"name":"系统下发类","jpcode":"xtxfl","code":"xtxfl","scode":"xitongxiafalei"}]; return SourceArray;}

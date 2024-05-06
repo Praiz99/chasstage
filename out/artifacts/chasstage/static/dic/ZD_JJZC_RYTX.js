@@ -1,0 +1,1 @@
+function ZD_JJZC_RYTX(){  var SourceArray = [{"name":"肥胖","jpcode":"fp","code":"1","scode":"feipang"},{"name":"瘦小","jpcode":"sx","code":"2","scode":"shouxiao"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFGL_SACW_SPZT(){  var SourceArray = [{"name":"删除审批中","jpcode":"scspz","code":"1","scode":"shanchushenpizhong"},{"name":"删除成功","jpcode":"sccg","code":"2","scode":"shanchuchenggong"},{"name":"再入库审批中","jpcode":"zrkspz","code":"3","scode":"zairukushenpizhong"},{"name":"再入库成功","jpcode":"zrkcg","code":"4","scode":"zairukuchenggong"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function AGXT_SHZT_DIC(){  var SourceArray = [{"name":"未审核","jpcode":"wsh","code":"01","scode":"weishenhe"},{"name":"已审未结","jpcode":"yswj","code":"02","scode":"yishenweijie"},{"name":"已审结","jpcode":"ysj","code":"03","scode":"yishenjie"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_YGZF_TSCLAY(){  var SourceArray = [{"name":"卖淫嫖娼","jpcode":"mypc","code":"101030128","scode":"maiyinpiaochang"},{"name":"卖淫","jpcode":"my","code":"101030129","scode":"maiyin"},{"name":"嫖娼","jpcode":"pc","code":"101030130","scode":"piaochang"},{"name":"拉客招嫖","jpcode":"lkzp","code":"101030131","scode":"lakezhaopiao"}]; return SourceArray;}

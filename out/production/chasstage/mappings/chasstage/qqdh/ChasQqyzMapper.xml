@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.qqdh.dao.ChasQqyzMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.qqdh.entity.ChasQqyz">
+
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="RYID" jdbcType="VARCHAR" property="ryid" />
+    <result column="WDBH" jdbcType="VARCHAR" property="wdbh" />
+    <result column="ZT" jdbcType="INTEGER" property="zt" />
+    <result column="LXR" jdbcType="VARCHAR" property="lxr" />
+    <result column="THSJ" jdbcType="INTEGER" property="thsj" />
+    <result column="SPR" jdbcType="VARCHAR" property="spr" />
+    <result column="SPSJ" jdbcType="TIMESTAMP" property="spsj" />
+    <result column="THKSSJ" jdbcType="TIMESTAMP" property="thkssj" />
+    <result column="THJSSJ" jdbcType="TIMESTAMP" property="thjssj" />
+    <result column="RYBH" jdbcType="VARCHAR" property="rybh" />
+    <result column="LXRDH" jdbcType="VARCHAR" property="lxrdh" />
+    <result column="SQYY" jdbcType="VARCHAR" property="sqyy" />
+    <result column="SQRXM" jdbcType="VARCHAR" property="sqrxm" />
+    <result column="SQSJ" jdbcType="TIMESTAMP" property="sqsj" />
+    <result column="XB" jdbcType="VARCHAR" property="xb" />
+    <result column="DWXTBH" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="ZBDW_BH" jdbcType="VARCHAR" property="zbdwbh" />
+    <result column="ZBDW_MC" jdbcType="VARCHAR" property="zbdwmc" />
+    <result column="lywj" jdbcType="VARCHAR" property="lywj" />
+    <result column="spyj" jdbcType="VARCHAR" property="spyj" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_qqyz
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+   <delete id="deleteByPrimaryRbyh" parameterType="java.lang.String">
+    delete from chas_yw_qqyz where RYBH = #{rybh,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.qqdh.entity.ChasQqyz">
+    insert into chas_yw_qqyz (ID, DATA_FLAG,
+      LRR_SFZH, LRSJ, XGR_SFZH,
+      XGSJ, BAQID, BAQMC, RYID,
+      WDBH,ZT, LXR, THSJ,
+      SPR, SPSJ, THKSSJ,
+      THJSSJ, RYBH, LXRDH,
+      SQYY, SQRXM, SQSJ,
+      XB, DWXTBH, ZBDW_BH, ZBDW_MC,lywj,spyj)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR},
+      #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR},
+      now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{ryid,jdbcType=VARCHAR},
+      #{wdbh,jdbcType=VARCHAR},#{zt,jdbcType=INTEGER}, #{lxr,jdbcType=VARCHAR}, #{thsj,jdbcType=INTEGER},
+      #{spr,jdbcType=VARCHAR}, #{spsj,jdbcType=TIMESTAMP}, #{thkssj,jdbcType=TIMESTAMP},
+      #{thjssj,jdbcType=TIMESTAMP}, #{rybh,jdbcType=VARCHAR}, #{lxrdh,jdbcType=VARCHAR},
+      #{sqyy,jdbcType=VARCHAR}, #{sqrxm,jdbcType=VARCHAR}, now(),
+      #{xb,jdbcType=VARCHAR},
+      #{dwxtbh,jdbcType=VARCHAR},
+      #{zbdwbh,jdbcType=VARCHAR},
+      #{zbdwmc,jdbcType=VARCHAR},#{lywj,jdbcType=VARCHAR},#{spyj,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.qqdh.entity.ChasQqyz">
+    update chas_yw_qqyz
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      RYID = #{ryid,jdbcType=VARCHAR},
+      WDBH = #{wdbh,jdbcType=VARCHAR},
+      ZT = #{zt,jdbcType=INTEGER},
+      LXR = #{lxr,jdbcType=VARCHAR},
+      THSJ = #{thsj,jdbcType=INTEGER},
+      SPR = #{spr,jdbcType=VARCHAR},
+      SPSJ = #{spsj,jdbcType=TIMESTAMP},
+      THKSSJ = #{thkssj,jdbcType=TIMESTAMP},
+      THJSSJ = #{thjssj,jdbcType=TIMESTAMP},
+      RYBH = #{rybh,jdbcType=VARCHAR},
+      LXRDH = #{lxrdh,jdbcType=VARCHAR},
+      SQYY = #{sqyy,jdbcType=VARCHAR},
+      SQRXM = #{sqrxm,jdbcType=VARCHAR},
+      XB = #{xb,jdbcType=VARCHAR},
+      DWXTBH = #{dwxtbh,jdbcType=VARCHAR},
+      ZBDW_BH = #{zbdwbh,jdbcType=VARCHAR},
+      ZBDW_MC = #{zbdwmc,jdbcType=VARCHAR},
+      lywj = #{lywj,jdbcType=VARCHAR},
+      spyj=#{spyj,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, RYID,
+    WDBH, ZT, LXR, THSJ, SPR, SPSJ, THKSSJ, THJSSJ, RYBH, LXRDH, SQYY, SQRXM, SQSJ, XB, DWXTBH, ZBDW_BH, ZBDW_MC,
+    lywj,spyj
+    from chas_yw_qqyz
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, RYID,
+    WDBH, ZT, LXR, THSJ, SPR, SPSJ, THKSSJ, THJSSJ, RYBH, LXRDH, SQYY, SQRXM, SQSJ, XB, DWXTBH, ZBDW_BH, ZBDW_MC,
+    lywj,spyj
+    from chas_yw_qqyz
+    <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}'
+      </if>
+      <if test="baqmc != null and baqmc !=''">
+        and baqmc = '${baqmc}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and RYBH = '${rybh}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+          and RYID = '${ryid}'
+      </if>
+      <if test="sqrxm != null and sqrxm !=''">
+          and SQRXM = '${sqrxm}'
+      </if>
+       <if test="zt != null and zt != ''">
+          and ZT = '${zt}'
+      </if>
+       <if test="wdbh != null and wdbh !=''">
+          and WDBH = '${wdbh}'
+      </if>
+      <if test="lxrdh != null and lxrdh !=''">
+        and lxrdh like '%${lxrdh}%'
+      </if>
+      <if test="lxr != null and lxr !=''">
+        and lxr like '%${lxr}%'
+      </if>
+      <if test="ztList != null">
+          and ZT not in
+            <foreach item="item" index="index" collection="ztList" open="(" separator="," close=")">
+                '${item}'
+            </foreach>
+      </if>
+      <if test="sqsj1 !=null and sqsj1 !=''">
+        and SQSJ &gt;='${sqsj1}'
+      </if>
+      <if test="sqsj2 !=null and sqsj2 !=''">
+        and SQSJ &lt;='${sqsj2}'
+      </if>
+      <!--<if test="sqsj1 != null and sqsj1 !=''">-->
+          <!--and (date_part('day', SQSJ::timestamp - '${sqsj1}'::timestamp) > 0)-->
+      <!--</if>-->
+      <!--<if test="sqsj2 != null and sqsj2 !=''">-->
+          <!--and (date_part('day', '${sqsj2}'::timestamp - SQSJ::timestamp) > 0)-->
+      <!--</if>-->
+      <if test="spsj1 !=null and spsj1 !=''">
+        and SPSJ &gt;='${spsj1}'
+      </if>
+      <if test="spsj2 !=null and spsj2 !=''">
+        and SPSJ &lt;='${sqsj2}'
+      </if>
+      <!--<if test="spsj1 != null and spsj1 !=''">-->
+          <!--and (date_part('day', SPSJ::timestamp - '${spsj1}'::timestamp) > 0)-->
+      <!--</if>-->
+      <!--<if test="spsj2 != null and spsj2 !=''">-->
+          <!--and (date_part('day', '${spsj2}'::timestamp - SQSJ::timestamp) > 0)-->
+      <!--</if>-->
+
+      <if test="qxbs == 'province'">
+      and dwxtbh LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+    </if>
+      <if test="qxbs == 'city'">
+      and dwxtbh LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+    </if>
+    <if test="qxbs == 'reg'">
+      and dwxtbh LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+    </if>
+    <if test="qxbs == 'org'">
+      and dwxtbh LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+    </if>
+    <if test="qxbs == 'user'">
+      and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+    </if>
+      <if test="bsp !=null and bsp !=''">
+        and (zt=1 or zt=4) and spsj is null
+      </if>
+      <if test="bsp !=null and bsp ==''">
+        and (zt=1 or zt=4) and spsj is not null
+      </if>
+    </where>
+  </select>
+  <select id="findbyparams" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, RYID,
+    WDBH, ZT, LXR, THSJ, SPR, SPSJ, THKSSJ, THJSSJ, RYBH, LXRDH, SQYY, SQRXM, SQSJ, XB, DWXTBH, ZBDW_BH, ZBDW_MC,
+    lywj,spyj
+    from chas_yw_qqyz
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and RYBH = '${rybh}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+          and RYID = '${ryid}'
+      </if>
+      <if test="zt != null and zt !=''">
+          and ZT != '${zt}'
+      </if>
+      <if test="sqrxm != null and sqrxm !=''">
+          and SQRXM != '${sqrxm}'
+      </if>
+      <if test="sqsj != null and sqsj !=''">
+          and (date_part('day', SQSJ::timestamp - '${sqsj}'::timestamp) = 0)
+      </if>
+      <if test="ztList != null">
+          and ZT not in
+            <foreach item="item" index="index" collection="ztList" open="(" separator="," close=")">
+                '${item}'
+            </foreach>
+      </if>
+    </where>
+  </select>
+</mapper>

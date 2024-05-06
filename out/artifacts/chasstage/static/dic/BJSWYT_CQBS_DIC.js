@@ -1,0 +1,1 @@
+function BJSWYT_CQBS_DIC(){  var SourceArray = [{"name":"临期","jpcode":"lq","code":"01","scode":"linqi"},{"name":"超期","jpcode":"cq","code":"02","scode":"chaoqi"}]; return SourceArray;}

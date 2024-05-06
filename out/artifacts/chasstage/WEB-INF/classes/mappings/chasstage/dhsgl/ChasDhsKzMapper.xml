@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.dhsgl.dao.ChasDhsKzMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.dhsgl.entity.ChasDhsKz">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="QYID" jdbcType="VARCHAR" property="qyid" />
+    <result column="RYID" jdbcType="VARCHAR" property="ryid" />
+    <result column="RYXM" jdbcType="VARCHAR" property="ryxm" />
+    <result column="RYXB" jdbcType="VARCHAR" property="ryxb" />
+    <result column="WDBH" jdbcType="VARCHAR" property="wdbh" />
+    <result column="KSSJ" jdbcType="TIMESTAMP" property="kssj" />
+    <result column="DCJD" jdbcType="VARCHAR" property="dcjd" />
+    <result column="FPZT" jdbcType="VARCHAR" property="fpzt" />
+    <result column="AJBH" jdbcType="VARCHAR" property="ajbh" />
+    <result column="JQBH" jdbcType="VARCHAR" property="jqbh" />
+    <result column="SFZH" jdbcType="VARCHAR" property="sfzh" />
+    <result column="RYBH" jdbcType="VARCHAR" property="rybh" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_dhskz
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+   <delete id="deleteByPrimaryRybh" parameterType="java.lang.String">
+    delete from chas_yw_dhskz where RYBH = #{rybh,jdbcType=VARCHAR}
+  </delete>
+    <delete id="deleteByPrimaryId" parameterType="java.lang.String">
+        delete from chas_yw_dhskz where id = #{id,jdbcType=VARCHAR}
+    </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.dhsgl.entity.ChasDhsKz">
+    insert into chas_yw_dhskz (ID, DATA_FLAG,
+      LRR_SFZH, LRSJ, XGR_SFZH,
+      XGSJ, BAQID, BAQMC,
+      QYID, RYID, RYXM, RYXB,
+      WDBH, KSSJ, DCJD,
+      FPZT, AJBH, JQBH, SFZH,
+      RYBH)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR},
+      #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR},
+      now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+      #{qyid,jdbcType=VARCHAR}, #{ryid,jdbcType=VARCHAR}, #{ryxm,jdbcType=VARCHAR}, #{ryxb,jdbcType=VARCHAR},
+      #{wdbh,jdbcType=VARCHAR}, #{kssj,jdbcType=TIMESTAMP}, #{dcjd,jdbcType=VARCHAR},
+      #{fpzt,jdbcType=VARCHAR}, #{ajbh,jdbcType=VARCHAR}, #{jqbh,jdbcType=VARCHAR}, #{sfzh,jdbcType=VARCHAR},
+      #{rybh,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.dhsgl.entity.ChasDhsKz">
+    update chas_yw_dhskz
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+      XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      QYID = #{qyid,jdbcType=VARCHAR},
+      RYID = #{ryid,jdbcType=VARCHAR},
+      RYXM = #{ryxm,jdbcType=VARCHAR},
+      RYXB = #{ryxb,jdbcType=VARCHAR},
+      WDBH = #{wdbh,jdbcType=VARCHAR},
+      KSSJ = #{kssj,jdbcType=TIMESTAMP},
+      DCJD = #{dcjd,jdbcType=VARCHAR},
+      FPZT = #{fpzt,jdbcType=VARCHAR},
+      AJBH = #{ajbh,jdbcType=VARCHAR},
+      JQBH = #{jqbh,jdbcType=VARCHAR},
+      SFZH = #{sfzh,jdbcType=VARCHAR},
+      RYBH = #{rybh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+
+    <update id="updateXmXbByRybh">
+    update chas_yw_dhskz
+    set
+      RYXM = #{ryxm,jdbcType=VARCHAR},
+      RYXB = #{ryxb,jdbcType=VARCHAR}
+    where RYBH = #{rybh,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    RYID, RYXM, RYXB, WDBH, KSSJ, DCJD, FPZT, AJBH, JQBH, SFZH, RYBH
+    from chas_yw_dhskz
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    RYID, RYXM, RYXB, WDBH, KSSJ, DCJD, FPZT, AJBH, JQBH, SFZH, RYBH
+    from chas_yw_dhskz
+     <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+          and RYID = '${ryid}'
+      </if>
+       <if test="fpzt != null and fpzt !=''">
+          and FPZT = '${fpzt}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and RYBH = '${rybh}'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+          and RYXM = '${ryxm}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+          and QYID = '${qyid}'
+      </if>
+
+    </where>
+  </select>
+
+  <!-- 此方法专用 必填baqid fjlx ryzt -->
+  <select id="selectDhsForyj" resultType="java.util.HashMap">
+    select * from ((select qy.* from (
+    select j.rybh,j.xm ryxm,b.xb,b.ywbh,j.qymc,j.kssj,j.qyid
+    from chas_yw_rygj_snap j left join chas_yw_ryjl b on j.rybh = b.rybh
+    where j.baqid = '${baqid}'
+    and b.ryzt = '${ryzt}') qy left join chas_xt_qy q on qy.qyid = q.ysid
+    where q.fjlx = '${fjlx}') ryxx inner join (
+        select rybh tmprybh,max(kssj) mkssj from chas_yw_rygj_snap
+        where isdel='0' and baqid='${baqid}' group by rybh) tmp
+     on ryxx.rybh=tmp.tmprybh  and ryxx.kssj=tmp.mkssj)
+  </select>
+    <!-- 此方法用于人员聚集预警 -->
+    <select id="selectForryjj" resultType="java.util.HashMap">
+    select qy.id,qy.qymc,(case when qy.rysl is null then 0 else qy.rysl end) as rysl,
+    tmp.rybh,tmp.mkssj as kssj from (
+    select qyid,rybh,max(kssj) mkssj from chas_yw_rygj_snap where isdel='0'
+      and rybh in (select rybh from chas_yw_ryjl where isdel='0' and baqid='${baqid}' and ryzt='${ryzt}')
+      and baqid='${baqid}' group by qyid,rybh) tmp
+    inner join chas_xt_qy qy on tmp.qyid = qy.ysid where qy.sfgns='1'
+  </select>
+
+
+  <select id="findByParams" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    RYID, RYXM, RYXB, WDBH, KSSJ, DCJD, FPZT, AJBH, JQBH, SFZH, RYBH
+    from chas_yw_dhskz
+     <where>
+      ISDEL=0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}'
+      </if>
+      <if test="isdel != null">
+          and ISDEL = '${isdel}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+          and RYID = '${ryid}'
+      </if>
+       <if test="fpzt != null and fpzt !=''">
+          and FPZT = '${fpzt}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and RYBH = '${rybh}'
+      </if>
+        <if test="qyid != null and qyid !=''">
+          and QYID = '${qyid}'
+      </if>
+    </where>
+  </select>
+
+
+    <select id="selectDhsRy" resultType="java.util.HashMap">
+        select dhs.ID, dhs.FPZT,WDBH, ggry.baqid,ggry.baqmc,ggry.rybh,ggry.ryxm,xb,dafs,r_rssj rqsj,tsqt,ry_zaymc rqyy
+        from chas_yw_dhskz dhs left join gg_baqryxx ggry on dhs.rybh = ggry.rybh
+        <where>
+            1=1 and dhs.ISDEL = 0
+            <if test="baqid != null and baqid !=''">
+                and dhs.BAQID = '${baqid}'
+            </if>
+            <if test="ryid != null and ryid !=''">
+                and dhs.RYID = '${ryid}'
+            </if>
+            <if test="fpzt != null and fpzt !=''">
+                and dhs.FPZT = '${fpzt}'
+            </if>
+            <if test="rybh != null and rybh !=''">
+                and dhs.RYBH = '${rybh}'
+            </if>
+            <if test="ryxm != null and ryxm !=''">
+                and dhs.RYXM like '%${ryxm}%'
+            </if>
+            <if test="qyid != null and qyid !=''">
+                and dhs.QYID = '${qyid}'
+            </if>
+            <if test="rqsj1 !=null and rqsj1 !=''">
+                and r_rssj &gt;='${rqsj1}'
+            </if>
+            <if test="rqsj2 !=null and rqsj2 !=''">
+                and r_rssj &lt;='${rqsj2}'
+            </if>
+
+        </where>
+        order by rqsj desc
+    </select>
+
+    <select id="findcountByBaqid" resultType="java.lang.String">
+        select count(*) from chas_yw_dhskz where isdel = 0 and fpzt = '1'
+        and rybh in(select rybh from gg_baqryxx where baqid = '${baqid}'
+          and isdel = 0 and ryzt = '01')
+    </select>
+    <update id="clearByrybh" parameterType="java.lang.String">
+        update chas_yw_dhskz set isdel = 1 , fpzt = '0' where rybh='${rybh}'
+    </update>
+    <select id="selectRyxxBydhsId" resultMap="com.wckj.chasstage.modules.baqry.dao.ChasBaqryxxMapper.BaseResultMap">
+        select ggry.*
+        from chas_yw_dhskz  , gg_baqryxx ggry where
+        chas_yw_dhskz.qyid='${dhsId}' and chas_yw_dhskz.baqid=ggry.baqid
+        and chas_yw_dhskz.ISDEL = 0 and ggry.ISDEL = 0 and chas_yw_dhskz.rybh = ggry.rybh
+        <if test="ryxm != null and ryxm !=''">
+            and ggry.ryxm like '%${ryxm}%'
+        </if>
+        <if test="xb != null and xb !=''">
+            and ggry.xb = '${xb}'
+        </if>
+        <if test="zjlx != null and zjlx !=''">
+            and ggry.zjlx = '${zjlx}'
+        </if>
+        <if test="zjhm != null and zjhm !=''">
+            and ggry.ry_sfzh = '${zjhm}'
+        </if>
+        <if test="csrq != null and csrq !=''">
+            and ggry.csrq = '${csrq}'
+        </if>
+        <if test="csrq1 != null and csrq1 !=''">
+            and ggry.csrq &gt;= '${csrq1}'
+        </if>
+        <if test="csrq2 != null and csrq2 !=''">
+            and ggry.csrq &lt;= '${csrq2}'
+        </if>
+        <if test="hjszd != null and hjszd !=''">
+            and ggry.hjdxz like '%${hjszd}%'
+        </if>
+        <if test="rqyy != null and rqyy !=''">
+            and ggry.ry_zaybh = '${rqyy}'
+        </if>
+        <if test="rqsj1 !=null and rqsj1 !=''">
+            and r_rssj &gt;='${rqsj1}'
+        </if>
+        <if test="rqsj2 !=null and rqsj2 !=''">
+            and r_rssj &lt;='${rqsj2}'
+        </if>
+        <if test="dafs != null and dafs !=''">
+            and ggry.dafs = '${dafs}'
+        </if>
+        <if test="rylx != null and rylx !=''">
+            and ggry.rylx = '${rylx}'
+        </if>
+        <if test="zbmj != null and zbmj !=''">
+            and ggry.mj_xm like '%${zbmj}%'
+        </if>
+        <if test="tsqt != null and tsqt !=''">
+            and ggry.tsqt like '%${tsqt}%'
+        </if>
+        <if test="baqid != null and baqid != ''">
+            and ggry.baqid = '${baqid}'
+        </if>
+        order by r_rssj desc
+    </select>
+    <select id="getTaRs" resultType="integer">
+        SELECT count(ryxx.id) FROM chas_yw_dhskz dhs join gg_baqryxx ryxx on dhs.rybh=ryxx.rybh
+        where dhs.baqid='${baqid}' and ryxx.baqid='${baqid}' and
+        dhs.qyid='${qyid}' and dhs.isdel=0 and ryxx.isdel=0
+        and (ryxx.ajbh='${ywbh}' or ryxx.jqbh='${ywbh}') and ryxx.ryzt in('01','02','03','05')
+    </select>
+    <select id="getHgRs" resultType="integer">
+        SELECT count(ryxx.id) FROM chas_yw_dhskz dhs join gg_baqryxx ryxx on dhs.rybh=ryxx.rybh
+        where dhs.baqid='${baqid}' and ryxx.baqid='${baqid}' and
+        dhs.qyid='${qyid}' and dhs.isdel=0 and ryxx.isdel=0
+        and ryxx.xb ='${xb}' and ryxx.ryzt in('01','02','03','05')
+    </select>
+    <select id="findcountByBaqidAndQyid" resultType="java.lang.Integer">
+        select count(*) from chas_yw_dhskz where isdel = 0 and fpzt = '1'
+        and qyid='${qyid}'
+        and rybh in(select rybh from gg_baqryxx where baqid = '${baqid}'
+          and isdel = 0 and ryzt = '01')
+    </select>
+    <select id="selectDhsDpData" resultType="hashmap">
+        select dhs.rybh, dhs.ryxm, dhs.ryxb, qy.qymc as qymc, ryxx.r_rssj as rssj
+        from chas_yw_dhskz dhs
+        LEFT JOIN chas_xt_qy qy on qy.ysid = dhs.qyid and qy.isdel = 0
+        LEFT JOIN gg_baqryxx ryxx on ryxx.rybh = dhs.rybh and ryxx.isdel = 0
+        where 1 = 1 and dhs.isdel = 0 and dhs.baqid = '${baqid}' order by dhs.xgsj desc
+    </select>
+</mapper>

@@ -1,0 +1,1 @@
+function SACW_HBZL(){  var SourceArray = [{"name":"人民币","jpcode":"rmb","code":"1","scode":"renminbi"},{"name":"英镑","jpcode":"yb","code":"2","scode":"yingbang"},{"name":"美元","jpcode":"my","code":"3","scode":"meiyuan"}]; return SourceArray;}

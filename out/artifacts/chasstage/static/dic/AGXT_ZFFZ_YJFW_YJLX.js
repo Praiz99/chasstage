@@ -1,0 +1,1 @@
+function AGXT_ZFFZ_YJFW_YJLX(){  var SourceArray = [{"name":"文书","jpcode":"ws","code":"01","scode":"wenshu"},{"name":"物品","jpcode":"wp","code":"02","scode":"wupin"}]; return SourceArray;}

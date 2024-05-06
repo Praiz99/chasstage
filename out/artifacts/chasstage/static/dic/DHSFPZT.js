@@ -1,0 +1,1 @@
+function DHSFPZT(){  var SourceArray = [{"name":"分配","jpcode":"fp","code":"1","scode":"fenpei"},{"name":"暂离","jpcode":"zl","code":"2","scode":"zanli"}]; return SourceArray;}

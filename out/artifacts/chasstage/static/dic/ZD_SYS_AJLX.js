@@ -1,0 +1,1 @@
+function ZD_SYS_AJLX(){  var SourceArray = [{"name":"案前","jpcode":"aq","code":"00","scode":"anqian"},{"name":"行政","jpcode":"xz","code":"01","scode":"xingzheng"},{"name":"刑事","jpcode":"xs","code":"02","scode":"xingshi"},{"name":"赔偿","jpcode":"pc","code":"03","scode":"peichang"},{"name":"通用","jpcode":"ty","code":"99","scode":"tongyong"}]; return SourceArray;}

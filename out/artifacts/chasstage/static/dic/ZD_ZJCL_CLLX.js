@@ -1,0 +1,1 @@
+function ZD_ZJCL_CLLX(){  var SourceArray = [{"name":"图片","jpcode":"tp","code":"01","scode":"tupian"},{"name":"视频","jpcode":"sp","code":"02","scode":"shipin"},{"name":"录音","jpcode":"ly","code":"03","scode":"luyin"},{"name":"文档","jpcode":"wd","code":"04","scode":"wendang"}]; return SourceArray;}

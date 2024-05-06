@@ -1,0 +1,1 @@
+function ZD_CASE_YS_JHFL(){  var SourceArray = [{"name":"审讯计划","jpcode":"sxjh","code":"01","scode":"shenxunjihua"},{"name":"调查取证计划","jpcode":"dcqzjh","code":"02","scode":"diaochaquzhengjihua"},{"name":"证据核实计划","jpcode":"zjhsjh","code":"03","scode":"zhengjuheshijihua"},{"name":"其他","jpcode":"qt","code":"04","scode":"qita"}]; return SourceArray;}

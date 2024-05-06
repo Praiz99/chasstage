@@ -1,0 +1,7 @@
+
+^
+java:S1192X"HDefine a constant instead of duplicating this literal "success" 4 times.(á÷Ê
+h
+java:S3776G"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Å‰¬©
+k
+java:S1128"PRemove this unused import 'com.wckj.chasstage.api.def.face.model.RegisterParam'.(™ ²Ãùÿÿÿÿ

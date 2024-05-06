@@ -1,0 +1,1 @@
+function ZNKP_ZNCJ_PCZT_DIC(){  var SourceArray = [{"name":"评查中","jpcode":"pcz","code":"01","scode":"pingchazhong"},{"name":"待上报","jpcode":"dsb","code":"02","scode":"daishangbao"},{"name":"待下发","jpcode":"dxf","code":"03","scode":"daixiafa"},{"name":"完结","jpcode":"wj","code":"04","scode":"wanjie"}]; return SourceArray;}

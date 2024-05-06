@@ -1,0 +1,1 @@
+function ZD_CASE_YS_XZQD(){  var SourceArray = [{"name":"熟人","jpcode":"sr","code":"01","scode":"shuren"},{"name":"沿街店铺","jpcode":"yjdp","code":"02","scode":"yanjiedianpu"},{"name":"阵控场所","jpcode":"zkcs","code":"03","scode":"zhenkongchangsuo"},{"name":"其他","jpcode":"qt","code":"04","scode":"qita"}]; return SourceArray;}

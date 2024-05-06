@@ -1,0 +1,1 @@
+function ZD_ASJBL_JJLY(){  var SourceArray = [{"name":"工资","jpcode":"gz","code":"02","scode":"gongzi"}]; return SourceArray;}

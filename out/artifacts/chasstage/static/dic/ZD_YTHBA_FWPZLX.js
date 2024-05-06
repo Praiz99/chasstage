@@ -1,0 +1,1 @@
+function ZD_YTHBA_FWPZLX(){  var SourceArray = [{"name":"实现类","jpcode":"sxl","code":"00","scode":"shixianlei"},{"name":"自动组装","jpcode":"zdzz","code":"01","scode":"zidongzuzhuang"}]; return SourceArray;}

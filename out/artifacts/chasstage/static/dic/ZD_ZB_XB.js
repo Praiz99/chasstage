@@ -1,0 +1,1 @@
+function ZD_ZB_XB(){  var SourceArray = [{"name":"男","jpcode":"n","code":"1","scode":"nan"},{"name":"女","jpcode":"n","code":"2","scode":"nv"},{"name":"未知","jpcode":"wz","code":"0","scode":"weizhi"},{"name":"未说明","jpcode":"wsm","code":"9","scode":"weishuoming"}]; return SourceArray;}

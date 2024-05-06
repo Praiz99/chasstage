@@ -1,0 +1,1 @@
+function ZD_JJZC_WZDSRLB(){  var SourceArray = [{"name":"甲方","jpcode":"jf","code":"1","scode":"jiafang"},{"name":"乙方","jpcode":"yf","code":"2","scode":"yifang"},{"name":"第三方","jpcode":"dsf","code":"3","scode":"disanfang"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFKP_KPHJ(){  var SourceArray = [{"name":"单位法制审核","jpcode":"dwfzsh","code":"1","scode":"danweifazhishenhe"},{"name":"单位领导审核","jpcode":"dwldsh","code":"2","scode":"danweilingdaoshenhe"},{"name":"区县法制审核","jpcode":"qxfzsh","code":"3","scode":"quxianfazhishenhe"},{"name":"区县预审审核","jpcode":"qxyssh","code":"4","scode":"quxianyushenshenhe"}]; return SourceArray;}

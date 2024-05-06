@@ -1,0 +1,1 @@
+function AGXT_ZT_DIC(){  var SourceArray = [{"name":"在办","jpcode":"zb","code":"00","scode":"zaiban"},{"name":"未破归档","jpcode":"wpgd","code":"01","scode":"weipoguidang"},{"name":"结案归档","jpcode":"jagd","code":"02","scode":"jieanguidang"}]; return SourceArray;}

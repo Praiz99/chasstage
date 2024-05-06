@@ -1,0 +1,1 @@
+function AGXT_JGRD_RDJZ(){  var SourceArray = [{"name":"市场基准价","jpcode":"scjzj","code":"01","scode":"shichangjizhunjia"},{"name":"市场零售价","jpcode":"sclsj","code":"02","scode":"shichanglingshoujia"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_ZY(){  var SourceArray = [{"name":"国家机关、党群组织、企业、事业单位负责人","jpcode":"gjjg、dqzz、qy、sydwfzr","code":"0","scode":"guojiajiguan、dangqunzuzhi、qiye、shiyedanweifuzeren"},{"name":"中国共产党中央委员会和地方各级组织负责人","jpcode":"zggcdzywyhhdfgjzzfzr","code":"01","scode":"zhongguogongchandangzhongyangweiyuanhuihedifanggejizuzhifuzeren"}]; return SourceArray;}

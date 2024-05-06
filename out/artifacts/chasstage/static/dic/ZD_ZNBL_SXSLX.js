@@ -1,0 +1,1 @@
+function ZD_ZNBL_SXSLX(){  var SourceArray = [{"name":"普通审讯室","jpcode":"ptsxs","code":"01","scode":"putongshenxunshi"},{"name":"远程审讯室","jpcode":"ycsxs","code":"02","scode":"yuanchengshenxunshi"}]; return SourceArray;}

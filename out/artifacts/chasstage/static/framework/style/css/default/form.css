@@ -1,0 +1,163 @@
+﻿@charset "utf-8";
+
+html{color:#000;overflow-x:auto!important;overflow-x:auto;overflow:auto;height: 100%;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-size:12px;font-family:宋体,Arial, Helvetica, sans-serif;}table{border-collapse:collapse;border-spacing:0;},caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+body{margin: 8px; height: 100%;}
+a{text-decoration:none}
+
+/**表单样式(小号字体)**/
+
+.panel-form{margin:2px 2px 0px 2px}
+.table_form{border:1px solid #e2e7fd;border-top:0px;width: 100%;margin-bottom:34px;}
+.table_form tr.sub-caption,.table_form tr.sub-caption td{background:#e2e7fd;line-height:30px; font-size:14px; font-weight:bold; padding-left:10px;}
+.table_form th{width:120px;text-align:right;padding-right:10px;line-height:30px;text-align:right;font-size:14px;background-color:#ebf5ff;border:1px solid #7babcf;font-weight:normal;}
+.table_form th.must{color:red;font-size:14px; }
+.table_form td{border:solid 1px #7babcf;padding-left:6px;text-align:left;font-size:12px}
+.table_form textarea{float:left;margin:0px;border:1px solid #dfdfdf;padding:2px;overflow: auto;background:url(../../imgs/default/text-bg.jpg) repeat-x;}
+.table_form td .commom-txt{ float:left;height:20px;line-height:20px;border:1px solid #dfdfdf;color:#222;width:180px;margin: 2px 0 2px 0px; background:url(../../imgs/default/text-bg.jpg) repeat-x;}
+.table_form .dic,.table_form{float:left;border:1px solid #dfdfdf;width:180px;}
+
+.table_form .commom-txt.disabled,.table_form .dic.disabled,.table_form .Wdate.disabled,.table_form select.disabled,.table_form textarea.disabled{border:0; background:none;}
+
+.table_form td .form-oper-icon{float:left;height:20px;border:1px solid #dfdfdf;border-left:0; text-align:center;background:#f2f2f2;margin: 2px 0 2px 0;cursor:pointer;}
+.table_form td .form-oper-icon .fa{float:left;height:16px;width:20px;color:#999;font-size:14px;margin-top:3px;font-weight:normal;}
+.table_form td .form-oper-icon input{float:left;width:20px;margin-top:4px;*margin-top:0;}
+.table_form td .form-oper-icon label{float:left;margin:0 2px 0; font-size:12px;height:20px; overflow:hidden;line-height:22px;+line-height:20px;}
+
+.common-btn{border:1px solid #ccc; background:#efefef;padding:1px 5px;height: 22px;cursor: pointer;}
+.common_th{text-align:right;padding-right:3px;line-height:30px;text-align:right;font-size:13px;background-color:#f1f5f9;border:1px solid #CACDD2;font-weight:bold}
+
+/**表单样式(大号字体)**/
+.table_form_bszie{border:1px solid #ddd;border-top:0px;width: 100%;}
+.table_form_bszie th{text-align:right;padding-right:3px;height:30px;text-align:right;font-size:14px;background-color:#f1f5f9;border-bottom:1px solid #CACDD2;font-weight:bold}
+.table_form_bszie td{border-bottom:1px solid #CACDD2;text-align:left;font-size:14px;line-height: 120%;padding: 1px 4px;}
+.table_form_bszie .bottom{border-bottom:1px solid #CACDD2}
+.table_form_bszie .right{border-right:1px solid #CACDD2}
+.table_form_bszie td .common-title{height:30px;background: url(../images/sundunGrid/Grid_background.gif) repeat-x left top;line-height:30px;padding:0 10px;font-size:14px;font-weight:bold;}
+.table_form_bszie td .commom-txt{ float:left;height:20px;line-height:20px;border:1px solid #dfdfdf;color:#222;width:180px;margin: 2px 0 2px 0px; background:url(../../imgs/default/text-bg.jpg) repeat-x;}
+.table_form_bszie textarea{margin:2px;border:1px solid #abc1d1;padding:2px;overflow: auto;}
+
+/*操作按钮区域样式*/
+.bottomNav { position:fixed; bottom:0;left:0;height:36px;width:100%; border-top: 1px solid #ccc; background-color:#e9e9e9;	text-align: center;
+	z-index: 999;
+    _bottom:auto;
+    _width: 100%;
+    _position: absolute;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+
+}
+
+.btn-90x34{margin-top:2px;background:url(../../imgs/default/btn-90x34.png);width:90px;height:34px; text-align:center; line-height:24px;border:0; font-size:14px; cursor:pointer;}
+.btn-120x34{margin-top:2px;background:url(../../imgs/default/btn-120x34.png);width:120px;height:34px; text-align:center; line-height:24px;border:0; font-size:14px; cursor:pointer;}
+
+.browse_btn{ background-color:#FFF;border:1px solid #ADCDCD;height:24px;text-align:center;}
+
+/**信息选择*/
+.fa-tasks{background:url(../../imgs/default/icon-task.png) no-repeat center;}
+
+/**信息引用*/
+.fa-retweet{background:url(../../imgs/default/icon-yyxz.png) no-repeat center;}
+
+/**模糊查询*/
+.searchDiv {
+	padding-top: 8px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+.searchTr th {
+	padding-left: 5px;
+	font: 13px/1.5 'Microsoft Yahei',Tahoma,'微软雅黑';
+}
+
+#searchForm {
+	margin-bottom: 5px;
+}
+
+.searchTr td {
+	padding-left: 5px;
+}
+
+/**datagrid相关*/
+.datagrid-toolbar {
+	background: #d6e7f7;
+}
+
+.accordion-group {
+	margin-bottom: 2px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+
+#openClose.close {
+	background-position: 1px center;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	float: left;
+}
+
+.close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .2;
+	filter: alpha(opacity = 20);
+	width: 6px;
+	margin: 0 1px;
+	cursor: pointer;
+}
+
+.accordion-heading {
+	white-space: nowrap;
+	background-color: #f5f5f5;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fefefe',
+		endColorstr='#f5f5f5', GradientType=0);
+	float: inherit;
+	width: 100%;
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+}
+
+.accordion-heading .accordion-toggle {
+	font-family: 黑体;
+	font-size: 14px;
+	_padding-top: 10px;
+	_padding-bottom: 8px;
+	display: block;
+	padding: 8px 15px;
+	cursor: pointer
+}
+
+/**通用表单样式,add 2017-04-30*/ 
+.form-panel{width:100%}
+.form-panel div.panel-top{margin:0px 5px 0 5px}
+.form-panel .panel-top .tbar-title{padding-left:5px;margin-top:2px;border:1px #8dc2e3 solid;border-bottom:0px;border-radius:4px;height:22px;padding-top:6px;font-size:13px;font-weight:bold;background-color:#258FA4;}
+.form-panel .panel-top .tbar-title span{color:#fff;font-weight:bold;font-size:13px;line-height:13px;padding-top:15px;}
+
+.form-panel div.panel-body{margin:2px 5px 0 5px;border:0px;}
+
+.form-panel .table_form{border:1px solid #e2e7fd;border-top:0px;width: 100%;margin-bottom:34px;}
+.form-panel .table_form th{width:120px;text-align:right;padding-right:10px;line-height:30px;text-align:right;font-size:14px;background-color:#ebf5ff;border:1px solid #7babcf;font-weight:normal;}
+.form-panel .table_form th.must{color:red;font-size:14px; }
+.form-panel .table_form td{border:solid 1px #7babcf;padding-left:6px;text-align:left;font-size:12px}
+.form-panel .table_form textarea{float:left;margin:1px;border:1px solid #0ae;padding:2px;overflow: auto;background:url(../../imgs/default/text-bg.jpg) repeat-x;width:70%;}
+.form-panel .table_form td .commom-txt{ float:left;height:22px;line-height:20px;border:1px solid #0ae;color:#222;width:180px;margin: 2px 0 2px 0px; background:url(../../imgs/default/text-bg.jpg) repeat-x;}
+.form-panel .table_form .dic,.table_form{float:left;border:1px solid #0ae;width:172px;}
+.form-panel .table_form select{height:21px;background:url(../../imgs/default/text-bg.jpg) repeat-x;float:left;border:1px solid #0ae;width:172px;}
+
+.form-panel .table_form .commom-txt.disabled,.table_form .dic.disabled,.table_form .Wdate.disabled,.table_form select.disabled,.table_form textarea.disabled{border:0; background:none;}
+
+.form-panel .table_form input[type='text']{border:1px solid #0ae;padding:2px;width:172px;font-size:14px;}
+
+.form-panel .button{border:solid 1px #ddd;background:transparent;background-color:#258FA4;color:#fff;border-radius:4px;font-size:14px;padding:4px 12px;margin:0;display:inline-block;line-height:20px;transition:all 1s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;text-align:center;cursor: pointer;}
+.form-panel .button[disabled]{pointer-events:none;cursor:not-allowed;webkit-box-shadow:none;box-shadow:none;filter:alpha(opacity=50);opacity:.5;}
+.form-panel .button:active{background-image:none;outline:0;transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;}
+.form-panel .button:hover{transition:all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;}
+
+.form-panel .panel-body .form-btns{text-align:center;}
+/**通用表单样式,add 2017-04-30*/

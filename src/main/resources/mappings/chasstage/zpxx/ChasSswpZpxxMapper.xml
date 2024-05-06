@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.zpxx.dao.ChasSswpZpxxMapper">
+    <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.zpxx.entity.ChasSswpZpxx">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="isdel" jdbcType="SMALLINT" property="isdel"/>
+        <result column="data_flag" jdbcType="CHAR" property="dataFlag"/>
+        <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh"/>
+        <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj"/>
+        <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh"/>
+        <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj"/>
+        <result column="baqid" jdbcType="VARCHAR" property="baqid"/>
+        <result column="baqmc" jdbcType="VARCHAR" property="baqmc"/>
+        <result column="rybh" jdbcType="VARCHAR" property="rybh"/>
+        <result column="wpid" jdbcType="VARCHAR" property="wpid"/>
+        <result column="biz_id" jdbcType="VARCHAR" property="bizId"/>
+        <result column="zplx" jdbcType="VARCHAR" property="zplx"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update gg_sswpxx_zpxx
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+    <delete id="deleteByWpid" parameterType="java.lang.String">
+    update gg_sswpxx_zpxx
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where wpid = '${wpid}'
+    </delete>
+    <delete id="deleteBybizId" parameterType="java.lang.String">
+    update gg_sswpxx_zpxx
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where biz_id = '${bizId}'
+    </delete>
+    <insert id="insert" parameterType="com.wckj.chasstage.modules.zpxx.entity.ChasSswpZpxx">
+        insert into gg_sswpxx_zpxx (id, isdel, data_flag,
+        lrr_sfzh, lrsj, xgr_sfzh,
+        xgsj, baqid, baqmc,
+        rybh, wpid, biz_id,
+        zplx)
+        values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=CHAR},
+        #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+        #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+        #{rybh,jdbcType=VARCHAR}, #{wpid,jdbcType=VARCHAR}, #{bizId,jdbcType=VARCHAR},
+        #{zplx,jdbcType=VARCHAR})
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.zpxx.entity.ChasSswpZpxx">
+        update gg_sswpxx_zpxx
+        set isdel = #{isdel,jdbcType=SMALLINT},
+        data_flag = #{dataFlag,jdbcType=CHAR},
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+        baqid = #{baqid,jdbcType=VARCHAR},
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+        rybh = #{rybh,jdbcType=VARCHAR},
+        wpid = #{wpid,jdbcType=VARCHAR},
+        biz_id = #{bizId,jdbcType=VARCHAR},
+        zplx = #{zplx,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, rybh,
+        wpid, biz_id, zplx
+        from gg_sswpxx_zpxx
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, rybh,
+        wpid, biz_id, zplx
+        from gg_sswpxx_zpxx
+        where 1 = 1 and isdel = 0
+        <if test="wpid != null and wpid != ''">
+            and wpid = '${wpid}'
+        </if>
+        <if test="rybh != null and rybh != ''">
+            and rybh = '${rybh}'
+        </if>
+        <if test="zplx != null and zplx != ''">
+            and zplx = '${zplx}'
+        </if>
+    </select>
+
+    <select id="findZpxxByBizId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from gg_sswpxx_zpxx where biz_id = '${bizId}' and isdel = 0
+  </select>
+</mapper>

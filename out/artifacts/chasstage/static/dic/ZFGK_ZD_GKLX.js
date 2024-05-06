@@ -1,0 +1,1 @@
+function ZFGK_ZD_GKLX(){  var SourceArray = [{"name":"不公开","jpcode":"bgk","code":"0","scode":"bugongkai"},{"name":"已公开","jpcode":"ygk","code":"1","scode":"yigongkai"}]; return SourceArray;}

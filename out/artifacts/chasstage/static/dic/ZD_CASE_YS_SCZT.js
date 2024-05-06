@@ -1,0 +1,1 @@
+function ZD_CASE_YS_SCZT(){  var SourceArray = [{"name":"待审","jpcode":"ds","code":"01","scode":"daishen"},{"name":"在审","jpcode":"zs","code":"02","scode":"zaishen"},{"name":"审结","jpcode":"sj","code":"03","scode":"shenjie"}]; return SourceArray;}

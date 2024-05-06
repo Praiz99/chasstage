@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.baq.dao.ChasBaqrefMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.baq.entity.ChasBaqref">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="DWDM" jdbcType="VARCHAR" property="dwdm" />
+    <result column="SYDWDM" jdbcType="VARCHAR" property="sydwdm" />
+    <result column="DWXTBH" jdbcType="VARCHAR" property="dwxtbh"/>
+    <result column="SYDWXTBH" jdbcType="VARCHAR" property="sydwxtbh"/>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from chas_xt_baqref
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.baq.entity.ChasBaqref">
+    insert into chas_xt_baqref (ID, BAQID, DWDM,
+      SYDWDM,DWXTBH,SYDWXTBH)
+    values (#{id,jdbcType=VARCHAR}, #{baqid,jdbcType=VARCHAR}, #{dwdm,jdbcType=VARCHAR},
+      #{sydwdm,jdbcType=VARCHAR},#{dwxtbh,jdbcType=VARCHAR},#{sydwxtbh,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.baq.entity.ChasBaqref">
+    update chas_xt_baqref
+    set BAQID = #{baqid,jdbcType=VARCHAR},
+      DWDM = #{dwdm,jdbcType=VARCHAR},
+      SYDWDM = #{sydwdm,jdbcType=VARCHAR},
+      DWXTBH = #{dwxtbh,jdbcType=VARCHAR},
+      SYDWXTBH = #{sydwxtbh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select *
+    from chas_xt_baqref
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from chas_xt_baqref
+     <where>
+     1=1
+       <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}'
+     </if>
+     <if test="dwdm != null and dwdm !=''">
+            and DWDM = '${dwdm}'
+     </if>
+     <if test="sydwdm != null and sydwdm !=''">
+            and SYDWDM = '${sydwdm}'
+     </if>
+     <if test="dwxtbh != null and dwxtbh !=''">
+         and DWXTBH = '${dwxtbh}'
+     </if>
+     <if test="sydwxtbh != null and sydwxtbh !=''">
+         and SYDWXTBH = '${sydwxtbh}'
+     </if>
+    </where>
+  </select>
+</mapper>

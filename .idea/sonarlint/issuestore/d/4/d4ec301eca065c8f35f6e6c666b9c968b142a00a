@@ -1,0 +1,82 @@
+
+H
+java:S14523"&Remove usage of generic wildcard type.(Øæ®±úÿÿÿÿ8¹»Øã¡1
+`
+java:S44881"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(î´½Ï
+C
+java:S1452B"&Remove usage of generic wildcard type.(ª¸µÚ8¼»Øã¡1
+c
+java:S4488@"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÚÒì”ùÿÿÿÿ
+C
+java:S1452S"&Remove usage of generic wildcard type.(¥Ê‚Ã8¾»Øã¡1
+^
+java:S4488O"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÂÃ»
+C
+java:S1452b"&Remove usage of generic wildcard type.(£÷ï8¿»Øã¡1
+c
+java:S4488`"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤ÿ½İüÿÿÿÿ
+H
+java:S1452q"&Remove usage of generic wildcard type.(Âò«ûÿÿÿÿÿ8À»Øã¡1
+^
+java:S4488o"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ì¿Ğ«
+D
+java:S1452€"&Remove usage of generic wildcard type.(°àÈŠ8Á»Øã¡1
+^
+java:S4488~"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(«šÎ•
+I
+java:S1452’"&Remove usage of generic wildcard type.(şÓÛÔıÿÿÿÿ8Ã»Øã¡1
+^
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(î†§o
+k	java:S100¡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò…¾Û8Ä»Øã¡1
+D
+java:S1452¡"&Remove usage of generic wildcard type.(Ò…¾Û8Ä»Øã¡1
+a
+java:S4488Ÿ"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÔÑş¿
+I
+java:S1452°"&Remove usage of generic wildcard type.(ïº¸Úıÿÿÿÿ8Å»Øã¡1
+d
+java:S4488®"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯¬ßÅıÿÿÿÿ
+D
+java:S1452İ"&Remove usage of generic wildcard type.(”³ş¢8Æ»Øã¡1
+W	java:S125¶"<This block of commented-out lines of code should be removed.(¬¹Óøÿÿÿÿ
+f
+java:S4488Û"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(‚Äˆ×ıÿÿÿÿ
+D
+java:S1452í"&Remove usage of generic wildcard type.(Ó€É8È»Øã¡1
+_
+java:S4488ê"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(…ÏêÂ
+I
+java:S1452ş"&Remove usage of generic wildcard type.(âíş„şÿÿÿÿ8Ê»Øã¡1
+_
+java:S4488û"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Š¸Œİ
+I
+java:S1452"&Remove usage of generic wildcard type.(¾æéıÿÿÿÿ8Ë»Øã¡1
+f
+java:S4488‹"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(İ‰İøÿÿÿÿ
+C
+java:S1452 "&Remove usage of generic wildcard type.(òôÜ
+8Í»Øã¡1
+d
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(øª¾úÿÿÿÿ
+p	java:S100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÉŸıÿÿÿÿ8Í»Øã¡1
+I
+java:S1452²"&Remove usage of generic wildcard type.(şÉŸıÿÿÿÿ8Î»Øã¡1
+d
+java:S4488®"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÔõÅ„øÿÿÿÿ
+p	java:S100Á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÀİ®øÿÿÿÿ8Ï»Øã¡1
+I
+java:S1452Á"&Remove usage of generic wildcard type.(ùÀİ®øÿÿÿÿ8Ï»Øã¡1
+f
+java:S4488¾"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(åÁÌüÿÿÿÿ
+C
+java:S1452Ô"&Remove usage of generic wildcard type.(€“À?8Ğ»Øã¡1
+d
+java:S4488Ï"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(şğğ‚ûÿÿÿÿ
+I
+java:S1452ç"&Remove usage of generic wildcard type.(İØì¼şÿÿÿÿ8Ñ»Øã¡1
+f
+java:S4488á"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¾ü’¥şÿÿÿÿ
+D
+java:S1452ú"&Remove usage of generic wildcard type.(«—ı´8Ò»Øã¡1
+m
+java:S4488ô"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¾ü’¥şÿÿÿÿ8·•Ìã¡1

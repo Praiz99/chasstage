@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.clcrjl.dao.ChasYwClcrjlMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.clcrjl.entity.ChasYwClcrjl">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="clid" jdbcType="VARCHAR" property="clid" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="dwbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="dwmc" jdbcType="VARCHAR" property="dwmc" />
+    <result column="cl_brand" jdbcType="VARCHAR" property="clBrand" />
+    <result column="cl_model" jdbcType="VARCHAR" property="clModel" />
+    <result column="cl_number" jdbcType="VARCHAR" property="clNumber" />
+    <result column="zrr_sfzh" jdbcType="VARCHAR" property="zrrSfzh" />
+    <result column="zrr_xm" jdbcType="VARCHAR" property="zrrXm" />
+    <result column="cqsj" jdbcType="TIMESTAMP" property="cqsj" />
+    <result column="rqsj" jdbcType="TIMESTAMP" property="rqsj" />
+    <result column="cl_name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_clcrjl
+    set isdel = 1,xgsj = date_trunc('second', now())
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.clcrjl.entity.ChasYwClcrjl">
+    insert into chas_yw_clcrjl (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, clid, baqid, 
+      baqmc, dwbh, dwmc, 
+      cl_brand, cl_model, cl_number, 
+      zrr_sfzh, zrr_xm, cqsj, 
+      rqsj,cl_name)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{clid,jdbcType=VARCHAR}, #{baqid,jdbcType=VARCHAR}, 
+      #{baqmc,jdbcType=VARCHAR}, #{dwxtbh,jdbcType=VARCHAR}, #{dwmc,jdbcType=VARCHAR},
+      #{clBrand,jdbcType=VARCHAR}, #{clModel,jdbcType=VARCHAR}, #{clNumber,jdbcType=VARCHAR}, 
+      #{zrrSfzh,jdbcType=VARCHAR}, #{zrrXm,jdbcType=VARCHAR}, #{cqsj,jdbcType=TIMESTAMP}, 
+      #{rqsj,jdbcType=TIMESTAMP},#{name,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.clcrjl.entity.ChasYwClcrjl">
+    update chas_yw_clcrjl
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      clid = #{clid,jdbcType=VARCHAR},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      dwbh = #{dwxtbh,jdbcType=VARCHAR},
+      dwmc = #{dwmc,jdbcType=VARCHAR},
+      cl_brand = #{clBrand,jdbcType=VARCHAR},
+      cl_model = #{clModel,jdbcType=VARCHAR},
+      cl_number = #{clNumber,jdbcType=VARCHAR},
+      zrr_sfzh = #{zrrSfzh,jdbcType=VARCHAR},
+      zrr_xm = #{zrrXm,jdbcType=VARCHAR},
+      cqsj = #{cqsj,jdbcType=TIMESTAMP},
+      rqsj = #{rqsj,jdbcType=TIMESTAMP},
+      cl_name =#{name,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, clid, baqid, baqmc, 
+    dwbh, dwmc, cl_brand, cl_model, cl_number, zrr_sfzh, zrr_xm, cqsj, rqsj,cl_name
+    from chas_yw_clcrjl
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, clid, baqid, baqmc, 
+    dwbh, dwmc, cl_brand, cl_model, cl_number, zrr_sfzh, zrr_xm, cqsj, rqsj,cl_name
+    from chas_yw_clcrjl
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="clBrand != null and clBrand !=''">
+        and cl_brand = '${clBrand}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="zrrXm != null and zrrXm !=''">
+        and zrr_xm = '${zrrXm}'
+      </if>
+      <if test="cqsj1 !=null and cqsj1 !=''">
+        and cqsj &gt;='${cqsj1}'
+      </if>
+      <if test="cqsj2 !=null and cqsj2 !=''">
+        and cqsj &lt;='${cqsj2}'
+      </if>
+      <if test="rqsj1 !=null and rqsj1 !=''">
+        and rqsj &gt;='${rqsj1}'
+      </if>
+      <if test="rqsj2 !=null and rqsj2 !=''">
+        and rqsj &lt;='${rqsj2}'
+      </if>
+      <if test="dwxtbh !=null and dwxtbh !=''">
+        and DWBH ='${dwxtbh}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and baqid in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+      </if>
+      <if test="qxbs == 'province'">
+        and DWBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+    </where>
+    order by rqsj desc
+  </select>
+
+
+  <select id="findByParams" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, clid, baqid, baqmc,
+    dwbh, dwmc, cl_brand, cl_model, cl_number, zrr_sfzh, zrr_xm, cqsj, rqsj,cl_name
+    from chas_yw_clcrjl
+    <where>
+      isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="clid != null and clid !=''">
+        and clid = '${clid}'
+      </if>
+      ORDER BY lrsj DESC limit 1 offset 0
+    </where>
+  </select>
+</mapper>

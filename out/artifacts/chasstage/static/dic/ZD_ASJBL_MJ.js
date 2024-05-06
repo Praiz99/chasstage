@@ -1,0 +1,1 @@
+function ZD_ASJBL_MJ(){  var SourceArray = [{"name":"财务","jpcode":"cw","code":"1","scode":"caiwu"},{"name":"金钱","jpcode":"jq","code":"2","scode":"jinqian"}]; return SourceArray;}

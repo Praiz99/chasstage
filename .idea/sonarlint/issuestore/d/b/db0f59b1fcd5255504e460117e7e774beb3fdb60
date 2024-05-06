@@ -1,0 +1,29 @@
+
+`
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ä¯À
+_
+java:S4488&"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ï˜¦
+]
+java:S4488/"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‚½Œj
+c
+java:S4488:"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(½„ê¹ùÿÿÿÿ
+c
+java:S4488E"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(í²‘ûÿÿÿÿ
+V	java:S125S"<This block of commented-out lines of code should be removed.(¬¹Óøÿÿÿÿ
+^
+java:S4488["HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ç¤¸²
+^
+java:S4488f"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(›Ò³­
+]
+java:S4488s"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¶¡I
+=
+java:S1452‡"&Remove usage of generic wildcard type.(ïŞù
+`
+java:S4488…"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(…™¸R
+<
+java:S1452•"&Remove usage of generic wildcard type.(¤¨Ö!
+a
+java:S4488“"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(»¿ï®
+d
+java:S1128
+"NRemove this unused import 'com.wckj.jdone.modules.act.core.NodeProcessCmdObj'.(î‡êÒ

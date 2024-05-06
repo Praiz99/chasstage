@@ -1,0 +1,1 @@
+function ZD_CASE_XZZFJG_RWLX(){  var SourceArray = [{"name":"日常","jpcode":"rc","code":"DAILY","scode":"richang"},{"name":"双随机","jpcode":"ssj","code":"RANDOM","scode":"shuangsuiji"},{"name":"专项","jpcode":"zx","code":"SPECIAL","scode":"zhuanxiang"},{"name":"事件核查","jpcode":"sjhc","code":"VERIFICATION","scode":"shijianhecha"}]; return SourceArray;}

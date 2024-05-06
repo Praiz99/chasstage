@@ -1,0 +1,1 @@
+function ZD_ZSZDAB_101030140(){  var SourceArray = [{"name":"提供赌博场地及麻将、扑克、牌九等赌具","jpcode":"tgdbcdjmj、pk、pjddj","code":"10103014001","scode":"tigongdubochangdijimajiang、puke、paijiudengduju"}]; return SourceArray;}

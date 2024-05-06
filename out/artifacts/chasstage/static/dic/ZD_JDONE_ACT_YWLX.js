@@ -1,0 +1,1 @@
+function ZD_JDONE_ACT_YWLX(){  var SourceArray = [{"name":"快办案件审批","jpcode":"kbajsp","code":"kbajsp","scode":"kuaibananjianshenpi"},{"name":"案件涉密审批","jpcode":"ajsmsp","code":"ajsmsp","scode":"anjianshemishenpi"},{"name":"通用数据变更警情删除","jpcode":"tysjbgjqsc","code":"tysjbg_jqDel","scode":"tongyongshujubiangengjingqingshanchu"}]; return SourceArray;}

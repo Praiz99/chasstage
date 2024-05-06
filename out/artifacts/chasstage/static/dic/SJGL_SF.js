@@ -1,0 +1,1 @@
+function SJGL_SF(){  var SourceArray = [{"name":"人民群众","jpcode":"rmqz","code":"1","scode":"renminqunzhong"},{"name":"国企领导","jpcode":"gqld","code":"2","scode":"guoqilingdao"}]; return SourceArray;}

@@ -1,0 +1,75 @@
+
+`	java:S112j"FDefine and throw a dedicated exception instead of using a generic one.(Âàøÿÿÿÿ
+\	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¿Ë•
+D
+java:S37406"/Provide the parametrized type for this generic.(œ¿†r
+K
+java:S3740’"/Provide the parametrized type for this generic.(ÍÓ¿Èøÿÿÿÿ
+K
+java:S3740²"/Provide the parametrized type for this generic.(î”ÏÊıÿÿÿÿ
+K
+java:S3740¹"/Provide the parametrized type for this generic.(¹¼…àúÿÿÿÿ
+K
+java:S3740Â"/Provide the parametrized type for this generic.(Ê‡Û¸ûÿÿÿÿ
+K
+java:S3740İ"/Provide the parametrized type for this generic.(äÂ»öşÿÿÿÿ
+K
+java:S3740ä"/Provide the parametrized type for this generic.(¹¼…àúÿÿÿÿ
+K
+java:S3740ò"/Provide the parametrized type for this generic.(Ê‡Û¸ûÿÿÿÿ
+F
+java:S3740‘"/Provide the parametrized type for this generic.(Á°¯ÿ
+K
+java:S3740˜"/Provide the parametrized type for this generic.(¹¼…àúÿÿÿÿ
+K
+java:S3740¡"/Provide the parametrized type for this generic.(Ê‡Û¸ûÿÿÿÿ
+t	java:S135º"YReduce the total number of break and continue statements in this loop to use at most one.(ßÙ²òüÿÿÿÿ
+t	java:S135å"YReduce the total number of break and continue statements in this loop to use at most one.(ßÙ²òüÿÿÿÿ
+t	java:S135™"YReduce the total number of break and continue statements in this loop to use at most one.(ßÙ²òüÿÿÿÿ
+F
+java:S1066È"/Merge this if statement with the enclosing one.(¬Ùá
+F
+java:S1066§"/Merge this if statement with the enclosing one.(¬Ùá
+F
+java:S1066¬"/Merge this if statement with the enclosing one.(¼ÙÖÓ
+k	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´àıÿÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(Äšæ»üÿÿÿÿ
+@
+java:S1197%"*Move the array designators [] to the type.(õÊÖÊ
+7
+java:S1116/"Remove this empty statement.(ƒÔÆİÿÿÿÿÿ
+7
+java:S1116?"Remove this empty statement.(ƒÔÆİÿÿÿÿÿ
+Q	java:S125F"<This block of commented-out lines of code should be removed.(Óî±ı
+?
+java:S1197H"*Move the array designators [] to the type.(…¹¾u
+V	java:S125L"<This block of commented-out lines of code should be removed.(„…ìªüÿÿÿÿ
+_
+java:S2147Y"DCombine this catch with the one at line 86, which has the same body.(ñ“Š±üÿÿÿÿ
+7
+java:S1116W"Remove this empty statement.(ƒÔÆİÿÿÿÿÿ
+7
+java:S1116Z"Remove this empty statement.(ƒÔÆİÿÿÿÿÿ
+m
+java:S3776j"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Âàøÿÿÿÿ
+E
+java:S1197l"*Move the array designators [] to the type.(´Ô²¤øÿÿÿÿ
+\
+java:S2147"ECombine this catch with the one at line 155, which has the same body.(åşáÿ
+a
+java:S2147Ÿ"ECombine this catch with the one at line 155, which has the same body.(¼¯•¶ùÿÿÿÿ
+R	java:S125œ"<This block of commented-out lines of code should be removed.(†€éˆ
+R	java:S125"<This block of commented-out lines of code should be removed.(†€éˆ
+R	java:S125 "<This block of commented-out lines of code should be removed.(†€éˆ
+2
+java:S3626Ï"Remove this redundant jump.(ÉŠ©ƒ
+i	java:S100İ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÂ»öşÿÿÿÿ
+2
+java:S3626ƒ"Remove this redundant jump.(ÉŠ©ƒ
+R	java:S125í"<This block of commented-out lines of code should be removed.(ñ©ò¡
+R	java:S125û"<This block of commented-out lines of code should be removed.(ŒèÆã
+i
+java:S3776‘"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Á°¯ÿ
+2
+java:S3626³"Remove this redundant jump.(ÉŠ©ƒ

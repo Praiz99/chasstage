@@ -1,0 +1,1 @@
+function ZD_CQWSLX(){  var SourceArray = [{"name":"呈请报告书","jpcode":"cqbgs","code":"CQBGS","scode":"chengqingbaogaoshu"},{"name":"审批表","jpcode":"spb","code":"SPB","scode":"shenpibiao"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFKP_DFXPZ_PZXLB(){  var SourceArray = [{"name":"目录","jpcode":"ml","code":"01","scode":"mulu"},{"name":"配置项","jpcode":"pzx","code":"02","scode":"peizhixiang"}]; return SourceArray;}

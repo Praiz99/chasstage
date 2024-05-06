@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.clsyjl.dao.ChasYwClsyjlMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.clsyjl.entity.ChasYwClsyjl">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="INTEGER" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="clid" jdbcType="VARCHAR" property="clid" />
+    <result column="cl_number" jdbcType="VARCHAR" property="clNumber" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="ryxm" jdbcType="VARCHAR" property="ryxm" />
+    <result column="wdbh_l" jdbcType="VARCHAR" property="wdbhL" />
+    <result column="wdbh_h" jdbcType="VARCHAR" property="wdbhH" />
+    <result column="sypcbh" jdbcType="VARCHAR" property="sypcbh" />
+    <result column="isend" jdbcType="VARCHAR" property="isend" />
+    <result column="jzbh" jdbcType="VARCHAR" property="jzbh" />
+    <result column="kssj" jdbcType="TIMESTAMP" property="kssj" />
+    <result column="jssj" jdbcType="TIMESTAMP" property="jssj" />
+    <result column="bindstat" jdbcType="VARCHAR" property="bindstat" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_clsyjl set isdel = 1,xgsj = date_trunc('second', now()),bindstat='3'
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.clsyjl.entity.ChasYwClsyjl">
+
+    insert into chas_yw_clsyjl (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      clid, cl_number,
+      rybh, ryxm, wdbh_l, 
+      wdbh_h, sypcbh, isend,jzbh,kssj,jssj,bindstat
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{clid,jdbcType=VARCHAR}, #{clNumber,jdbcType=VARCHAR},
+      #{rybh,jdbcType=VARCHAR}, #{ryxm,jdbcType=VARCHAR}, #{wdbhL,jdbcType=VARCHAR}, 
+      #{wdbhH,jdbcType=VARCHAR}, #{sypcbh,jdbcType=VARCHAR}, #{isend,jdbcType=VARCHAR},
+      #{jzbh,jdbcType=VARCHAR},#{kssj,jdbcType=TIMESTAMP},#{jssj,jdbcType=TIMESTAMP},
+      #{bindstat,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.clsyjl.entity.ChasYwClsyjl">
+
+    update chas_yw_clsyjl
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      clid = #{clid,jdbcType=VARCHAR},
+      cl_number = #{clNumber,jdbcType=VARCHAR},
+      rybh = #{rybh,jdbcType=VARCHAR},
+      ryxm = #{ryxm,jdbcType=VARCHAR},
+      wdbh_l = #{wdbhL,jdbcType=VARCHAR},
+      wdbh_h = #{wdbhH,jdbcType=VARCHAR},
+      sypcbh = #{sypcbh,jdbcType=VARCHAR},
+      isend = #{isend,jdbcType=VARCHAR},
+      jzbh = #{jzbh,jdbcType=VARCHAR},
+      kssj = #{kssj,jdbcType=TIMESTAMP},
+      jssj = #{jssj,jdbcType=TIMESTAMP},
+      bindstat = #{bindstat,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, clid, 
+    cl_number, rybh, ryxm, wdbh_l, wdbh_h, sypcbh, isend,jzbh,kssj,jssj,bindstat
+    from chas_yw_clsyjl
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, clid, 
+    cl_number, rybh, ryxm, wdbh_l, wdbh_h, sypcbh, isend,jzbh,kssj,jssj,bindstat
+    from chas_yw_clsyjl
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="clid != null and clid !=''">
+        and clid = '${clid}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+      <if test="wdbhL != null and wdbhL !=''">
+        and wdbh_l = '${wdbhL}'
+      </if>
+      <if test="wdbhH != null and wdbhH !=''">
+        and wdbh_h = '${wdbhH}'
+      </if>
+      <if test="jzbh != null and jzbh !=''">
+        and jzbh = '${jzbh}'
+      </if>
+      <if test="isend != null and isend !=''">
+        and isend = '${isend}'
+      </if>
+      <if test="bindstat != null and bindstat !=''">
+        and bindstat = '${bindstat}'
+      </if>
+      <if test="baqmc !=null and baqmc !=''">
+        and BAQMC LIKE '%${baqmc}%'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and id in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+      </if>
+    </where>
+  </select>
+  <select id="getClsyrysl" resultType="java.lang.Integer">
+
+    select count(id)
+    from chas_yw_clsyjl
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="clid != null and clid !=''">
+        and clid = '${clid}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="jzbh != null and jzbh !=''">
+        and jzbh = '${jzbh}'
+      </if>
+      and bindstat = '1' and lrsj>= (now()- interval '2 d')
+
+    </where>
+  </select>
+  <update id="unBindsyjlByClid" parameterType="map">
+    update chas_yw_clsyjl set bindstat='2'
+    <where>
+      <if test="baqid != null and baqid !=''">
+        and baqid = '${baqid}'
+      </if>
+      <if test="clid != null and clid !=''">
+        and clid = '${clid}'
+      </if>
+      <if test="clNumber != null and clNumber !=''">
+        and cl_number = '${clNumber}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+        and bindstat = '1'
+    </where>
+  </update>
+</mapper>

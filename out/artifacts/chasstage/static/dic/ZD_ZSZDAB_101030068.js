@@ -1,0 +1,1 @@
+function ZD_ZSZDAB_101030068(){  var SourceArray = [{"name":"殴打报案人","jpcode":"odbar","code":"10103006801","scode":"oudabaoanren"},{"name":"殴打（伤害）他人","jpcode":"od-sh-tr","code":"10103006802","scode":"ouda-shanghai-taren"}]; return SourceArray;}

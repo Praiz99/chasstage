@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wckj.chasstage.modules.shsng.dao.ChasSngMapper" >
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.shsng.entity.ChasSng" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="isdel" property="isdel" jdbcType="SMALLINT" />
+    <result column="data_flag" property="dataFlag" jdbcType="VARCHAR" />
+    <result column="lrr_sfzh" property="lrrSfzh" jdbcType="VARCHAR" />
+    <result column="lrsj" property="lrsj" jdbcType="TIMESTAMP" />
+    <result column="xgr_sfzh" property="xgrSfzh" jdbcType="VARCHAR" />
+    <result column="xgsj" property="xgsj" jdbcType="TIMESTAMP" />
+    <result column="shbh" property="shbh" jdbcType="VARCHAR" />
+    <result column="zgqk" property="zgqk" jdbcType="VARCHAR" />
+    <result column="sngid" property="sngid" jdbcType="VARCHAR" />
+    <result column="baqid" property="baqid" jdbcType="VARCHAR" />
+    <result column="baqmc" property="baqmc" jdbcType="VARCHAR" />
+    <result column="kzcs1" property="kzcs1" jdbcType="VARCHAR" />
+    <result column="kzcs2" property="kzcs2" jdbcType="VARCHAR" />
+    <result column="sblx" property="sblx" jdbcType="VARCHAR" />
+    <result column="sbmc" property="sbmc" jdbcType="VARCHAR" />
+    <result column="ffsj" property="ffsj" jdbcType="TIMESTAMP" />
+    <result column="ghsj" property="ghsj" jdbcType="TIMESTAMP" />
+    <result column="zt" property="zt" jdbcType="VARCHAR" />
+    <result column="kzcs3" property="kzcs3" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, shbh, zgqk, sngid, baqid, baqmc,
+    kzcs1, kzcs2, sblx, sbmc, ffsj, ghsj, zt, kzcs3
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from chas_xt_sng
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from chas_xt_sng
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.shsng.entity.ChasSng" >
+    insert into chas_xt_sng (id, isdel, data_flag,
+      lrr_sfzh, lrsj, xgr_sfzh,
+      xgsj, shbh, zgqk,
+      sngid, baqid, baqmc,
+      kzcs1, kzcs2, sblx,
+      sbmc, ffsj, ghsj, zt, kzcs3)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR},
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+      #{xgsj,jdbcType=TIMESTAMP}, #{shbh,jdbcType=VARCHAR}, #{zgqk,jdbcType=VARCHAR},
+      #{sngid,jdbcType=VARCHAR}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+      #{kzcs1,jdbcType=VARCHAR}, #{kzcs2,jdbcType=VARCHAR}, #{sblx,jdbcType=VARCHAR},
+      #{sbmc,jdbcType=VARCHAR}, #{ffsj,jdbcType=TIMESTAMP}, #{ghsj,jdbcType=TIMESTAMP},
+    #{zt,jdbcType=VARCHAR}, #{kzcs3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wckj.chasstage.modules.shsng.entity.ChasSng" >
+    insert into chas_xt_sng
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="isdel != null" >
+        isdel,
+      </if>
+      <if test="dataFlag != null" >
+        data_flag,
+      </if>
+      <if test="lrrSfzh != null" >
+        lrr_sfzh,
+      </if>
+      <if test="lrsj != null" >
+        lrsj,
+      </if>
+      <if test="xgrSfzh != null" >
+        xgr_sfzh,
+      </if>
+      <if test="xgsj != null" >
+        xgsj,
+      </if>
+      <if test="shbh != null" >
+        shbh,
+      </if>
+      <if test="zgqk != null" >
+        zgqk,
+      </if>
+      <if test="sngid != null" >
+        sngid,
+      </if>
+      <if test="baqid != null" >
+        baqid,
+      </if>
+      <if test="baqmc != null" >
+        baqmc,
+      </if>
+      <if test="kzcs1 != null" >
+        kzcs1,
+      </if>
+      <if test="kzcs2 != null" >
+        kzcs2,
+      </if>
+      <if test="sblx != null" >
+        sblx,
+      </if>
+      <if test="sbmc != null" >
+        sbmc,
+      </if>
+      <if test="ffsj != null" >
+        ffsj,
+      </if>
+      <if test="ghsj != null" >
+        ghsj,
+      </if>
+      <if test="zt != null" >
+        zt,
+      </if>
+      <if test="kzcs3 != null" >
+        kzcs3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="isdel != null" >
+        #{isdel,jdbcType=SMALLINT},
+      </if>
+      <if test="dataFlag != null" >
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null" >
+        #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null" >
+        #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null" >
+        #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shbh != null" >
+        #{shbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqk != null" >
+        #{zgqk,jdbcType=VARCHAR},
+      </if>
+      <if test="sngid != null" >
+        #{sngid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqid != null" >
+        #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null" >
+        #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs1 != null" >
+        #{kzcs1,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs2 != null" >
+        #{kzcs2,jdbcType=VARCHAR},
+      </if>
+      <if test="sblx != null" >
+        #{sblx,jdbcType=VARCHAR},
+      </if>
+      <if test="sbmc != null" >
+        #{sbmc,jdbcType=VARCHAR},
+      </if>
+      <if test="ffsj != null" >
+        #{ffsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ghsj != null" >
+        #{ghsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zt != null" >
+        #{zt,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs3 != null" >
+        #{kzcs3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wckj.chasstage.modules.shsng.entity.ChasSng" >
+    update chas_xt_sng
+    <set >
+      <if test="isdel != null" >
+        isdel = #{isdel,jdbcType=SMALLINT},
+      </if>
+      <if test="dataFlag != null" >
+        data_flag = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null" >
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null" >
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null" >
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shbh != null" >
+        shbh = #{shbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqk != null" >
+        zgqk = #{zgqk,jdbcType=VARCHAR},
+      </if>
+      <if test="sngid != null" >
+        sngid = #{sngid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqid != null" >
+        baqid = #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null" >
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs1 != null" >
+        kzcs1 = #{kzcs1,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs2 != null" >
+        kzcs2 = #{kzcs2,jdbcType=VARCHAR},
+      </if>
+      <if test="sblx != null" >
+        sblx = #{sblx,jdbcType=VARCHAR},
+      </if>
+      <if test="sbmc != null" >
+        sbmc = #{sbmc,jdbcType=VARCHAR},
+      </if>
+      <if test="ffsj != null" >
+        ffsj = #{ffsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ghsj != null" >
+        ghsj = #{ghsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zt != null" >
+        zt = #{zt,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs3 != null" >
+        kzcs3 = #{kzcs3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.shsng.entity.ChasSng" >
+    update chas_xt_sng
+    <set >
+      <if test="isdel != null" >
+        isdel = #{isdel,jdbcType=SMALLINT},
+      </if>
+      <if test="dataFlag != null" >
+        data_flag = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null" >
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null" >
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null" >
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shbh != null" >
+        shbh = #{shbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zgqk != null" >
+        zgqk = #{zgqk,jdbcType=VARCHAR},
+      </if>
+      <if test="sngid != null" >
+        sngid = #{sngid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqid != null" >
+        baqid = #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null" >
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs1 != null" >
+        kzcs1 = #{kzcs1,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs2 != null" >
+        kzcs2 = #{kzcs2,jdbcType=VARCHAR},
+      </if>
+      <if test="sblx != null" >
+        sblx = #{sblx,jdbcType=VARCHAR},
+      </if>
+      <if test="sbmc != null" >
+        sbmc = #{sbmc,jdbcType=VARCHAR},
+      </if>
+      <if test="ffsj != null" >
+        ffsj = #{ffsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ghsj != null" >
+        ghsj = #{ghsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="zt != null" >
+        zt = #{zt,jdbcType=VARCHAR},
+      </if>
+      <if test="kzcs3 != null" >
+        kzcs3 = #{kzcs3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chas_xt_sng
+    <where>
+      isdel = 0
+      <if test="kzcs1 != null and kzcs1 != ''" >
+        and kzcs1 like '${kzcs1}%'
+      </if>
+      <if test="kzcs2 != null and kzcs2 != ''" >
+        and kzcs2 like '${kzcs2}%'
+      </if>
+      <if test="zt != null and zt != ''" >
+        and zt = #{zt,jdbcType=VARCHAR}
+      </if>
+      <if test="kzcs3 != null and kzcs3 != ''" >
+        and kzcs3 = #{kzcs3,jdbcType=VARCHAR}
+      </if>
+      <if test="ksffsj != null and ksffsj != ''" >
+        and ffsj between to_timestamp(#{ksffsj},'yyyy-MM-dd hh24:mi:ss')
+        AND to_timestamp(#{jsffsj},'yyyy-MM-dd hh24:mi:ss')
+      </if>
+      <if test="ksghsj != null and ksghsj != ''" >
+        and ghsj between to_timestamp(#{ksghsj},'yyyy-MM-dd hh24:mi:ss')
+        AND to_timestamp(#{jsghsj},'yyyy-MM-dd hh24:mi:ss')
+      </if>
+      <if test="baqid != null and baqid != ''" >
+        and baqid = #{baqid,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <select id="selectZg" resultType="java.lang.Integer">
+    select count(id) as num FROM chas_xt_sng
+    where isdel = 0 and zgqk = '1'
+  </select>
+  <update id="yjcl" parameterType="java.lang.String">
+    update chas_xt_sng
+    set zgqk = '2',
+        xgsj = now()
+    where zgqk = '1'
+  </update>
+  <select id="findeByWdbhL" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chas_xt_sng where isdel = 0 and kzcs2 = #{kzcs2}
+  </select>
+  <update id="sngUpdate" parameterType="com.wckj.chasstage.modules.shsng.entity.ChasSng">
+    update chas_xt_sng
+    set zgqk = #{zgqk},
+        zt = #{zt},
+        ffsj = now(),
+        ghsj = null,
+        xgsj = now()
+    where kzcs2 = #{kzcs2}
+  </update>
+  <select id="findDataBySbbh" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from chas_xt_sng where isdel = 0 and shbh = #{shbh,jdbcType=VARCHAR}
+  </select>
+</mapper>

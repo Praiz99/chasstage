@@ -1,0 +1,1 @@
+function ZD_ASJBL_XCLX(){  var SourceArray = [{"name":"广场","jpcode":"gc","code":"0130","scode":"guangchang"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function BJ_TIME_LIMIT_UNIT(){  var SourceArray = [{"name":"时","jpcode":"s","code":"1","scode":"shi"},{"name":"天","jpcode":"t","code":"2","scode":"tian"}]; return SourceArray;}

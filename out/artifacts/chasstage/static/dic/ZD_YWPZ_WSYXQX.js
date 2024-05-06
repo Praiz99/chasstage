@@ -1,0 +1,1 @@
+function ZD_YWPZ_WSYXQX(){  var SourceArray = [{"name":"天","jpcode":"t","code":"day","scode":"tian"},{"name":"月","jpcode":"y","code":"month","scode":"yue"},{"name":"年","jpcode":"n","code":"year","scode":"nian"}]; return SourceArray;}

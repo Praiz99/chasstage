@@ -1,0 +1,1 @@
+function CHAS_MJGW(){  var SourceArray = [{"name":"法制大队","jpcode":"fzdd","code":"fzdd","scode":"fazhidadui"},{"name":"禁毒大队","jpcode":"jddd","code":"jddd","scode":"jindudadui"},{"name":"网安大队","jpcode":"wadd","code":"wadd","scode":"wangandadui"}]; return SourceArray;}

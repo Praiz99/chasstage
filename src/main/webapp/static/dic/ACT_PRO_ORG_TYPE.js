@@ -1,0 +1,1 @@
+function ACT_PRO_ORG_TYPE(){  var SourceArray = [{"name":"办案单位","jpcode":"badw","code":"01","scode":"badw"},{"name":"刑侦部门","jpcode":"xzbm","code":"02","scode":"xzbm"},{"name":"法制部门","jpcode":"fzbm","code":"03","scode":"fzbm"},{"name":"区县局","jpcode":"qxj","code":"04","scode":"quxianju"}]; return SourceArray;}

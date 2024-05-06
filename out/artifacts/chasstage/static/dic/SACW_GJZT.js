@@ -1,0 +1,1 @@
+function SACW_GJZT(){  var SourceArray = [{"name":"待估价","jpcode":"dgj","code":"0","scode":"daigujia"},{"name":"估价中","jpcode":"gjz","code":"1","scode":"gujiazhong"},{"name":"估价完成","jpcode":"gjwc","code":"2","scode":"gujiawancheng"},{"name":"估价发起失败","jpcode":"gjfqsb","code":"3","scode":"gujiafaqishibai"}]; return SourceArray;}

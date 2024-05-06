@@ -1,0 +1,1 @@
+function ZNKP_ZNCJ_FALX_DIC(){  var SourceArray = [{"name":"月度检查","jpcode":"ydjc","code":"01","scode":"yuedujiancha"},{"name":"季度检查","jpcode":"jdjc","code":"02","scode":"jidujiancha"},{"name":"年度检查","jpcode":"ndjc","code":"03","scode":"niandujiancha"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFJD_CLLX(){  var SourceArray = [{"name":"小型汽车","jpcode":"xxqc","code":"1","scode":"xiaoxingqiche"},{"name":"摩托车","jpcode":"mtc","code":"2","scode":"motuoche"},{"name":"大中型货车","jpcode":"dzxhc","code":"3","scode":"dazhongxinghuoche"}]; return SourceArray;}

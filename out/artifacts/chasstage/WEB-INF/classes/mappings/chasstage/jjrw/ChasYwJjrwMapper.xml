@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.jjrw.dao.ChasYwJjrwMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.jjrw.entity.ChasYwJjrw">
+    <result column="id" jdbcType="OTHER" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="dwdm" jdbcType="VARCHAR" property="dwdm" />
+    <result column="xtdwdm" jdbcType="VARCHAR" property="xtdwdm" />
+    <result column="dwmc" jdbcType="VARCHAR" property="dwmc" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="rymc" jdbcType="VARCHAR" property="rymc" />
+    <result column="yjr" jdbcType="VARCHAR" property="yjr" />
+    <result column="yjsj" jdbcType="TIMESTAMP" property="yjsj" />
+    <result column="jsr" jdbcType="VARCHAR" property="jsr" />
+    <result column="jssj" jdbcType="TIMESTAMP" property="jssj" />
+    <result column="sjbq" jdbcType="TIMESTAMP" property="sjbq" />
+    <result column="rwlx" jdbcType="VARCHAR" property="rwlx" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_jjrw
+    set isdel = 1,xgsj = date_trunc('second', now())
+	where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.jjrw.entity.ChasYwJjrw">
+    insert into chas_yw_jjrw (id, isdel, data_flag,
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, dwdm,
+      xtdwdm, dwmc,rybh, rymc,
+      yjr, yjsj, jsr, jssj,
+      sjbq, rwlx)
+    values (#{id,jdbcType=OTHER}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{dwdm,jdbcType=VARCHAR},  #{xtdwdm,jdbcType=VARCHAR}, #{dwmc,jdbcType=VARCHAR},
+      #{rybh,jdbcType=VARCHAR}, #{rymc,jdbcType=VARCHAR}, #{yjr,jdbcType=VARCHAR},
+      #{yjsj,jdbcType=TIMESTAMP}, #{jsr,jdbcType=VARCHAR}, #{jssj,jdbcType=TIMESTAMP},
+      #{sjbq,jdbcType=TIMESTAMP}, #{rwlx,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.jjrw.entity.ChasYwJjrw">
+    update chas_yw_jjrw
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+    DATA_FLAG = #{dataFlag,jdbcType=CHAR},
+    LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+    LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+    XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+    baqid = #{baqid,jdbcType=VARCHAR},
+    baqmc = #{baqmc,jdbcType=VARCHAR},
+    dwdm = #{dwdm,jdbcType=VARCHAR} ,
+    xtdwdm = #{xtdwdm,jdbcType=VARCHAR} ,
+    dwmc = #{dwmc,jdbcType=VARCHAR},
+    rybh =#{rybh,jdbcType=VARCHAR},
+    rymc = #{rymc,jdbcType=VARCHAR} ,
+    yjr = #{yjr,jdbcType=VARCHAR} ,
+    yjsj =#{yjsj,jdbcType=TIMESTAMP},
+    jsr = #{jsr,jdbcType=VARCHAR},
+    jssj = #{jssj,jdbcType=TIMESTAMP},
+    rwlx = #{rwlx,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String"
+          resultMap="BaseResultMap">
+   select * from chas_yw_jjrw
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from chas_yw_jjrw
+    <where>
+      1=1 and isdel = 0
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+      <if test="rymc != null and rymc !=''">
+        and rymc like '%${rymc}%'
+      </if>
+      <if test="yjr != null and yjr !=''">
+        and yjr = '${yjr}'
+      </if>
+      <if test="jsr != null and jsr !=''">
+        and jsr = '${jsr}'
+      </if>
+      <if test="rwlx != null and rwlx !=''">
+        and rwlx = '${rwlx}'
+      </if>
+    </where>
+  </select>
+
+</mapper>

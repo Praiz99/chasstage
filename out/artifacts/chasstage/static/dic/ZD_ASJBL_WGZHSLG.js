@@ -1,0 +1,1 @@
+function ZD_ASJBL_WGZHSLG(){  var SourceArray = [{"name":"澳大利亚大使馆","jpcode":"adlydsg","code":"0361100","scode":"aodaliyadashiguan"}]; return SourceArray;}

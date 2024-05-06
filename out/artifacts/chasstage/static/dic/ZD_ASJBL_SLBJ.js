@@ -1,0 +1,1 @@
+function ZD_ASJBL_SLBJ(){  var SourceArray = [{"name":"长汗毛","jpcode":"chm","code":"10034000","scode":"changhanmao"}]; return SourceArray;}

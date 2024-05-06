@@ -1,0 +1,1 @@
+function AGXT_AJXX_ZDAJ(){  var SourceArray = [{"name":"挂牌督办","jpcode":"gpdb","code":"01","scode":"guapaiduban"},{"name":"上级部门交办","jpcode":"sjbmjb","code":"02","scode":"shangjibumenjiaoban"},{"name":"其他","jpcode":"qt","code":"03","scode":"qita"}]; return SourceArray;}

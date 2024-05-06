@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/**表单样式(小号字体)**/
+.panel-form {
+	margin: 2px 2px 0px 2px
+}
+
+.common_table_form {
+	border: 1px solid #ddd;
+	border-top: 0px;
+	width: 100%;
+	margin-bottom: 34px;
+}
+
+.common_table_form tr.sub-caption,.common_table_form tr.sub-caption td {
+	background: #e2e7fd;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.common_table_form th {
+	width: 120px;
+	text-align: right;
+	padding-right: 10px;
+	line-height: 30px;
+	text-align: right;
+	font-size: 14px;
+	background-color: #f5f5f5;
+	border: 1px solid #CACDD2;
+	font-weight: normal;
+}
+
+.common_table_form th.must {
+	color: red;
+	font-size: 14px;
+}
+
+.common_table_form td {
+	background: #fff;
+	border: solid 1px #CACDD2;
+	padding-left: 3px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.common_table_form td .common-title {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.common_table_form textarea {
+	float: left;
+	margin: 0px;
+	border: 1px solid #dfdfdf;
+	padding: 2px;
+	overflow: auto;
+}
+
+.common_table_form td .commom-txt {
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #dfdfdf;
+	color: #222;
+	width: 180px;
+	margin: 2px 0 2px 0px;
+}
+
+.common_table_form .dic,.common_table_form .Wdate,.common_table_form select
+	{
+	float: left;
+	border: 1px solid #dfdfdf;
+	width: 180px;
+}
+
+.common_table_form select {
+	margin: 2px 0 2px 1px;
+	height: 22px;
+}
+
+/*.common_table_form .commom-txt.must,.common_table_form .dic.must,.common_table_form .Wdate.must,.common_table_form select.must,.common_table_form textarea.must{border:1px solid red;}*/
+.common_table_form .commom-txt.disabled,.common_table_form .dic.disabled,.common_table_form .Wdate.disabled,.common_table_form select.disabled,.common_table_form textarea.disabled
+	{
+	border: 0;
+	background: none;
+}
+
+.common_table_form td .form-oper-icon {
+	float: left;
+	height: 20px;
+	border: 1px solid #dfdfdf;
+	border-left: 0;
+	text-align: center;
+	background: #f2f2f2;
+	margin: 2px 0 2px 0;
+	cursor: pointer;
+}
+
+.common_table_form td .form-oper-icon .fa {
+	float: left;
+	height: 16px;
+	width: 20px;
+	color: #999;
+	font-size: 14px;
+	margin-top: 3px;
+	font-weight: normal;
+}
+
+.common_table_form td .form-oper-icon input {
+	float: left;
+	width: 20px;
+	margin-top: 4px;
+	*margin-top: 0;
+}
+
+.common_table_form td .form-oper-icon label {
+	float: left;
+	margin: 0 2px 0;
+	font-size: 12px;
+	height: 20px;
+	overflow: hidden;
+	line-height: 22px; +
+	line-height: 20px;
+}
+
+.common-btn {
+	border: 1px solid #ccc;
+	background: #efefef;
+	padding: 1px 5px;
+	height: 22px;
+	cursor: pointer;
+}
+
+.common_th {
+	text-align: right;
+	padding-right: 3px;
+	line-height: 30px;
+	text-align: right;
+	font-size: 13px;
+	background-color: #f1f5f9;
+	border: 1px solid #CACDD2;
+	font-weight: bold
+}
+
+.form-actions {
+	padding: 19px 20px 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-primary {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #2fa4e7;
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+	cursor: pointer;
+	padding: 4px 12px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05)
+}
+
+body,label,input,button,select,textarea,.uneditable-input,.navbar-search .search-query
+	{
+	font-family: Helvetica, Georgia, Arial, sans-serif, 宋体;
+	font-size: 13px;
+	_font-size: 12px;
+}

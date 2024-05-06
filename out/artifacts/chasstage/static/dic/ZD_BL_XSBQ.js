@@ -1,0 +1,1 @@
+function ZD_BL_XSBQ(){  var SourceArray = [{"name":"QQ账号","jpcode":"QQzh","code":"01","scode":"QQzhanghao"},{"name":"微信账号","jpcode":"wxzh","code":"02","scode":"weixinzhanghao"},{"name":"手机号码","jpcode":"sjhm","code":"03","scode":"shoujihaoma"},{"name":"身份证号码","jpcode":"sfzhm","code":"04","scode":"shenfenzhenghaoma"}]; return SourceArray;}

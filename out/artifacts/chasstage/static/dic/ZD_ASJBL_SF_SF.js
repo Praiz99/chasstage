@@ -1,0 +1,1 @@
+function ZD_ASJBL_SF_SF(){  var SourceArray = [{"name":"是","jpcode":"s","code":"1","scode":"shi"},{"name":"否","jpcode":"f","code":"2","scode":"fou"},{"name":"待查","jpcode":"dc","code":"3","scode":"daicha"}]; return SourceArray;}

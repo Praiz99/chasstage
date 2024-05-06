@@ -1,0 +1,1 @@
+function ZFBA_TXTJ_YWZT(){  var SourceArray = [{"name":"待处理","jpcode":"dcl","code":"01","scode":"daichuli"},{"name":"推送失败","jpcode":"tssb","code":"03","scode":"tuisongshibai"},{"name":"完成","jpcode":"wc","code":"04","scode":"wancheng"}]; return SourceArray;}

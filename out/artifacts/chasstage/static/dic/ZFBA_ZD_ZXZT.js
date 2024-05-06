@@ -1,0 +1,1 @@
+function ZFBA_ZD_ZXZT(){  var SourceArray = [{"name":"未执行","jpcode":"wzx","code":"00","scode":"weizhixing"},{"name":"执行中","jpcode":"zxz","code":"01","scode":"zhixingzhong"},{"name":"暂缓执行","jpcode":"zhzx","code":"02","scode":"zanhuanzhixing"},{"name":"执行完毕","jpcode":"zxwb","code":"03","scode":"zhixingwanbi"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function BCLX(){  var SourceArray = [{"name":"标准工作制","jpcode":"bzgzz","code":"1","scode":"biaozhungongzuozhi"}]; return SourceArray;}

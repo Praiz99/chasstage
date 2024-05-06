@@ -1,0 +1,1 @@
+function XZFY_BL_FYJG(){  var SourceArray = [{"name":"暂无结果","jpcode":"zwjg","code":"01","scode":"zanwujieguo"},{"name":"决定","jpcode":"jd","code":"02","scode":"jueding"},{"name":"终止","jpcode":"zz","code":"03","scode":"zhongzhi"},{"name":"其他","jpcode":"qt","code":"04","scode":"qita"}]; return SourceArray;}

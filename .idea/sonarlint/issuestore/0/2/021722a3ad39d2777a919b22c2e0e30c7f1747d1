@@ -1,0 +1,86 @@
+
+Š
+java:S1488«"gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(™·¦íÿÿÿÿÿ8€¢¾à¡1
+ˆ
+java:S1488è"jImmediately return this expression instead of assigning it to the temporary variable "signConfigPageData".(Ù¢ ù8¢¾à¡1
+„
+java:S1488‡"aImmediately return this expression instead of assigning it to the temporary variable "baqresult".(Ì”úšşÿÿÿÿ8¢¾à¡1
+g
+java:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(³¸¡ø8µ¢¾à¡1
+g
+java:S44887"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûŸÇÔ8¶¢¾à¡1
+j
+java:S4488?"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(´Ô¯Ìúÿÿÿÿ8·¢¾à¡1
+e
+java:S4488H"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(şÄè¡8·¢¾à¡1
+\
+java:S1854["?Remove this useless assignment to local variable "sessionUser".(ÁÂûì8¹¢¾à¡1
+g
+java:S4488X"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(”¨Éò8¹¢¾à¡1
+M
+java:S1481["0Remove this unused "sessionUser" local variable.(ÁÂûì8º¢¾à¡1
+l
+java:S4488i"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ó¯†úüÿÿÿÿ8»¢¾à¡1
+l
+java:S4488y"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¶ÕÌ—üÿÿÿÿ8»¢¾à¡1
+]
+java:S1854‹"?Remove this useless assignment to local variable "sessionUser".(ÁÂûì8¼¢¾à¡1
+h
+java:S4488€"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"( óÁ8¼¢¾à¡1
+N
+java:S1481‹"0Remove this unused "sessionUser" local variable.(ÁÂûì8½¢¾à¡1
+D
+java:S1452›"&Remove usage of generic wildcard type.(«ç‚¢8½¢¾à¡1
+k
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ôÿçÅÿÿÿÿÿ8½¢¾à¡1
+D
+java:S1452ª"&Remove usage of generic wildcard type.(ê®ç£8¾¢¾à¡1
+k
+java:S4488Ÿ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(—†ñíıÿÿÿÿ8¾¢¾à¡1
+I
+java:S1452º"&Remove usage of generic wildcard type.(ÄöÕ’üÿÿÿÿ8¾¢¾à¡1
+k
+java:S4488¯"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ôş½Èşÿÿÿÿ8¿¢¾à¡1
+D
+java:S1452È"&Remove usage of generic wildcard type.(Ù’ÓÁ8¿¢¾à¡1
+f
+java:S4488¾"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤ªÛ8¿¢¾à¡1
+\
+java:S1854ç"9Remove this useless assignment to local variable "param".(¶ØÂşşÿÿÿÿ8À¢¾à¡1
+I
+java:S1452æ"&Remove usage of generic wildcard type.(û´ùóşÿÿÿÿ8À¢¾à¡1
+f
+java:S4488Û"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ô’Û8À¢¾à¡1
+^	java:S125Î"<This block of commented-out lines of code should be removed.(¬¹Óøÿÿÿÿ8À¢¾à¡1
+M
+java:S1481ç"*Remove this unused "param" local variable.(¶ØÂşşÿÿÿÿ8Á¢¾à¡1
+D
+java:S1452ù"&Remove usage of generic wildcard type.(‚¤Ôø8Á¢¾à¡1
+f
+java:S4488í"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ü£®8Á¢¾à¡1
+f
+java:S4488ş"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ö‚ÀØ8Â¢¾à¡1
+f
+java:S4488Œ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Éä¥Ó8Ã¢¾à¡1
+k
+java:S4488›"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÖŠíÈüÿÿÿÿ8Ã¢¾à¡1
+C
+java:S1452²"&Remove usage of generic wildcard type.(¹È¾ 8Ã¢¾à¡1
+h
+java:S4488ª"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ñ„×Û8Ä¢¾à¡1
+I
+java:S1452Á"&Remove usage of generic wildcard type.(ÄğÿÍùÿÿÿÿ8Æ¢¾à¡1
+k
+java:S4488·"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„œÑÍùÿÿÿÿ8Æ¢¾à¡1
+I
+java:S1452Ñ"&Remove usage of generic wildcard type.(Â‹Öøÿÿÿÿ8Ç¢¾à¡1
+f
+java:S4488Æ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(éêîó8Ç¢¾à¡1
+I
+java:S1452Ş"&Remove usage of generic wildcard type.(õ“Ìıÿÿÿÿ8Ç¢¾à¡1
+e
+java:S4488Ö"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‡¦c8Ç¢¾à¡1
+D
+java:S1452ê"&Remove usage of generic wildcard type.(˜ù¹‰8È¢¾à¡1
+k
+java:S4488â"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ğ“”¹øÿÿÿÿ8È¢¾à¡1

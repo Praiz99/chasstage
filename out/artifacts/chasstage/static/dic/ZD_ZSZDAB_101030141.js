@@ -1,0 +1,1 @@
+function ZD_ZSZDAB_101030141(){  var SourceArray = [{"name":"赌博自书参与麻将、扑克、牌九等棋牌类赌博","jpcode":"dbzscymj、pk、pjdqpldb","code":"10103014101","scode":"dubozishucanyumajiang、puke、paijiudengqipaileidubo"}]; return SourceArray;}

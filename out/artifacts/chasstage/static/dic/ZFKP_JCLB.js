@@ -1,0 +1,1 @@
+function ZFKP_JCLB(){  var SourceArray = [{"name":"奖励","jpcode":"jl","code":"01","scode":"jiangli"},{"name":"惩罚","jpcode":"cf","code":"02","scode":"chengfa"}]; return SourceArray;}

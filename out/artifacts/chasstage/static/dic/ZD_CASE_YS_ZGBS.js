@@ -1,0 +1,1 @@
+function ZD_CASE_YS_ZGBS(){  var SourceArray = [{"name":"未整改","jpcode":"wzg","code":"01","scode":"weizhenggai"},{"name":"整改待审","jpcode":"zgds","code":"02","scode":"zhenggaidaishen"},{"name":"已整改","jpcode":"yzg","code":"03","scode":"yizhenggai"},{"name":"继续整改","jpcode":"jxzg","code":"04","scode":"jixuzhenggai"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFGK_ZD_SFTB(){  var SourceArray = [{"name":"未推送","jpcode":"wts","code":"0","scode":"weituisong"},{"name":"已推送","jpcode":"yts","code":"1","scode":"yituisong"},{"name":"待推送","jpcode":"dts","code":"2","scode":"daituisong"}]; return SourceArray;}

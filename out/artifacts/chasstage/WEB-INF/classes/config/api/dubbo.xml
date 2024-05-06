@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo  
+       	http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="true">
+
+	<description>Spring公共配置 </description>
+
+	<dubbo:application name="dubbo-consumer-${conf.appname:unknow}"/>
+
+	<!--zookeeper注册中心 -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.zookeeper}" file="${catalina.base}/dubbo-registry/${conf.appname}-registry.properties"/>
+
+	<dubbo:protocol name="dubbo" port="${dubbo.port:-1}" host="${framework.host:}"/>
+
+	<dubbo:consumer retries="0" timeout="${dubbo.timeout:60000}" loadbalance="roundrobin" actives="${dubbo.actives:60}" check="false" filter="clientAuthFilter"/>
+ 
+	<import resource="classpath*:/config/jdone/api/jdone-consumer.xml"/>
+	<import resource="classpath*:/config/frwsServer/api/frwsServer-consumer.xml"/>
+	<import resource="classpath*:/config/api/sdk/ref/zfba.xml"/>
+	<import resource="classpath*:/config/api/sdk/ref/jdone.xml"/>
+	<import resource="classpath*:/config/api/sdk/ref/qgc.xml"/>
+
+
+</beans>

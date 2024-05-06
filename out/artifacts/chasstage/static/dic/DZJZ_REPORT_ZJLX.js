@@ -1,0 +1,1 @@
+function DZJZ_REPORT_ZJLX(){  var SourceArray = [{"name":"诉讼文书卷","jpcode":"sswsj","code":"SSWSJ02","scode":"susongwenshujuan"},{"name":"诉讼证据卷","jpcode":"sszjj","code":"SSZJJ02","scode":"susongzhengjujuan"}]; return SourceArray;}

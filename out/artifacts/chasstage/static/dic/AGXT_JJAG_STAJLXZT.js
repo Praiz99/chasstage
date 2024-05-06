@@ -1,0 +1,1 @@
+function AGXT_JJAG_STAJLXZT(){  var SourceArray = [{"name":"办案","jpcode":"ba","code":"01","scode":"banan"},{"name":"审核","jpcode":"sh","code":"02","scode":"shenhe"},{"name":"变更位置","jpcode":"bgwz","code":"05","scode":"biangengweizhi"},{"name":"移交大队","jpcode":"yjdd","code":"06","scode":"yijiaodadui"},{"name":"其他","jpcode":"qt","code":"99","scode":"qita"}]; return SourceArray;}

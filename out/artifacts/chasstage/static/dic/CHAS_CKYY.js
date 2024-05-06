@@ -1,0 +1,1 @@
+function CHAS_CKYY(){  var SourceArray = [{"name":"本人领回","jpcode":"brlh","code":"21","scode":"benrenlinghui"},{"name":"家属领回","jpcode":"jslh","code":"22","scode":"jiashulinghui"}]; return SourceArray;}

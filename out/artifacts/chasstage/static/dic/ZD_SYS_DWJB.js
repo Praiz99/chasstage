@@ -1,0 +1,1 @@
+function ZD_SYS_DWJB(){  var SourceArray = [{"name":"厅级","jpcode":"tj","code":"10","scode":"tingji"},{"name":"厅直属","jpcode":"tzs","code":"11","scode":"tingzhishu"},{"name":"市级","jpcode":"sjdw","code":"20","scode":"shijidanwei"},{"name":"区县级","jpcode":"qxj","code":"30","scode":"quxianji"},{"name":"基层单位","jpcode":"jcdw","code":"40","scode":"jicengdanwei"}]; return SourceArray;}

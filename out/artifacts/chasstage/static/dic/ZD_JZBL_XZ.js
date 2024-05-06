@@ -1,0 +1,1 @@
+function ZD_JZBL_XZ(){  var SourceArray = [{"name":"刑事询问笔录","jpcode":"xsxwbl","code":"0102","scode":"xingshixunwenbilu"},{"name":"行政询问笔录","jpcode":"xzxwbl","code":"0103","scode":"xingzhengxunwenbilu"}]; return SourceArray;}

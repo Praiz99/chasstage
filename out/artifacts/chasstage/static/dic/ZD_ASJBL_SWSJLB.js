@@ -1,0 +1,1 @@
+function ZD_ASJBL_SWSJLB(){  var SourceArray = [{"name":"事件","jpcode":"sj","code":"9000000","scode":"shijian"}]; return SourceArray;}

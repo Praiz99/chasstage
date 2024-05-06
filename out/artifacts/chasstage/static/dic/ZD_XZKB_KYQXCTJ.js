@@ -1,0 +1,1 @@
+function ZD_XZKB_KYQXCTJ(){  var SourceArray = [{"name":"原始现场","jpcode":"ysxc","code":"01","scode":"yuanshixianchang"},{"name":"变动现场","jpcode":"bdxc","code":"02","scode":"biandongxianchang"}]; return SourceArray;}

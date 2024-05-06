@@ -1,0 +1,1 @@
+function CHAS_SBLX(){  var SourceArray = [{"name":"储物柜","jpcode":"cwg","code":"01","scode":"chuwugui"},{"name":"储物架","jpcode":"cwj","code":"02","scode":"chuwujia"}]; return SourceArray;}

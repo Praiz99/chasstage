@@ -1,0 +1,1 @@
+function JDONE_ACT_NODE_RULETYPE(){  var SourceArray = [{"name":"shell脚本","jpcode":"shelljb","code":"01","scode":"shelljiaoben"},{"name":"springbean","jpcode":"springbean","code":"02","scode":"springbean"}]; return SourceArray;}

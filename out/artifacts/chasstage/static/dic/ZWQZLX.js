@@ -1,0 +1,1 @@
+function ZWQZLX(){  var SourceArray = [{"name":"签名","jpcode":"qm","code":"QM","scode":"qianming"},{"name":"指纹","jpcode":"zw","code":"ZW","scode":"zhiwen"}]; return SourceArray;}

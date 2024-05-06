@@ -1,0 +1,51 @@
+
+A
+java:S1452"&Remove usage of generic wildcard type.(§÷óÄúÿÿÿÿ
+;
+java:S1452"&Remove usage of generic wildcard type.(ƒ‰û
+A
+java:S1452"&Remove usage of generic wildcard type.(õžÞÿûÿÿÿÿ
+A
+java:S1452"&Remove usage of generic wildcard type.(ˆú·êøÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓŠ†Ïûÿÿÿÿ
+A
+java:S1452"&Remove usage of generic wildcard type.(ÓŠ†Ïûÿÿÿÿ
+A
+java:S1452"&Remove usage of generic wildcard type.(ÎÑÐúùÿÿÿÿ
+<
+java:S1452"&Remove usage of generic wildcard type.(ËŠ‚
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ð‹¦ÿÿÿÿÿ
+A
+java:S1452"&Remove usage of generic wildcard type.(½ð‹¦ÿÿÿÿÿ
+;
+java:S1452"&Remove usage of generic wildcard type.(·Õ
+<
+java:S1452!"&Remove usage of generic wildcard type.(ñžˆø
+A
+java:S1452#"&Remove usage of generic wildcard type.(·âÍÐûÿÿÿÿ
+<
+java:S1452%"&Remove usage of generic wildcard type.(ñáäé
+<
+java:S1452'"&Remove usage of generic wildcard type.(±Ø ¹
+c	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºýÀ¸
+<
+java:S1452)"&Remove usage of generic wildcard type.(ºýÀ¸
+A
+java:S1452+"&Remove usage of generic wildcard type.(ßÉËòþÿÿÿÿ
+A
+java:S14523"&Remove usage of generic wildcard type.(ÄŽ€ýùÿÿÿÿ
+c	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê×Îï
+<
+java:S14525"&Remove usage of generic wildcard type.(ê×Îï
+A
+java:S1452="&Remove usage of generic wildcard type.(ùçÝæùÿÿÿÿ
+A
+java:S1452?"&Remove usage of generic wildcard type.(øíŠ¢øÿÿÿÿ
+C
+java:S1452A"&Remove usage of generic wildcard type.(çÈ´’8˜¹Ôã¡1
+d
+java:S1128"BRemove this unused import 'com.wckj.api.def.zfba.model.ApiGgJqxx'.(ýŽåþÿÿÿÿ8˜¹Ôã¡1
+g
+java:S1128"KRemove this unused import 'com.wckj.chasstage.api.def.sys.model.MjxxParam'.(ÃÀ¤K8™¹Ôã¡1
+`
+java:S1128"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8™¹Ôã¡1

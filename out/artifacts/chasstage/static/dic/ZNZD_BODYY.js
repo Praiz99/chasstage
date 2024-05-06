@@ -1,0 +1,1 @@
+function ZNZD_BODYY(){  var SourceArray = [{"name":"无故","jpcode":"wg","code":"01","scode":"wugu"},{"name":"突然","jpcode":"tr","code":"02","scode":"turan"},{"name":"现场纠纷","jpcode":"xcjf","code":"03","scode":"xianchangjiufen"},{"name":"过去纠纷","jpcode":"gqjf","code":"04","scode":"guoqujiufen"}]; return SourceArray;}

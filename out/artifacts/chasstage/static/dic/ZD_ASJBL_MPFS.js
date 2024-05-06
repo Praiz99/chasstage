@@ -1,0 +1,1 @@
+function ZD_ASJBL_MPFS(){  var SourceArray = [{"name":"手淫","jpcode":"sy","code":"1","scode":"shouyin"}]; return SourceArray;}

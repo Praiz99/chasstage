@@ -1,0 +1,1 @@
+function YYCSYY(){  var SourceArray = [{"name":"出所辨认","jpcode":"csbr","code":"0","scode":"chusuobianren"},{"name":"移送","jpcode":"ys","code":"1","scode":"yisong"},{"name":"释放","jpcode":"sf","code":"2","scode":"shifang"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_ASJBL_ZJXY(){  var SourceArray = [{"name":"无宗教信仰","jpcode":"wzjxy","code":"00","scode":"wuzongjiaoxinyang"}]; return SourceArray;}

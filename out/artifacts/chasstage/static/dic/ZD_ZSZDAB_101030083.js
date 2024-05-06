@@ -1,0 +1,1 @@
+function ZD_ZSZDAB_101030083(){  var SourceArray = [{"name":"故意损毁财物","jpcode":"gyshcw","code":"10103008301","scode":"guyisunhuicaiwu"}]; return SourceArray;}

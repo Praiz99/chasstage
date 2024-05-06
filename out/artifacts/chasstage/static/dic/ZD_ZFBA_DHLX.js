@@ -1,0 +1,1 @@
+function ZD_ZFBA_DHLX(){  var SourceArray = [{"name":"当事人","jpcode":"dsr","code":"01","scode":"dangshiren"},{"name":"家属","jpcode":"js","code":"02","scode":"jiashu"},{"name":"律师","jpcode":"ls","code":"03","scode":"lvshi"},{"name":"关系人","jpcode":"gxr","code":"04","scode":"guanxiren"}]; return SourceArray;}

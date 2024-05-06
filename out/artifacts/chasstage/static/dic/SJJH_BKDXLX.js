@@ -1,0 +1,1 @@
+function SJJH_BKDXLX(){  var SourceArray = [{"name":"人员布控","jpcode":"rybk","code":"01","scode":"renyuanbukong"},{"name":"车辆布控（扩充）","jpcode":"clbk-kc-","code":"02","scode":"cheliangbukong-kuochong-"}]; return SourceArray;}

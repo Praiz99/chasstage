@@ -1,0 +1,1 @@
+function SACW_BHDW(){  var SourceArray = [{"name":"元","jpcode":"y","code":"11","scode":"yuan"},{"name":"英镑","jpcode":"yb","code":"21","scode":"yingbang"},{"name":"美元","jpcode":"my","code":"31","scode":"meiyuan"}]; return SourceArray;}

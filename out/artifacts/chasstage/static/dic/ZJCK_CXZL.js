@@ -1,0 +1,1 @@
+function ZJCK_CXZL(){  var SourceArray = [{"name":"账号信息","jpcode":"zhxx","code":"01","scode":"zhanghaoxinxi"},{"name":"账户及交易明细","jpcode":"zhjjymx","code":"03","scode":"zhanghujijiaoyimingxi"}]; return SourceArray;}

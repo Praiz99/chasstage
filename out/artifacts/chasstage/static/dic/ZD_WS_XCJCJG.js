@@ -1,0 +1,1 @@
+function ZD_WS_XCJCJG(){  var SourceArray = [{"name":"阳性","jpcode":"yx","code":"01","scode":"yangxing"},{"name":"阴性","jpcode":"yx","code":"02","scode":"yinxing"}]; return SourceArray;}

@@ -1,0 +1,32 @@
+body{
+	background-color: #FFFFFF;
+    height: 100% !important;
+    margin: 0px !important;
+}
+
+.top_layer{
+	height:30px;
+	background-color: #F2F2F2;
+}
+
+.top_layer span{
+	padding-left:20px;
+	line-height:30px;
+	font-size:14px;
+	color:#999999;
+	font-family:微软雅黑;
+}
+
+.floor_layer{
+	height:50px;
+	padding-left:50px;
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.floor_layer a{
+	line-height:50px;
+	font-size:14px;
+	font-family:微软雅黑;
+	text-decoration:underline;
+}

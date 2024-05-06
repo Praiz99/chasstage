@@ -1,0 +1,1 @@
+function YTHCJ(){  var SourceArray = [{"name":"未采集","jpcode":"wcj","code":"0","scode":"weicaiji"},{"name":"已采集","jpcode":"ycj","code":"1","scode":"yicaiji"}]; return SourceArray;}

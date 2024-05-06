@@ -1,0 +1,32 @@
+
+a	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ä­Ûòøÿÿÿÿ
+F
+java:S3740Æ"/Provide the parametrized type for this generic.(´¼€í
+p
+java:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(¥êß€
+d
+java:S1192U"NDefine a constant instead of duplicating this literal "ç³»ç»Ÿå¼‚å¸¸:" 5 times.(şÜ¼É
+l
+java:S1192¬"PDefine a constant instead of duplicating this literal "æ“ä½œæˆåŠŸï¼" 3 times.(Ø¯ĞŠùÿÿÿÿ
+D
+java:S5411"(Use a primitive boolean expression here.(ŒÊ¥ÿÿÿÿÿ
+a
+java:S2259†"EA "NullPointerException" could be thrown; "baqryxx" is nullable here.(ÚŒ—¦úÿÿÿÿ
+^
+java:S2259b"IA "NullPointerException" could be thrown; "ryxxBywdbhL" is nullable here.(­úâ^
+_
+java:S2259Î"IA "NullPointerException" could be thrown; "ryxxBywdbhL" is nullable here.(­úâ^
+c
+java:S1871é"MThis branch's code block is the same as the block for the branch on line 230.(Ï¨\
+S
+java:S1854‹"<Remove this useless assignment to local variable "response".(€ËÊÇ
+N
+java:S1135¥"2Complete the task associated to this TODO comment.(Ö×¬êúÿÿÿÿ
+C
+java:S1602š",Remove useless curly braces around statement(¥—ığ
+U
+java:S1155ı">Use isEmpty() to check whether the collection is empty or not.(Ô×¸î
+g
+java:S1128"LRemove this unused import 'com.wckj.chasstage.api.def.baqry.model.ActParam'.(ŒÜ¬¿ıÿÿÿÿ
+o
+java:S1128"TRemove this unused import 'com.wckj.chasstage.modules.wpg.service.ChasSswpgService'.(¯¼ŸĞûÿÿÿÿ

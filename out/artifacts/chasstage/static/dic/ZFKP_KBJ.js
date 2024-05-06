@@ -1,0 +1,1 @@
+function ZFKP_KBJ(){  var SourceArray = [{"name":"闭卷","jpcode":"bj","code":"0","scode":"bijuan"},{"name":"开卷","jpcode":"kj","code":"1","scode":"kaijuan"}]; return SourceArray;}

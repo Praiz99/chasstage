@@ -1,0 +1,1 @@
+function ZFGK_ZD_XZCF_STATE(){  var SourceArray = [{"name":"正常","jpcode":"zc","code":"1","scode":"zhengchang"},{"name":"撤销","jpcode":"cx","code":"2","scode":"chexiao"},{"name":"删除","jpcode":"sc","code":"3","scode":"shanchu"}]; return SourceArray;}

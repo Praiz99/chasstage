@@ -1,0 +1,1 @@
+function YJFS(){  var SourceArray = [{"name":"页面消息提醒","jpcode":"ymxxtx","code":"01","scode":"yemianxiaoxitixing"},{"name":"报警器提醒","jpcode":"bjqtx","code":"02","scode":"baojingqitixing"},{"name":"钉消息提醒","jpcode":"dxxtx","code":"03","scode":"dingxiaoxitixing"}]; return SourceArray;}

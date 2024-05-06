@@ -1,0 +1,1 @@
+function QGC_YWLX(){  var SourceArray = [{"name":"人员","jpcode":"ry","code":"001","scode":"renyuan"},{"name":"案件","jpcode":"aj","code":"002","scode":"anjian"},{"name":"警情","jpcode":"jq","code":"003","scode":"jingqing"},{"name":"文书","jpcode":"ws","code":"004","scode":"wenshu"}]; return SourceArray;}

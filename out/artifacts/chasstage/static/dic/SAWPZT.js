@@ -1,0 +1,1 @@
+function SAWPZT(){  var SourceArray = [{"name":"在柜","jpcode":"zg","code":"1","scode":"zaigui"},{"name":"取出","jpcode":"qc","code":"2","scode":"quchu"},{"name":"问题物品","jpcode":"wtwp","code":"3","scode":"wentiwupin"}]; return SourceArray;}

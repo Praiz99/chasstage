@@ -1,0 +1,1 @@
+function ZFBA_ZD_GYLX(){  var SourceArray = [{"name":"刑事拘留","jpcode":"xsjl","code":"04","scode":"xingshijuliu"},{"name":"逮捕","jpcode":"db","code":"05","scode":"daibo"},{"name":"行政拘留","jpcode":"xzjl","code":"21","scode":"xingzhengjuliu"},{"name":"强制隔离戒毒","jpcode":"qzgljd","code":"42","scode":"qiangzhigelijiedu"}]; return SourceArray;}

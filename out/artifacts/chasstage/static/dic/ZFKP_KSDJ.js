@@ -1,0 +1,1 @@
+function ZFKP_KSDJ(){  var SourceArray = [{"name":"初级","jpcode":"cj","code":"1","scode":"chuji"},{"name":"中级","jpcode":"zj","code":"2","scode":"zhongji"},{"name":"高级","jpcode":"gj","code":"3","scode":"gaoji"}]; return SourceArray;}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.yjlb.dao.ChasYjlbMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.yjlb.entity.ChasYjlb">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="YJLB" jdbcType="VARCHAR" property="yjlb" />
+    <result column="yjsc" jdbcType="INTEGER" property="yjsc" />
+    <result column="cffs" jdbcType="VARCHAR" property="cffs" />
+    <result column="yjjb" jdbcType="VARCHAR" property="yjjb" />
+    <result column="yjfs" jdbcType="VARCHAR" property="yjfs" />
+    <result column="xsajyjsj" jdbcType="VARCHAR" property="xsajyjsj" />
+    <result column="xzajyjsj" jdbcType="VARCHAR" property="xzajyjsj" />
+    <result column="xstqyjsj" jdbcType="VARCHAR" property="xstqyjsj" />
+    <result column="xztqyjsj" jdbcType="VARCHAR" property="xztqyjsj" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_yjlb
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.yjlb.entity.ChasYjlb">
+    insert into chas_xt_yjlb (ID, ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, YJLB,yjsc,cffs,yjjb,yjfs,xsajyjsj,xzajyjsj,xstqyjsj,xztqyjsj
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{yjlb,jdbcType=VARCHAR}
+      , #{yjsc,jdbcType=INTEGER}, #{cffs,jdbcType=VARCHAR}, #{yjjb,jdbcType=VARCHAR},#{yjfs,jdbcType=VARCHAR},#{xsajyjsj,jdbcType=VARCHAR}
+      ,#{xzajyjsj,jdbcType=VARCHAR},#{xstqyjsj,jdbcType=VARCHAR},#{xztqyjsj,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.yjlb.entity.ChasYjlb">
+    update chas_xt_yjlb
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      YJLB = #{yjlb,jdbcType=VARCHAR},
+      yjsc = #{yjsc,jdbcType=INTEGER},
+      cffs = #{cffs,jdbcType=VARCHAR},
+      yjjb =#{yjjb,jdbcType=VARCHAR},
+      yjfs =#{yjfs,jdbcType=VARCHAR},
+      xsajyjsj =#{xsajyjsj,jdbcType=VARCHAR},
+      xzajyjsj =#{xzajyjsj,jdbcType=VARCHAR},
+      xstqyjsj =#{xstqyjsj,jdbcType=VARCHAR},
+      xztqyjsj =#{xztqyjsj,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, YJLB,yjsc,cffs,yjjb,xsajyjsj,xzajyjsj,xstqyjsj,xztqyjsj
+    from chas_xt_yjlb
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, YJLB,yjsc,cffs,yjjb,yjfs,xsajyjsj,xzajyjsj,xstqyjsj,xztqyjsj
+    from chas_xt_yjlb
+    <where>
+     1=1 and isdel = 0
+       <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}' 
+     </if>
+     <if test="yjlb != null and yjlb !=''">
+            and YJLB = '${yjlb}' 
+     </if>
+        <if test="sydwdm != null and sydwdm !=''">
+            and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+        </if>
+
+    </where>
+  </select>
+</mapper>

@@ -1,0 +1,1 @@
+function ZD_SYS_SF(){  var SourceArray = [{"name":"否","jpcode":"f","code":"0","scode":"fou"},{"name":"是","jpcode":"s","code":"1","scode":"shi"}]; return SourceArray;}

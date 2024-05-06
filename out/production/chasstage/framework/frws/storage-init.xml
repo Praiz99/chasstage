@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<storage-support>
+		<type-def>
+			<name>参数可配置的oss</name>
+			<mark>extra-oss</mark>
+			<class>com.wckj.frwsClient.storage.ExtraOssFileStorage</class>
+		</type-def>
+	</storage-support>
+	
+	<storage-list>
+	
+		<storage>
+			<name>系统默认文件容器</name>
+			<mark>storage-default</mark>
+			<type>default</type>
+		</storage>
+		
+		<storage>
+			<name>杭州文件存储</name>
+			<mark>hangzhou</mark>
+			<desc>存储文书文件</desc>
+			<type>default</type>
+			<root-dir>E:\test</root-dir>
+			<extra>
+				<name>1233</name>
+			</extra> 
+		</storage>
+		
+		<storage>
+			<name>可配置杭州文件存储</name>
+			<mark>extra-hangzhou</mark>
+			<desc>存储文书文件</desc>
+			<type>extra-oss</type>
+			<root-dir>hangzhou</root-dir>
+			<extra>
+				<endpoint>1233</endpoint>
+				<accessKeyId>1233</accessKeyId>
+				<accessKeySecret>1233</accessKeySecret>
+				<bucketName>1233</bucketName>
+			</extra> 
+		</storage>
+				
+	</storage-list>
+</data>

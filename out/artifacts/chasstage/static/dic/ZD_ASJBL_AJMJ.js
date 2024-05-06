@@ -1,0 +1,1 @@
+function ZD_ASJBL_AJMJ(){  var SourceArray = [{"name":"公开","jpcode":"gk","code":"0","scode":"gongkai"},{"name":"受控","jpcode":"sk","code":"1","scode":"shoukong"}]; return SourceArray;}

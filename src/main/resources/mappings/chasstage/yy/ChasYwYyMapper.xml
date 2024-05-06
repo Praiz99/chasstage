@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.yy.dao.ChasYwYyMapper">
+    <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.yy.entity.ChasYwYy">
+
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="isdel" jdbcType="SMALLINT" property="isdel"/>
+        <result column="data_flag" jdbcType="VARCHAR" property="dataFlag"/>
+        <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh"/>
+        <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj"/>
+        <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh"/>
+        <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj"/>
+        <result column="baqid" jdbcType="VARCHAR" property="baqid"/>
+        <result column="baqmc" jdbcType="VARCHAR" property="baqmc"/>
+        <result column="yylx" jdbcType="VARCHAR" property="yylx"/>
+        <result column="yyrjh" jdbcType="VARCHAR" property="yyrjh"/>
+        <result column="yyrxm" jdbcType="VARCHAR" property="yyrxm"/>
+        <result column="yyrsfzh" jdbcType="VARCHAR" property="yyrsfzh"/>
+        <result column="yyrdwdm" jdbcType="VARCHAR" property="yyrdwdm"/>
+        <result column="yyrdwmc" jdbcType="VARCHAR" property="yyrdwmc"/>
+        <result column="kssj" jdbcType="TIMESTAMP" property="kssj"/>
+        <result column="jssj" jdbcType="TIMESTAMP" property="jssj"/>
+        <result column="rysl" jdbcType="SMALLINT" property="rysl"/>
+        <result column="sysxs" jdbcType="SMALLINT" property="sysxs"/>
+        <result column="sxssl" jdbcType="SMALLINT" property="sxssl"/>
+        <result column="yybz" jdbcType="VARCHAR" property="yybz"/>
+        <result column="yyzt" jdbcType="VARCHAR" property="yyzt"/>
+        <result column="sprjh" jdbcType="VARCHAR" property="sprjh"/>
+        <result column="sprxm" jdbcType="VARCHAR" property="sprxm"/>
+        <result column="sprdwdm" jdbcType="VARCHAR" property="sprdwdm"/>
+        <result column="spyj" jdbcType="VARCHAR" property="spyj"/>
+        <result column="csyy" jdbcType="VARCHAR" property="csyy"/>
+        <result column="rqsj" jdbcType="TIMESTAMP" property="rqsj"/>
+        <result column="cqsj" jdbcType="TIMESTAMP" property="cqsj"/>
+        <result column="tel" jdbcType="VARCHAR" property="tel"/>
+        <result column="shbh" jdbcType="VARCHAR" property="shbh"/>
+        <result column="crqzt" jdbcType="VARCHAR" property="crqzt"/>
+        <result column="rybh" jdbcType="VARCHAR" property="rybh"/>
+        <result column="sfdd" jdbcType="VARCHAR" property="sfdd"/>
+        <result column="lxfs" jdbcType="VARCHAR" property="lxfs"/>
+        <result column="cphm" jdbcType="VARCHAR" property="cphm"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        update chas_yw_yy set isdel = 1
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="com.wckj.chasstage.modules.yy.entity.ChasYwYy">
+        insert into chas_yw_yy (id, isdel, data_flag,
+        lrr_sfzh, lrsj, xgr_sfzh,
+        xgsj, baqid, baqmc,
+        yylx, yyrjh, yyrxm,
+        yyrsfzh, yyrdwdm, yyrdwmc,
+        kssj, jssj, rysl,
+        sysxs, sxssl, yybz,
+        yyzt, sprjh, sprxm,
+        sprdwdm, spyj, csyy,
+        rqsj, cqsj, tel,
+        shbh, crqzt, rybh,sfdd,cphm)
+        values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR},
+        #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+        #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+        #{yylx,jdbcType=VARCHAR}, #{yyrjh,jdbcType=VARCHAR}, #{yyrxm,jdbcType=VARCHAR},
+        #{yyrsfzh,jdbcType=VARCHAR}, #{yyrdwdm,jdbcType=VARCHAR}, #{yyrdwmc,jdbcType=VARCHAR},
+        #{kssj,jdbcType=TIMESTAMP}, #{jssj,jdbcType=TIMESTAMP}, #{rysl,jdbcType=SMALLINT},
+        #{sysxs,jdbcType=SMALLINT}, #{sxssl,jdbcType=SMALLINT}, #{yybz,jdbcType=VARCHAR},
+        #{yyzt,jdbcType=VARCHAR}, #{sprjh,jdbcType=VARCHAR}, #{sprxm,jdbcType=VARCHAR},
+        #{sprdwdm,jdbcType=VARCHAR}, #{spyj,jdbcType=VARCHAR}, #{csyy,jdbcType=VARCHAR},
+        #{rqsj,jdbcType=TIMESTAMP}, #{cqsj,jdbcType=TIMESTAMP}, #{tel,jdbcType=VARCHAR},
+        #{shbh,jdbcType=VARCHAR}, #{crqzt,jdbcType=VARCHAR}, #{rybh,jdbcType=VARCHAR},#{sfdd,jdbcType=VARCHAR},
+        #{cphm,jdbcType=VARCHAR}
+        )
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.yy.entity.ChasYwYy">
+        update chas_yw_yy
+        set isdel = #{isdel,jdbcType=SMALLINT},
+        data_flag = #{dataFlag,jdbcType=VARCHAR},
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+        baqid = #{baqid,jdbcType=VARCHAR},
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+        yylx = #{yylx,jdbcType=VARCHAR},
+        yyrjh = #{yyrjh,jdbcType=VARCHAR},
+        yyrxm = #{yyrxm,jdbcType=VARCHAR},
+        yyrsfzh = #{yyrsfzh,jdbcType=VARCHAR},
+        yyrdwdm = #{yyrdwdm,jdbcType=VARCHAR},
+        yyrdwmc = #{yyrdwmc,jdbcType=VARCHAR},
+        kssj = #{kssj,jdbcType=TIMESTAMP},
+        jssj = #{jssj,jdbcType=TIMESTAMP},
+        rysl = #{rysl,jdbcType=SMALLINT},
+        sysxs = #{sysxs,jdbcType=SMALLINT},
+        sxssl = #{sxssl,jdbcType=SMALLINT},
+        yybz = #{yybz,jdbcType=VARCHAR},
+        yyzt = #{yyzt,jdbcType=VARCHAR},
+        sprjh = #{sprjh,jdbcType=VARCHAR},
+        sprxm = #{sprxm,jdbcType=VARCHAR},
+        sprdwdm = #{sprdwdm,jdbcType=VARCHAR},
+        spyj = #{spyj,jdbcType=VARCHAR},
+        csyy = #{csyy,jdbcType=VARCHAR},
+        rqsj = #{rqsj,jdbcType=TIMESTAMP},
+        cqsj = #{cqsj,jdbcType=TIMESTAMP},
+        tel = #{tel,jdbcType=VARCHAR},
+        shbh = #{shbh,jdbcType=VARCHAR},
+        crqzt = #{crqzt,jdbcType=VARCHAR},
+        rybh = #{rybh,jdbcType=VARCHAR},
+        sfdd = #{sfdd,jdbcType=VARCHAR},
+        cphm = #{cphm,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, yylx,
+    yyrjh, yyrxm, yyrsfzh, yyrdwdm, yyrdwmc, kssj, jssj, rysl, sysxs, sxssl, yybz, yyzt,
+    sprjh, sprxm, sprdwdm, spyj, csyy, rqsj, cqsj, tel, shbh, crqzt, rybh, sfdd,cphm
+    from chas_yw_yy
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+
+        select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, yylx,
+        yyrjh, yyrxm, yyrsfzh, yyrdwdm, yyrdwmc, kssj, jssj, rysl, sysxs, sxssl, yybz, yyzt,
+        sprjh, sprxm, sprdwdm, spyj, csyy, rqsj, cqsj, tel, shbh, crqzt, rybh, sfdd,cphm
+        from chas_yw_yy
+        <where>
+            1=1 and isdel = 0
+            <if test="baqid != null and baqid !=''">
+                and baqid = '${baqid}'
+            </if>
+            <if test="yyrdwdm != null and yyrdwdm !=''">
+                and yyrdwdm = '${yyrdwdm}'
+            </if>
+            <if test="yylx != null and yylx !=''">
+                and yylx = '${yylx}'
+            </if>
+            <if test="yyrxm != null and yyrxm !=''">
+                and yyrxm like '%${yyrxm}%'
+            </if>
+            <if test="yyrsfzh != null and yyrsfzh !=''">
+                and yyrsfzh = '${yyrsfzh}'
+            </if>
+            <if test="yyrjh != null and yyrjh !=''">
+                and yyrjh like '%${yyrjh}%'
+            </if>
+            <if test="yyzt != null and yyzt !=''">
+                and yyzt = '${yyzt}'
+            </if>
+            <if test="baqmc !=null and baqmc !=''">
+                and BAQMC LIKE '%${baqmc}%'
+            </if>
+            <if test="shbh != null and shbh !=''">
+                and shbh = '${shbh}'
+            </if>
+            <if test="crqzt != null and crqzt !=''">
+                and crqzt = '${crqzt}'
+            </if>
+            <if test="notcrqzt != null and notcrqzt !=''">
+                and crqzt != '${notcrqzt}'
+            </if>
+            <if test="startTime!=null and startTime !=''">
+                and kssj &gt;= to_timestamp(#{startTime},'yyyy-MM-dd hh24:mi:ss')
+            </if>
+            <if test="endTime!=null and endTime !=''">
+                and kssj &lt;= to_timestamp(#{endTime}, 'yyyy-MM-dd hh24:mi:ss')
+            </if>
+            <if test="nowTime!=null and nowTime !=''">
+                and jssj &gt;= to_timestamp(#{nowTime},'yyyy-MM-dd hh24:mi:ss')
+            </if>
+            <if test="sydwdm != null and sydwdm !=''">
+                and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+            </if>
+            <if test="qxbs == 'reg'">
+                and yyrdwdm LIKE CONCAT(left(#{orgCode,jdbcType=VARCHAR},6),'%')
+            </if>
+            <if test="qxbs == 'org'">
+                and yyrdwdm LIKE CONCAT(left(#{orgCode,jdbcType=VARCHAR},8),'%')
+            </if>
+            order by lrsj desc
+        </where>
+    </select>
+    <select id="findByParams" resultMap="BaseResultMap">
+
+        select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, yylx,
+        yyrjh, yyrxm, yyrsfzh, yyrdwdm, yyrdwmc, kssj, jssj, rysl, sysxs, sxssl, yybz, yyzt,
+        sprjh, sprxm, sprdwdm, spyj, csyy, rqsj, cqsj, tel, shbh, crqzt, rybh, sfdd,cphm
+        from chas_yw_yy
+        <where>
+            1=1 and isdel = 0
+            <if test="baqid != null and baqid !=''">
+                and baqid = '${baqid}'
+            </if>
+            <if test="yyrdwdm != null and yyrdwdm !=''">
+                and yyrdwdm = '${yyrdwdm}'
+            </if>
+            <if test="yylx != null and yylx !=''">
+                and yylx = '${yylx}'
+            </if>
+            <if test="yyrxm != null and yyrxm !=''">
+                and yyrxm = '${yyrxm}'
+            </if>
+            <if test="yyrsfzh != null and yyrsfzh !=''">
+                and yyrsfzh = '${yyrsfzh}'
+            </if>
+            <if test="yyrjh != null and yyrjh !=''">
+                and yyrjh = '${yyrjh}'
+            </if>
+            <if test="yyzt != null and yyzt !=''">
+                and yyzt = '${yyzt}'
+            </if>
+            <if test="baqmc !=null and baqmc !=''">
+                and BAQMC LIKE '%${baqmc}%'
+            </if>
+            <if test="shbh != null and shbh !=''">
+                and shbh = '${shbh}'
+            </if>
+            <if test="crqzt != null and crqzt !=''">
+                and crqzt = '${crqzt}'
+            </if>
+            <if test="notcrqzt != null and notcrqzt !=''">
+                and crqzt != '${notcrqzt}'
+            </if>
+            <if test="cphm != null and cphm !=''">
+                and cphm = '${cphm}'
+            </if>
+            <if test="curtime != null and curtime !=''">
+                and  (kssj &lt;= to_timestamp('${curtime}','yyyy-MM-dd hh24:mi:ss') and  to_timestamp('${curtime}','yyyy-MM-dd hh24:mi:ss') &lt;= jssj)
+            </if>
+            order by lrsj desc
+        </where>
+    </select>
+
+    <select id="getYyxxAndMjzpkPageData" resultMap="BaseResultMap">
+        select yy.id, yy.isdel, yy.data_flag, yy.lrr_sfzh, yy.lrsj, yy.xgr_sfzh, yy.xgsj, yy.baqid, yy.baqmc, yy.yylx,
+        yy.yyrjh, yy.yyrxm, yy.yyrsfzh, yy.yyrdwdm, yy.yyrdwmc, yy.kssj, yy.jssj, yy.rysl, yy.sysxs, yy.sxssl, yy.yybz,
+        yy.yyzt,
+        yy.sprjh, yy.sprxm, yy.sprdwdm, yy.spyj, yy.csyy, yy.rqsj, yy.cqsj, yy.tel, yy.shbh, yy.crqzt, yy.rybh, yy.sfdd,yy.cphm ,mjzpk.lxr as lxfs
+        from chas_yw_yy yy, chas_xt_mjzpk mjzpk
+        <where>
+            1=1 and yy.isdel = 0 and mjzpk.isdel = 0 and yy.yyrsfzh = mjzpk.mjsfzh
+            <if test="baqid != null and baqid !=''">
+                and yy.baqid = '${baqid}'
+            </if>
+            <if test="yyrdwdm != null and yyrdwdm !=''">
+                and yy.yyrdwdm = '${yyrdwdm}'
+            </if>
+            <if test="yylx != null and yylx !=''">
+                and yy.yylx = '${yylx}'
+            </if>
+            <if test="yyrxm != null and yyrxm !=''">
+                and yy.yyrxm like '%${yyrxm}%'
+            </if>
+            <if test="yyrsfzh != null and yyrsfzh !=''">
+                and yy.yyrsfzh = '${yyrsfzh}'
+            </if>
+            <if test="yyrjh != null and yyrjh !=''">
+                and yy.yyrjh like '%${yyrjh}%'
+            </if>
+            <if test="yyzt != null and yyzt !=''">
+                and yy.yyzt = '${yyzt}'
+            </if>
+            <if test="baqmc !=null and baqmc !=''">
+                and yy.BAQMC LIKE '%${baqmc}%'
+            </if>
+            <if test="shbh != null and shbh !=''">
+                and yy.shbh = '${shbh}'
+            </if>
+            <if test="crqzt != null and crqzt !=''">
+                and yy.crqzt = '${crqzt}'
+            </if>
+            <if test="startTime!=null and startTime !=''">
+                and yy.kssj &gt;= to_timestamp(#{startTime},'yyyy-MM-dd hh24:mi:ss')
+            </if>
+            <if test="endTime!=null and endTime !=''">
+                and yy.kssj &lt;= to_timestamp(#{endTime}, 'yyyy-MM-dd hh24:mi:ss')
+            </if>
+            order by yy.lrsj desc
+        </where>
+    </select>
+</mapper>

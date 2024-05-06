@@ -1,0 +1,1 @@
+function ZD_YTHBA_JDSXLX(){  var SourceArray = [{"name":"普通","jpcode":"pt","code":"00","scode":"putong"},{"name":"规则","jpcode":"gz","code":"01","scode":"guize"}]; return SourceArray;}

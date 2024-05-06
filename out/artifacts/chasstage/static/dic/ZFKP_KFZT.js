@@ -1,0 +1,1 @@
+function ZFKP_KFZT(){  var SourceArray = [{"name":"草稿","jpcode":"cg","code":"00","scode":"caogao"},{"name":"生效","jpcode":"sx","code":"01","scode":"shengxiao"},{"name":"失效","jpcode":"sx","code":"02","scode":"shixiao"}]; return SourceArray;}

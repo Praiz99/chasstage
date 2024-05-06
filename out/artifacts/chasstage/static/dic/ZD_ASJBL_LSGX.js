@@ -1,0 +1,1 @@
+function ZD_ASJBL_LSGX(){  var SourceArray = [{"name":"中央管辖单位","jpcode":"zygxdw","code":"01","scode":"zhongyangguanxiadanwei"},{"name":"省市管辖单位","jpcode":"ssgxdw","code":"02","scode":"shengshiguanxiadanwei"}]; return SourceArray;}

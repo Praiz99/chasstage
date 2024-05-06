@@ -1,0 +1,1 @@
+function ZD_XZBC_STFBCD(){  var SourceArray = [{"name":"新鲜","jpcode":"xx","code":"1","scode":"xinxian"},{"name":"腐败","jpcode":"fb","code":"2","scode":"fubai"},{"name":"白骨化","jpcode":"bgh","code":"3","scode":"baiguhua"}]; return SourceArray;}

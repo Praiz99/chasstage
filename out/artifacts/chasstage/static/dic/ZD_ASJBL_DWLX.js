@@ -1,0 +1,1 @@
+function ZD_ASJBL_DWLX(){  var SourceArray = [{"name":"机关、团体","jpcode":"jg、tt","code":"100","scode":"jiguan、tuanti"},{"name":"国家机关","jpcode":"gjjg","code":"110","scode":"guojiajiguan"}]; return SourceArray;}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.wd.dao.ChasWdMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.wd.entity.ChasWd">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="WDBH_H" jdbcType="VARCHAR" property="wdbhH" />
+    <result column="WDBH_L" jdbcType="VARCHAR" property="wdbhL" />
+    <result column="YSID" jdbcType="VARCHAR" property="ysid" />
+    <result column="lx" jdbcType="VARCHAR" property="lx" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from chas_xt_wd
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.wd.entity.ChasWd">
+    insert into chas_xt_wd (ID, ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, WDBH_H, 
+      WDBH_L,YSID,lx)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{wdbhH,jdbcType=VARCHAR}, 
+      #{wdbhL,jdbcType=VARCHAR},#{ysid,jdbcType=VARCHAR},#{lx,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.wd.entity.ChasWd">
+    update chas_xt_wd
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      WDBH_H = #{wdbhH,jdbcType=VARCHAR},
+      WDBH_L = #{wdbhL,jdbcType=VARCHAR},
+      YSID = #{ysid,jdbcType=VARCHAR},
+      lx = #{lx,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, WDBH_H, 
+    WDBH_L,YSID,lx
+    from chas_xt_wd
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, WDBH_H, 
+    WDBH_L,YSID,lx
+    from chas_xt_wd
+    <where>
+     1=1 and isdel = 0
+       <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}' 
+     </if>
+     <if test="wdbhH != null and wdbhH !=''">
+            and WDBH_H = '${wdbhH}' 
+     </if>
+     <if test="wdbhL != null and wdbhL !=''">
+            and WDBH_L = '${wdbhL}' 
+     </if>
+      <if test="ysid != null and ysid !=''">
+        and YSID = '${ysid}'
+      </if>
+     <!--
+     <if test="qxbs == 'province'">
+        and BAQID LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+     </if>
+       <if test="qxbs == 'city'">
+        and BAQID LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+     </if>
+     <if test="qxbs == 'reg'">
+        and BAQID LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+     </if>
+     <if test="qxbs == 'org'">
+        and BAQID LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+     </if>
+     <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+     </if>-->
+    </where>
+  </select>
+</mapper>

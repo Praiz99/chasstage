@@ -1,0 +1,1 @@
+function CHAS_JYLX(){  var SourceArray = [{"name":"民警","jpcode":"mj","code":"01","scode":"minjing"},{"name":"协辅警","jpcode":"xfj","code":"02","scode":"xiefujing"}]; return SourceArray;}

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.sxsgl.dao.ChasSxsKzMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.sxsgl.entity.ChasSxsKz">
+
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="FPZT" jdbcType="VARCHAR" property="fpzt" />
+    <result column="DYZT" jdbcType="VARCHAR" property="dyzt" />
+    <result column="RYID" jdbcType="VARCHAR" property="ryid" />
+    <result column="KSSJ" jdbcType="TIMESTAMP" property="kssj" />
+    <result column="SYMJ" jdbcType="VARCHAR" property="symj" />
+    <result column="RYBH" jdbcType="VARCHAR" property="rybh" />
+    <result column="RYXM" jdbcType="VARCHAR" property="ryxm" />
+    <result column="QYID" jdbcType="VARCHAR" property="qyid" />
+    <result column="JXYD" jdbcType="VARCHAR" property="jxyd" />
+    <result column="HDSJ" jdbcType="TIMESTAMP" property="hdsj" />
+    <result column="qymc" jdbcType="VARCHAR" property="qymc" />
+    <result column="gbsj" jdbcType="TIMESTAMP" property="gbsj" />
+    <result column="rylx" jdbcType="VARCHAR" property="rylx" />
+  </resultMap>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_sxskz
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+   <delete id="deleteByPrimaryRbyh" parameterType="java.lang.String">
+    delete from chas_yw_sxskz where RYBH = #{rybh,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.sxsgl.entity.ChasSxsKz">
+    insert into chas_yw_sxskz (ID, DATA_FLAG,
+    LRR_SFZH, LRSJ, XGR_SFZH,
+    XGSJ, BAQID, BAQMC,
+    FPZT, DYZT, RYID, KSSJ,
+    SYMJ, RYBH,RYXM,QYID,JXYD,HDSJ,qymc)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR},
+    #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR},
+    now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+    #{fpzt,jdbcType=VARCHAR}, #{dyzt,jdbcType=VARCHAR},
+    #{ryid,jdbcType=VARCHAR}, #{kssj,jdbcType=TIMESTAMP},
+    #{symj,jdbcType=VARCHAR}, #{rybh,jdbcType=VARCHAR},#{ryxm,jdbcType=VARCHAR},
+    #{qyid,jdbcType=VARCHAR}, #{jxyd,jdbcType=VARCHAR},
+    #{hdsj,jdbcType=TIMESTAMP}, #{qymc,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.sxsgl.entity.ChasSxsKz">
+    update chas_yw_sxskz
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+    DATA_FLAG = #{dataflag,jdbcType=CHAR},
+    LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+    XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+    BAQID = #{baqid,jdbcType=VARCHAR},
+    BAQMC = #{baqmc,jdbcType=VARCHAR},
+    FPZT = #{fpzt,jdbcType=VARCHAR},
+    DYZT = #{dyzt,jdbcType=VARCHAR},
+    RYID = #{ryid,jdbcType=VARCHAR},
+    KSSJ = #{kssj,jdbcType=TIMESTAMP},
+    SYMJ = #{symj,jdbcType=VARCHAR},
+    RYBH = #{rybh,jdbcType=VARCHAR},
+    RYXM = #{ryxm,jdbcType=VARCHAR},
+    QYID = #{qyid,jdbcType=VARCHAR},
+    JXYD = #{jxyd,jdbcType=VARCHAR},
+    HDSJ = #{hdsj,jdbcType=TIMESTAMP},
+    qymc = #{qymc,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateRyxmByRybh">
+    update chas_yw_sxskz
+    set
+    RYXM = #{ryxm,jdbcType=VARCHAR}
+    where RYBH = #{rybh,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String"
+    resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+        and RYID = '${ryid}'
+      </if>
+      <if test="fpzt != null and fpzt !=''">
+        and FPZT = '${fpzt}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and RYBH = '${rybh}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+      <if test="isdel != null">
+        and ISDEL = '${isdel}'
+      </if>
+    </where>
+  </select>
+
+  <select id="selectByysdd" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    <where>
+        1 = 1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+
+      <if test="fpzt != null and fpzt !=''">
+        and FPZT = '${fpzt}'
+      </if>
+    </where>
+  </select>
+  <select id="getSxsKzByRybh" resultMap="BaseResultMap">
+
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    <where>
+        1 = 1
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+        and RYID = '${ryid}'
+      </if>
+      <if test="fpzt != null and fpzt !=''">
+        and FPZT = '${fpzt}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and RYBH = '${rybh}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+    </where>
+    order by lrsj desc limit 1 offset 0
+  </select>
+  
+  <select id="getSyqk" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="checkDate != null and checkDate !=''">
+        and ((XGSJ::timestamp)::date - ('${checkDate}'::timestamp)::date = 0)
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+    </where>
+  </select>
+  
+  
+  <select id="findByParams" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    <where>
+      ISDEL=0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="ryid != null and ryid !=''">
+        and RYID = '${ryid}'
+      </if>
+      <if test="fpzt != null and fpzt !=''">
+        and FPZT = '${fpzt}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and RYBH = '${rybh}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+      <if test="hdsj != null and hdsj !=''">
+        and '${hdsj}'
+      </if>
+      <if test="condition != null and condition != ''">
+        order by lrsj desc limit 1 offset 0
+      </if>
+    </where>
+  </select>
+
+
+
+  <!--绕过 findbuid isdel=0 -->
+ 
+    <select id="findAllById" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz
+    where  ID = #{id,jdbcType=VARCHAR}
+  </select>
+
+    <select id="findcountByBaqid" resultType="java.lang.String">
+        select count(*) from chas_yw_sxskz where isdel = 0 and fpzt = '2'
+        and rybh in (select rybh from gg_baqryxx where baqid = '${baqid}'
+          and isdel = 0 and ryzt = '01');
+    </select>
+
+  <select id="findcountByQyid" resultType="integer">
+        select count(id) from chas_yw_sxskz where isdel = 0 and (fpzt = '2'
+       or fpzt = '4' ) and qyid='${qyid}';
+    </select>
+  <update id="clearByrybh" parameterType="java.lang.String">
+        update chas_yw_sxskz set isdel = 1  where rybh='${rybh}'
+    </update>
+
+  <select id="getJxydSxs" resultMap="BaseResultMap">
+    SELECT * from chas_yw_sxskz where isdel=0 and qyid='${qyid}' and rybh is null limit 1 offset 0;
+  </select>
+  <select id="getCountByRybh" useCache="false" resultType="int">
+    SELECT count(id) from chas_yw_sxskz sxs where sxs.baqid='${baqid}'
+    and sxs.rybh='${rybh}' and lrsj > '${start}' and isdel = 0
+  </select>
+  <select id="selectSyjl" resultMap="BaseResultMap">
+    select kz.ID, kz.ISDEL, kz.DATA_FLAG, kz.LRR_SFZH, kz.LRSJ, kz.XGR_SFZH, kz.XGSJ, kz.BAQID,
+    kz.BAQMC, kz.FPZT,
+    kz.DYZT, kz.RYID, kz.KSSJ, kz.SYMJ, kz.RYBH,kz.RYXM, kz.QYID, kz.JXYD, kz.HDSJ,kz.qymc,jl.xgsj as gbsj,ry.rylx
+    from chas_yw_sxskz kz left join chas_yw_sxsgbjl jl  on  kz.id=jl.syid and jl.isdel = 0 left join gg_baqryxx ry on ry.rybh=kz.rybh and ry.isdel = 0
+    <where>
+      1 = 1
+      <if test="baqid != null and baqid !=''">
+        and kz.BAQID = '${baqid}'
+      </if>
+      <if test="symj != null and symj !=''">
+        and kz.symj like '%${symj}%'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+        and kz.ryxm like '%${ryxm}%'
+      </if>
+      <if test="sysj1 != null and sysj1 !=''">
+        and kz.kssj >= '${sysj1}'
+      </if>
+      <if test="sysj2 != null and sysj2 !=''">
+        and kz.kssj &lt;= '${sysj2}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and kz.qyid = '${qyid}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and kz.BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+<!--      order by hdsj desc-->
+<!--      <if test="pageSize != null and size !=null">-->
+<!--        limit ${pageSize} offset ${size}-->
+<!--      </if>-->
+
+    </where>
+  </select>
+  <select id="selectSyjlSize" resultType="integer">
+    select count(ID)
+    from chas_yw_sxskz
+    <where>
+      isdel = 0 and rybh is not null and hdsj is not null
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="symj != null and symj !=''">
+        and symj like '%${symj}%'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+        and ryxm like '%${ryxm}%'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+    </where>
+  </select>
+
+  <select id="findTheLastFpjl" resultMap="BaseResultMap" useCache="false">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, FPZT,
+    DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc
+    from chas_yw_sxskz where ISDEL=0 and BAQID = '${baqid}' and (lrsj>= now()- interval '1 d')
+    and rybh is not null and rybh !=''
+    order by kssj desc limit 1;
+  </select>
+<!--  <select id="findTheLastFpjl" resultMap="BaseResultMap" useCache="false">-->
+<!--    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,-->
+<!--           BAQMC, FPZT,-->
+<!--           DYZT, RYID, KSSJ, SYMJ, RYBH,RYXM, QYID, JXYD, HDSJ,qymc-->
+<!--    from chas_yw_sxskz where ISDEL=0 and BAQID = '${baqid}' and (lrsj>= now()- interval '1 d')-->
+<!--                         and rybh is not null and rybh !=''-->
+<!--    order by kssj desc limit 1;-->
+<!--  </select>-->
+
+  <select id="selectSxsDpData" resultType="hashmap">
+    select sxs.rybh, sxs.ryxm, ryxx.xb as ryxb, qy.qymc as qymc, ryxx.r_rssj as rssj
+    from chas_yw_sxskz sxs
+           LEFT JOIN chas_xt_qy qy on qy.ysid = sxs.qyid and qy.isdel = 0
+           LEFT JOIN gg_baqryxx ryxx on ryxx.rybh = sxs.rybh and ryxx.isdel = 0
+    where 1 = 1 and sxs.isdel = 0 and sxs.baqid = '${baqid}' order by sxs.xgsj desc
+  </select>
+</mapper>

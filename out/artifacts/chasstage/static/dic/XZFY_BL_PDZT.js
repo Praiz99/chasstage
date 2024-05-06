@@ -1,0 +1,1 @@
+function XZFY_BL_PDZT(){  var SourceArray = [{"name":"未评定","jpcode":"wpd","code":"00","scode":"weipingding"},{"name":"审核审批中","jpcode":"shspz","code":"01","scode":"shenheshenpizhong"},{"name":"通过","jpcode":"tg","code":"02","scode":"tongguo"},{"name":"不通过","jpcode":"btg","code":"03","scode":"butongguo"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_CASE_JJZC_DQGAZT(){  var SourceArray = [{"name":"不挂案","jpcode":"bga","code":"0","scode":"buguaan"},{"name":"挂案","jpcode":"ga","code":"1","scode":"guaan"}]; return SourceArray;}

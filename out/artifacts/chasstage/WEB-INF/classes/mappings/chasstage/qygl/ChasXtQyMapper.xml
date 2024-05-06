@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.qygl.dao.ChasXtQyMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.qygl.entity.ChasXtQy">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="RYSL" jdbcType="INTEGER" property="rysl" />
+    <result column="RYZLSJ" jdbcType="INTEGER" property="ryzlsj" />
+    <result column="PXBH" jdbcType="INTEGER" property="pxbh" />
+    <result column="SFGNS" jdbcType="INTEGER" property="sfgns" />
+    <result column="FJLX" jdbcType="VARCHAR" property="fjlx" />
+    <result column="YSBH" jdbcType="VARCHAR" property="ysbh" />
+    <result column="KZLX" jdbcType="VARCHAR" property="kzlx" />
+    <result column="QYMC" jdbcType="VARCHAR" property="qymc" />
+    <result column="YSID" jdbcType="VARCHAR" property="ysid" />
+    <result column="mac" jdbcType="VARCHAR" property="mac" />
+  </resultMap>
+
+  <delete id="clearByBaq" parameterType="java.lang.String">
+    delete from  chas_xt_qy where baqid = #{baqid,jdbcType=VARCHAR}
+  </delete>
+
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_qy
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.qygl.entity.ChasXtQy">
+    insert into chas_xt_qy (ID,ISDEL, DATA_FLAG,
+    LRR_SFZH, LRSJ, XGR_SFZH,
+    XGSJ, BAQID, BAQMC, RYSL,
+    RYZLSJ, PXBH, SFGNS,
+    FJLX, YSBH, KZLX,QYMC,YSID,mac)
+    values (#{id,jdbcType=VARCHAR},#{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR},
+    #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR},
+    now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+    #{rysl,jdbcType=INTEGER},
+    #{ryzlsj,jdbcType=INTEGER}, #{pxbh,jdbcType=INTEGER}, #{sfgns,jdbcType=INTEGER},
+    #{fjlx,jdbcType=VARCHAR}, #{ysbh,jdbcType=VARCHAR},
+    #{kzlx,jdbcType=VARCHAR}, #{qymc,jdbcType=VARCHAR}, #{ysid,jdbcType=VARCHAR},
+     #{mac,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.qygl.entity.ChasXtQy">
+    update chas_xt_qy
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+    DATA_FLAG = #{dataflag,jdbcType=CHAR},
+    LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+    XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+    BAQID = #{baqid,jdbcType=VARCHAR},
+    BAQMC = #{baqmc,jdbcType=VARCHAR},
+    RYSL = #{rysl,jdbcType=INTEGER},
+    RYZLSJ = #{ryzlsj,jdbcType=INTEGER},
+    PXBH = #{pxbh,jdbcType=INTEGER},
+    SFGNS = #{sfgns,jdbcType=INTEGER},
+    FJLX = #{fjlx,jdbcType=VARCHAR},
+    YSBH = #{ysbh,jdbcType=VARCHAR},
+    KZLX = #{kzlx,jdbcType=VARCHAR},
+    QYMC = #{qymc,jdbcType=VARCHAR},
+    YSID = #{ysid,jdbcType=VARCHAR},
+    mac = #{mac,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String"
+          resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, RYSL,
+    RYZLSJ, PXBH, SFGNS, FJLX, YSBH, KZLX ,QYMC ,YSID,mac
+    from chas_xt_qy
+    where ID = #{id,jdbcType=VARCHAR} and isdel != 1
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, RYSL,
+    RYZLSJ, PXBH, SFGNS, FJLX, YSBH, KZLX ,QYMC,YSID,mac
+    from chas_xt_qy
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="qymc != null and qymc !=''">
+        and QYMC LIKE '%${qymc}%'
+      </if>
+      <if test="ysbh != null and ysbh !=''">
+        and YSBH = '${ysbh}'
+      </if>
+      <if test="fjlx != null and fjlx !=''">
+        and FJLX = '${fjlx}'
+      </if>
+      <if test="ysid != null and ysid !=''">
+        and YSID = '${ysid}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+    </where>
+  </select>
+
+
+
+  <select id="getDhsRoomData" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,BAQMC, RYSL,RYZLSJ, PXBH, SFGNS, FJLX, YSBH, KZLX ,QYMC ,YSID,mac
+    from chas_xt_qy
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="fjlx != null and fjlx !=''">
+        and FJLX = '${fjlx}'
+      </if>
+      <if test="ysid != null and ysid !=''">
+        and YSID = '${ysid}'
+      </if>
+    </where>
+  </select>
+
+  <select id="findByParams" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, RYSL,
+    RYZLSJ, PXBH, SFGNS, FJLX, YSBH, KZLX ,QYMC ,YSID,mac
+    from chas_xt_qy
+    <where>
+      <if test="dhsk != null and dhsk !=''">
+        not exists(
+        SELECT chas_yw_dhskz.QYID
+        from chas_yw_dhskz
+        WHERE chas_xt_qy.ysid=chas_yw_dhskz.QYID and isdel=0
+        )
+      </if>
+      <if test="sxsk != null and sxsk !=''">
+        not exists(
+        SELECT chas_yw_sxskz.QYID
+        from chas_yw_sxskz
+        WHERE chas_xt_qy.ysid=chas_yw_sxskz.QYID and isdel='0'
+        )
+      </if>
+
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="isdel != null">
+        and ISDEL = '${isdel}'
+      </if>
+      <if test="kzlx != null and kzlx !=''">
+        and KZLX = '${kzlx}'
+      </if>
+      <if test=" fjlx != null and  fjlx !=''">
+        and FJLX = '${fjlx}'
+      </if>
+      <if test="ysid != null and ysid !=''">
+        and YSID = '${ysid}'
+      </if>
+    </where>
+    <if test="cusorder != null and cusorder !=''">
+      order by ysbh
+    </if>
+  </select>
+  <select id="findKfpDhs" resultMap="BaseResultMap">
+    select chas_yw_dhskz.QYID as ysid from chas_xt_qy ,chas_yw_dhskz,chas_yw_ryjl
+    <where>
+      chas_xt_qy.ysid = chas_yw_dhskz.QYID
+      and chas_yw_ryjl.ID = chas_yw_dhskz.RYID
+      <if test="ywbh != null and ywbh !=''">
+        and position('${ywbh}' in chas_yw_ryjl.ywbh) &gt; 0
+      </if>
+      <if test="notywbh != null and notywbh !=''">
+        and position('${notywbh}' in chas_yw_ryjl.ywbh) &lt;=0
+      </if>
+
+      <if test="ryxb != null and ryxb !=''">
+        and chas_yw_dhskz.RYXB = '${ryxb}'
+      </if>
+      <if test="baqid != null and baqid !=''">
+        and chas_xt_qy.BAQID = '${baqid}' and chas_yw_dhskz.BAQID = '${baqid}' and chas_yw_ryjl.BAQID = '${baqid}'
+      </if>
+      <if test="isdel != null ">
+        and chas_xt_qy.ISDEL = 0 and chas_yw_dhskz.isdel=0 and chas_yw_ryjl.isdel=0 and chas_yw_ryjl.ryzt='1'
+      </if>
+      <if test="kzlx != null and kzlx !=''">
+        and chas_xt_qy.KZLX = '${kzlx}'
+      </if>
+      <if test=" fjlx != null and  fjlx !=''">
+        and chas_xt_qy.FJLX = '${fjlx}'
+      </if>
+      <if test="ysid != null and ysid !=''">
+        and YSID = '${ysid}'
+      </if>
+      GROUP BY chas_yw_dhskz.QYID
+      ORDER BY COUNT(chas_yw_dhskz.QYID) ASC
+    </where>
+  </select>
+
+  <select id="getDhsByRybh" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select c.QYMC from chas_yw_ryjl a inner join chas_yw_dhskz b on a.DHS_BH=b.id and b.isdel = 0 inner join chas_xt_qy c on b.QYID=c.ysid and c.isdel = 0 where a.rybh=#{rybh,jdbcType=VARCHAR} and a.ryzt='1'
+  </select>
+  <select id="findByYsid" parameterType="java.lang.String"
+          resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC, RYSL,
+    RYZLSJ, PXBH, SFGNS, FJLX, YSBH, KZLX ,QYMC ,YSID,mac
+    from chas_xt_qy
+    where 1 = 1 and isdel = 0 and YSID = #{ysid,jdbcType=VARCHAR}
+  </select>
+
+  <select id="findfreeSxs" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from chas_xt_qy where 1 = 1 and isdel = 0 and ysid not in(
+    select qyid from chas_yw_sxskz where baqid = '${baqid}' and isdel = 0)
+    and baqid = '${baqid}' and fjlx = '3'
+  </select>
+
+  <select id="findByYsids" resultMap="BaseResultMap">
+    select * from chas_xt_qy where ysid in
+    <foreach item="item" index="index" collection="ysids"
+             open="(" separator="," close=")">
+      '${item}'
+    </foreach>
+    and isdel = '0'
+  </select>
+
+  <select id="findbtaAndtxbDhs" resultMap="BaseResultMap">
+    select chas_yw_dhskz.QYID as ID from chas_xt_qy ,chas_yw_dhskz where chas_xt_qy.isdel=0 and chas_xt_qy.ysid = chas_yw_dhskz.QYID and chas_xt_qy.ysid not in
+    (
+	    select chas_yw_dhskz.QYID  from chas_xt_qy ,chas_yw_dhskz,chas_yw_ryjl where chas_xt_qy.ysid = chas_yw_dhskz.QYID
+    and chas_yw_dhskz.isdel=0 and chas_yw_ryjl.isdel=0 and chas_yw_ryjl.ryzt='1'  and chas_xt_qy.isdel=0
+    and chas_yw_ryjl.ID = chas_yw_dhskz.RYID and position('${ywbh}' in chas_yw_ryjl.ywbh) &gt; 0 <if test="kzlx != null and kzlx !=''"> and chas_xt_qy.KZLX = '${kzlx}'</if> and  chas_xt_qy.FJLX = '${fjlx}' and chas_xt_qy.BAQID = '${baqid}'
+	  union
+	  select chas_yw_dhskz.QYID  from chas_xt_qy ,chas_yw_dhskz,chas_yw_ryjl where chas_xt_qy.ysid = chas_yw_dhskz.QYID
+    and chas_yw_dhskz.isdel=0 and chas_yw_ryjl.isdel=0 and chas_yw_ryjl.ryzt='1'  and chas_xt_qy.isdel=0
+    and chas_yw_dhskz.RYXB = '${ryxb}' and chas_xt_qy.FJLX = '${fjlx}' <if test="kzlx != null and kzlx !=''">and chas_xt_qy.KZLX = '${kzlx}'</if> and chas_xt_qy.BAQID = '${baqid}')
+    and chas_xt_qy.FJLX = '${fjlx}' <if test="kzlx != null and kzlx !=''">and chas_xt_qy.KZLX = '${kzlx}'</if> and chas_xt_qy.BAQID = '${baqid}' GROUP BY chas_yw_dhskz.QYID
+      ORDER BY COUNT(chas_yw_dhskz.QYID) ASC
+  </select>
+
+</mapper>

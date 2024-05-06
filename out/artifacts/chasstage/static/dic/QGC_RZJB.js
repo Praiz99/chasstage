@@ -1,0 +1,1 @@
+function QGC_RZJB(){  var SourceArray = [{"name":"警告","jpcode":"jg","code":"001","scode":"jinggao"},{"name":"信息","jpcode":"xx","code":"002","scode":"xinxi"},{"name":"异常","jpcode":"yc","code":"003","scode":"yichang"}]; return SourceArray;}

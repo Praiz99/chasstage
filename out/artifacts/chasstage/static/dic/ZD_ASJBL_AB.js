@@ -1,0 +1,1 @@
+function ZD_ASJBL_AB(){  var SourceArray = [{"name":"背叛分裂国家案","jpcode":"BPFLGJA","code":"010100","scode":"BEIPANFENLIEGUOJIAAN"}]; return SourceArray;}

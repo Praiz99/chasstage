@@ -1,0 +1,1 @@
+function AGXT_SMGZT(){  var SourceArray = [{"name":"空闲","jpcode":"kx","code":"01","scode":"kongxian"},{"name":"占用","jpcode":"zy","code":"02","scode":"zhanyong"}]; return SourceArray;}

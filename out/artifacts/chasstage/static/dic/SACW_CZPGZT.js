@@ -1,0 +1,1 @@
+function SACW_CZPGZT(){  var SourceArray = [{"name":"待评估","jpcode":"dpg","code":"0","scode":"daipinggu"},{"name":"评估完成","jpcode":"pgwc","code":"1","scode":"pingguwancheng"},{"name":"评估退回","jpcode":"pgth","code":"2","scode":"pinggutuihui"}]; return SourceArray;}

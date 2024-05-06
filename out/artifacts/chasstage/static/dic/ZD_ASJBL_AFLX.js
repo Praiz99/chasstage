@@ -1,0 +1,1 @@
+function ZD_ASJBL_AFLX(){  var SourceArray = [{"name":"初犯","jpcode":"cf","code":"1","scode":"chufan"}]; return SourceArray;}

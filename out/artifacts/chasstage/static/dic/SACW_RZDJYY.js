@@ -1,0 +1,1 @@
+function SACW_RZDJYY(){  var SourceArray = [{"name":"拍卖","jpcode":"pm","code":"88801","scode":"paimai"},{"name":"变卖","jpcode":"bm","code":"88802","scode":"bianmai"},{"name":"出售","jpcode":"cs","code":"88803","scode":"chushou"},{"name":"变现","jpcode":"bx","code":"88804","scode":"bianxian"}]; return SourceArray;}

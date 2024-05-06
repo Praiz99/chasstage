@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+			
+	<!-- 自动扫描且只扫描@Controller -->
+	<context:component-scan base-package="com.wckj" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<!-- 加载应用程序属性文件 -->		
+	<bean id="propertyConfigurer" class="com.wckj.framework.conf.ConfContextPropertyConfigurer">  
+	    <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />  
+	    <property name="ignoreResourceNotFound" value="true" />
+	    <property name="adminAddressPropName" value="conf.admin.address"/>
+	    <property name="accessTokenPropName" value="conf.access.token"/>
+	    <property name="envPropName" value="conf.env"/>
+	    <property name="appNamePropName" value="conf.appname"/>  
+	    <property name="mirrorfilePropName" value="conf.mirrorfile"/>  
+	    <property name="locations">  
+	    	<list>
+	          	<value>classpath*:/config/conf/application-conf.properties</value>
+	    	</list>  
+	    </property>  
+	</bean>
+		
+	<!--自动扫描aop切面 -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	<mvc:cors>
+    	<mvc:mapping path="/**" allowed-origin-patterns="*" allow-credentials="true"/>
+	</mvc:cors>
+	 
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean class="com.wckj.framework.json.jackson.CustomObjectMapper"/>
+				</property>
+		        <property name="supportedMediaTypes">  
+		            <list>  
+		            	<value>text/html;charset=UTF-8</value><!-- 避免IE出现下载JSON文件的情况 -->   
+		                <value>application/json;charset=UTF-8</value>  
+		            </list>  
+		        </property>				
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	 
+	<!-- 处理静态资源 -->
+	<mvc:resources location="/static/" mapping="/static/**"/>
+	
+	
+	<!-- 将无法mapping到Controller的path交给default servlet handler处理 -->		
+	<mvc:default-servlet-handler/>
+	
+	<!-- 定义JSP文件的位置 --> 
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<!--拦截器 -->
+    <mvc:interceptors>    
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/task/http/**"/>
+			<mvc:exclude-mapping path="/static/**"/>
+			<mvc:exclude-mapping path="/rest/**"/>
+			<mvc:exclude-mapping path="/api/**"/>
+			<mvc:exclude-mapping path="/login**"/>
+			<mvc:exclude-mapping path="/loginRole/**"/>
+			<mvc:exclude-mapping path="/test.jsp"/>
+			<bean class="com.wckj.jdone.modules.sys.interceptor.AuthorizeInterceptor">
+				<property name="jumpUrlsStringMapper" value="${mvc.rewrite.paths:}"/>				
+				<property name="ignorePath" value="${mvc.exclude.paths:}"/>
+			</bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/rest/**" />
+			<bean class="com.wckj.framework.api.interceptor.RestApiInterceptor"/>
+		</mvc:interceptor>		      
+    </mvc:interceptors>			
+	
+	
+    <!-- 异常处理 -->
+    <bean id="exceptionResolver" class="com.wckj.jdone.common.interceptor.mvc.JdoneExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.Throwable">framework/error/500</prop>
+                <prop key="java.lang.Exception">framework/error/permission</prop>
+                <!--
+                <prop key="com.wckj.framework.exception.ProgramException">framework/error/500</prop>
+                <prop key="com.wckj.framework.exception.BizDataException">framework/error/500</prop>
+                <prop key="com.wckj.framework.exception.OperationException">framework/error/500</prop>
+                -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- 定义上传文件组件 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+    
+	<beans profile="swagger">
+	    <!-- spring mvc swagger配置必须放到spring mvc ioc容器中，也即必须在spring-mvc.xml中定义该bean，否则将扫描不到接口 -->
+	    <bean id="swaggerConfig" class="com.wckj.framework.api.configuration.SwaggerConfig"/>
+	    <!-- api doc 扩展 -->
+	    <bean id="ServiceModelToSwagger2Mapper" class="com.wckj.framework.api.configuration.ServiceModelToSwagger2MapperImpl" primary="true"/>
+	</beans>        
+    
+</beans>

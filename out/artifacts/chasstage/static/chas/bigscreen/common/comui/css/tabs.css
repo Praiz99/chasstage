@@ -1,0 +1,158 @@
+.new-tabs .tabs {
+  list-style-type: none;
+  height: 56px !important;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 4px;
+  width: 50000px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+.new-tabs .tabs .tabs-selected .tabs-title {
+	height:20px;
+	font-size:18px;
+	font-family:微软雅黑;
+	font-weight:bold;
+	color:#5282d6;
+	line-height: 56px;
+}
+
+.new-tabs .tabs .tabs-title {
+	height:12px;
+	font-size:14px;
+	font-family:微软雅黑;
+	font-weight:400;
+	color:#999999;
+	line-height:36px;
+	cursor: pointer;
+}
+.new-tabs .tabs li.tabs-selected{
+	height:56px;
+	margin: -6px 0 -12px 0;
+	background:#ffffff;
+	border-radius:5px;
+}
+
+.new-tabs .tabs li{
+	height:38px;
+	margin: 6px 3px 12px 0;
+	background:#e7e7e7;
+	border-radius:3px;
+	text-align: center;
+}
+
+.new-tabs .tabs li.tabs-selected a.tabs-inner {
+  height:56px !important;
+  background-color: #ffffff;
+  color: #0E2D5F;
+  background: -webkit-linear-gradient(top,#ffffff 0,#ffffff 100%) !important;
+  background: -moz-linear-gradient(top,#ffffff 0,#ffffff 100%) !important;
+  background: -o-linear-gradient(top,#ffffff 0,#ffffff 100%) !important;
+  background: linear-gradient(to bottom,#ffffff 0,#ffffff 100%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff,GradientType=0) !important;
+}
+
+.new-tabs .tabs a.tabs-inner {
+  height:36px !important;
+  background-color: #e7e7e7;
+  border-color: #e7e7e7;
+  background: -webkit-linear-gradient(top,#e7e7e7 0,#e7e7e7 100%) !important;
+  background: -moz-linear-gradient(top,#e7e7e7 0,#e7e7e7 100%) !important;
+  background: -o-linear-gradient(top,#e7e7e7 0,#e7e7e7 100%) !important;
+  background: linear-gradient(to bottom,#e7e7e7 0,#e7e7e7 100%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e7e7e7,endColorstr=#e7e7e7,GradientType=0) !important;
+}
+
+.new-tabs .tabs-header{
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.new-tabs .tabs,
+.new-tabs .tabs li.tabs-selected a.tabs-inner{
+  border-color: #ffffff;
+}
+
+.new-tabs .tabs-wrap{
+	background-color:#FFFFFF;
+}
+
+.new-tabs .tabs-panels{
+	border-color:#FFFFFF;
+}
+/*tab add 2019-5-8 by wzz*/
+.tab-navm ul,ol,li{ list-style: none;}
+
+.tab-navm{
+  /*border-bottom: 1px solid #D9D9D9;
+  background-color:#FFFFFF;*/
+  background: #fff url(../imgs/tab_bg.png) repeat-x 0 bottom;
+  padding-top: 5px;
+  height: auto!important;
+  position: relative; 
+}
+.tab-navm-special {
+  height:89px;
+}
+/*.tab-navm ul{
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}*/
+.tab-navm ul{
+  overflow: hidden;
+}
+.tab-navm li{
+  float: left;
+  margin: 10px 3px 0 -1px;
+  border: 1px solid #D9D9D9;
+  border-radius:3px 3px 0 0;
+  background-color:#F1F4F9;
+  min-width:92px;
+  padding: 0 10px;
+  width:auto;
+  height:34px;
+  font-size:14px;
+  font-family:"Microsoft YaHei";
+  color:#999999;
+  line-height:34px;
+  text-align:center;
+  cursor: pointer;
+  position: relative;
+}
+.tab-navm li:first-child {
+  margin-left: 0;
+}
+.tab-navm li.navtab{
+  margin: 0;
+  border-bottom: 1px solid #fff;
+  width:auto;
+  height:44px;
+  background-color:#FFFFFF;
+  border-radius:0;
+  font-size:18px;
+  font-weight:bold;
+  color:#5182D6;
+  line-height:44px;
+}
+.tab-navm li span {
+  position: absolute;
+  right: -15px;
+  top: -2px;
+  border-radius: 10px; 
+  background-color: #f20000;
+  padding: 0 6px;
+  min-width: 8px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+.tab-content {
+  background:#fff;
+  box-shadow:0px 3px 3px 0px rgba(0, 0, 0, 0.18);
+}

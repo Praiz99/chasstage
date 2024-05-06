@@ -1,0 +1,1 @@
+function ZD_JJZC_JG(){  var SourceArray = [{"name":"浙江","jpcode":"zj","code":"1","scode":"zhejiang"},{"name":"江苏","jpcode":"js","code":"2","scode":"jiangsu"},{"name":"湖南","jpcode":"hn","code":"3","scode":"hunan"}]; return SourceArray;}

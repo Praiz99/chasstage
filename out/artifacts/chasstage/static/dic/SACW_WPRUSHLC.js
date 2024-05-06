@@ -1,0 +1,1 @@
+function SACW_WPRUSHLC(){  var SourceArray = [{"name":"不需要审批","jpcode":"bxysp","code":"01","scode":"buxuyaoshenpi"},{"name":"单位领导或局长审批","jpcode":"dwldhjcsp","code":"02","scode":"danweilingdaohuojuchangshenpi"},{"name":"单位领导审批","jpcode":"dwldsp","code":"03","scode":"danweilingdaoshenpi"},{"name":"局长审批","jpcode":"jcsp","code":"04","scode":"juchangshenpi"}]; return SourceArray;}

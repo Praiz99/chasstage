@@ -1,0 +1,1 @@
+function ZD_ASJBL_BSHWD(){  var SourceArray = [{"name":"本市","jpcode":"bs","code":"10","scode":"benshi"},{"name":"外地","jpcode":"wd","code":"20","scode":"waidi"}]; return SourceArray;}

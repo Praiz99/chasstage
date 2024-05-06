@@ -1,0 +1,71 @@
+body,td,th,label,span,div,input,select{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+}
+
+.bottomborder {
+	border-bottom: 1px solid #A8CBE9;
+	font-size: 13px;
+	height: 25px;
+}
+
+.form-textarea {
+	border: 1px solid #CAE1E8;
+	overflow: auto;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 3px 0px;
+	padding: 0px;
+}
+
+.l-layout-left {
+	width: 99%;
+	height: 90%;
+	border: 1px solid #BED5F3;
+}
+
+#examineForm{
+	height: inherit;
+}
+
+#actTableInfo{
+	height: 100%;
+}
+
+#actTableInfo .tabs-panels{
+	border: none;
+}
+.l-layout-header {
+	height: 28px;
+	line-height: 27px;
+	background: #E5EFFE;
+	font-weight: bold;
+	padding-left: 8px;
+}
+
+#shTable,#shOtherTable {
+	border-bottom: 1px solid #A8CBE9;
+	border-top: 1px solid #A8CBE9;
+	margin-top: 2px;
+	width: 100%;
+}
+
+#nextTable,#otherTable {
+	cellpadding: 0;
+	cellspacing: 0;
+	border: 0;
+	width: 100%;
+}
+
+.shBtn {
+	width: 50px;
+	height: 22px;
+}
+
+#proHis,#processHistory {
+	width: 60px;
+	height: 22px;
+	float: right;
+	font-weight: normal;
+	margin: 3px 3px;
+}

@@ -1,0 +1,1 @@
+function FJZT(){  var SourceArray = [{"name":"空闲","jpcode":"kx","code":"1","scode":"kongxian"},{"name":"使用","jpcode":"sy","code":"2","scode":"shiyong"},{"name":"停用","jpcode":"ty","code":"3","scode":"tingyong"}]; return SourceArray;}

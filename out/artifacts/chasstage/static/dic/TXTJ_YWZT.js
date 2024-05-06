@@ -1,0 +1,1 @@
+function TXTJ_YWZT(){  var SourceArray = [{"name":"人员照片推送","jpcode":"ryzpts","code":"txtj_rysysj_ryzp","scode":"renyuanzhaopiantuisong"},{"name":"人员送押送拘提交","jpcode":"rysysjtj","code":"txtj_rysysj_sysjtj","scode":"renyuansongyasongjutijiao"},{"name":"收押状态接收","jpcode":"syztjs","code":"txtj_syztjs","scode":"shouyazhuangtaijieshou"}]; return SourceArray;}

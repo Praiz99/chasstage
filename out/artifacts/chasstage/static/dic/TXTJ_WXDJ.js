@@ -1,0 +1,1 @@
+function TXTJ_WXDJ(){  var SourceArray = [{"name":"安全","jpcode":"aq","code":"01","scode":"anquan"},{"name":"危险","jpcode":"wx","code":"02","scode":"weixian"}]; return SourceArray;}

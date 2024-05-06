@@ -1,0 +1,1 @@
+function ZD_YTHBA_SFYZ(){  var SourceArray = [{"name":"是","jpcode":"s","code":"1","scode":"shi"},{"name":"否","jpcode":"f","code":"2","scode":"fou"},{"name":"部分一致","jpcode":"bfyz","code":"3","scode":"bufenyizhi"}]; return SourceArray;}

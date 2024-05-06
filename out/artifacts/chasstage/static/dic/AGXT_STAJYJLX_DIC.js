@@ -1,0 +1,1 @@
+function AGXT_STAJYJLX_DIC(){  var SourceArray = [{"name":"移交内部单位","jpcode":"yjnbdw","code":"01","scode":"yijiaoneibudanwei"},{"name":"移交法制审核","jpcode":"yjfzsh","code":"02","scode":"yijiaofazhishenhe"},{"name":"移交预审审核","jpcode":"yjyssh","code":"03","scode":"yijiaoyushenshenhe"}]; return SourceArray;}

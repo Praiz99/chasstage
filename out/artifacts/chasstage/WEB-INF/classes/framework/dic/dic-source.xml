@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<catObj>
+		<name>测试分组</name>
+		<mark>csfz</mark>
+		<desc>系统默认分组</desc>
+		<dicObjList>
+			<dicObj>
+				<name>性别字典</name>
+				<mark>ZD_XB</mark>
+				<desc>性别字典--国标</desc>
+				<codeObjList>
+					<codeObj code="1" name="男" fpy="nan" spy="name"/>
+				</codeObjList>
+			</dicObj>
+			<refDicObj>
+				<name>参数表</name>
+				<mark>JDONE_SYS_PARAM</mark>
+				<desc>参数表-引用字典</desc>
+				<sourceName>数据源名称</sourceName>
+				<sourceMark></sourceMark>
+				<tableName>参数表</tableName>
+				<tableMark>JDONE_SYS_PARAM</tableMark>				
+				<fcode>value</fcode>
+				<fname>name</fname>
+		        <fspy></fspy>
+				<ffpy></ffpy>
+				<orders></orders>
+			 </refDicObj>			
+		</dicObjList>
+	</catObj>
+</data>

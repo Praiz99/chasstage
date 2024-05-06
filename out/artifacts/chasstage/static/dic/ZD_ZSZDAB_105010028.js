@@ -1,0 +1,1 @@
+function ZD_ZSZDAB_105010028(){  var SourceArray = [{"name":"机动车违反交通管制规定","jpcode":"jdcwfjtgzgd","code":"1050100281078","scode":"jidongcheweifanjiaotongguanzhiguiding"},{"name":"非机动车违反交通管制强行通行，不听劝阻","jpcode":"fjdcwfjtgzqxtx-btqz","code":"1050100282002","scode":"feijidongcheweifanjiaotongguanzhiqiangxingtongxing-butingquanzu"}]; return SourceArray;}

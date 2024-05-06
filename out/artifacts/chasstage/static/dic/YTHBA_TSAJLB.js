@@ -1,0 +1,1 @@
+function YTHBA_TSAJLB(){  var SourceArray = [{"name":"刑拘直诉","jpcode":"xjzs","code":"1","scode":"xingjuzhisu"},{"name":"认罪认罚","jpcode":"rzrf","code":"2","scode":"renzuirenfa"},{"name":"单轨制案件","jpcode":"dgzaj","code":"3","scode":"danguizhianjian"},{"name":"其他速裁类案件","jpcode":"qtsclaj","code":"0","scode":"qitasucaileianjian"}]; return SourceArray;}

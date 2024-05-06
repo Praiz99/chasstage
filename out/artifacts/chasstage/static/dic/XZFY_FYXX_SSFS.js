@@ -1,0 +1,1 @@
+function XZFY_FYXX_SSFS(){  var SourceArray = [{"name":"直接诉讼","jpcode":"zjss","code":"101","scode":"zhijiesusong"},{"name":"经复议诉讼","jpcode":"jfyss","code":"102","scode":"jingfuyisusong"}]; return SourceArray;}

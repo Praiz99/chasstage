@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.znqt.dao.ChasZnqtMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.znqt.entity.ChasZnqt">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="WZDM" jdbcType="VARCHAR" property="wzdm" />
+    <result column="WZMC" jdbcType="VARCHAR" property="wzmc" />
+    <result column="IP" jdbcType="VARCHAR" property="ip" />
+    <result column="PORT" jdbcType="INTEGER" property="port" />
+    <result column="ZDLJ" jdbcType="INTEGER" property="zdlj" />
+    <result column="LJ1" jdbcType="INTEGER" property="lj1" />
+    <result column="LJ2" jdbcType="INTEGER" property="lj2" />
+    <result column="LJ3" jdbcType="INTEGER" property="lj3" />
+    <result column="LJ4" jdbcType="INTEGER" property="lj4" />
+    <result column="ZT" jdbcType="VARCHAR" property="zt" />
+    <result column="BZ" jdbcType="VARCHAR" property="bz" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_znqt
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.znqt.entity.ChasZnqt">
+    insert into chas_yw_znqt (ID, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, WZDM, 
+      WZMC, IP, PORT, ZDLJ, 
+      LJ1, LJ2, LJ3, LJ4, 
+      ZT, BZ)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR}, 
+      now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{wzdm,jdbcType=VARCHAR}, 
+      #{wzmc,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, #{port,jdbcType=INTEGER}, #{zdlj,jdbcType=INTEGER}, 
+      #{lj1,jdbcType=INTEGER}, #{lj2,jdbcType=INTEGER}, #{lj3,jdbcType=INTEGER}, #{lj4,jdbcType=INTEGER}, 
+      #{zt,jdbcType=VARCHAR}, #{bz,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.znqt.entity.ChasZnqt">
+    update chas_yw_znqt
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      WZDM = #{wzdm,jdbcType=VARCHAR},
+      WZMC = #{wzmc,jdbcType=VARCHAR},
+      IP = #{ip,jdbcType=VARCHAR},
+      PORT = #{port,jdbcType=INTEGER},
+      ZDLJ = #{zdlj,jdbcType=INTEGER},
+      LJ1 = #{lj1,jdbcType=INTEGER},
+      LJ2 = #{lj2,jdbcType=INTEGER},
+      LJ3 = #{lj3,jdbcType=INTEGER},
+      LJ4 = #{lj4,jdbcType=INTEGER},
+      ZT = #{zt,jdbcType=VARCHAR},
+      BZ = #{bz,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, WZDM, 
+    WZMC, IP, PORT, ZDLJ, LJ1, LJ2, LJ3, LJ4, ZT, BZ
+    from chas_yw_znqt
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, WZDM, 
+    WZMC, IP, PORT, ZDLJ, LJ1, LJ2, LJ3, LJ4, ZT, BZ
+    from chas_yw_znqt
+    <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}' 
+      </if>
+      <if test="wzdm != null and wzdm !=''">
+          and WZDM = '${wzdm}' 
+      </if>
+      <if test="wzmc != null and wzmc !=''">  
+          and WZMC LIKE '%${wzmc}%'
+      </if>
+
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+    </where>
+  </select>
+</mapper>

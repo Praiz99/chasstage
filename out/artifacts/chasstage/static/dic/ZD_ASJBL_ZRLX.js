@@ -1,0 +1,1 @@
+function ZD_ASJBL_ZRLX(){  var SourceArray = [{"name":"无人值班","jpcode":"wrzb","code":"01","scode":"wurenzhiban"},{"name":"值班人员失职","jpcode":"zbrysz","code":"02","scode":"zhibanrenyuanshizhi"}]; return SourceArray;}

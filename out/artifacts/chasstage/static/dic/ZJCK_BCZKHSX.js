@@ -1,0 +1,1 @@
+function ZJCK_BCZKHSX(){  var SourceArray = [{"name":"嫌疑人名下账户","jpcode":"xyrmxzh","code":"1","scode":"xianyirenmingxiazhanghu"},{"name":"嫌疑人实际控制账户","jpcode":"xyrsjkzzh","code":"2","scode":"xianyirenshijikongzhizhanghu"},{"name":"其他涉案账户","jpcode":"qtsazh","code":"3","scode":"qitasheanzhanghu"}]; return SourceArray;}

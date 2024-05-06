@@ -1,0 +1,159 @@
+
+K
+java:S3740ã"/Provide the parametrized type for this generic.(­Ÿª©øÿÿÿÿ
+t
+java:S2293B"YReplace the type specification in this constructor call with the diamond operator ("<>").(·­©õùÿÿÿÿ
+p
+java:S2293Ã"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢
+p
+java:S2293—"YReplace the type specification in this constructor call with the diamond operator ("<>").(½¬á¢
+u
+java:S2293š"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+p
+java:S2293¢"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘Ğµß
+p
+java:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘Ğµß
+p
+java:S2293´"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘Ğµß
+p
+java:S2293½"YReplace the type specification in this constructor call with the diamond operator ("<>").(‘Ğµß
+b
+java:S1192˜"FDefine a constant instead of duplicating this literal "dicId" 5 times.(©“«ùÿÿÿÿ
+_
+java:S1192ç"IDefine a constant instead of duplicating this literal "ZD_ZB_XB" 3 times.(¯úñp
+n
+java:S1192À"RDefine a constant instead of duplicating this literal "CHAS_ZD_CASE_TSQT" 5 times.(¾ÚÕÜÿÿÿÿÿ
+h
+java:S1192†"LDefine a constant instead of duplicating this literal "BAQRYSSWPZT" 3 times.(«·ñóÿÿÿÿÿ
+3
+java:S1643ù"Use a StringBuilder instead.(„Ê
+ƒ
+java:S1488 "gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(·Èš‘ûÿÿÿÿ
+~
+java:S1488°"gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(Å–àà
+~
+java:S1488Ä"gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(Ä¢¹º
+ƒ
+java:S1488¡"gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(—°§ªúÿÿÿÿ
+ƒ
+java:S1488³"gImmediately return this expression instead of assigning it to the temporary variable "apiReturnResult".(ø×©©şÿÿÿÿ
+|
+java:S1488À"`Immediately return this expression instead of assigning it to the temporary variable "fileName".(¾ÚÕÜÿÿÿÿÿ
+w
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "fileName".(Æ—âˆ
+K
+java:S1191%"5Use classes from the Java API instead of Sun classes.(ëŞï®
+A
+java:S1452O"&Remove usage of generic wildcard type.(¾Óˆ¯ùÿÿÿÿ
+c
+java:S4488M"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(˜Õè°üÿÿÿÿ
+c	java:S100^"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò…¾Û
+<
+java:S1452^"&Remove usage of generic wildcard type.(Ò…¾Û
+`
+java:S4488\"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÔÑş¿
+<
+java:S1452n"&Remove usage of generic wildcard type.(¸‹‹
+^
+java:S4488l"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(£Õ‘ı
+<
+java:S1452|"&Remove usage of generic wildcard type.(ïŞù
+_
+java:S4488z"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(…™¸R
+B
+java:S1452’"&Remove usage of generic wildcard type.(€‘ÊÃüÿÿÿÿ
+d
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤Åöñüÿÿÿÿ
+_
+java:S4488˜"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ã²ÔÄ
+d
+java:S4488©"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ë±¾‹øÿÿÿÿ
+Q
+java:S1854Ì":Remove this useless assignment to local variable "result".(Ğ©˜ó
+d
+java:S4488À"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(—ˆşíıÿÿÿÿ
+_
+java:S4488×"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸Ú©
+_
+java:S4488è"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„Ÿı‘
+d	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ùû”
+d
+java:S4488ø"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ûİœşÿÿÿÿ
+B
+java:S1452"&Remove usage of generic wildcard type.(åïÆ˜øÿÿÿÿ
+d
+java:S4488ˆ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹·×¶ıÿÿÿÿ
+d
+java:S4488•"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(­Şª¹øÿÿÿÿ
+_
+java:S4488¥"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ºñµë
+B
+java:S1452Á"&Remove usage of generic wildcard type.(§èÒ¦úÿÿÿÿ
+d
+java:S4488µ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(æ ±üÿÿÿÿ
+=
+java:S1452Ñ"&Remove usage of generic wildcard type.(å¹¹•
+a
+java:S4488É"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¨ã÷€
+W	java:S125Ü"<This block of commented-out lines of code should be removed.(¬¹Óøÿÿÿÿ
+d
+java:S4488é"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ğ©ö«ıÿÿÿÿ
+d
+java:S4488ù"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ä–üıÿÿÿÿ
+=
+java:S1452"&Remove usage of generic wildcard type.(ÿÆÕû
+d
+java:S4488ˆ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÿœÎşÿÿÿÿ
+B
+java:S1452 "&Remove usage of generic wildcard type.(Ğõñùÿÿÿÿ
+f
+java:S4488”"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²ã‚øÿÿÿÿ
+=
+java:S1452²"&Remove usage of generic wildcard type.(Ëº…û
+a
+java:S4488¥"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ê„öÔ
+n
+java:S3776º"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(¦¹¤ıÿÿÿÿ
+_
+java:S4488¸"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(áÕ•æ
+?	java:S108Æ")Either remove or fill this block of code.(…ˆÕŞ
+P
+java:S2864è"4Iterate over the "entrySet" instead of the "keySet".(½Ö²’ûÿÿÿÿ
+P
+java:S2864í"4Iterate over the "entrySet" instead of the "keySet".(½Ö²’ûÿÿÿÿ
+c
+java:S5998ñ"LRefactor this repetition that can lead to a stack overflow for large inputs.(ÔÌ¢«
+P
+java:S2864ÿ"4Iterate over the "entrySet" instead of the "keySet".(½Ö²’ûÿÿÿÿ
+^
+java:S5361‚"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ê½Ä
+d
+java:S5361ƒ"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Í³š—ÿÿÿÿÿ
+_
+java:S5361„"HReplace this call to "replaceAll()" by a call to the "replace()" method.(î¼Î¹
+^
+java:S5361…"HReplace this call to "replaceAll()" by a call to the "replace()" method.(‘›é
+P
+java:S2864‡"4Iterate over the "entrySet" instead of the "keySet".(½Ö²’ûÿÿÿÿ
+d
+java:S5361Š"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Ÿ¦ÕÂÿÿÿÿÿ
+d
+java:S5361‹"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Åö´ıÿÿÿÿ
+d
+java:S5361Œ"HReplace this call to "replaceAll()" by a call to the "replace()" method.(Ğ½¡ôûÿÿÿÿ
+d
+java:S5361"HReplace this call to "replaceAll()" by a call to the "replace()" method.(«Ó§Øÿÿÿÿÿ
+d
+java:S4488Å"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÆÅÃúÿÿÿÿ
+d
+java:S4488İ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ùàõæüÿÿÿÿ
+^
+java:S4488å"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹ûƒb
+=
+java:S1452š"&Remove usage of generic wildcard type.(Ì¤ á
+f
+java:S4488˜"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ü¹êøÿÿÿÿ
+F
+java:S1128)"0Remove this unused import 'java.net.URLDecoder'.(œ®ô„
+F
+java:S1128*"0Remove this unused import 'java.net.URLEncoder'.(ê¢ºÆ

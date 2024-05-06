@@ -1,0 +1,1 @@
+function ZD_YJMX_YYDM(){  var SourceArray = [{"name":"中断","jpcode":"zd","code":"01","scode":"zhongduan"},{"name":"强制","jpcode":"qz","code":"02","scode":"qiangzhi"},{"name":"其他","jpcode":"qt","code":"99","scode":"qita"}]; return SourceArray;}

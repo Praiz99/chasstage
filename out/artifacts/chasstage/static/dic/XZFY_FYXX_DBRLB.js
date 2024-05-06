@@ -1,0 +1,1 @@
+function XZFY_FYXX_DBRLB(){  var SourceArray = [{"name":"法定","jpcode":"fd","code":"01","scode":"fading"},{"name":"委托","jpcode":"wt","code":"02","scode":"weituo"},{"name":"其他","jpcode":"qt","code":"03","scode":"qita"}]; return SourceArray;}

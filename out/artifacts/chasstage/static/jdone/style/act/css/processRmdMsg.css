@@ -1,0 +1,182 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, input, textarea, p, blockquote, th, td {
+	color: #333;
+	font-family: 'Arial', 'Tahoma', 'Verdana', 'helvetica',
+		'microsoft yahei', "微软雅黑", "宋体", "SimHei", "黑体", sans-serif;
+	line-height: 22px;
+	font-size: 14px; /*解决电脑设置保护色，网页空白处默认淡绿色问题*/
+}
+
+.rb-alert{
+    width: 350px;
+    height: 60px;
+    position: absolute;
+    z-index: 9999999;
+    overflow: hidden;
+}
+.rb-alert label{
+    display: block;
+    margin: 20px 20px 0 60px;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+}
+.rb-alert.success{
+    background: url(../images/ui/alert-s.png) no-repeat;
+}
+.rb-alert.true{
+    background: url(../images/ui/alert-s.png) no-repeat;
+}
+.rb-alert.failure{
+    background: url(../images/ui/alert-f.png) no-repeat;
+}
+.rb-alert.false{
+    background: url(../images/ui/alert-f.png) no-repeat;
+}
+.rb-alert.warning{
+    background: url(../images/ui/alert-w.png) no-repeat;
+}
+.rb-alert-adv-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 3;
+}
+.rb-alert-adv{
+    width: 350px;
+    height: 120px;
+    position: absolute;
+    z-index: 9999999;
+    overflow: hidden;
+}
+.rb-alert-adv label{
+    display: block;
+    margin: 30px 20px 0 70px;
+    font-size: 14px;
+    color: #fff;
+    overflow: hidden;
+}
+.rb-alert-adv div{
+    display: block;
+    margin: 15px 20px 0 60px;
+}
+.rb-alert-adv div a{
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 3px;
+    background:#83a22f;
+    border-radius: 3px;
+	color:#fff;
+    cursor: pointer;
+}
+.rb-alert-adv.success{
+    background: url(../images/ui/alert-adv-s.png) no-repeat;
+}
+.rb-alert-adv.true{
+    background: url(../images/ui/alert-adv-s.png) no-repeat;
+}
+.rb-alert-adv.failure{
+    background: url(../images/ui/alert-adv-f.png) no-repeat;
+}
+.rb-alert-adv.false{
+    background: url(../images/ui/alert-adv-f.png) no-repeat;
+}
+.rb-alert-adv.warning{
+    background: url(../images/ui/alert-adv-w.png) no-repeat;
+}
+/*  导航菜单 */
+.rb-nav{position:absolute;left:0;top:0;overflow:hidden;width:100%;margin:0;padding:0;}
+.rb-nav .loading{ background:url(../images/ui/loading.gif) center top no-repeat; font-size:12px; color:#000;width:150px;height:40px; padding:25px 0 0 0; text-align:center;margin:80px 0 0;}
+.rb-nav li{height:40px;width:100%;border-bottom:1px solid #cdcecf;border-top:1px solid #fff;color:#000; font-size:14px; font-weight:bold;cursor:pointer;overflow:hidden; *margin-left:-16px;}
+.rb-nav li .icon{float:left;width:30px;height:30px;margin:12px 0 0 8px;color:#505050;}
+.rb-nav li .text{height:40px;line-height:40px;}
+.rb-nav li.active{color:#185c9b;background-color:#3168bc;}
+.rb-nav li.active .icon{color:#fff;}
+.rb-nav li .icon.black{color:#000;}
+.rb-nav li.active .icon.black{color:#fff;}
+.rb-nav-hoverbg{ display:none;position:absolute;top:0;left:0;width:160px;height:40px;background:#fff;}
+.rb-nav-child{display:none;position:relative;top:0;left:30px;background:#fefef9; overflow:auto;}
+.rb-nav-child .loading{position:absolute;left:0;top:0; z-index:2; padding-top:10px;width:100%; text-align:center; background:#F2F2F2; font-weight:bold;}
+.rb-nav-child .item-bg{display:none;position:absolute;left:0;top:0;height:24px;width:100%; background:#e1e6a9;}
+.rb-nav-child .item-active-bg{display:none;position:absolute;left:0;top:0;height:24px;width:100%; background:#3168bc;}
+.rb-nav-child ul.root{display:none;position:absolute;left:0;top:0;margin:10px 5px;}
+.rb-nav-child ul.root li{line-height:24px;font-size:12px;*margin-left:-16px; cursor:pointer}
+.rb-nav-child ul.root li ul{margin-left:16px; overflow:hidden; display:none;}
+.rb-nav-child ul.root li .icon{float:left;width:12px;height:24px;background:url(../images/ui/leaf.gif) -3px 4px  no-repeat;}
+.rb-nav-child ul.root li .text{ display:block;border:1px solid transparent;height:24px; overflow:hidden;}
+.rb-nav-child ul.root li .text.hover{border:1px solid #999;}
+.rb-nav-child ul.root li.active{color:#fff;}
+.rb-nav-child ul.root li .folder.close{float:left;width:16px;height:24px;background:url(../images/ui/tree-close.gif)  left 4px  no-repeat;}
+.rb-nav-child ul.root li .folder.open{float:left;width:16px;height:24px;background:url(../images/ui/tree-open.gif) left 4px no-repeat;}
+
+.rb-list{background:#e2e7fd url(../imgs/bar-bg.png) repeat-x;margin:5px 5px 0 5px;width:99%;border:1px #d2d2d2 solid;border-bottom:0;*border-bottom:1px #d2d2d2 solid;}
+.rb-list table{}
+.rb-list table caption{height:28px;}
+.rb-list .msgtitle{ float:left;line-height:28px; font-size:14px; color:#000; margin-left:10px;}
+.rb-list .rb-toolbar{float:right; padding:0px;}
+.rb-list table thead th{ background-color:transparent;height:26px;line-height:26px;text-align:center;border:1px #d2d2d2 solid;border-top:0;border-left:0;white-space:nowrap;}
+.rb-list table thead th.border-right-no{border-right:0;}
+.rb-list table tbody tr.even{ background-color:#f9f9f9;}
+.rb-list table tbody tr.hover{ background-color:#f5fcd2;}
+.rb-list table tbody tr.classify{ background-color:#f2f2f2;font-weight:bold;}
+.rb-list table tbody tr.classify td{text-align:left;}
+.rb-list table tbody td{height:26px;line-height:26px;text-align:center;}
+.rb-list table tbody td label{}
+.rb-list table tbody td.error{color:red;}
+.rb-list table tbody td.border-right-no{border-right:0;}
+.rb-list table tfoot{height:26px;background-color:transparent;}
+.rb-list table tfoot td{line-height:26px; text-align:right; font-size:12px; color:#000;border-bottom:1px #d2d2d2 solid;*border-bottom:0;}
+.rb-list table tfoot td a{ cursor:pointer;color:#000;margin-right:10px;}
+.rb-list table tfoot td.border-right-no{border-right:0;}
+
+
+.rb-list .time-between{ float:right; margin:4px 8px; display:none;}
+.rb-list .time-between ul{float:left;}
+.rb-list .time-between li{float:left;height:28px;position:relative; cursor:pointer}
+.rb-list .time-between li label{line-height:30px;font-size:14px; margin:0 5px;}
+.rb-list .time-between li.s{ background-position:0 -28px;}
+.rb-list .time-between li.m{ background-position:-5px -28px;}
+.rb-list .time-between li.e{ background-position:right -28px;}
+.rb-list .time-between li span{ position:absolute;right:0;top:-10px;background:url(../images/ui/rb-toolbar-number.png) no-repeat;width:26px;height:20px; text-align:center;line-height:20px; font-size:12px; color:#fff;}
+
+.rb-toolbar-bg{ background:url(../imgs/rb-toolbar-bg.png) no-repeat;}
+.rb-toolbar ul{float:left;}
+.rb-toolbar li{float:left;height:24px;position:relative; cursor:pointer}
+.rb-toolbar li label{line-height:24px;font-size:12px; margin:0 10px;}
+.rb-toolbar li.s{ background-position:0 -24px;}
+.rb-toolbar li.s.a{ background-position:0 0;color:#fff;}
+.rb-toolbar li.m{ background-position:-5px -24px;}
+.rb-toolbar li.m.a{ background-position:-5px 0;color:#fff;}
+.rb-toolbar li.e{ background-position:right -24px;}
+.rb-toolbar li.e.a{ background-position:right 0;color:#fff;}
+.rb-toolbar li span{ position:absolute;right:-4px;top:-8px;background:url(../images/ui/rb-toolbar-number.png) no-repeat;width:26px;height:20px; text-align:center;line-height:20px; font-size:12px; color:#fff; z-index:1}
+
+.rb-tabs{width:100%;height:30px; background:url(../images/tab-bg.png) repeat-x; position:relative;overflow-x:hidden;border-bottom:1px solid #3168bc;}
+.rb-tabs .tabs-toleft{ display:none;position:absolute;left:0;top:0; background:url(../images/ui/tabs-more.png) no-repeat;width:20px;height:30px;z-index:2; cursor:pointer;}
+.rb-tabs .tabs-toright{display:none;position:absolute;right:0;top:0; background:url(../images/ui/tabs-more.png) right 0 no-repeat;width:20px;height:30px;z-index:2;cursor:pointer;}
+.rb-tabs-item{position:absolute;left:0;top:0; z-index:1; display:block;height:30px;width:3000px;}
+.rb-tabs ul{ float:left;margin:0 20px;}
+.rb-tabs li{ float:left;height:30px;line-height:30px; font-size:14px; color:#000; text-align:center; position:relative;}
+.rb-tabs li.active{ background:#3e76c9;color:#fff;}
+.rb-tabs li.hover{ background:#3168bc;}
+.rb-tabs li.active.hover{ background:#3168bc;}
+.rb-tabs li label{ margin:0 20px;}
+.rb-tabs li .close{ display:none;position:absolute; background:url(../images/ui/close.png);width:12px;height:12px;top:0;right:0; cursor:pointer;}
+.rb-tabs-content .main-iframe{width:1200px;height:800px;}
+
+.rb-shortcut{width:160px;overflow:hidden;overflow-y:auto;}
+.rb-shortcut ul{margin:5px 0;padding:0;width:140px;}
+.rb-shortcut ul li{float:left;width:80px;height:100px;cursor:pointer;}
+.rb-shortcut ul li label{display: none;}
+.rb-shortcut ul li label2{display: none;position:absolute;left:0;top:0;width:80px;height:100px;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 5px;border:1px solid #fff;background:#000;-moz-opacity:0.5;opacity: 0.5;z-index:-1;}
+.rb-shortcut ul li div{float:left;width:48px;height:48px;margin:10px 16px 5px 16px;background-repeat:no-repeat;position:relative;
+}
+.rb-shortcut ul li span{float:left;width:80px;height:32px;line-height:16px;font-size:12px;color:#000;text-align:center;margin:0;word-break:break-all;overflow:hidden;}
+
+.rb-mask-bg{position:absolute; z-index:999; background:#000;}
+.rb-mask{position:absolute; z-index:1000; background:#fff; color:#000; border-radius:5px;width:260px;height:50px;line-height:50px; text-align:center;}

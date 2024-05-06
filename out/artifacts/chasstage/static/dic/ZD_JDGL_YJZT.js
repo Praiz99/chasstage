@@ -1,0 +1,1 @@
+function ZD_JDGL_YJZT(){  var SourceArray = [{"name":"无需签收","jpcode":"wxqs","code":"00","scode":"wuxuqianshou"},{"name":"待签收","jpcode":"dqs","code":"01","scode":"daiqianshou"},{"name":"已签收","jpcode":"yqs","code":"02","scode":"yiqianshou"}]; return SourceArray;}

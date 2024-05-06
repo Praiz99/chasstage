@@ -1,0 +1,81 @@
+
+]
+java:S1192­"FDefine a constant instead of duplicating this literal "baqid" 6 times.(Ş‘éğ
+^
+java:S44885"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(õõœ–
+A
+java:S1452M"&Remove usage of generic wildcard type.(âÍôîúÿÿÿÿ
+]
+java:S4488E"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÔáæM
+<
+java:S1452\"&Remove usage of generic wildcard type.(Êı´ç
+c
+java:S4488S"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Î¾ŸŞşÿÿÿÿ
+A
+java:S1452k"&Remove usage of generic wildcard type.(Øæ®±úÿÿÿÿ
+c
+java:S4488i"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÍäÅÿşÿÿÿÿ
+<
+java:S1452{"&Remove usage of generic wildcard type.(ª¸µÚ
+c
+java:S4488y"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÚÒì”ùÿÿÿÿ
+=
+java:S1452Œ"&Remove usage of generic wildcard type.(Çæâ
+_
+java:S4488‰"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÂÃ»
+=
+java:S1452œ"&Remove usage of generic wildcard type.(£÷ï
+d
+java:S4488š"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤ÿ½İüÿÿÿÿ
+B
+java:S1452¬"&Remove usage of generic wildcard type.(Âò«ûÿÿÿÿÿ
+_
+java:S4488ª"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ì¿Ğ«
+=
+java:S1452¼"&Remove usage of generic wildcard type.(°àÈŠ
+_
+java:S4488º"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(«šÎ•
+B
+java:S1452Ï"&Remove usage of generic wildcard type.(şÓÛÔıÿÿÿÿ
+^
+java:S4488Ê"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(î†§o
+d	java:S100ß"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò…¾Û
+=
+java:S1452ß"&Remove usage of generic wildcard type.(Ò…¾Û
+a
+java:S4488İ"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÔÑş¿
+B
+java:S1452ï"&Remove usage of generic wildcard type.(ïº¸Úıÿÿÿÿ
+d
+java:S4488í"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯¬ßÅıÿÿÿÿ
+<
+java:S1452€"&Remove usage of generic wildcard type.(òôÜ
+
+d
+java:S4488ı"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(øª¾úÿÿÿÿ
+_
+java:S4488…"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(şÄè¡
+B
+java:S1452™"&Remove usage of generic wildcard type.(¾Óˆ¯ùÿÿÿÿ
+d
+java:S4488—"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(˜Õè°üÿÿÿÿ
+B
+java:S1452¨"&Remove usage of generic wildcard type.(±Åâûÿÿÿÿ
+_
+java:S4488¦"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(İ°Ì€
+B
+java:S1452Ê"&Remove usage of generic wildcard type.(­ñ›¯ıÿÿÿÿ
+_
+java:S4488È"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(‰¸¹ˆ
+=
+java:S1452İ"&Remove usage of generic wildcard type.(àØÇ
+^
+java:S4488Û"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ö İ6
+=
+java:S1452÷"&Remove usage of generic wildcard type.(µœåÆ
+_
+java:S4488õ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(«¿ïç
+B
+java:S1452ˆ"&Remove usage of generic wildcard type.(‹Û„Ûÿÿÿÿÿ
+d
+java:S4488†"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÇÁ½Ùşÿÿÿÿ

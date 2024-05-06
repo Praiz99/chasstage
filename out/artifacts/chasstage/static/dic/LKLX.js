@@ -1,0 +1,1 @@
+function LKLX(){  var SourceArray = [{"name":"入所","jpcode":"rs","code":"0","scode":"rusuo"},{"name":"临时出所","jpcode":"lscs","code":"1","scode":"linshichusuo"},{"name":"出所","jpcode":"cs","code":"2","scode":"chusuo"}]; return SourceArray;}

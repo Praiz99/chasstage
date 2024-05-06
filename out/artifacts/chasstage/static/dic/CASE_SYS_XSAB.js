@@ -1,0 +1,1 @@
+function CASE_SYS_XSAB(){  var SourceArray = [{"name":"背叛国家罪","jpcode":"bpgjz","code":"208000001","scode":"beipanguojiazui"},{"name":"分裂国家罪","jpcode":"flgjz","code":"208000002","scode":"fenlieguojiazui"}]; return SourceArray;}

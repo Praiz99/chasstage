@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.face.dao.ChasYwFeatureMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.face.entity.ChasYwFeature">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="tzbh" jdbcType="VARCHAR" property="tzbh" />
+    <result column="rylx" jdbcType="VARCHAR" property="rylx" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="length" jdbcType="BIGINT" property="length" />
+    <result column="data" jdbcType="VARCHAR" property="data" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="isdel" jdbcType="INTEGER" property="isdel" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_feature set isdel = 1
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.face.entity.ChasYwFeature">
+    insert into chas_yw_feature (id, tzbh, rylx,
+      num, length, data,dwxtbh,lrsj,xgsj,isdel
+      )
+    values (#{id,jdbcType=VARCHAR}, #{tzbh,jdbcType=VARCHAR}, #{rylx,jdbcType=VARCHAR},
+      #{num,jdbcType=INTEGER}, #{length,jdbcType=BIGINT}, #{data,jdbcType=VARCHAR}
+      , #{dwxtbh,jdbcType=VARCHAR}, now(),now(),#{isdel,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.face.entity.ChasYwFeature">
+    update chas_yw_feature
+    set tzbh = #{tzbh,jdbcType=VARCHAR},
+      rylx = #{rylx,jdbcType=VARCHAR},
+      num = #{num,jdbcType=INTEGER},
+      length = #{length,jdbcType=BIGINT},
+      data = #{data,jdbcType=VARCHAR},
+      dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+      xgsj = now(),
+      isdel = #{isdel,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, tzbh, rylx, num, length, data,dwxtbh,lrsj,xgsj,isdel
+    from chas_yw_feature
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, tzbh, rylx, num, length, data,dwxtbh,lrsj,xgsj,isdel
+    from chas_yw_feature where isdel = 0
+      <if test="rylx != null and rylx !=''">
+        and rylx = '${rylx}'
+      </if>
+      <if test="dwxtbh != null and dwxtbh !=''">
+        and dwxtbh = '${dwxtbh}'
+      </if>
+      <if test="lrsjxz != null and lrsjxz !=''">
+        and lrsj>= (now()- interval '1 d')
+      </if>
+  </select>
+
+  <select id="selectAllInAll" resultMap="BaseResultMap">
+    select id, tzbh, rylx, num, length, data,dwxtbh,lrsj,xgsj,isdel
+    from chas_yw_feature where 1 = 1 and isdel = 0
+    <if test="rylx != null and rylx !=''">
+      and rylx = '${rylx}'
+    </if>
+    <if test="dwxtbh != null and dwxtbh !=''">
+      and dwxtbh = '${dwxtbh}'
+    </if>
+    <if test="lrsjxz != null and lrsjxz !=''">
+      and lrsj>= (now()- interval '1 d')
+    </if>
+    <if test="rybhList !=null">
+      and tzbh in
+      <foreach close=")" collection="rybhList" index="index" item="item" open="(" separator=",">
+        '${item}'
+      </foreach>
+    </if>
+  </select>
+
+</mapper>

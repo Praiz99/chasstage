@@ -1,0 +1,1 @@
+function ZNZD_ONE_ODBW(){  var SourceArray = [{"name":"头部","jpcode":"tb","code":"1000","scode":"toubu"},{"name":"躯体","jpcode":"qt","code":"2000","scode":"quti"},{"name":"四肢","jpcode":"sz","code":"3000","scode":"sizhi"}]; return SourceArray;}

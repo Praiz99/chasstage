@@ -1,0 +1,1 @@
+function QGC_FWZT(){  var SourceArray = [{"name":"正常","jpcode":"zc","code":"001","scode":"zhengchang"},{"name":"异常","jpcode":"yc","code":"002","scode":"yichang"}]; return SourceArray;}

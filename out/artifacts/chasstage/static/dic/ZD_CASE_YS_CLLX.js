@@ -1,0 +1,1 @@
+function ZD_CASE_YS_CLLX(){  var SourceArray = [{"name":"检察院其他函件","jpcode":"jcyqthj","code":"0300","scode":"jianchayuanqitahanjian"},{"name":"退查提纲","jpcode":"tctg","code":"0301","scode":"tuichatigang"},{"name":"法院其他函件","jpcode":"fyqthj","code":"0400","scode":"fayuanqitahanjian"},{"name":"判决书","jpcode":"pjs","code":"0401","scode":"panjueshu"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function SACW_FMKJNZT(){  var SourceArray = [{"name":"已缴纳","jpcode":"yjn","code":"01","scode":"yijiaona"},{"name":"部分缴纳","jpcode":"bfjn","code":"02","scode":"bufenjiaona"},{"name":"未缴纳","jpcode":"wjn","code":"03","scode":"weijiaona"},{"name":"作废","jpcode":"zf","code":"04","scode":"zuofei"}]; return SourceArray;}

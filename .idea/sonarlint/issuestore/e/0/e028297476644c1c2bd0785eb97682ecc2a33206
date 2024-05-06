@@ -1,0 +1,37 @@
+
+a	java:S112Ÿ"FDefine and throw a dedicated exception instead of using a generic one.(ÉÔñÈúÿÿÿÿ
+_
+java:S1192"HDefine a constant instead of duplicating this literal "success" 4 times.(åãı›
+2
+java:S1643U"Use a StringBuilder instead.(õ©äÕ
+3
+java:S1643Æ"Use a StringBuilder instead.(õ©äÕ
+\
+java:S10754"ARefactor your code to get this URI from a customizable parameter.(ü•Û¬şÿÿÿÿ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(º»‹
+c	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ´õ•
+Q	java:S125½"<This block of commented-out lines of code should be removed.(¶Õ×U
+R	java:S125Ã"<This block of commented-out lines of code should be removed.(º»‹
+W	java:S125é"<This block of commented-out lines of code should be removed.(ìõ„¦üÿÿÿÿ
+W	java:S125ö"<This block of commented-out lines of code should be removed.(†ƒ€ëşÿÿÿÿ
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(¥ˆŞ¸
+R	java:S125¤"<This block of commented-out lines of code should be removed.(ˆ’Úè
+i	java:S100®"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÃŞ˜ÿÿÿÿÿ
+P
+java:S1854½"9Remove this useless assignment to local variable "mjzpk".(³½ë’
+L
+java:S2696µ"6Make the enclosing method "static" or remove this set.(ÿÆãY
+W	java:S125¶"<This block of commented-out lines of code should be removed.(”‚ñŞüÿÿÿÿ
+A
+java:S1481½"*Remove this unused "mjzpk" local variable.(³½ë’
+W	java:S125¿"<This block of commented-out lines of code should be removed.(°“õÁùÿÿÿÿ
+R
+java:S2696Ò"6Make the enclosing method "static" or remove this set.(À‹¯üıÿÿÿÿ
+M
+java:S2696Ö"6Make the enclosing method "static" or remove this set.(¸Ïº¾
+N
+java:S1854ï"7Remove this useless assignment to local variable "map".(ƒ¢Œó
+?
+java:S1481ï"(Remove this unused "map" local variable.(ƒ¢Œó
+Z
+java:S1128"DRemove this unused import 'com.wckj.jdone.modules.sys.util.SysUtil'.(™“ò

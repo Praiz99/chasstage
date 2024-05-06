@@ -1,0 +1,1 @@
+function ZFKP_KPJB(){  var SourceArray = [{"name":"省级","jpcode":"sj","code":"01","scode":"shengji"},{"name":"地市级","jpcode":"dsj","code":"02","scode":"dishiji"},{"name":"区县级","jpcode":"qxj","code":"03","scode":"quxianji"}]; return SourceArray;}

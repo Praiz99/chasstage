@@ -1,0 +1,1 @@
+function ZD_DZJZ_ZJRYXMXS(){  var SourceArray = [{"name":"3","jpcode":"3","code":"提请批准逮捕书","scode":"3"},{"name":"3","jpcode":"3","code":"起诉意见书","scode":"3"}]; return SourceArray;}

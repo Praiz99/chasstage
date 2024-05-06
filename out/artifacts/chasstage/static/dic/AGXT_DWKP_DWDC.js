@@ -1,0 +1,1 @@
+function AGXT_DWKP_DWDC(){  var SourceArray = [{"name":"一档","jpcode":"yd","code":"01","scode":"yidang"},{"name":"二档","jpcode":"ed","code":"02","scode":"erdang"},{"name":"三档","jpcode":"sd","code":"03","scode":"sandang"},{"name":"四档","jpcode":"sd","code":"04","scode":"sidang"}]; return SourceArray;}

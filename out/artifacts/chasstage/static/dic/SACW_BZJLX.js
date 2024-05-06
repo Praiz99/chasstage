@@ -1,0 +1,1 @@
+function SACW_BZJLX(){  var SourceArray = [{"name":"行政保证金","jpcode":"xzbzj","code":"01","scode":"xingzhengbaozhengjin"},{"name":"刑事保证金","jpcode":"xsbzj","code":"02","scode":"xingshibaozhengjin"}]; return SourceArray;}

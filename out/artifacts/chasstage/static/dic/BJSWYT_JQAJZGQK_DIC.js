@@ -1,0 +1,1 @@
+function BJSWYT_JQAJZGQK_DIC(){  var SourceArray = [{"name":"待整改","jpcode":"dzg","code":"01","scode":"daizhenggai"},{"name":"部分整改","jpcode":"bfzg","code":"02","scode":"bufenzhenggai"},{"name":"全部整改","jpcode":"qbzg","code":"03","scode":"quanbuzhenggai"}]; return SourceArray;}

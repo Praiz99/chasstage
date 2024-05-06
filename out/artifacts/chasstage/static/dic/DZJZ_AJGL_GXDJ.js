@@ -1,0 +1,1 @@
+function DZJZ_AJGL_GXDJ(){  var SourceArray = [{"name":"个人","jpcode":"gr","code":"00","scode":"geren"},{"name":"单位","jpcode":"dw","code":"01","scode":"danwei"}]; return SourceArray;}

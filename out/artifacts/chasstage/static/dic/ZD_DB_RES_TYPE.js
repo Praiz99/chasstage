@@ -1,0 +1,1 @@
+function ZD_DB_RES_TYPE(){  var SourceArray = [{"name":"数据表","jpcode":"sjb","code":"01","scode":"shujubiao"},{"name":"查询脚本","jpcode":"cxjb","code":"02","scode":"chaxunjiaoben"}]; return SourceArray;}

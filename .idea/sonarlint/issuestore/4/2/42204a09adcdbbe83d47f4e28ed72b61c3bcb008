@@ -1,0 +1,27 @@
+
+t
+java:S2293r"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+u
+java:S2293µ"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+u
+java:S2293”"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+r
+java:S1192°"VDefine a constant instead of duplicating this literal "æš‚æ— çœ‹å®ˆåŒºäººå‘˜" 3 times.(éîİÓÿÿÿÿÿ
+a
+java:S1192s"FDefine a constant instead of duplicating this literal "baqid" 6 times.(”äÀşÿÿÿÿ
+`
+java:S2259æ"DA "NullPointerException" could be thrown; "sbList" is nullable here.(¬ö‚´øÿÿÿÿ
+N
+java:S2589ç"7Remove this expression which always evaluates to "true"(Ÿü‹‘
+_
+java:S2583ˆ"CChange this condition so that it does not always evaluate to "true"(®ñ©™ûÿÿÿÿ
+V	java:S125z"<This block of commented-out lines of code should be removed.(¸ã¼“üÿÿÿÿ
+R	java:S125€"<This block of commented-out lines of code should be removed.(¤Ã¨œ
+W	java:S125"<This block of commented-out lines of code should be removed.(œˆÛùÿÿÿÿ
+W	java:S125¶"<This block of commented-out lines of code should be removed.(£øó÷ùÿÿÿÿ
+U
+java:S1155é">Use isEmpty() to check whether the collection is empty or not.(ÖçŸã
+n
+java:S3776‹"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(µ«­¹ÿÿÿÿÿ
+B
+java:S1168ô"+Return an empty collection instead of null.(¥¹ï

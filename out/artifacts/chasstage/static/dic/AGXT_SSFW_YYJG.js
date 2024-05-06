@@ -1,0 +1,1 @@
+function AGXT_SSFW_YYJG(){  var SourceArray = [{"name":"预约成功","jpcode":"yycg","code":"01","scode":"yuyuechenggong"},{"name":"预约失败","jpcode":"yysb","code":"02","scode":"yuyueshibai"}]; return SourceArray;}

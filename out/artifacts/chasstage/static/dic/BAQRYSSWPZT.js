@@ -1,0 +1,1 @@
+function BAQRYSSWPZT(){  var SourceArray = [{"name":"无","jpcode":"w","code":"01","scode":"wu"},{"name":"未处理","jpcode":"wcl","code":"02","scode":"weichuli"},{"name":"部分处理","jpcode":"bfcl","code":"03","scode":"bufenchuli"},{"name":"已处理","jpcode":"ycl","code":"04","scode":"yichuli"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function YWPZ_BFML_SFJSCBF(){  var SourceArray = [{"name":"仅首次不罚","jpcode":"jscbf","code":"01","scode":"jinshoucibufa"},{"name":"可多次不罚","jpcode":"kdcbf","code":"02","scode":"keduocibufa"}]; return SourceArray;}

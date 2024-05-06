@@ -1,0 +1,1 @@
+function DZJZ_JZPZ_XZYT(){  var SourceArray = [{"name":"行政未结","jpcode":"xz","code":"01","scode":"xingzheng"},{"name":"行政处理审批","jpcode":"xzclsp","code":"02","scode":"xingzhengchulishenpi"},{"name":"行政已结","jpcode":"xzyj","code":"03","scode":"xingzhengyijie"},{"name":"刑事下行","jpcode":"xs","code":"04","scode":"xingshi"}]; return SourceArray;}

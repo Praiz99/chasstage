@@ -1,0 +1,1 @@
+function ZFKP_AJMJLX(){  var SourceArray = [{"name":"主办","jpcode":"zb","code":"01","scode":"zhuban"},{"name":"协办","jpcode":"xb","code":"02","scode":"xieban"}]; return SourceArray;}

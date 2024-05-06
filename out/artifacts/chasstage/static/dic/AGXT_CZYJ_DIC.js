@@ -1,0 +1,1 @@
+function AGXT_CZYJ_DIC(){  var SourceArray = [{"name":"其他","jpcode":"qt","code":"010100","scode":"qita"},{"name":"受案","jpcode":"sa","code":"010101","scode":"shouan"},{"name":"不予处理","jpcode":"bycl","code":"010102","scode":"buyuchuli"},{"name":"调解","jpcode":"dj","code":"010103","scode":"diaojie"}]; return SourceArray;}

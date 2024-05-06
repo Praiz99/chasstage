@@ -1,0 +1,1 @@
+function XNSACW_AJSSJD(){  var SourceArray = [{"name":"公安","jpcode":"ga","code":"01","scode":"gongan"},{"name":"检察院","jpcode":"jcy","code":"02","scode":"jianchayuan"},{"name":"法院","jpcode":"fy","code":"03","scode":"fayuan"}]; return SourceArray;}

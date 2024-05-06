@@ -1,0 +1,1 @@
+function ZD_ASJBL_QZZL_CRJ(){  var SourceArray = [{"name":"定居签证","jpcode":"djqz","code":"1","scode":"dingjuqianzheng"}]; return SourceArray;}

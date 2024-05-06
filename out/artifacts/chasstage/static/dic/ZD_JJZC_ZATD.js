@@ -1,0 +1,1 @@
+function ZD_JJZC_ZATD(){  var SourceArray = [{"name":"组织形式","jpcode":"zzxs","code":"100","scode":"zuzhixingshi"},{"name":"单独作案","jpcode":"ddza","code":"110","scode":"danduzuoan"},{"name":"共同作案","jpcode":"gtza","code":"120","scode":"gongtongzuoan"},{"name":"结伙作案","jpcode":"jhza","code":"121","scode":"jiehuozuoan"}]; return SourceArray;}

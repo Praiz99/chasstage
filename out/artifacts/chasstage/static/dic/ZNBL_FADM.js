@@ -1,0 +1,1 @@
+function ZNBL_FADM(){  var SourceArray = [{"name":"案件信息","jpcode":"ajxx","code":"01","scode":"anjianxinxi"},{"name":"笔录信息","jpcode":"blxx","code":"02","scode":"biluxinxi"}]; return SourceArray;}

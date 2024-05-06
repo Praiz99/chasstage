@@ -1,0 +1,1 @@
+function BJSWYT_ZRHJ_DIC(){  var SourceArray = [{"name":"派出所","jpcode":"pcs","code":"10","scode":"paichusuo"},{"name":"侦查","jpcode":"zc","code":"20","scode":"zhencha"},{"name":"预审","jpcode":"ys","code":"30","scode":"yushen"},{"name":"法制","jpcode":"fz","code":"40","scode":"fazhi"}]; return SourceArray;}

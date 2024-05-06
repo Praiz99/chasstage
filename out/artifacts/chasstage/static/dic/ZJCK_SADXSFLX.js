@@ -1,0 +1,1 @@
+function ZJCK_SADXSFLX(){  var SourceArray = [{"name":"嫌疑人","jpcode":"xyr","code":"1","scode":"xianyiren"},{"name":"非嫌疑人","jpcode":"fxyr","code":"2","scode":"feixianyiren"}]; return SourceArray;}

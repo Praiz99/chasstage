@@ -1,0 +1,1 @@
+function ZD_ASJBL_SDRYCZQK(){  var SourceArray = [{"name":"死刑","jpcode":"sx","code":"0108","scode":"sixing"}]; return SourceArray;}

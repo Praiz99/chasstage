@@ -1,0 +1,1 @@
+function DYZT(){  var SourceArray = [{"name":"关","jpcode":"g","code":"1","scode":"guan"},{"name":"开","jpcode":"k","code":"2","scode":"kai"},{"name":"其他","jpcode":"qt","code":"3","scode":"qita"}]; return SourceArray;}

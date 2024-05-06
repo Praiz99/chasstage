@@ -1,0 +1,1 @@
+function BJSWYT_SCLX_DIC(){  var SourceArray = [{"name":"个案检查","jpcode":"gajc","code":"01","scode":"geanjiancha"},{"name":"专项检查","jpcode":"zxjc","code":"02","scode":"zhuanxiangjiancha"},{"name":"抽案检查","jpcode":"cajc","code":"03","scode":"chouanjiancha"}]; return SourceArray;}

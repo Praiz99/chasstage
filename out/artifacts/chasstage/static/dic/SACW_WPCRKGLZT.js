@@ -1,0 +1,1 @@
+function SACW_WPCRKGLZT(){  var SourceArray = [{"name":"进行中","jpcode":"jxz","code":"1","scode":"jinxingzhong"},{"name":"已完成","jpcode":"ywc","code":"2","scode":"yiwancheng"},{"name":"已作废","jpcode":"yzf","code":"3","scode":"yizuofei"}]; return SourceArray;}

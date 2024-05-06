@@ -1,0 +1,32 @@
+
+h
+java:S1192ã"JDefine a constant instead of duplicating this literal "ZD_SYS_SF" 3 times.(ø˜‹8Ÿ‡õà¡1
+c
+java:S1192>"FDefine a constant instead of duplicating this literal "baqid" 5 times.(îÃ«Õ8Ÿ‡õà¡1
+‚
+java:S1488ë"_Immediately return this expression instead of assigning it to the temporary variable "baqList".(Ø™‹¬úÿÿÿÿ8 ‡õà¡1
+‚
+java:S1488ü"_Immediately return this expression instead of assigning it to the temporary variable "baqList".(Ø™‹¬úÿÿÿÿ8 ‡õà¡1
+X	java:S125$"<This block of commented-out lines of code should be removed.(éÑ®Ò8ˆõà¡1
+X	java:S125?"<This block of commented-out lines of code should be removed.(ÈÜ¾ë8’ˆõà¡1
+Z
+java:S1155I">Use isEmpty() to check whether the collection is empty or not.(Ğƒ 48“ˆõà¡1
+t
+java:S3776W"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ıÔÏàıÿÿÿÿ8”ˆõà¡1
+[
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(Ğƒ 48 ˆõà¡1
+R
+java:S2209·"5Change this instance-reference to a static reference.(õÊ¾E8¥ˆõà¡1
+[
+java:S1155Í">Use isEmpty() to check whether the collection is empty or not.(Ì8¨ˆõà¡1
+Y	java:S125Ó"<This block of commented-out lines of code should be removed.(äŸ˜Ñ8®ˆõà¡1
+\
+java:S1155‹">Use isEmpty() to check whether the collection is empty or not.(Êìâ’8²ˆõà¡1
+^	java:S125"<This block of commented-out lines of code should be removed.(ÃÎÂáúÿÿÿÿ8³ˆõà¡1
+^	java:S125•"<This block of commented-out lines of code should be removed.(çÕ”üøÿÿÿÿ8´ˆõà¡1
+r
+java:S1128"PRemove this unused import 'com.wckj.chasstage.modules.baqry.entity.ChasBaqryxx'.(áòó“ùÿÿÿÿ8µˆõà¡1
+]
+java:S1128"@Remove this unused import 'org.postgresql.jdbc.PreferQueryMode'.(à•ªò8µˆõà¡1
+_
+java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8µˆõà¡1

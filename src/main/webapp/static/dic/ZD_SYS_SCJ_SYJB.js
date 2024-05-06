@@ -1,0 +1,1 @@
+function ZD_SYS_SCJ_SYJB(){  var SourceArray = [{"name":"省级","jpcode":"sj","code":"01","scode":"shengji"},{"name":"地市级","jpcode":"dsj","code":"02","scode":"dishiji"},{"name":"区县级","jpcode":"qxj","code":"03","scode":"quxianji"},{"name":"用户","jpcode":"yh","code":"04","scode":"yonghu"}]; return SourceArray;}

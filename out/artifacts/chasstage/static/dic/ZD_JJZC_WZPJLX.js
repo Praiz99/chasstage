@@ -1,0 +1,1 @@
+function ZD_JJZC_WZPJLX(){  var SourceArray = [{"name":"本票","jpcode":"bp","code":"1","scode":"benpiao"},{"name":"支票","jpcode":"zp","code":"2","scode":"zhipiao"},{"name":"汇票","jpcode":"hp","code":"3","scode":"huipiao"}]; return SourceArray;}

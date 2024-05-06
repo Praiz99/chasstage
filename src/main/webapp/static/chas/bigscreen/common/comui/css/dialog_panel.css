@@ -1,0 +1,104 @@
+.new-dialog .window .window-header{
+	height:34px !important;
+}
+
+.new-dialog .window .panel-title{
+	font-size: 16px;
+    font-family: 微软雅黑;
+    height: 39px;
+    line-height: 39px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 17px;
+}
+
+.new-dialog .window .window-header .panel-tool .panel-tool-close {
+    background: url(../imgs/close_pic2.png) no-repeat;
+    padding-left: 6px;
+}
+
+.new-dialog .window {
+	padding: 0px;
+	background-color: #5182D6;
+    background: -webkit-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: -moz-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: -o-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: linear-gradient(to bottom,#5182D6 0,#5182D6 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5182D6,endColorstr=#5182D6,GradientType=0);
+}
+
+.new-dialog .window .panel-header {
+    background-color: #5182D6;
+    background: -webkit-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: -moz-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: -o-linear-gradient(top,#5182D6 0,#5182D6 100%);
+    background: linear-gradient(to bottom,#5182D6 0,#5182D6 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5182D6,endColorstr=#5182D6,GradientType=0);
+}
+
+.new-dialog .window .window-body iframe{
+	height: 100% !important;
+}
+
+.new-dialog .form-horizontal .form-actions {
+    padding: 0 0 0 800px !important;
+}
+
+.new-dialog .form-horizontal .form-actions .btn-primary {
+    background-color: #41BE67;
+    text-shadow: none;
+}
+
+.new-dialog .dialog-button{
+	background: #ffffff;
+}
+
+.new-dialog .dialog-button .l-btn {
+	margin: 3px 9px 3px 0px;
+}
+
+.new-dialog .dialog-button .l-btn:first-child .l-btn-text {
+    margin: 0 10px;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.new-dialog .dialog-button .l-btn .l-btn-text {
+    margin: 0 10px;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    color: #333333;
+}
+
+.new-dialog .dialog-button .l-btn {
+    color: #ffffff;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    background: -webkit-linear-gradient(top,#ffffff 0,#ffffff 100%);
+    background: -moz-linear-gradient(top,#ffffff 0,#ffffff 100%);
+    background: -o-linear-gradient(top,#ffffff 0,#ffffff 100%);
+    background: linear-gradient(to bottom,#ffffff 0,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#ffffff,GradientType=0);
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.new-dialog .dialog-button .l-btn:first-child {
+    color: #41BE67;
+    background: #41BE67;
+    border: 1px solid #41BE67;
+    background: -webkit-linear-gradient(top,#41BE67 0,#41BE67 100%);
+    background: -moz-linear-gradient(top,#41BE67 0,#41BE67 100%);
+    background: -o-linear-gradient(top,#41BE67 0,#41BE67 100%);
+    background: linear-gradient(to bottom,#41BE67 0,#41BE67 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#41BE67,endColorstr=#41BE67,GradientType=0);
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}

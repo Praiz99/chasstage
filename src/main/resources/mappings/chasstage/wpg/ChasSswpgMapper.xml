@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.wpg.dao.ChasSswpgMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.wpg.entity.ChasSswpg">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="MC" jdbcType="VARCHAR" property="mc" />
+    <result column="SFZNG" jdbcType="INTEGER" property="sfzng" />
+    <result column="DWDM" jdbcType="VARCHAR" property="dwdm" />
+    <result column="DWXTBH" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="YSID" jdbcType="VARCHAR" property="ysid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_sswpg
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.wpg.entity.ChasSswpg">
+    insert into chas_xt_sswpg (ID,ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQMC, BAQID, 
+      MC, SFZNG,DWDM ,DWXTBH ,YSID)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR}, 
+      now(),#{baqmc,jdbcType=VARCHAR}, #{baqid,jdbcType=VARCHAR}, 
+      #{mc,jdbcType=VARCHAR}, #{sfzng,jdbcType=INTEGER}, #{dwdm,jdbcType=VARCHAR}, #{dwxtbh,jdbcType=VARCHAR}, #{ysid,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.wpg.entity.ChasSswpg">
+    update chas_xt_sswpg
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      MC = #{mc,jdbcType=VARCHAR},
+      SFZNG = #{sfzng,jdbcType=INTEGER},
+      DWDM = #{dwdm,jdbcType=VARCHAR},
+      DWXTBH = #{dwxtbh,jdbcType=VARCHAR},
+      YSID = #{ysid,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQMC, BAQID, 
+    MC, SFZNG ,DWDM ,DWXTBH ,YSID
+    from chas_xt_sswpg
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQMC, BAQID, 
+    MC, SFZNG ,DWDM ,DWXTBH ,YSID
+    from chas_xt_sswpg
+    <where>
+      1=1 and isdel =0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}' 
+      </if>
+      <if test="ysid != null and ysid !=''">
+          and YSID = '${ysid}' 
+      </if>
+      <if test="mc != null and mc !=''">
+        and MC LIKE '%${mc}%'
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+	   <if test="sydwdm != null and sydwdm !=''">
+		and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+	  </if>
+    </where>
+  </select>
+</mapper>

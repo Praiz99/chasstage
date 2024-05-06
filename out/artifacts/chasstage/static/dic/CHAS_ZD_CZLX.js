@@ -1,0 +1,1 @@
+function CHAS_ZD_CZLX(){  var SourceArray = [{"name":"存入","jpcode":"cr","code":"01","scode":"cunru"},{"name":"取出","jpcode":"qc","code":"02","scode":"quchu"}]; return SourceArray;}

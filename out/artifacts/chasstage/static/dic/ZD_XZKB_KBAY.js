@@ -1,0 +1,1 @@
+function ZD_XZKB_KBAY(){  var SourceArray = [{"name":"盗窃","jpcode":"dq","code":"101030078","scode":"daoqie"},{"name":"赌博","jpcode":"db","code":"101030141","scode":"dubo"}]; return SourceArray;}

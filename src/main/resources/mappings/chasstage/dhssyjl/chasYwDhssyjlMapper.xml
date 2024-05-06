@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wckj.chasstage.modules.dhssyjl.dao.chasYwDhssyjlMapper" >
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.dhssyjl.entity.ChasYwDhssyjl" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="isdel" property="isdel" jdbcType="SMALLINT" />
+    <result column="data_flag" property="dataFlag" jdbcType="VARCHAR" />
+    <result column="lrr_sfzh" property="lrrSfzh" jdbcType="VARCHAR" />
+    <result column="lrsj" property="lrsj" jdbcType="TIMESTAMP" />
+    <result column="xgr_sfzh" property="xgrSfzh" jdbcType="VARCHAR" />
+    <result column="xgsj" property="xgsj" jdbcType="TIMESTAMP" />
+    <result column="baqid" property="baqid" jdbcType="VARCHAR" />
+    <result column="baqmc" property="baqmc" jdbcType="VARCHAR" />
+    <result column="qyid" property="qyid" jdbcType="VARCHAR" />
+    <result column="qymc" property="qymc" jdbcType="VARCHAR" />
+    <result column="sjbq" property="sjbq" jdbcType="TIMESTAMP" />
+    <result column="xm" property="xm" jdbcType="VARCHAR" />
+    <result column="dwxtbh" property="dwxtbh" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="xyrxm" property="xyrxm" jdbcType="VARCHAR" />
+    <result column="jssj" property="jssj" jdbcType="TIMESTAMP" />
+    <result column="kssj" property="kssj" jdbcType="TIMESTAMP" />
+    <result column="rybh" property="rybh" jdbcType="VARCHAR" />
+    <result column="rylx" property="rylx" jdbcType="VARCHAR" />
+    <result column="mjsfzh" property="mjsfzh" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, qyid, qymc, sjbq, 
+    xm, dwxtbh, username, xyrxm, jssj, kssj, rybh,rylx,mjsfzh
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from chas_yw_dhssyjl
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    update chas_yw_dhssyjl set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.dhssyjl.entity.ChasYwDhssyjl" >
+    insert into chas_yw_dhssyjl (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      qyid, qymc, sjbq, 
+      xm, dwxtbh, username, 
+      xyrxm, jssj, kssj, 
+      rybh,rylx,mjsfzh)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{qyid,jdbcType=VARCHAR}, #{qymc,jdbcType=VARCHAR}, #{sjbq,jdbcType=TIMESTAMP}, 
+      #{xm,jdbcType=VARCHAR}, #{dwxtbh,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{xyrxm,jdbcType=VARCHAR}, #{jssj,jdbcType=TIMESTAMP}, #{kssj,jdbcType=TIMESTAMP}, 
+      #{rybh,jdbcType=VARCHAR},#{rylx,jdbcType=VARCHAR},#{mjsfzh,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wckj.chasstage.modules.dhssyjl.entity.ChasYwDhssyjl" >
+    insert into chas_yw_dhssyjl
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="isdel != null" >
+        isdel,
+      </if>
+      <if test="dataFlag != null" >
+        data_flag,
+      </if>
+      <if test="lrrSfzh != null" >
+        lrr_sfzh,
+      </if>
+      <if test="lrsj != null" >
+        lrsj,
+      </if>
+      <if test="xgrSfzh != null" >
+        xgr_sfzh,
+      </if>
+      <if test="xgsj != null" >
+        xgsj,
+      </if>
+      <if test="baqid != null" >
+        baqid,
+      </if>
+      <if test="baqmc != null" >
+        baqmc,
+      </if>
+      <if test="qyid != null" >
+        qyid,
+      </if>
+      <if test="qymc != null" >
+        qymc,
+      </if>
+      <if test="sjbq != null" >
+        sjbq,
+      </if>
+      <if test="xm != null" >
+        xm,
+      </if>
+      <if test="dwxtbh != null" >
+        dwxtbh,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="xyrxm != null" >
+        xyrxm,
+      </if>
+      <if test="jssj != null" >
+        jssj,
+      </if>
+      <if test="kssj != null" >
+        kssj,
+      </if>
+      <if test="rybh != null" >
+        rybh,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="isdel != null" >
+        #{isdel,jdbcType=SMALLINT},
+      </if>
+      <if test="dataFlag != null" >
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null" >
+        #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null" >
+        #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null" >
+        #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baqid != null" >
+        #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null" >
+        #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="qyid != null" >
+        #{qyid,jdbcType=VARCHAR},
+      </if>
+      <if test="qymc != null" >
+        #{qymc,jdbcType=VARCHAR},
+      </if>
+      <if test="sjbq != null" >
+        #{sjbq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xm != null" >
+        #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="dwxtbh != null" >
+        #{dwxtbh,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="xyrxm != null" >
+        #{xyrxm,jdbcType=VARCHAR},
+      </if>
+      <if test="jssj != null" >
+        #{jssj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="kssj != null" >
+        #{kssj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rybh != null" >
+        #{rybh,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wckj.chasstage.modules.dhssyjl.entity.ChasYwDhssyjl" >
+    update chas_yw_dhssyjl
+    <set >
+      <if test="isdel != null" >
+        isdel = #{isdel,jdbcType=SMALLINT},
+      </if>
+      <if test="dataFlag != null" >
+        data_flag = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null" >
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null" >
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null" >
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null" >
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baqid != null" >
+        baqid = #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null" >
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="qyid != null" >
+        qyid = #{qyid,jdbcType=VARCHAR},
+      </if>
+      <if test="qymc != null" >
+        qymc = #{qymc,jdbcType=VARCHAR},
+      </if>
+      <if test="sjbq != null" >
+        sjbq = #{sjbq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xm != null" >
+        xm = #{xm,jdbcType=VARCHAR},
+      </if>
+      <if test="dwxtbh != null" >
+        dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="xyrxm != null" >
+        xyrxm = #{xyrxm,jdbcType=VARCHAR},
+      </if>
+      <if test="jssj != null" >
+        jssj = #{jssj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="kssj != null" >
+        kssj = #{kssj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rybh != null" >
+        rybh = #{rybh,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.dhssyjl.entity.ChasYwDhssyjl" >
+    update chas_yw_dhssyjl
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      qyid = #{qyid,jdbcType=VARCHAR},
+      qymc = #{qymc,jdbcType=VARCHAR},
+      sjbq = #{sjbq,jdbcType=TIMESTAMP},
+      xm = #{xm,jdbcType=VARCHAR},
+      dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      xyrxm = #{xyrxm,jdbcType=VARCHAR},
+      jssj = #{jssj,jdbcType=TIMESTAMP},
+      kssj = #{kssj,jdbcType=TIMESTAMP},
+      rybh = #{rybh,jdbcType=VARCHAR},
+      rylx = #{rylx,jdbcType=VARCHAR},
+      mjsfzh = #{mjsfzh,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="getDhssyjlByRybh" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chas_yw_dhssyjl
+    where isdel = 0 and
+    rybh = #{rybh,jdbcType=VARCHAR}
+    AND
+    jssj isNUll
+    ORDER BY kssj desc limit 1
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chas_yw_dhssyjl
+    <where>
+    1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and qyid = '${qyid}'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+        and xyrxm like '%${ryxm}%'
+      </if>
+      <if test="sysj1 != null and sysj1 !=''">
+        and kssj >= '${sysj1}'
+      </if>
+      <if test="sysj2 != null and sysj2 !=''">
+        and kssj &lt;= '${sysj2}'
+      </if>
+      <if test="qxbs == 'province'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

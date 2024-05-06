@@ -1,0 +1,1 @@
+function QQYZ(){  var SourceArray = [{"name":"申请","jpcode":"sq","code":"0","scode":"shenqing"},{"name":"审批通过","jpcode":"sptg","code":"1","scode":"shenpitongguo"},{"name":"审批未通过","jpcode":"spwtg","code":"3","scode":"shenpiweitongguo"},{"name":"使用中","jpcode":"syz","code":"4","scode":"shiyongzhong"},{"name":"结束","jpcode":"js","code":"5","scode":"jieshu"}]; return SourceArray;}

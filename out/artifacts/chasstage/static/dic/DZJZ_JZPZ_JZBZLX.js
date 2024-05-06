@@ -1,0 +1,1 @@
+function DZJZ_JZPZ_JZBZLX(){  var SourceArray = [{"name":"标准","jpcode":"bz","code":"01","scode":"biaozhun"},{"name":"自定义","jpcode":"zdy","code":"02","scode":"zidingyi"}]; return SourceArray;}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.ythcjqk.dao.ChasythcjQkMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.ythcjqk.entity.ChasythcjQk">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="ryxm" jdbcType="VARCHAR" property="ryxm" />
+    <result column="zwcj" jdbcType="VARCHAR" property="zwcj" />
+    <result column="dnacj" jdbcType="VARCHAR" property="dnacj" />
+    <result column="mfcj" jdbcType="VARCHAR" property="mfcj" />
+    <result column="sdqk" jdbcType="VARCHAR" property="sdqk" />
+    <result column="nyjc" jdbcType="VARCHAR" property="nyjc" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update gg_ythcjqk
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.ythcjqk.entity.ChasythcjQk">
+    insert into gg_ythcjqk (id, isdel, data_flag, 
+      lrr_sfzh, lrsj, xgr_sfzh, 
+      xgsj, baqid, baqmc, 
+      rybh, ryxm, zwcj, dnacj, 
+      mfcj, sdqk, nyjc)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{rybh,jdbcType=VARCHAR}, #{ryxm,jdbcType=VARCHAR}, #{zwcj,jdbcType=VARCHAR}, #{dnacj,jdbcType=VARCHAR}, 
+      #{mfcj,jdbcType=VARCHAR}, #{sdqk,jdbcType=VARCHAR}, #{nyjc,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.ythcjqk.entity.ChasythcjQk">
+    update gg_ythcjqk
+    set isdel = #{isdel,jdbcType=SMALLINT},
+      data_flag = #{dataFlag,jdbcType=VARCHAR},
+      lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      baqid = #{baqid,jdbcType=VARCHAR},
+      baqmc = #{baqmc,jdbcType=VARCHAR},
+      rybh = #{rybh,jdbcType=VARCHAR},
+      ryxm = #{ryxm,jdbcType=VARCHAR},
+      zwcj = #{zwcj,jdbcType=VARCHAR},
+      dnacj = #{dnacj,jdbcType=VARCHAR},
+      mfcj = #{mfcj,jdbcType=VARCHAR},
+      sdqk = #{sdqk,jdbcType=VARCHAR},
+      nyjc = #{nyjc,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, rybh, 
+    ryxm, zwcj, dnacj, mfcj, sdqk, nyjc
+    from gg_ythcjqk
+    where id = #{id,jdbcType=VARCHAR} and isdel != 1
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, rybh, 
+    ryxm, zwcj, dnacj, mfcj, sdqk, nyjc
+    from gg_ythcjqk where 1 = 1 and isdel = 0
+    <if test="rybh != null and rybh != ''">
+        and rybh = '${rybh}'
+    </if>
+  </select>
+</mapper>

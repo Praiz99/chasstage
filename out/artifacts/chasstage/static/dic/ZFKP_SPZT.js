@@ -1,0 +1,1 @@
+function ZFKP_SPZT(){  var SourceArray = [{"name":"审批通过","jpcode":"spz","code":"01","scode":"shenpizhong"},{"name":"不通过","jpcode":"sptg","code":"02","scode":"shenpitongguo"},{"name":"审批中","jpcode":"spbtg","code":"03","scode":"shenpibutongguo"}]; return SourceArray;}

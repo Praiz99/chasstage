@@ -1,0 +1,1 @@
+function ZNZD_DPXZ(){  var SourceArray = [{"name":"长方形","jpcode":"cfx","code":"01","scode":"changfangxing"},{"name":"正方形","jpcode":"zfx","code":"02","scode":"zhengfangxing"},{"name":"圆柱形","jpcode":"yzx","code":"03","scode":"yuanzhuxing"},{"name":"不规则多边形","jpcode":"bgzdbx","code":"04","scode":"buguizeduobianxing"}]; return SourceArray;}

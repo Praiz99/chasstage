@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/**新增*/
+.fa-plus{background:url(../images/icons/png_16/untitled98.png) no-repeat center;}
+.fa-plus-circle{background:url(../images/icons/png_16/untitled81.png) no-repeat center;}
+.fa-plus-square{background:url(../images/icons/png_16/untitled228.png) no-repeat center;}
+
+/**删除*/
+.fa-minus{background:url(../images/icons/png_16/untitled99.png) no-repeat center;}
+.fa-minus-square{background:url(../images/icons/png_16/untitled82.png) no-repeat center;}
+.fa-minus-square{background:url(../images/icons/png_16/untitled293.png) no-repeat center;}
+
+/**检索*/
+.fa-search{background:url(../images/icons/png_16/untitled3.png) no-repeat center;}
+.fa-search-minus{background:url(../images/icons/png_16/untitled16.png) no-repeat center;}
+.fa-search-plus{background:url(../images/icons/png_16/untitled15.png) no-repeat center;}
+
+/** x */
+.fa-times{background:url(../images/icons/png_16/untitled14.png) no-repeat center;}
+.fa-times-circle{background:url(../images/icons/png_16/untitled83.png) no-repeat center;}
+
+/** √ */
+.fa-check{background:url(../images/icons/png_16/untitled13.png) no-repeat center;}
+.fa-check-circle{background:url(../images/icons/png_16/untitled84.png) no-repeat center;}
+
+/**刷新*/
+.fa-repeat{background:url(../images/icons/png_16/untitled30.png) no-repeat center;}
+.fa-repeat-left{background:url(../images/icons/png_16/untitled201.png) no-repeat center;}
+.fa-repeat-right{background:url(../images/icons/png_16/untitled30.png) no-repeat center;}
+
+.fa-undo{background:url(../images/icons/png_16/untitled201.png) no-repeat center;}
+
+/**打印*/
+.fa-print{background:url(../images/icons/png_16/untitled45.png) no-repeat center;}
+
+/**笔形编辑*/
+.fa-pencil{background:url(../images/icons/png_16/untitled61.png) no-repeat center;}
+.fa-pencil-square{background:url(../images/icons/png_16/untitled298.png) no-repeat center;}
+.fa-pencil-square-o{background:url(../images/icons/png_16/untitled65.png) no-repeat center;}
+
+/**关联人员、选择*/
+.fa-tasks{background:url(../images/icons/png_16/untitled165.png) no-repeat center;}
+
+/**导入、导出*/
+.fa-sign-out{background:url(../images/icons/png_16/untitled132.png) no-repeat center;}
+.fa-sign-in{background:url(../images/icons/png_16/untitled136.png) no-repeat center;}
+
+/**批量操作*/
+.fa-indent{background:url(../images/icons/png_16/untitled58.png) no-repeat center;}
+
+/**登记*/
+.fa-file-text-o{background:url(../images/icons/png_16/untitled220.png) no-repeat center;}
+/**关联**/
+.fa-exchange{background:url(../images/icons/png_16/untitled211.png) no-repeat center;}
+/**解除关联**/
+.fa-external-link{background:url(../images/icons/png_16/untitled135.png) no-repeat center;}
+/**默认组卷**/
+.fa-book{background:url(../images/icons/png_16/untitled43.png) no-repeat center;}
+
+/**引用*/
+.fa-retweet{background:url(../images/icons/png_16/untitled115.png) no-repeat center;}
+/**关联*/
+.fa-link{background:url(../images/icons/png_16/untitled170.png) no-repeat center;}
+/**解除关联*/
+.fa-chain-broken{background:url(../images/icons/png_16/untitled264.png) no-repeat center;}
+/**左箭头圆圈*/
+.fa-arrow-circle-o-left{background:url(../images/icons/png_16/untitled362.png) no-repeat center;}
+/**文本文档*/
+.fa-file-text{background:url(../images/icons/png_16/untitled314.png) no-repeat center;}
+/**领回*/
+.fa-share-square{background:url(../images/icons/png_16/untitled66.png) no-repeat center;}
+
+/**双角度-左*/
+.fa-angle-double-left{background:url(../images/icons/png_16/untitled229.png) no-repeat center;}
+/**双角度-右*/
+.fa-angle-double-right{background:url(../images/icons/png_16/untitled230.png) no-repeat center;}
+/**双角度-上*/
+.fa-angle-double-up{background:url(../images/icons/png_16/untitled231.png) no-repeat center;}
+/**双角度-下*/
+.fa-angle-double-down{background:url(../images/icons/png_16/untitled232.png) no-repeat center;}
+/**角度-左*/
+.fa-angle-left{background:url(../images/icons/png_16/untitled233.png) no-repeat center;}
+/**角度-右*/
+.fa-angle-right{background:url(../images/icons/png_16/untitled234.png) no-repeat center;}
+/**角度-上*/
+.fa-angle-up{background:url(../images/icons/png_16/untitled235.png) no-repeat center;}
+/**角度-下*/
+.fa-angle-down{background:url(../images/icons/png_16/untitled236.png) no-repeat center;}
+/**上传*/
+.fa-upload{background:url(../images/icons/png_16/untitled139.png) no-repeat center;}
+

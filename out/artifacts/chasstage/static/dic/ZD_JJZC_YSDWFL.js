@@ -1,0 +1,1 @@
+function ZD_JJZC_YSDWFL(){  var SourceArray = [{"name":"人大、政协委员会","jpcode":"rd、zxwyh","code":"0100","scode":"renda、zhengxieweiyuanhui"},{"name":"党委政府","jpcode":"dwzf","code":"0200","scode":"dangweizhengfu"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZFJD_MFFS(){  var SourceArray = [{"name":"1","jpcode":"1","code":"1","scode":"1"},{"name":"2","jpcode":"2","code":"2","scode":"2"},{"name":"3","jpcode":"3","code":"3","scode":"3"},{"name":"4","jpcode":"4","code":"4","scode":"4"},{"name":"5","jpcode":"5","code":"5","scode":"5"},{"name":"6","jpcode":"6","code":"6","scode":"6"}]; return SourceArray;}

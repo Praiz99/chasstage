@@ -1,0 +1,1 @@
+function ZD_AJBL_DZQZFCZT(){  var SourceArray = [{"name":"破损","jpcode":"ps","code":"broken","scode":"posun"},{"name":"完好","jpcode":"wh","code":"full","scode":"wanhao"},{"name":"未封存","jpcode":"wfc","code":"no_seal","scode":"weifengcun"}]; return SourceArray;}

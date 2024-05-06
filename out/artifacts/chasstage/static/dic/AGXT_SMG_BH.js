@@ -1,0 +1,1 @@
+function AGXT_SMG_BH(){  var SourceArray = [{"name":"1号双面柜","jpcode":"1hsmg","code":"g0001","scode":"1haoshuangmiangui"},{"name":"2号双面柜","jpcode":"2hsmg","code":"g0002","scode":"2haoshuangmiangui"}]; return SourceArray;}

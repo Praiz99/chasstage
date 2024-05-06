@@ -1,0 +1,1 @@
+function ZD_ASBGL_XZBW(){  var SourceArray = [{"name":"仓库","jpcode":"ck","code":"2301","scode":"cangku"}]; return SourceArray;}

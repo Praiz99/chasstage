@@ -1,0 +1,1 @@
+function YYYQ(){  var SourceArray = [{"name":"云嘉","jpcode":"yj","code":"04","scode":"yunjia"},{"name":"微软","jpcode":"wr","code":"01","scode":"weiruan"},{"name":"科大讯飞","jpcode":"xf","code":"02","scode":"xunfei"},{"name":"阿里语音","jpcode":"alyy","code":"03","scode":"aliyuyin"}]; return SourceArray;}

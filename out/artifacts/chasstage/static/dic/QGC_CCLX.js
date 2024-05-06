@@ -1,0 +1,1 @@
+function QGC_CCLX(){  var SourceArray = [{"name":"ipsan","jpcode":"ipsan","code":"001","scode":"ipsan"},{"name":"nas","jpcode":"nas","code":"002","scode":"nas"},{"name":"nvr","jpcode":"nvr","code":"003","scode":"nvr"},{"name":"cvr","jpcode":"cvr","code":"004","scode":"cvr"}]; return SourceArray;}

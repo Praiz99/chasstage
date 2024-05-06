@@ -1,0 +1,1 @@
+function ZNKP_ZNCJ_FAZT_DIC(){  var SourceArray = [{"name":"未启动","jpcode":"wqd","code":"01","scode":"weiqidong"},{"name":"已启动","jpcode":"yqd","code":"03","scode":"yiqidong"},{"name":"禁用","jpcode":"jy","code":"04","scode":"jinyong"},{"name":"完结","jpcode":"wj","code":"05","scode":"wanjie"}]; return SourceArray;}

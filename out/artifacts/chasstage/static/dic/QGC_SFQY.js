@@ -1,0 +1,1 @@
+function QGC_SFQY(){  var SourceArray = [{"name":"使用中","jpcode":"syz","code":"10","scode":"shiyongzhong"},{"name":"停用","jpcode":"ty","code":"20","scode":"tingyong"}]; return SourceArray;}

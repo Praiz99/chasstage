@@ -1,0 +1,1 @@
+function TXTJ_JDFF(){  var SourceArray = [{"name":"干戒","jpcode":"gj","code":"1","scode":"ganjie"},{"name":"药戒","jpcode":"yj","code":"2","scode":"yaojie"},{"name":"其他","jpcode":"qt","code":"9","scode":"qita"}]; return SourceArray;}

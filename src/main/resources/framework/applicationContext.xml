@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"  
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task.xsd		
+		http://www.springframework.org/schema/cache 
+        http://www.springframework.org/schema/cache/spring-cache.xsd" 
+		default-lazy-init="true">
+
+	<description>Spring公共配置 </description>
+
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.wckj">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<bean class="com.wckj.framework.spring.SpringContextHolder"  lazy-init="false"/>
+	
+	<!-- 数据源配置, 使用 BoneCP 数据库连接池 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
+	    <!-- 数据源驱动类可不写，Druid默认会自动根据URL识别DriverClass -->
+	    <property name="driverClassName" value="org.postgresql.Driver" />
+		<!-- 基本属性 url、user、password -->
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<!-- 配置初始化大小、最小、最大 -->
+		<property name="initialSize" value="5" />
+		<property name="minIdle" value="5" /> 
+		<property name="maxActive" value="${jdbc.pool.maxActive:50}" />
+		<!-- 配置获取连接等待超时的时间 -->
+		<property name="maxWait" value="30000" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="60000" />
+		<property name="validationQuery" value="select 1" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小（Oracle使用）
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="20" /> -->
+		<!-- 配置监控统计拦截的filters -->
+	    <property name="filters" value="stat" /> 
+	</bean>
+	
+ 	<!-- MyBatis begin -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath*:/mappings/**/*.xml"/>
+		<property name="configLocation" value="classpath:/framework/mybatis-config.xml"></property>
+    </bean>
+    
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.wckj.**.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
+    </bean>
+    
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	<!--自动扫描aop切面 -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+    <!-- 定义事务 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 使用annotation定义事务 	-->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" order="999" />
+
+	<!-- 定义声明式事务 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+          <tx:attributes>
+             <tx:method name="get*Data" read-only="true" propagation="SUPPORTS"/>
+             <tx:method name="find*" read-only="true" propagation="SUPPORTS"/>
+             <tx:method name="save*" propagation="REQUIRED" rollback-for="Exception" />
+             <tx:method name="update*" propagation="REQUIRED" rollback-for="Exception" />
+             <tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception" />
+			 <tx:method name="Save*" propagation="REQUIRED" rollback-for="Exception" />
+             <tx:method name="Update*" propagation="REQUIRED" rollback-for="Exception" />
+         </tx:attributes>
+     </tx:advice>
+     
+    <aop:config proxy-target-class="true">
+     	<aop:pointcut expression="execution(public * com.wckj..*Service*.*(..))" id="txServicePoint"/>	       	          	   	     	
+     	<aop:advisor advice-ref="txAdvice" pointcut-ref="txServicePoint" order="1000"/>
+    </aop:config>     	
+    
+	<!-- 加载应用程序属性文件 -->		
+	<bean id="propertyConfigurer" class="com.wckj.framework.conf.ConfContextPropertyConfigurer">  
+	    <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />  
+	    <property name="ignoreResourceNotFound" value="true" />
+	    <property name="adminAddressPropName" value="conf.admin.address"/>
+	    <property name="accessTokenPropName" value="conf.access.token"/>
+	    <property name="envPropName" value="conf.env"/>
+	    <property name="appNamePropName" value="conf.appname"/>  
+	    <property name="mirrorfilePropName" value="conf.mirrorfile"/>  
+	    <property name="locations">  
+	    	<list>
+	          	<value>classpath*:/config/conf/application-conf.properties</value>
+	    	</list>  
+	    </property>  
+	</bean>
+	
+	<!-- 日志模块配置 start -->
+	<bean id="logTracer" class="com.wckj.jdone.modules.log.logTracer.JdoneLogTracer"/>
+	<!-- 日志模块配置 end -->
+	
+	<!-- 任务执行器 -->  
+	<task:executor id="executor" pool-size="400"/>  
+	
+	<!--开启注解调度支持 @Async @Scheduled-->  
+	<task:annotation-driven executor="executor" proxy-target-class="true"/>
+	
+	<!-- 定义quartz工厂类 -->
+	<bean id="quartzfactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="startupDelay" value="10"/>	
+	</bean>	
+	
+	<!-- redis -->
+	<import resource="classpath*:/framework/cache/redis/redis.xml"/>
+
+	<!-- 其他服务-->
+	
+	<!-- dubbo api -->
+	<beans profile="dubbo">
+		<import resource="classpath*:/config/api/dubbo.xml"/>
+	</beans>
+	
+	<!-- kafka消息服务 -->
+	<beans profile="kafka">
+		<import resource="classpath*:/framework/msg/kafka-producer.xml"/>
+		<import resource="classpath*:/framework/msg/kafka-consumer.xml"/>
+	</beans>
+	
+	<!-- 动态数据源配置 -->
+	<beans profile="dyncds">	
+		<import resource="classpath*:/framework/dynamicDataSource-config.xml"/>
+	</beans>
+	
+</beans>

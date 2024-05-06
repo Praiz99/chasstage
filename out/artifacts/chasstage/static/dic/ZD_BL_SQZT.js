@@ -1,0 +1,1 @@
+function ZD_BL_SQZT(){  var SourceArray = [{"name":"申请中","jpcode":"sqz","code":"00","scode":"shenqingzhong"},{"name":"申请完成","jpcode":"sqwc","code":"01","scode":"shenqingwancheng"}]; return SourceArray;}

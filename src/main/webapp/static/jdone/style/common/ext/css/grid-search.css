@@ -1,0 +1,348 @@
+﻿@charset "utf-8";
+
+
+html {
+	background-color: #efefef;
+	font-family: "Microsoft YaHei";
+}
+
+body {
+	height: 95%;
+	margin: 5px;
+}
+label {
+    font-family: "Microsoft YaHei";
+}
+.row-fluid {
+	border: 1px solid #eceaea;
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+	overflow:hidden;
+}
+
+.row-fluid form {
+	padding: 5px 5px 5px 5px;
+}
+
+.row-fluid table {
+	float: left;
+	width: 80%;
+	margin-bottom: -3px;
+}
+
+.row-fluid td {
+	float: left;
+	margin-bottom: 2px;
+	display:inline-block;
+	padding-left: 0px;
+	width: 350px;
+}
+
+.search-textbox {
+	width: 170px;
+	height: 27px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	font-weight: normal;
+	border: 1px solid #bfbebe;
+	border-radius: 5px 5px 5px 5px;
+	line-height: 30px;
+	padding-left: 10px;
+}
+
+.search-label {
+	width: 110px;
+	text-align: right;
+	height: 30px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	font-weight: normal;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 6px;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus {
+	outline: none;
+    border: 1px solid #928f8f;
+}
+
+.btn {
+	font-family: "Microsoft YaHei";
+	padding: 4px 12px;
+	font-size: 12px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.btn-primary {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #2fa4e7;
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.form-actions{
+	text-align: right;
+}
+
+.extend-search{
+	text-align: center;
+	margin-top: -2px;
+}
+
+.extend-search-open{
+	cursor: pointer;	
+}
+
+.extend-search-close{
+	cursor: pointer;	
+}
+
+select {
+	font-family: "Microsoft YaHei";
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url(../imgs/select-down.png) no-repeat right 5px center;
+}
+
+/**datagrid样式调整**/
+.datagrid{
+	background-color: #fff;
+	margin-bottom: 10px;
+	max-width: 100%;
+}
+	
+.datagrid-wrap{
+	padding: 5px 25px 5px 10px;
+	border: none;
+	max-width: 98%;
+}
+
+.datagrid-toolbar{
+	background-color: #fff;
+	margin-bottom: 5px;
+	border: none;
+}
+
+.datagrid .datagrid-pager{
+	background-color: #fff;
+	margin-top: 10px;
+	border-style: none;
+}
+
+.pager-label {
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	font-weight: normal;
+	margin-right: 10px;
+	color: #333333;
+	float: left;
+	margin-top: 5px;
+}
+
+.pagination-btn-separator{
+	display: none;
+}
+
+.pagination-page-list, .pagination .pagination-num{
+	border-color: #bfbebe;
+	height: 24px;
+	margin-right: 15px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	padding: 0px;
+}
+
+.pagination-page-list{
+	width: 40px;
+}
+
+.pagination span{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #333333;
+}
+
+.pagination-first{
+	background: url(../imgs/page-first.png) no-repeat center;
+}
+
+.pagination-prev{
+	background: url(../imgs/page-prev.png) no-repeat center;
+}
+
+.pagination-next{
+	background: url(../imgs/page-next.png) no-repeat center;
+}
+
+.pagination-last{
+	background: url(../imgs/page-last.png) no-repeat center;
+}
+
+.page-skip{
+	height: 20px;
+	width: 40px;
+	border: 1px solid #bfbebe;
+	margin-top: 3px;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 2px;
+}
+
+.page-skip:hover{
+	background: #eaf2ff;
+}
+
+.datagrid-pager .l-btn-icon-left{
+	border: 1px solid #bfbebe;
+	width: 22px;
+	height: 22px;
+}
+
+.datagrid-pager .l-btn-plain{
+	margin-right: 10px;
+}
+	
+.datagrid-toolbar .l-btn {
+	color: #ffffff;
+	background-color:  rgb(255,127,0);
+	margin-right: 15px;
+}
+
+.datagrid-toolbar .l-btn-text {
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	margin: 0 10px 0 10px
+}
+
+.datagrid-toolbar .l-btn:hover {
+	background-color:  rgb(255,102,0);
+	border: 1px solid #eceaea;
+}
+
+.datagrid-toolbar .datagrid-btn-separator{
+	border: none;
+}
+
+.datagrid-view{
+	margin-right: 10px;
+	border: 1px solid #bfbebe;
+	min-height: 60px;
+}
+
+.datagrid-cell, .datagrid-empty{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #353535;
+}
+
+.datagrid-header .datagrid-cell span{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #353535;
+	font-weight: bold;
+}
+
+.datagrid-row, .datagrid-header-row{
+	height: 30px;
+}
+
+.datagrid-header, .datagrid-td-rownumber{
+	background: #fafafa;
+	filter: none;
+}
+
+.datagrid-header-check, .datagrid-cell-check{
+	width: 30px;
+	height: 15px;
+}
+
+.datagrid-header-check input, .datagrid-cell-check input{
+	width: 15px;
+	height: 15px;
+}
+
+.datagrid-header-check input:checked, .datagrid-cell-check input:checked{
+	width: 13px;
+	height: 13px;
+	background: url(../imgs/checked.png) no-repeat center;
+	-webkit-appearance: none;
+}
+
+.search-operarea{
+	margin: 10px 0 0 15px;
+	width: 98%;
+	overflow: hidden;
+}
+
+.quick-search{
+	height: 20px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+
+input[type="radio"] {
+	height: 24px;
+	position: absolute;
+	top: -999px;
+	left: -999px;
+}
+
+input[type="radio"] + label{
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #333333;
+	padding:0px 4px 0px 24px;
+	cursor:pointer;
+	background: url(../imgs/radio-uncheck.png) no-repeat 2px;
+}
+
+input[type="radio"]:checked + label{
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #333333;
+	padding:0px 4px 0px 24px;
+	cursor:pointer;
+	background: url(../imgs/radio-checked.png) no-repeat 2px;
+}
+
+.pagination-info{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+}
+
+.oper-btn{
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #34a8ff;
+	padding-left: 20px;
+	line-height: 24px;
+	margin-right: 10px;
+}
+
+.oper-edit{
+	background:  url(../imgs/oper-edit.png) no-repeat 0px;
+}
+
+.oper-view{
+	background:  url(../imgs/oper-view.png) no-repeat 0px;
+}
+
+.oper-info{
+	background:  url(../imgs/oper-info.png) no-repeat 0px;
+}
+
+/******************列表宽度样式**************************/
+.datagrid-btable,.datagrid-header-inner,.datagrid-htable,.datagrid-body {
+	width: inherit;
+}

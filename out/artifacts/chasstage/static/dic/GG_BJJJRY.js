@@ -1,0 +1,1 @@
+function GG_BJJJRY(){  var SourceArray = [{"name":"陈立峰","jpcode":"clf","code":"112728","scode":"chenlifeng"},{"name":"吴利明","jpcode":"wlm","code":"113261","scode":"wuliming"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_RY_BHRSF(){  var SourceArray = [{"name":"律师","jpcode":"ls","code":"01","scode":"lvshi"},{"name":"普通辩护人","jpcode":"ptbhr","code":"02","scode":"putongbianhuren"}]; return SourceArray;}

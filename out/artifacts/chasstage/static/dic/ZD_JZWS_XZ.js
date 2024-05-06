@@ -1,0 +1,1 @@
+function ZD_JZWS_XZ(){  var SourceArray = [{"name":"行政处罚决定书","jpcode":"xzcfjds","code":"101001","scode":"xingzhengchufajuedingshu"}]; return SourceArray;}

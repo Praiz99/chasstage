@@ -1,0 +1,1 @@
+function ZD_CASE_AJSH(){  var SourceArray = [{"jpcode":"ws","scode":"weishen","code":"01","name":"未审"},{"jpcode":"shz","scode":"shenhezhong","code":"02","name":"审核中"},{"jpcode":"ys","scode":"yishen","code":"03","name":"以审"},{"jpcode":"scdp","scode":"shenchadaipi","code":"04","name":"审查待批"}]; return SourceArray;}

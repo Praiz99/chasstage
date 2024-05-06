@@ -1,0 +1,101 @@
+.red {
+	color: #F00;
+}
+
+.result-container {
+	width: 100%;
+	position: absolute;
+	z-index: 999;
+	border: 1px solid #70C2D1;
+}
+
+.item-container {
+	width: 100%;
+	line-height: 25px;
+	font-size: 12px;
+	cursor: pointer;
+	font-family:"宋体";
+	text-indent:0;
+}
+
+.dic-item {
+	padding-left: 2px;
+	line-height: 25px;
+	background: #fafbff;
+	border-bottom: #70C2D1 1px dashed;
+	text-align:left;
+}
+
+.dic-item input {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.item-container .selected {
+	background: #EAEAEA;
+}
+
+.item-container .over {
+	background: #D1ECF5;
+}
+
+.page-container {
+	padding: 5px 0px;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: right;
+	font-size: 12px;
+	vertical-align: top;
+	background: #FFF;
+	font-family:"宋体";
+	background:#e2e7fd;
+	text-indent:0;
+}
+
+.page-container-num {
+	float: left;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	color: #09C;
+	margin:0 0 0 4px;
+	padding:0;
+}
+
+.page-container-btn {
+	float: right;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	margin-right:8px;
+	cursor: pointer;
+}
+
+.page-container-btn a{
+	margin-right:3px;
+}
+
+.dic-input-enable {
+	background: #fff url('images/dic_btn.gif') no-repeat right;
+	border: 1px solid #70C2D1;
+	height:22px;
+}
+
+.dic-input-error {
+	background: #fff url('images/dic_btn.gif') no-repeat right;
+	border: 1px solid red;
+	height:22px;
+}
+
+.dic-input-disabled {
+	background: #fff url('images/dic_btn.gif') no-repeat right;
+	border: 1px solid;
+	height:22px;
+	border-color:#d9d6c3;
+	background-color:#f6f5ec;
+}
+
+.result-container img {
+	border: none;
+}

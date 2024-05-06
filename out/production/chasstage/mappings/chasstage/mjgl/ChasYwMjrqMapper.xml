@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.mjgl.dao.ChasYwMjrqMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.mjgl.entity.ChasYwMjrq">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="SMALLINT" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="mjsfzh" jdbcType="VARCHAR" property="mjsfzh" />
+    <result column="mjxm" jdbcType="VARCHAR" property="mjxm" />
+    <result column="mjjh" jdbcType="VARCHAR" property="mjjh" />
+    <result column="wdbh_h" jdbcType="VARCHAR" property="wdbhH" />
+    <result column="wdbh_l" jdbcType="VARCHAR" property="wdbhL" />
+    <result column="jrsj" jdbcType="TIMESTAMP" property="jrsj" />
+    <result column="cqsj" jdbcType="TIMESTAMP" property="cqsj" />
+    <result column="rybh" jdbcType="VARCHAR" property="rybh" />
+    <result column="zjlx" jdbcType="VARCHAR" property="zjlx" />
+    <result column="lxdh" jdbcType="VARCHAR" property="lxdh" />
+    <result column="fwsx" jdbcType="SMALLINT" property="fwsx" />
+    <result column="fwyy" jdbcType="VARCHAR" property="fwyy" />
+    <result column="zpid" jdbcType="VARCHAR" property="zpid" />
+    <result column="zt" jdbcType="VARCHAR" property="zt" />
+    <result column="xb" jdbcType="VARCHAR" property="xb" />
+    <result column="xklx" jdbcType="VARCHAR" property="xklx" />
+    <result column="register_code" jdbcType="VARCHAR" property="registerCode" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_mjrq set isdel=1 ,XGSJ = date_trunc('second', now())
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.mjgl.entity.ChasYwMjrq">
+    insert into chas_yw_mjrq (id, isdel, data_flag,
+    lrr_sfzh, lrsj, xgr_sfzh,
+    xgsj, baqid, baqmc,
+    mjsfzh, mjxm, mjjh,
+    wdbh_h, wdbh_l, jrsj,
+    cqsj, rybh,
+    zjlx, lxdh, fwsx,
+    fwyy, zpid, zt, xb,xklx, register_code
+    )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=SMALLINT}, #{dataFlag,jdbcType=VARCHAR},
+    #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+    #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+    #{mjsfzh,jdbcType=VARCHAR}, #{mjxm,jdbcType=VARCHAR}, #{mjjh,jdbcType=VARCHAR},
+    #{wdbhH,jdbcType=VARCHAR}, #{wdbhL,jdbcType=VARCHAR}, #{jrsj,jdbcType=TIMESTAMP},
+    #{cqsj,jdbcType=TIMESTAMP}, #{rybh,jdbcType=VARCHAR},
+    #{zjlx,jdbcType=VARCHAR}, #{lxdh,jdbcType=VARCHAR}, #{fwsx,jdbcType=SMALLINT},
+    #{fwyy,jdbcType=VARCHAR}, #{zpid,jdbcType=VARCHAR}, #{zt,jdbcType=VARCHAR}, #{xb,jdbcType=VARCHAR},
+    #{xklx,jdbcType=VARCHAR}, #{registerCode,jdbcType=VARCHAR}
+    )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.mjgl.entity.ChasYwMjrq">
+    update chas_yw_mjrq
+    set isdel = #{isdel,jdbcType=SMALLINT},
+    data_flag = #{dataFlag,jdbcType=VARCHAR},
+    lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+    lrsj = #{lrsj,jdbcType=TIMESTAMP},
+    xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+    xgsj = #{xgsj,jdbcType=TIMESTAMP},
+    baqid = #{baqid,jdbcType=VARCHAR},
+    baqmc = #{baqmc,jdbcType=VARCHAR},
+    mjsfzh = #{mjsfzh,jdbcType=VARCHAR},
+    mjxm = #{mjxm,jdbcType=VARCHAR},
+    mjjh = #{mjjh,jdbcType=VARCHAR},
+    wdbh_h = #{wdbhH,jdbcType=VARCHAR},
+    wdbh_l = #{wdbhL,jdbcType=VARCHAR},
+    jrsj = #{jrsj,jdbcType=TIMESTAMP},
+    cqsj = #{cqsj,jdbcType=TIMESTAMP},
+    rybh = #{rybh,jdbcType=VARCHAR},
+    zjlx = #{zjlx,jdbcType=VARCHAR},
+    lxdh = #{lxdh,jdbcType=VARCHAR},
+    fwsx = #{fwsx,jdbcType=SMALLINT},
+    fwyy = #{fwyy,jdbcType=VARCHAR},
+    zpid = #{zpid,jdbcType=VARCHAR},
+    zt = #{zt,jdbcType=VARCHAR},
+    xb = #{xb,jdbcType=VARCHAR},
+    xklx=#{xklx,jdbcType=VARCHAR},
+    register_code = #{registerCode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select *
+    from chas_yw_mjrq
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from chas_yw_mjrq
+    <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+      <if test="mjjh != null and mjjh !=''">
+        and mjjh = '${mjjh}'
+      </if>
+      <if test="rySfzh != null and rySfzh !=''">
+        and mjsfzh = '${rySfzh}'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+        and mjxm = '${ryxm}'
+      </if>
+      <if test="wdbh_h != null and wdbh_h != ''">
+        and wdbh_h = '${wdbh_h}'
+      </if>
+      <if test="wdbhL != null and wdbhL != ''">
+        and wdbh_l = '${wdbhL}'
+      </if>
+      <if test="xb != null and xb !=''">
+        and xb = '${xb}'
+      </if>
+      <if test="zt != null and zt !=''">
+        and zt = '${zt}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+      </if>
+    </where>
+  </select>
+
+  <select id="findByParams" resultMap="BaseResultMap">
+    select *
+    from chas_yw_mjrq
+    <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="rybh != null and rybh !=''">
+        and rybh = '${rybh}'
+      </if>
+      <if test="mjjh != null and mjjh !=''">
+        and mjjh = '${mjjh}'
+      </if>
+      <if test="rySfzh != null and rySfzh !=''">
+        and mjsfzh = '${rySfzh}'
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+        and mjxm = '${ryxm}'
+      </if>
+      <if test="wdbh_h != null and wdbh_h != ''">
+        and wdbh_h = '${wdbh_h}'
+      </if>
+      <if test="wdbh_l != null and wdbh_l != ''">
+        and wdbh_l = '${wdbh_l}'
+      </if>
+      <if test="notzt != null and notzt != ''">
+        and zt != '${notzt}'
+      </if>
+      <if test="zt != null and zt != ''">
+        and zt = '${zt}'
+      </if>
+    </where>
+    order by lrsj desc
+    limit 1 offset 0
+  </select>
+  <select id="isMjzq" parameterType="java.lang.String" resultMap="BaseResultMap">
+   select * from chas_yw_mjrq
+    where isdel = 0 and zt = '02'
+    and mjsfzh = #{mjsfzh,jdbcType=VARCHAR}
+  </select>
+</mapper>

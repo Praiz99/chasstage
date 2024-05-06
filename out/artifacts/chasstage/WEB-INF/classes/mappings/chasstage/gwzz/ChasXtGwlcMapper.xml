@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.gwzz.dao.ChasXtGwlcMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.gwzz.entity.ChasXtGwlc">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="isdel" jdbcType="INTEGER" property="isdel" />
+    <result column="data_flag" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="lrr_sfzh" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="lrsj" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="xgr_sfzh" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="xgsj" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="baqid" jdbcType="VARCHAR" property="baqid" />
+    <result column="baqmc" jdbcType="VARCHAR" property="baqmc" />
+    <result column="jsmc" jdbcType="VARCHAR" property="jsmc" />
+    <result column="jsdm" jdbcType="VARCHAR" property="jsdm" />
+    <result column="lczz" jdbcType="VARCHAR" property="lczz" />
+    <result column="lczzdm" jdbcType="VARCHAR" property="lczzdm" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, isdel, data_flag, lrr_sfzh, lrsj, xgr_sfzh, xgsj, baqid, baqmc, jsmc, jsdm, lczz, 
+    lczzdm
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from chas_xt_gwlc
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_gwlc
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.gwzz.entity.ChasXtGwlc">
+    insert into chas_xt_gwlc
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      id,
+      <if test="isdel != null">
+        isdel,
+      </if>
+      <if test="dataFlag != null">
+        data_flag,
+      </if>
+      <if test="lrrSfzh != null">
+        lrr_sfzh,
+      </if>
+      <if test="lrsj != null">
+        lrsj,
+      </if>
+      <if test="xgrSfzh != null">
+        xgr_sfzh,
+      </if>
+      <if test="xgsj != null">
+        xgsj,
+      </if>
+      <if test="baqid != null">
+        baqid,
+      </if>
+      <if test="baqmc != null">
+        baqmc,
+      </if>
+      <if test="jsmc != null">
+        jsmc,
+      </if>
+      <if test="jsdm != null">
+        jsdm,
+      </if>
+      <if test="lczz != null">
+        lczz,
+      </if>
+      <if test="lczzdm != null">
+        lczzdm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      #{id,jdbcType=VARCHAR},
+      <if test="isdel != null">
+        #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="dataFlag != null">
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null">
+        #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null">
+        #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null">
+        #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null">
+        #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baqid != null">
+        #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null">
+        #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jsmc != null">
+        #{jsmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jsdm != null">
+        #{jsdm,jdbcType=VARCHAR},
+      </if>
+      <if test="lczz != null">
+        #{lczz,jdbcType=VARCHAR},
+      </if>
+      <if test="lczzdm != null">
+        #{lczzdm,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.gwzz.entity.ChasXtGwlc">
+    update chas_xt_gwlc
+    <set>
+      <if test="isdel != null">
+        isdel = #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="dataFlag != null">
+        data_flag = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lrrSfzh != null">
+        lrr_sfzh = #{lrrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="lrsj != null">
+        lrsj = #{lrsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="xgrSfzh != null">
+        xgr_sfzh = #{xgrSfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="xgsj != null">
+        xgsj = #{xgsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="baqid != null">
+        baqid = #{baqid,jdbcType=VARCHAR},
+      </if>
+      <if test="baqmc != null">
+        baqmc = #{baqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jsmc != null">
+        jsmc = #{jsmc,jdbcType=VARCHAR},
+      </if>
+      <if test="jsdm != null">
+        jsdm = #{jsdm,jdbcType=VARCHAR},
+      </if>
+      <if test="lczz != null">
+        lczz = #{lczz,jdbcType=VARCHAR},
+      </if>
+      <if test="lczzdm != null">
+        lczzdm = #{lczzdm,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from chas_xt_gwlc
+    <where>
+      isdel = 0
+      <if test="baqid != null and baqid !=''">
+        and baqid = #{baqid}
+      </if>
+      <if test="jsdm != null and jsdm !=''">
+        and jsdm = #{jsdm}
+      </if>
+    </where>
+  </select>
+</mapper>

@@ -1,0 +1,1 @@
+package com.wckj.chasstage.api.def.zpxx.sercive;import com.wckj.chasstage.api.def.zpxx.model.ZpxxParam;import com.wckj.framework.api.ApiReturnResult;import com.wckj.framework.api.IApiBaseService;/** * describe: * * @author lcm * @date 2020/09/22 */public interface ApiZpxxService extends IApiBaseService {    ApiReturnResult<?> zpxxSave(ZpxxParam param);}

@@ -1,0 +1,1 @@
+function AGXT_SSFW_RYLX(){  var SourceArray = [{"name":"律师人员","jpcode":"lsry","code":"01","scode":"lvshirenyuan"},{"name":"翻译人员","jpcode":"fyry","code":"02","scode":"fanyirenyuan"},{"name":"见证人员","jpcode":"jzry","code":"03","scode":"jianzhengrenyuan"},{"name":"合适成年人","jpcode":"hscnr","code":"04","scode":"heshichengnianren"}]; return SourceArray;}

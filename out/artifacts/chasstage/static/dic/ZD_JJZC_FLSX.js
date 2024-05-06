@@ -1,0 +1,1 @@
+function ZD_JJZC_FLSX(){  var SourceArray = [{"name":"刑拘证","jpcode":"xjz","code":"1","scode":"xingjuzheng"},{"name":"逮捕证","jpcode":"dbz","code":"2","scode":"daibozheng"}]; return SourceArray;}

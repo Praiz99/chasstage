@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.xgpz.dao.ChasXgpzMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.xgpz.entity.ChasXgpz">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="JCKSSJ" jdbcType="INTEGER" property="jckssj" />
+    <result column="JCJSSJ" jdbcType="INTEGER" property="jcjssj" />
+    <result column="JCJG" jdbcType="INTEGER" property="jcjg" />
+    <result column="JCKSSJFZ" jdbcType="INTEGER" property="jckssjfz" />
+    <result column="JCJSSJFZ" jdbcType="INTEGER" property="jcjssjfz" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_xt_xgpz
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.xgpz.entity.ChasXgpz">
+    insert into chas_xt_xgpz (ID, ISDEL, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, JCKSSJ,JCKSSJFZ,
+      JCJSSJ,JCJSSJFZ, JCJG)
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR}, 
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{jckssj,jdbcType=INTEGER},
+    #{jckssjfz,jdbcType=INTEGER},
+      #{jcjssj,jdbcType=INTEGER},#{jcjssjfz,jdbcType=INTEGER}, #{jcjg,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.xgpz.entity.ChasXgpz">
+    update chas_xt_xgpz
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      JCKSSJ = #{jckssj,jdbcType=INTEGER},
+      JCKSSJFZ = #{jckssjfz,jdbcType=INTEGER},
+      JCJSSJ = #{jcjssj,jdbcType=INTEGER},
+      JCJSSJFZ = #{jcjssjfz,jdbcType=INTEGER},
+      JCJG = #{jcjg,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, JCKSSJ, JCKSSJFZ,
+    JCJSSJ,JCJSSJFZ, JCJG
+    from chas_xt_xgpz
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, JCKSSJ, JCKSSJFZ,
+    JCJSSJ,JCJSSJFZ, JCJG
+    from chas_xt_xgpz
+    <where>
+     1=1 and isdel = 0
+       <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}' 
+     </if>
+     <if test="jcjg != null and jcjg !=''">
+            and JCJG = '${jcjg}' 
+     </if>
+        <if test="sydwdm != null and sydwdm !=''">
+            and BAQID in (select baqref.baqid from chas_xt_baqref baqref where baqref.sydwdm ='${sydwdm}')
+        </if>
+    </where>
+  </select>
+</mapper>

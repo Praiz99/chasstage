@@ -1,0 +1,1 @@
+function FSARRQZT(){  var SourceArray = [{"name":"预约","jpcode":"yy","code":"01","scode":"yuyue"},{"name":"入区","jpcode":"rq","code":"02","scode":"ruqu"},{"name":"离区","jpcode":"lq","code":"03","scode":"liqu"}]; return SourceArray;}

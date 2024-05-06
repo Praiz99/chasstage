@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.sbgl.dao.ChasSbMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.sbgl.entity.ChasSb">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="QYID" jdbcType="VARCHAR" property="qyid" />
+    <result column="SBLX" jdbcType="VARCHAR" property="sblx" />
+    <result column="SBBH" jdbcType="VARCHAR" property="sbbh" />
+    <result column="SBMC" jdbcType="VARCHAR" property="sbmc" />
+    <result column="SBGN" jdbcType="VARCHAR" property="sbgn" />
+    <result column="sbzt" jdbcType="INTEGER" property="sbzt" />
+      <result column="kzcs1" jdbcType="VARCHAR" property="kzcs1" />
+      <result column="kzcs2" jdbcType="VARCHAR" property="kzcs2" />
+      <result column="kzcs3" jdbcType="VARCHAR" property="kzcs3" />
+      <result column="kzcs4" jdbcType="VARCHAR" property="kzcs4" />
+      <result column="kzcs5" jdbcType="VARCHAR" property="kzcs5" />
+      <result column="kzcs6" jdbcType="VARCHAR" property="kzcs6" />
+      <result column="wlzt" jdbcType="VARCHAR" property="wlzt" />
+      <result column="gzzt" jdbcType="VARCHAR" property="gzzt" />
+      <result column="sbgzms" jdbcType="VARCHAR" property="sbgzms" />
+      <result column="sfzx" jdbcType="VARCHAR" property="sfzx" />
+      <result column="sfdb" jdbcType="VARCHAR" property="sfdb" />
+      <result column="jkjk" jdbcType="VARCHAR" property="jkjk" />
+      <result column="csdh" jdbcType="VARCHAR" property="csdh" />
+  </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        update chas_xt_sb
+        set isdel = 1,XGSJ = date_trunc('second', now())
+        where ID = #{id,jdbcType=VARCHAR}
+    </delete>
+
+    <delete id="clearByBaqAndLx" >
+        update chas_xt_sb
+        set isdel = 1,XGSJ = date_trunc('second', now())
+        where baqid = #{baqid,jdbcType=VARCHAR} and sblx=#{lx,jdbcType=VARCHAR}
+    </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.sbgl.entity.ChasSb">
+    insert into chas_xt_sb (ID, ISDEL, DATA_FLAG,
+      LRR_SFZH, LRSJ, XGR_SFZH,
+      XGSJ, BAQID, BAQMC, QYID,
+      SBLX, SBBH, SBMC, SBGN,kzcs1,
+      kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+      sbgzms,sfzx,sfdb,jkjk,csdh
+      )
+    values (#{id,jdbcType=VARCHAR}, #{isdel,jdbcType=INTEGER}, #{dataflag,jdbcType=CHAR},
+      #{lrrSfzh,jdbcType=VARCHAR}, #{lrsj,jdbcType=TIMESTAMP}, #{xgrSfzh,jdbcType=VARCHAR},
+      #{xgsj,jdbcType=TIMESTAMP}, #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, #{qyid,jdbcType=VARCHAR},
+      #{sblx,jdbcType=VARCHAR}, #{sbbh,jdbcType=VARCHAR}, #{sbmc,jdbcType=VARCHAR}, #{sbgn,jdbcType=VARCHAR}
+      , #{kzcs1,jdbcType=VARCHAR}, #{kzcs2,jdbcType=VARCHAR}, #{kzcs3,jdbcType=VARCHAR}
+      , #{kzcs4,jdbcType=VARCHAR}, #{kzcs5,jdbcType=VARCHAR}, #{kzcs6,jdbcType=VARCHAR},
+      #{wlzt,jdbcType=VARCHAR},#{gzzt,jdbcType=VARCHAR}, #{sbgzms,jdbcType=VARCHAR},
+      #{sfzx,jdbcType=VARCHAR}, #{sfdb,jdbcType=VARCHAR}, #{jkjk,jdbcType=VARCHAR}, #{csdh,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.sbgl.entity.ChasSb">
+    update chas_xt_sb
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+      XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      QYID = #{qyid,jdbcType=VARCHAR},
+      SBLX = #{sblx,jdbcType=VARCHAR},
+      SBBH = #{sbbh,jdbcType=VARCHAR},
+      SBMC = #{sbmc,jdbcType=VARCHAR},
+      SBGN = #{sbgn,jdbcType=VARCHAR},
+      sbzt = #{sbzt,jdbcType=INTEGER},
+      kzcs1 = #{kzcs1,jdbcType=VARCHAR},
+      kzcs2 = #{kzcs2,jdbcType=VARCHAR},
+      kzcs3 = #{kzcs3,jdbcType=VARCHAR},
+      kzcs4 = #{kzcs4,jdbcType=VARCHAR},
+      kzcs5 = #{kzcs5,jdbcType=VARCHAR},
+      kzcs6 = #{kzcs6,jdbcType=VARCHAR},
+      wlzt=#{wlzt,jdbcType=VARCHAR},
+      gzzt=#{gzzt,jdbcType=VARCHAR},
+      sbgzms=#{sbgzms,jdbcType=VARCHAR},
+      sfzx=#{sfzx,jdbcType=VARCHAR},
+      sfdb=#{sfdb,jdbcType=VARCHAR},
+      jkjk=#{jkjk,jdbcType=VARCHAR},
+      csdh=#{csdh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    SBLX, SBBH, SBMC, SBGN,sbzt, kzcs1,
+      kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+      sbgzms,sfzx,sfdb,jkjk,csdh
+    from chas_xt_sb
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    SBLX, SBBH, SBMC, SBGN,sbzt, kzcs1,
+      kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+      sbgzms,sfzx,sfdb,jkjk,csdh
+    from chas_xt_sb
+    <where>
+     1=1 and isdel = 0
+     <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}'
+     </if>
+     <if test="sblx != null and sblx !=''">
+            and SBLX = '${sblx}'
+     </if>
+     <if test="qyid != null and qyid !=''">
+            and QYID = '${qyid}'
+     </if>
+     <if test="sbgn != null and sbgn !=''">
+            and SBGN = '${sbgn}'
+     </if>
+     <if test="sbbh != null and sbbh !=''">
+            and SBBH = '${sbbh}'
+     </if>
+     <if test="sbmc != null and sbmc !=''">
+        and SBMC LIKE '%${sbmc}%'
+      </if>
+    <if test="wdbhL != null and wdbhL !=''">
+        and kzcs2 = '${wdbhL}'
+    </if>
+    <if test="sfzx != null and sfzx !=''">
+        and sfzx = '${sfzx}'
+    </if>
+    <if test="sfdb != null and sfdb !=''">
+        and sfdb = '${sfdb}'
+    </if>
+        <if test="kzcs1 != null and kzcs1 !=''">
+            and kzcs1 = '${kzcs1}'
+        </if>
+        <if test="kzcs2 != null and kzcs2 !=''">
+            and kzcs2 = '${kzcs2}'
+        </if>
+        <if test="kzcs3 != null and kzcs3 !=''">
+            and kzcs3 = '${kzcs3}'
+        </if>
+        <if test="kzcs6 != null and kzcs6 !=''">
+            and kzcs6 = '${kzcs6}'
+        </if>
+      ORDER BY LRSJ DESC
+    </where>
+  </select>
+    <select id="findByParams" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    SBLX, SBBH, SBMC, SBGN,sbzt, kzcs1,
+        kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+        sbgzms,sfzx,sfdb,jkjk,csdh
+    from chas_xt_sb
+    <where>
+      1=1 and isdel = 0
+       <if test="sbgn != null and sbgn !=''">
+            and SBGN = '${sbgn}'
+     </if>
+      <if test="nosbgn1 != null and nosbgn1 !=''">
+            and SBGN != '${nosbgn1}'
+     </if>
+      <if test="nosbgn2 != null and nosbgn2 !=''">
+            and SBGN != '${nosbgn2}'
+     </if>
+        <if test="nosbgn3 != null and nosbgn3 !=''">
+            and SBGN != '${nosbgn3}'
+        </if>
+      <if test="baqid != null and baqid !=''">
+            and BAQID = '${baqid}'
+     </if>
+     <if test="sblx != null and sblx !=''">
+            and SBLX = '${sblx}'
+     </if>
+     <if test="qyid != null and qyid !=''">
+            and QYID = '${qyid}'
+     </if>
+      <if test="sbbh != null and sbbh !=''">
+            and SBBH = '${sbbh}'
+     </if>
+    <if test="wdbhL != null and wdbhL !=''">
+        and kzcs2 = '${wdbhL}'
+    </if>
+    <if test="sfzx != null and sfzx !=''">
+        and sfzx = '${sfzx}'
+    </if>
+    <if test="sfdb != null and sfdb !=''">
+        and sfdb = '${sfdb}'
+    </if>
+        <if test="kzcs1 != null and kzcs1 !=''">
+            and kzcs1 = '${kzcs1}'
+        </if>
+        <if test="kzcs2 != null and kzcs2 !=''">
+            and kzcs2 = '${kzcs2}'
+        </if>
+        <if test="kzcs3 != null and kzcs3 !=''">
+            and kzcs3 = '${kzcs3}'
+        </if>
+        <if test="kzcs6 != null and kzcs6 !=''">
+            and kzcs6 = '${kzcs6}'
+        </if>
+        <if test="sbgzms != null and sbgzms !=''">
+            and sbgzms = '${sbgzms}'
+        </if>
+        <if test="sfzx != null and sfzx !=''">
+            and sfzx = '${sfzx}'
+        </if>
+        <if test="sfdb != null and sfdb !=''">
+            and sfdb = '${sfdb}'
+        </if>
+        <if test="jkjk != null and jkjk !=''">
+            and jkjk = '${jkjk}'
+        </if>
+        <if test="baqList !=null">
+            and BAQID in
+            <foreach item="item" index="index" collection="baqList" open="(" separator="," close=")">
+                '${item}'
+            </foreach>
+        </if>
+        <if test="kzcs6Like != null and kzcs6Like !=''">
+            and kzcs6 like '%${kzcs6Like}%'
+        </if>
+    </where>
+  </select>
+
+    <select id="getRtspValByQyid" resultType="java.util.HashMap">
+        select nvr.kzcs1,nvr.kzcs2,nvr.kzcs3,nvr.kzcs4,camera.kzcs5 from chas_xt_sb nvr left join chas_xt_sb camera on
+        nvr.sbbh = camera.kzcs1 and camera.isdel = 0
+        where camera.qyid = '${qyid}'  and camera.sbgn = '42' and nvr.isdel = 0 limit 1
+    </select>
+
+    <select id="findZDSB" resultMap="BaseResultMap">
+        select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+    SBLX, SBBH, SBMC, SBGN,sbzt, kzcs1,
+        kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+        sbgzms,sfzx,sfdb,jkjk,csdh
+    from chas_xt_sb
+        where sblx like '01%' and isdel = 0
+    </select>
+    <select id="getSbByLxAndQy" resultMap="BaseResultMap">
+        select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, QYID,
+               SBLX, SBBH, SBMC, SBGN,sbzt, kzcs1,
+               kzcs2,kzcs3,kzcs4,kzcs5,kzcs6,wlzt,gzzt,
+               sbgzms,sfzx,sfdb,jkjk,csdh
+        from chas_xt_sb
+        where isdel = 0 and sblx = '${sblx}' and qyid='${qyid}' limit 1
+    </select>
+</mapper>

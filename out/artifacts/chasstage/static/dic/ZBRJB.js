@@ -1,0 +1,1 @@
+function ZBRJB(){  var SourceArray = [{"name":"值班领导","jpcode":"zbld","code":"0","scode":"zhibanlingdao"},{"name":"值班长","jpcode":"zbc","code":"1","scode":"zhibanchang"},{"name":"值班员","jpcode":"zby","code":"2","scode":"zhibanyuan"}]; return SourceArray;}

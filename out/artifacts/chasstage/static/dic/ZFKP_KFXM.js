@@ -1,0 +1,1 @@
+function ZFKP_KFXM(){  var SourceArray = [{"name":"行为不检","jpcode":"xwbj","code":"1000","scode":"xingweibujian"},{"name":"贪污腐败","jpcode":"twfb","code":"1001","scode":"tanwufubai"},{"name":"打架抽烟","jpcode":"djcy","code":"1003","scode":"dajiachouyan"}]; return SourceArray;}

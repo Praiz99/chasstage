@@ -1,0 +1,1 @@
+function ZD_JJZC_CLLX(){  var SourceArray = [{"name":"轿车","jpcode":"jc","code":"1","scode":"jiaoche"},{"name":"货车","jpcode":"hc","code":"2","scode":"huoche"},{"name":"客车","jpcode":"kc","code":"3","scode":"keche"}]; return SourceArray;}

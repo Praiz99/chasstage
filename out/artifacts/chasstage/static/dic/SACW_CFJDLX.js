@@ -1,0 +1,1 @@
+function SACW_CFJDLX(){  var SourceArray = [{"name":"行政处罚","jpcode":"xzcf","code":"01","scode":"xingzhengchufa"},{"name":"当场处罚","jpcode":"dccf","code":"02","scode":"dangchangchufa"}]; return SourceArray;}

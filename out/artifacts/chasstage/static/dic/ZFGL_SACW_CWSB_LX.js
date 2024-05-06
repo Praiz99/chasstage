@@ -1,0 +1,1 @@
+function ZFGL_SACW_CWSB_LX(){  var SourceArray = [{"name":"储物架","jpcode":"cwj","code":"1","scode":"chuwujia"},{"name":"储物箱","jpcode":"cwx","code":"2","scode":"chuwuxiang"},{"name":"通用设备","jpcode":"tysb","code":"3","scode":"tongyongshebei"}]; return SourceArray;}

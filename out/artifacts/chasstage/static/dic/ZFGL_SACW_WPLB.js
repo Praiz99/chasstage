@@ -1,0 +1,1 @@
+function ZFGL_SACW_WPLB(){  var SourceArray = [{"name":"涉案款项","jpcode":"sakx","code":"010","scode":"sheankuanxiang"},{"name":"涉案物品","jpcode":"sawp","code":"011","scode":"sheanwupin"}]; return SourceArray;}

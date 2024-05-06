@@ -1,0 +1,1 @@
+function SACW_CZZT(){  var SourceArray = [{"name":"待处置","jpcode":"dcz","code":"0","scode":"daichuzhi"},{"name":"处置中","jpcode":"czz","code":"1","scode":"chuzhizhong"},{"name":"处置完成","jpcode":"czwc","code":"2","scode":"chuzhiwancheng"},{"name":"变卖前保管发起中","jpcode":"bmqbgfqz","code":"3","scode":"bianmaiqianbaoguanfaqizhong"}]; return SourceArray;}

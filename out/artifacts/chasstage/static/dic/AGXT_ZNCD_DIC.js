@@ -1,0 +1,1 @@
+function AGXT_ZNCD_DIC(){  var SourceArray = [{"name":"刻录完成","jpcode":"klwc","code":"1","scode":"keluwancheng"},{"name":"刻录中","jpcode":"klz","code":"2","scode":"keluzhong"},{"name":"新增待入","jpcode":"xzdr","code":"3","scode":"xinzengdairu"},{"name":"已存入","jpcode":"ycr","code":"4","scode":"yicunru"},{"name":"已取出","jpcode":"yqc","code":"5","scode":"yiquchu"}]; return SourceArray;}

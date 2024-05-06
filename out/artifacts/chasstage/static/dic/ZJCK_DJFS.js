@@ -1,0 +1,1 @@
+function ZJCK_DJFS(){  var SourceArray = [{"name":"限额内冻结","jpcode":"xedj","code":"01","scode":"xianeneidongjie"},{"name":"只收不付","jpcode":"zsbf","code":"02","scode":"zhishoubufu"}]; return SourceArray;}

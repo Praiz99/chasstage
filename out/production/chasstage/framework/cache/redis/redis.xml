@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<beans profile="redis.default">
+		<import resource="classpath*:/framework/cache/redis/redis-default.xml" />
+	</beans>
+
+	<beans profile="redis.cluster">
+		<import resource="classpath*:/framework/cache/redis/redis-cluster.xml" />
+	</beans>
+
+	<beans profile="web.cluster">
+		<bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
+			<property name="maxInactiveIntervalInSeconds" value="7200"></property>
+		</bean>
+		<bean id="springSessionRedisTaskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+			<property name="corePoolSize" value="16" />
+			<property name="maxPoolSize" value="256" />
+			<property name="queueCapacity" value="256" />
+			<property name="keepAliveSeconds" value="60" />
+		</bean>
+	</beans>
+	 
+</beans>

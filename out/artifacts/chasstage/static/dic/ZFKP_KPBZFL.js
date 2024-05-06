@@ -1,0 +1,1 @@
+function ZFKP_KPBZFL(){  var SourceArray = [{"name":"办理行政案件","jpcode":"blxzaj","code":"01","scode":"banlixingzhenganjian"},{"name":"办理刑事案件","jpcode":"blxsaj","code":"02","scode":"banlixingshianjian"}]; return SourceArray;}

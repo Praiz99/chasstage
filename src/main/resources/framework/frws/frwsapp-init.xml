@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<frwsapp-list>
+		<frwsapp>
+			<name>系统默认文件存取服务</name>
+			<mark>default</mark>
+			<desc>系统默认文件存取服务</desc>
+			<client-root-url>http://localhost:8080/frwsApp</client-root-url>
+			<server-root-url>http://localhost:8080/jdone</server-root-url>
+		</frwsapp>
+		<frwsapp>
+			<name>杭州地区文件存取服务</name>
+			<mark>hangzhou</mark>
+			<desc>杭州地区文件存取服务</desc>
+			<client-root-url>http://localhost:8080/frwsApp</client-root-url>
+			<server-root-url>http://localhost:8080/jdone</server-root-url>
+			<storages></storages>
+			<!-- <route-type>ORG</route-type> -->
+			<match-value>3301,330201</match-value>
+		</frwsapp>
+	</frwsapp-list>
+</data>

@@ -1,0 +1,1 @@
+function CHAS_SYRW_SYZT(){  var SourceArray = [{"name":"待送押","jpcode":"dsy","code":"1","scode":"daisongya"},{"name":"送押中","jpcode":"syz","code":"2","scode":"songyazhong"},{"name":"已送押","jpcode":"ysy","code":"3","scode":"yisongya"}]; return SourceArray;}

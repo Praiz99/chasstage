@@ -1,0 +1,1 @@
+function ZD_YTHBA_XCZT(){  var SourceArray = [{"name":"羁押","jpcode":"-y","code":"1","scode":"-ya"},{"name":"未羁押","jpcode":"w-y","code":"2","scode":"wei-ya"},{"name":"服刑","jpcode":"fx","code":"3","scode":"fuxing"}]; return SourceArray;}

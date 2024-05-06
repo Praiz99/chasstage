@@ -1,0 +1,1 @@
+function YWPZ_BFML_SYDX(){  var SourceArray = [{"name":"仅单位","jpcode":"jdw","code":"01","scode":"jindanwei"},{"name":"仅个人","jpcode":"jgr","code":"02","scode":"jingeren"},{"name":"单位与个人","jpcode":"dwygr","code":"03","scode":"danweiyugeren"}]; return SourceArray;}

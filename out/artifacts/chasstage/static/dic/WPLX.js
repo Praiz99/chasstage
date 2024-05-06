@@ -1,0 +1,1 @@
+function WPLX(){  var SourceArray = [{"name":"随身物品","jpcode":"sswp","code":"01","scode":"suishenwupin"},{"name":"涉案物品","jpcode":"sawp","code":"02","scode":"sheanwupin"}]; return SourceArray;}

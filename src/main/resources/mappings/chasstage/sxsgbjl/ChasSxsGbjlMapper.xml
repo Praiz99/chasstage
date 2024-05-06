@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.sxsgbjl.dao.ChasSxsGbjlMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.sxsgbjl.entity.ChasSxsGbjl">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="QYID" jdbcType="VARCHAR" property="qyid" />
+    <result column="qymc" jdbcType="VARCHAR" property="qymc" />
+    <result column="xm" jdbcType="VARCHAR" property="xm" />
+    <result column="dwxtbh" jdbcType="VARCHAR" property="dwxtbh" />
+    <result column="syid" jdbcType="VARCHAR" property="syid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="xyrxm" jdbcType="VARCHAR" property="xyrxm" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update chas_yw_sxsgbjl
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.sxsgbjl.entity.ChasSxsGbjl">
+    insert into chas_yw_sxsgbjl (ID, DATA_FLAG,
+    LRR_SFZH, LRSJ, XGR_SFZH,
+    XGSJ, BAQID, BAQMC,QYID,qymc,xm,dwxtbh,syid,username,xyrxm)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR},
+    #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR},
+    now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR},
+    #{qyid,jdbcType=VARCHAR}, #{qymc,jdbcType=VARCHAR},
+    #{xm,jdbcType=VARCHAR},#{dwxtbh,jdbcType=VARCHAR},#{syid,jdbcType=VARCHAR}
+    ,#{username,jdbcType=VARCHAR},#{xyrxm,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.sxsgbjl.entity.ChasSxsGbjl">
+    update chas_yw_sxsgbjl
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+    DATA_FLAG = #{dataflag,jdbcType=CHAR},
+    LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+    XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+    XGSJ = date_trunc('second', now()),
+    BAQID = #{baqid,jdbcType=VARCHAR},
+    BAQMC = #{baqmc,jdbcType=VARCHAR},
+    QYID = #{qyid,jdbcType=VARCHAR},
+    qymc = #{qymc,jdbcType=VARCHAR},
+    xm = #{xm,jdbcType=VARCHAR},
+    dwxtbh = #{dwxtbh,jdbcType=VARCHAR},
+    syid = #{syid,jdbcType=VARCHAR},
+    username = #{username,jdbcType=VARCHAR},
+    xyrxm = #{xyrxm,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String"
+    resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC,  QYID, qymc,xm,dwxtbh,syid,username,xyrxm
+    from chas_yw_sxsgbjl
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID,
+    BAQMC,  QYID, qymc,xm,dwxtbh,syid,username,xyrxm
+    from chas_yw_sxsgbjl
+    <where>
+      1=1 and ISDEL = 0
+      <if test="baqid != null and baqid !=''">
+        and BAQID = '${baqid}'
+      </if>
+      <if test="qyid != null and qyid !=''">
+        and QYID = '${qyid}'
+      </if>
+      <if test="sydwdm != null and sydwdm !=''">
+        and BAQID in (SELECT baqid from chas_xt_baqref where sydwdm='${sydwdm}')
+      </if>
+      <if test="qxbs == 'province'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},2),'%')
+      </if>
+      <if test="qxbs == 'city'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},4),'%')
+      </if>
+      <if test="qxbs == 'reg'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},6),'%')
+      </if>
+      <if test="qxbs == 'org'">
+        and DWXTBH LIKE CONCAT(left(#{orgSysCode,jdbcType=VARCHAR},8),'%')
+      </if>
+      <if test="qxbs == 'user'">
+        and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+</mapper>

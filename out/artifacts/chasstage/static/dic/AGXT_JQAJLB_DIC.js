@@ -1,0 +1,1 @@
+function AGXT_JQAJLB_DIC(){  var SourceArray = [{"name":"办案区人员","jpcode":"baqry","code":"03","scode":"bananqurenyuan"},{"name":"警情","jpcode":"jq","code":"01","scode":"jingqing"},{"name":"案件","jpcode":"aj","code":"02","scode":"anjian"}]; return SourceArray;}

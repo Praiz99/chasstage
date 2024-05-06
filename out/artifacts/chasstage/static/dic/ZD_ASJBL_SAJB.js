@@ -1,0 +1,1 @@
+function ZD_ASJBL_SAJB(){  var SourceArray = [{"name":"严重情节","jpcode":"yzqj","code":"1","scode":"yanzhongqingjie"}]; return SourceArray;}

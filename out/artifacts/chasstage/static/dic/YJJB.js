@@ -1,0 +1,1 @@
+function YJJB(){  var SourceArray = [{"name":"忽略","jpcode":"hl","code":"0","scode":"hulue"},{"name":"一级","jpcode":"yj","code":"1","scode":"yiji"},{"name":"二级","jpcode":"ej","code":"2","scode":"erji"},{"name":"三级","jpcode":"sj","code":"3","scode":"sanji"},{"name":"特级","jpcode":"tj","code":"4","scode":"teji"}]; return SourceArray;}

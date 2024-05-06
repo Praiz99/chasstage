@@ -1,0 +1,1 @@
+function XNSACW_DJFS(){  var SourceArray = [{"name":"平台","jpcode":"pt","code":"01","scode":"pingtai"},{"name":"现场","jpcode":"xc","code":"02","scode":"xianchang"}]; return SourceArray;}

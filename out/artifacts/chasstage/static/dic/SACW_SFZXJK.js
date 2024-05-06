@@ -1,0 +1,1 @@
+function SACW_SFZXJK(){  var SourceArray = [{"name":"已在线缴款","jpcode":"yzxjk","code":"0","scode":"yizaixianjiaokuan"},{"name":"未在线缴款","jpcode":"wzxjk","code":"1","scode":"weizaixianjiaokuan"}]; return SourceArray;}

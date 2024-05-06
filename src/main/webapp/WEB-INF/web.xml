@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>jdone</display-name>
+	
+ 	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/framework/applicationContext.xml
+		</param-value>
+ 	</context-param>
+
+	<context-param>
+	    <param-name>globalInitializerClasses</param-name>
+	    <param-value>com.wckj.framework.spring.CustomApplicationContextInitializer</param-value>
+	</context-param> 
+	
+    <!-- spring bean service-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- spring session的过滤器配置，注意此过滤器必须放在其他过滤器之前 -->
+	<filter>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<filter-class>com.wckj.framework.spring.mvc.CustomDelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSessionRepositoryFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+    
+	<!--用于单点退出，该过滤器用于实现单点登出功能，可选配置-->
+    <listener>
+        <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+    </listener>
+    
+    <filter>
+        <filter-name>CASSingle Sign OutFilter</filter-name>
+        <filter-class>com.wckj.framework.cas.client.CustomSingleSignOutFilter</filter-class>        
+    </filter>
+    <filter-mapping>
+        <filter-name>CASSingle Sign OutFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>    
+    
+	<!-- 框架主要拦截 -->
+    <filter>
+        <filter-name>mainFilter</filter-name>
+        <filter-class>com.wckj.framework.web.filter.MainFilter</filter-class>         
+    </filter>
+    <filter-mapping>
+        <filter-name>mainFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+	<!-- cas 单点登录客户端 -->
+    <filter>
+        <filter-name>CASFilter</filter-name>
+        <filter-class>com.wckj.framework.cas.client.CustomCasAuthenticationFilter</filter-class>
+		<init-param>
+		     <param-name>authenticationRedirectStrategyClass</param-name>
+		     <param-value>com.wckj.jdone.common.interceptor.cas.ClientAuthenticationRedirectStrategy</param-value>
+		</init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CASFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!--该过滤器负责对Ticket的校验工作，必须启用它 -->
+    <filter>
+        <filter-name>CASValidationFilter</filter-name>
+        <filter-class>com.wckj.framework.cas.client.CustomCas20ProxyReceivingTicketValidationFilter</filter-class>
+        <init-param>
+        	<param-name>redirectAfterValidation</param-name>
+        	<param-value>true</param-value>
+        </init-param>  
+        <init-param>
+            <param-name>encoding</param-name>  
+            <param-value>UTF-8</param-value>  
+        </init-param>                         
+    </filter>
+    <filter-mapping>
+        <filter-name>CASValidationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+     	
+	<!-- 系统初始化 servlet -->
+	<servlet>
+		<servlet-name>SystemStart</servlet-name>
+		<servlet-class>com.wckj.jdone.common.servlet.SystemStart</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- spring mvc controller -->
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/views/framework/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/framework/error/404.jsp</location>
+	</error-page>
+	
+</web-app>

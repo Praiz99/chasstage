@@ -1,0 +1,1 @@
+function ZD_ASJBL_DPZL(){  var SourceArray = [{"name":"海洛因","jpcode":"hly","code":"S0101","scode":"hailuoyin"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function DZJZ_JZPZ_CLLX_JQ(){  var SourceArray = [{"name":"警情类","jpcode":"jql","code":"0400","scode":"jingqinglei"}]; return SourceArray;}

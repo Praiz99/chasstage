@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wckj.chasstage.modules.pcry.dao.ChasYwPcryMapper">
+  <resultMap id="BaseResultMap" type="com.wckj.chasstage.modules.pcry.entity.ChasYwPcry">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ISDEL" jdbcType="INTEGER" property="isdel" />
+    <result column="DATA_FLAG" jdbcType="CHAR" property="dataflag" />
+    <result column="LRR_SFZH" jdbcType="VARCHAR" property="lrrSfzh" />
+    <result column="LRSJ" jdbcType="TIMESTAMP" property="lrsj" />
+    <result column="XGR_SFZH" jdbcType="VARCHAR" property="xgrSfzh" />
+    <result column="XGSJ" jdbcType="TIMESTAMP" property="xgsj" />
+    <result column="BAQID" jdbcType="VARCHAR" property="baqid" />
+    <result column="BAQMC" jdbcType="VARCHAR" property="baqmc" />
+    <result column="RYBH" jdbcType="VARCHAR" property="rybh" />
+    <result column="RYXM" jdbcType="VARCHAR" property="ryxm" />
+    <result column="RY_SFZH" jdbcType="VARCHAR" property="rysfzh" />
+    <result column="ZJLX" jdbcType="VARCHAR" property="zjlx" />
+    <result column="XB" jdbcType="VARCHAR" property="xb" />
+    <result column="CSRQ" jdbcType="DATE" property="csrq" />
+    <result column="BM" jdbcType="VARCHAR" property="bm" />
+    <result column="CYM" jdbcType="VARCHAR" property="cym" />
+    <result column="CH" jdbcType="VARCHAR" property="ch" />
+    <result column="GJ" jdbcType="VARCHAR" property="gj" />
+    <result column="WHCD" jdbcType="VARCHAR" property="whcd" />
+    <result column="MZ" jdbcType="VARCHAR" property="mz" />
+    <result column="GZDW" jdbcType="VARCHAR" property="gzdw" />
+    <result column="HJD_XZQH" jdbcType="VARCHAR" property="hjdxzqh" />
+    <result column="XZDXZ" jdbcType="VARCHAR" property="xzdxz" />
+    <result column="LXDH" jdbcType="VARCHAR" property="lxdh" />
+    <result column="ZPID" jdbcType="VARCHAR" property="zpid" />
+    <result column="ZBDW_MC" jdbcType="VARCHAR" property="zbdwMc" />
+    <result column="CJSJ" jdbcType="TIMESTAMP" property="cjsj" />
+    <result column="ZBDW_BH" jdbcType="VARCHAR" property="zbdwBh" />
+    <result column="CJDD" jdbcType="VARCHAR" property="cjdd" />
+    <result column="SFZBM" jdbcType="INTEGER" property="sfzbm" />
+    <result column="SFSFBM" jdbcType="INTEGER" property="sfsfbm" />
+    <result column="YTHCJZT" jdbcType="INTEGER" property="ythcjzt" />
+    <result column="DWXTBH" jdbcType="INTEGER" property="dwxtbh" />
+    
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    update gg_pcryxx
+    set isdel = 1,XGSJ = date_trunc('second', now())
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wckj.chasstage.modules.pcry.entity.ChasYwPcry">
+    insert into gg_pcryxx (ID, DATA_FLAG, 
+      LRR_SFZH, LRSJ, XGR_SFZH, 
+      XGSJ, BAQID, BAQMC, 
+      RYBH, RYXM, RY_SFZH, ZJLX, 
+      XB, CSRQ, BM, CYM, 
+      CH, GJ, WHCD, MZ, 
+      GZDW, HJD_XZQH, XZDXZ, LXDH, 
+      ZPID, ZBDW_MC, CJSJ, 
+      ZBDW_BH, CJDD, SFZBM, 
+      SFSFBM, YTHCJZT,DWXTBH)
+    values (#{id,jdbcType=VARCHAR}, #{dataflag,jdbcType=CHAR}, 
+      #{lrrSfzh,jdbcType=VARCHAR}, now(), #{xgrSfzh,jdbcType=VARCHAR}, 
+      now(), #{baqid,jdbcType=VARCHAR}, #{baqmc,jdbcType=VARCHAR}, 
+      #{rybh,jdbcType=VARCHAR}, #{ryxm,jdbcType=VARCHAR}, #{rysfzh,jdbcType=VARCHAR}, #{zjlx,jdbcType=VARCHAR}, 
+      #{xb,jdbcType=VARCHAR}, #{csrq,jdbcType=TIMESTAMP}, #{bm,jdbcType=VARCHAR}, #{cym,jdbcType=VARCHAR}, 
+      #{ch,jdbcType=VARCHAR}, #{gj,jdbcType=VARCHAR}, #{whcd,jdbcType=VARCHAR}, #{mz,jdbcType=VARCHAR}, 
+      #{gzdw,jdbcType=VARCHAR}, #{hjdxzqh,jdbcType=VARCHAR}, #{xzdxz,jdbcType=VARCHAR}, #{lxdh,jdbcType=VARCHAR}, 
+      #{zpid,jdbcType=VARCHAR}, #{zbdwMc,jdbcType=VARCHAR}, #{cjsj,jdbcType=TIMESTAMP}, 
+      #{zbdwBh,jdbcType=VARCHAR}, #{cjdd,jdbcType=VARCHAR}, #{sfzbm,jdbcType=INTEGER}, 
+      #{sfsfbm,jdbcType=INTEGER}, #{ythcjzt,jdbcType=INTEGER}, #{dwxtbh,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wckj.chasstage.modules.pcry.entity.ChasYwPcry">
+    update gg_pcryxx
+    set ISDEL = #{isdel,jdbcType=INTEGER},
+      DATA_FLAG = #{dataflag,jdbcType=CHAR},
+      LRR_SFZH = #{lrrSfzh,jdbcType=VARCHAR},
+      LRSJ = #{lrsj,jdbcType=TIMESTAMP},
+      XGR_SFZH = #{xgrSfzh,jdbcType=VARCHAR},
+      XGSJ = date_trunc('second', now()),
+      BAQID = #{baqid,jdbcType=VARCHAR},
+      BAQMC = #{baqmc,jdbcType=VARCHAR},
+      RYBH = #{rybh,jdbcType=VARCHAR},
+      RYXM = #{ryxm,jdbcType=VARCHAR},
+      RY_SFZH = #{rysfzh,jdbcType=VARCHAR},
+      ZJLX = #{zjlx,jdbcType=VARCHAR},
+      XB = #{xb,jdbcType=VARCHAR},
+      CSRQ = #{csrq,jdbcType=TIMESTAMP},
+      BM = #{bm,jdbcType=VARCHAR},
+      CYM = #{cym,jdbcType=VARCHAR},
+      CH = #{ch,jdbcType=VARCHAR},
+      GJ = #{gj,jdbcType=VARCHAR},
+      WHCD = #{whcd,jdbcType=VARCHAR},
+      MZ = #{mz,jdbcType=VARCHAR},
+      GZDW = #{gzdw,jdbcType=VARCHAR},
+      HJD_XZQH = #{hjdxzqh,jdbcType=VARCHAR},
+      XZDXZ = #{xzdxz,jdbcType=VARCHAR},
+      LXDH = #{lxdh,jdbcType=VARCHAR},
+      ZPID = #{zpid,jdbcType=VARCHAR},
+      ZBDW_MC = #{zbdwMc,jdbcType=VARCHAR},
+      CJSJ = #{cjsj,jdbcType=TIMESTAMP},
+      ZBDW_BH = #{zbdwBh,jdbcType=VARCHAR},
+      CJDD = #{cjdd,jdbcType=VARCHAR},
+      SFZBM = #{sfzbm,jdbcType=INTEGER},
+      SFSFBM = #{sfsfbm,jdbcType=INTEGER},
+      YTHCJZT = #{ythcjzt,jdbcType=INTEGER},
+      DWXTBH = #{dwxtbh,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, RYBH, 
+    RYXM, RY_SFZH, ZJLX, XB, CSRQ, BM, CYM, CH, GJ, WHCD, MZ, GZDW, HJD_XZQH, XZDXZ, LXDH, ZPID, 
+    ZBDW_MC, CJSJ, ZBDW_BH, CJDD, SFZBM, SFSFBM, YTHCJZT ,DWXTBH
+    from gg_pcryxx
+    where isdel = 0 and ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, ISDEL, DATA_FLAG, LRR_SFZH, LRSJ, XGR_SFZH, XGSJ, BAQID, BAQMC, RYBH, 
+    RYXM, RY_SFZH, ZJLX, XB, CSRQ, BM, CYM, CH, GJ, WHCD, MZ, GZDW, HJD_XZQH, XZDXZ, LXDH, ZPID, 
+    ZBDW_MC, CJSJ, ZBDW_BH, CJDD, SFZBM, SFSFBM, YTHCJZT ,DWXTBH
+    from gg_pcryxx
+     <where>
+      1=1 and isdel = 0
+      <if test="baqid != null and baqid !=''">
+          and BAQID = '${baqid}' 
+      </if>
+      <if test="ryxm != null and ryxm !=''">
+          and RYXM = '${ryxm}' 
+      </if>
+      <if test="rybh != null and rybh !=''">
+          and RYBH = '${rybh}' 
+      </if>
+      <if test="rysfzh != null and rysfzh !=''">
+          and RY_SFZH = '${rysfzh}' 
+      </if>
+       <if test="xb != null and xb !=''">
+         and xb = '${xb}'
+       </if>
+      <if test="cjsj1 !=null and cjsj1 !=''">
+        and CJSJ &gt;='${cjsj1}'
+      </if>
+      <if test="cjsj2 !=null and cjsj2 !=''">
+        and CJSJ &lt;='${cjsj2}'
+      </if>
+     <if test="lrsj1 != null and lrsj1 != ''">
+        and lrsj &gt;= '${lrsj1}'
+     </if>
+     <if test="lrsj2 != null and lrsj2 != ''">
+       and lrsj &lt;= '${lrsj2}'
+     </if>
+      
+      <if test="qxbs == 'province'">
+      and DWXTBH LIKE #{orgSysCode,jdbcType=VARCHAR}
+    </if>
+      <if test="qxbs == 'city'">
+      and DWXTBH LIKE #{orgSysCode,jdbcType=VARCHAR}
+    </if>
+    <if test="qxbs == 'reg'">
+      and DWXTBH LIKE #{orgSysCode,jdbcType=VARCHAR}
+    </if>
+    <if test="qxbs == 'org'">
+      and DWXTBH LIKE #{orgSysCode,jdbcType=VARCHAR}
+    </if>
+    <if test="qxbs == 'user'">
+      and LRR_SFZH = #{idCard,jdbcType=VARCHAR}
+    </if>
+    </where>
+  </select>
+
+  <select id="findByRybh" resultMap="BaseResultMap">
+    select * from gg_pcryxx where rybh = '${rybh}' and isdel = 0
+  </select>
+</mapper>

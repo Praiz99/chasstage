@@ -1,0 +1,1 @@
+function ZD_SYS_ACT_BACKTYPE(){  var SourceArray = [{"name":"逐级退回","jpcode":"zjth","code":"01","scode":"zhujituihui"},{"name":"退回发起人（结束）","jpcode":"thfqr","code":"02","scode":"tuihuifaqiren"},{"name":"选择节点退回","jpcode":"xzjdth","code":"03","scode":"xuanzejiediantuihui"}]; return SourceArray;}

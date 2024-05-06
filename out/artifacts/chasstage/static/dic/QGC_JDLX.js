@@ -1,0 +1,1 @@
+function QGC_JDLX(){  var SourceArray = [{"name":"通用平台","jpcode":"typt","code":"001","scode":"tongyongpingtai"},{"name":"自建平台","jpcode":"zjpt","code":"002","scode":"zijianpingtai"}]; return SourceArray;}

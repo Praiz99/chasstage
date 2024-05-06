@@ -1,0 +1,1 @@
+function XZFY_BL_PJJGXL(){  var SourceArray = [{"name":"调解撤回","jpcode":"djch","code":"0701","scode":"diaojiechehui"},{"name":"其他","jpcode":"qt","code":"0702","scode":"qita"}]; return SourceArray;}

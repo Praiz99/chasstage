@@ -1,0 +1,1 @@
+function ZD_YTHBA_JHLX(){  var SourceArray = [{"name":"推送","jpcode":"ts","code":"00","scode":"tuisong"},{"name":"接收","jpcode":"js","code":"01","scode":"jieshou"}]; return SourceArray;}

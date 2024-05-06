@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.title{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: normal;
+    font-family: MicrosoftYaHei;
+    font-size: 48px;
+    color: #28B0FE;
+    height: 40px;
+    line-height: 20px;
+}
+.button{
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.area-map{
+    width: 100%;
+    /*height: 100%;*/
+    text-align: center;
+    background: url("../images/bg.png") center no-repeat;
+    background-origin: content-box;
+    background-size: 100% 100%;
+}
+.showSettings{
+    display: inline-block;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+}
+.showItem{
+    height: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.showBlueColor{
+    width: 50px;
+    height: 20px;
+    background-color: blue;
+    color: blue;
+}
+.showBlueText{
+    color: blue;
+    height: 20px;
+    line-height:20px;
+}
+.showYellowColor{
+    width: 50px;
+    height: 20px;
+    background-color: yellow;
+    color: yellow;
+}
+.showYellowText{
+    color: yellow;
+    height: 20px;
+    line-height:20px;
+}
+.showOrangeColor{
+    width: 50px;
+    height: 20px;
+    background-color: orange;
+    color: orange;
+}
+.showOrangeText{
+    color: orange;
+    height: 20px;
+    line-height:20px;
+}
+.showRedColor{
+    width: 50px;
+    height: 20px;
+    background-color: red;
+    color: red;
+}
+.showRedText{
+    color: red;
+    height: 20px;
+    line-height:20px;
+}
+.showMjColor{
+    width: 50px;
+    height: 20px;
+    background-color: rebeccapurple;
+    color: rebeccapurple;
+}
+.showMjText{
+    color: rebeccapurple;
+    height: 20px;
+    line-height:20px;
+}
+.showFkColor{
+    width: 50px;
+    height: 20px;
+    background-color: green;
+    color: green;
+}
+.showFkText{
+    color: green;
+    height: 20px;
+    line-height:20px;
+}
+.showGrayColor{
+    width: 50px;
+    height: 20px;
+    background-color: gainsboro;
+    color: gainsboro;
+}
+.showGrayText{
+    color: gainsboro;
+    height: 20px;
+    line-height:20px;
+}
+.selectItem{
+    cursor: pointer;
+}

@@ -1,0 +1,1 @@
+function ZD_ASJBL_XSDJ(){  var SourceArray = [{"name":"一般","jpcode":"yb","code":"1","scode":"yiban"}]; return SourceArray;}

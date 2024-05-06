@@ -1,0 +1,1 @@
+function ZD_BL_SQLX(){  var SourceArray = [{"name":"授权","jpcode":"sq","code":"0","scode":"shouquan"},{"name":"索取","jpcode":"sq","code":"1","scode":"suoqu"},{"name":"移交到民警","jpcode":"yjdmj","code":"2","scode":"yijiaodaominjing"},{"name":"移交到单位","jpcode":"yjddw","code":"3","scode":"yijiaodaodanwei"}]; return SourceArray;}

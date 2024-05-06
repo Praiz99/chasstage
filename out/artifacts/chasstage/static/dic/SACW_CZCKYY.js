@@ -1,0 +1,1 @@
+function SACW_CZCKYY(){  var SourceArray = [{"name":"变卖","jpcode":"bm","code":"10001","scode":"bianmai"},{"name":"其他","jpcode":"qt","code":"999999","scode":"qita"}]; return SourceArray;}

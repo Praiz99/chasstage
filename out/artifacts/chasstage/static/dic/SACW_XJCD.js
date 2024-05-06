@@ -1,0 +1,1 @@
+function SACW_XJCD(){  var SourceArray = [{"name":"全新","jpcode":"qx","code":"0","scode":"quanxin"},{"name":"其他","jpcode":"qt","code":"1","scode":"qita"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function QGC_CJFS(){  var SourceArray = [{"name":"监控设备","jpcode":"jksb","code":"001","scode":"jiankongshebei"},{"name":"采集站","jpcode":"cjz","code":"002","scode":"caijizhan"},{"name":"其他","jpcode":"qt","code":"099","scode":"qita"}]; return SourceArray;}

@@ -1,0 +1,1 @@
+function ZD_ASJBL_LJMD(){  var SourceArray = [{"name":"闯馆","jpcode":"cg","code":"1","scode":"chuangguan"}]; return SourceArray;}

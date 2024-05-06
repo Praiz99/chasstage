@@ -1,0 +1,32 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥šãşÿÿÿÿ
+d
+java:S2095W"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ú˜…
+z
+java:S11495"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(åûÒ¸ûÿÿÿÿ
+{
+java:S1149˜"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(åûÒ¸ûÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(…ÎÒÌ
+Z
+java:S2147>"DCombine this catch with the one at line 59, which has the same body.(ï­£Ä
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(ìÏÍ‚
+V	java:S1250"<This block of commented-out lines of code should be removed.(‘…Ñøÿÿÿÿ
+T
+java:S47194"9Replace charset name argument with StandardCharsets.UTF_8(Ê¾Ö˜úÿÿÿÿ
+E
+java:S2093("*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Z
+java:S2147c"DCombine this catch with the one at line 97, which has the same body.(ï­£Ä
+E
+java:S2093R"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+\
+java:S2147 "ECombine this catch with the one at line 158, which has the same body.(ï­£Ä
+D
+java:S1481†"-Remove this unused "location" local variable.(ÈÑ‚
+W	java:S125‰"<This block of commented-out lines of code should be removed.(ÉÍàÂùÿÿÿÿ
+W	java:S125“"<This block of commented-out lines of code should be removed.(šÇ§úÿÿÿÿ
+U
+java:S4719—"9Replace charset name argument with StandardCharsets.UTF_8(Ê¾Ö˜úÿÿÿÿ
+E
+java:S2093~"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

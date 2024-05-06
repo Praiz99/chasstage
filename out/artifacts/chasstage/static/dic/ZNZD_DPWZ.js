@@ -1,0 +1,1 @@
+function ZNZD_DPWZ(){  var SourceArray = [{"name":"踏板处","jpcode":"tbc","code":"01","scode":"tabanchu"},{"name":"坐凳处","jpcode":"zdc","code":"02","scode":"zuodengchu"},{"name":"前斜杠处","jpcode":"qxgc","code":"03","scode":"qianxiegangchu"},{"name":"其他处","jpcode":"qtc","code":"09","scode":"qitachu"}]; return SourceArray;}

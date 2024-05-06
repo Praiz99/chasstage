@@ -1,0 +1,1 @@
+function ZFKP_DFXPZ_SLFLB(){  var SourceArray = [{"name":"警情数量分","jpcode":"jqslf","code":"03","scode":"jingqingshuliangfen"},{"name":"行政数量分","jpcode":"xzslf","code":"01","scode":"xingzhengshuliangfen"},{"name":"刑事数量分","jpcode":"xsslf","code":"02","scode":"xingshishuliangfen"}]; return SourceArray;}

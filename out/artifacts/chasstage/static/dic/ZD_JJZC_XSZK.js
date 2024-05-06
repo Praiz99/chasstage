@@ -1,0 +1,1 @@
+function ZD_JJZC_XSZK(){  var SourceArray = [{"name":"未知","jpcode":"wz","code":"1","scode":"weizhi"},{"name":"在逃","jpcode":"zt","code":"2","scode":"zaitao"},{"name":"抓获","jpcode":"zh","code":"3","scode":"zhuahuo"},{"name":"死亡","jpcode":"sw","code":"4","scode":"siwang"},{"name":"其他","jpcode":"qt","code":"5","scode":"qita"}]; return SourceArray;}

@@ -1,0 +1,66 @@
+/*chrome 滚动条重置*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+/*列表滚动条单独处理*/
+.comui-table-theme-default ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.comui-table-theme-default ::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+}
+
+.comui-table-theme-default ::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 12px;
+}
+
+.comui-table-theme-default ::-webkit-scrollbar-thumb:horizontal {
+  width: 10px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 12px;
+}
+/*老列表滚动条单独处理*/
+.datagrid ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.datagrid ::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+}
+
+.datagrid ::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 12px;
+}
+
+.datagrid ::-webkit-scrollbar-thumb:horizontal {
+  width: 10px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 12px;
+}
